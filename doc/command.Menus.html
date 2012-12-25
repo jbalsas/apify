@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>command.Menus</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/jquery-1.7.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="page-header">
+                <h1>command.Menus</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <div class="left-section">
+                <ul class="nav nav-list">
+                    <li class="nav-header">
+                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (109)</a>
+                    </li>
+                </ul>
+                <ul id="other-module" class="nav nav-list">
+                    <li><a href="brackets.html">brackets</a></li>
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="command.KeyBindingManager.html">command.KeyBindingManager</a></li>
+                    <li><a href="command.Menus.html">command.Menus</a></li>
+                    <li><a href="debug.DebugCommandHandlers.html">debug.DebugCommandHandlers</a></li>
+                    <li><a href="document.ChangedDocumentTracker.html">document.ChangedDocumentTracker</a></li>
+                    <li><a href="document.DocumentCommandHandlers.html">document.DocumentCommandHandlers</a></li>
+                    <li><a href="document.DocumentManager.html">document.DocumentManager</a></li>
+                    <li><a href="document.TextRange.html">document.TextRange</a></li>
+                    <li><a href="editor.CodeHintList.html">editor.CodeHintList</a></li>
+                    <li><a href="editor.CodeHintManager.html">editor.CodeHintManager</a></li>
+                    <li><a href="editor.CSSInlineEditor.html">editor.CSSInlineEditor</a></li>
+                    <li><a href="editor.Editor.html">editor.Editor</a></li>
+                    <li><a href="editor.EditorCommandHandlers.html">editor.EditorCommandHandlers</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="editor.EditorUtils.html">editor.EditorUtils</a></li>
+                    <li><a href="editor.InlineTextEditor.html">editor.InlineTextEditor</a></li>
+                    <li><a href="editor.InlineWidget.html">editor.InlineWidget</a></li>
+                    <li><a href="editor.MultiRangeInlineEditor.html">editor.MultiRangeInlineEditor</a></li>
+                    <li><a href="file.FileUtils.html">file.FileUtils</a></li>
+                    <li><a href="file.NativeFileError.html">file.NativeFileError</a></li>
+                    <li><a href="file.NativeFileSystem.html">file.NativeFileSystem</a></li>
+                    <li><a href="help.HelpCommandHandlers.html">help.HelpCommandHandlers</a></li>
+                    <li><a href="language.CSSUtils.html">language.CSSUtils</a></li>
+                    <li><a href="language.HTMLUtils.html">language.HTMLUtils</a></li>
+                    <li><a href="language.JSLintUtils.html">language.JSLintUtils</a></li>
+                    <li><a href="language.JSUtils.html">language.JSUtils</a></li>
+                    <li><a href="LiveDevelopment.Agents.ConsoleAgent.html">LiveDevelopment.Agents.ConsoleAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.CSSAgent.html">LiveDevelopment.Agents.CSSAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMAgent.html">LiveDevelopment.Agents.DOMAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMHelpers.html">LiveDevelopment.Agents.DOMHelpers</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMNode.html">LiveDevelopment.Agents.DOMNode</a></li>
+                    <li><a href="LiveDevelopment.Agents.EditAgent.html">LiveDevelopment.Agents.EditAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.GotoAgent.html">LiveDevelopment.Agents.GotoAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.HighlightAgent.html">LiveDevelopment.Agents.HighlightAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.NetworkAgent.html">LiveDevelopment.Agents.NetworkAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteAgent.html">LiveDevelopment.Agents.RemoteAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteFunctions.html">LiveDevelopment.Agents.RemoteFunctions</a></li>
+                    <li><a href="LiveDevelopment.Agents.ScriptAgent.html">LiveDevelopment.Agents.ScriptAgent</a></li>
+                    <li><a href="LiveDevelopment.Documents.CSSDocument.html">LiveDevelopment.Documents.CSSDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.HTMLDocument.html">LiveDevelopment.Documents.HTMLDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.JSDocument.html">LiveDevelopment.Documents.JSDocument</a></li>
+                    <li><a href="LiveDevelopment.Inspector.Inspector.html">LiveDevelopment.Inspector.Inspector</a></li>
+                    <li><a href="LiveDevelopment.LiveDevelopment.html">LiveDevelopment.LiveDevelopment</a></li>
+                    <li><a href="LiveDevelopment.main.html">LiveDevelopment.main</a></li>
+                    <li><a href="nls.de.strings.html">nls.de.strings</a></li>
+                    <li><a href="nls.de.urls.html">nls.de.urls</a></li>
+                    <li><a href="nls.es.strings.html">nls.es.strings</a></li>
+                    <li><a href="nls.es.urls.html">nls.es.urls</a></li>
+                    <li><a href="nls.fr.strings.html">nls.fr.strings</a></li>
+                    <li><a href="nls.fr.urls.html">nls.fr.urls</a></li>
+                    <li><a href="nls.it.strings.html">nls.it.strings</a></li>
+                    <li><a href="nls.it.urls.html">nls.it.urls</a></li>
+                    <li><a href="nls.ja.strings.html">nls.ja.strings</a></li>
+                    <li><a href="nls.nb.strings.html">nls.nb.strings</a></li>
+                    <li><a href="nls.pt-br.strings.html">nls.pt-br.strings</a></li>
+                    <li><a href="nls.pt-br.urls.html">nls.pt-br.urls</a></li>
+                    <li><a href="nls.root.strings.html">nls.root.strings</a></li>
+                    <li><a href="nls.root.urls.html">nls.root.urls</a></li>
+                    <li><a href="nls.ru.strings.html">nls.ru.strings</a></li>
+                    <li><a href="nls.ru.urls.html">nls.ru.urls</a></li>
+                    <li><a href="nls.strings.html">nls.strings</a></li>
+                    <li><a href="nls.tr.strings.html">nls.tr.strings</a></li>
+                    <li><a href="nls.urls.html">nls.urls</a></li>
+                    <li><a href="preferences.PreferencesDialogs.html">preferences.PreferencesDialogs</a></li>
+                    <li><a href="preferences.PreferencesManager.html">preferences.PreferencesManager</a></li>
+                    <li><a href="preferences.PreferenceStorage.html">preferences.PreferenceStorage</a></li>
+                    <li><a href="project.FileIndexManager.html">project.FileIndexManager</a></li>
+                    <li><a href="project.FileSyncManager.html">project.FileSyncManager</a></li>
+                    <li><a href="project.FileViewController.html">project.FileViewController</a></li>
+                    <li><a href="project.ProjectManager.html">project.ProjectManager</a></li>
+                    <li><a href="project.SidebarView.html">project.SidebarView</a></li>
+                    <li><a href="project.WorkingSetSort.html">project.WorkingSetSort</a></li>
+                    <li><a href="project.WorkingSetView.html">project.WorkingSetView</a></li>
+                    <li><a href="search.FindInFiles.html">search.FindInFiles</a></li>
+                    <li><a href="search.FindReplace.html">search.FindReplace</a></li>
+                    <li><a href="search.QuickOpen.html">search.QuickOpen</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.AppInit.html">utils.AppInit</a></li>
+                    <li><a href="utils.Async.html">utils.Async</a></li>
+                    <li><a href="utils.BuildInfoUtils.html">utils.BuildInfoUtils</a></li>
+                    <li><a href="utils.CollectionUtils.html">utils.CollectionUtils</a></li>
+                    <li><a href="utils.ExtensionLoader.html">utils.ExtensionLoader</a></li>
+                    <li><a href="utils.ExtensionUtils.html">utils.ExtensionUtils</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                    <li><a href="utils.NativeApp.html">utils.NativeApp</a></li>
+                    <li><a href="utils.PerfUtils.html">utils.PerfUtils</a></li>
+                    <li><a href="utils.Resizer.html">utils.Resizer</a></li>
+                    <li><a href="utils.ShellAPI.html">utils.ShellAPI</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="utils.TokenUtils.html">utils.TokenUtils</a></li>
+                    <li><a href="utils.UpdateNotification.html">utils.UpdateNotification</a></li>
+                    <li><a href="utils.UrlParams.html">utils.UrlParams</a></li>
+                    <li><a href="utils.ViewUtils.html">utils.ViewUtils</a></li>
+                    <li><a href="view.ViewCommandHandlers.html">view.ViewCommandHandlers</a></li>
+                    <li><a href="widgets.bootstrap-alerts.html">widgets.bootstrap-alerts</a></li>
+                    <li><a href="widgets.bootstrap-buttons.html">widgets.bootstrap-buttons</a></li>
+                    <li><a href="widgets.bootstrap-dropdown.html">widgets.bootstrap-dropdown</a></li>
+                    <li><a href="widgets.bootstrap-modal.html">widgets.bootstrap-modal</a></li>
+                    <li><a href="widgets.bootstrap-popover.html">widgets.bootstrap-popover</a></li>
+                    <li><a href="widgets.bootstrap-scrollspy.html">widgets.bootstrap-scrollspy</a></li>
+                    <li><a href="widgets.bootstrap-tabs.html">widgets.bootstrap-tabs</a></li>
+                    <li><a href="widgets.bootstrap-twipsy.html">widgets.bootstrap-twipsy</a></li>
+                    <li><a href="widgets.Dialogs.html">widgets.Dialogs</a></li>
+                    <li><a href="widgets.ModalBar.html">widgets.ModalBar</a></li>
+                    <li><a href="widgets.PopUpManager.html">widgets.PopUpManager</a></li>
+                    <li><a href="widgets.StatusBar.html">widgets.StatusBar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <section>
+                <div id="description">
+                    <p>lobal define, $, brackets, window, MouseEvent</p>
+                </div>
+            </section>
+
+            <section id="dependencies">
+                <h3>Dependencies</h3>
+                <ul class="nav nav-list">
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="command.KeyBindingManager.html">command.KeyBindingManager</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="widgets.PopUpManager.html">widgets.PopUpManager</a></li>
+                </ul>
+            </section>
+
+            <section id="variables">
+                <h3>Variables <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <!--<ul>-->
+                <div class="member public">
+
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>AppMenuBar</h4>
+                    <dl>
+                    </dl>
+                    <p>Brackets Application Menu Constants</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var AppMenuBar = {
+        FILE_MENU       : &quot;file-menu&quot;,
+        EDIT_MENU       : &quot;edit-menu&quot;,
+        VIEW_MENU       : &quot;view-menu&quot;,
+        NAVIGATE_MENU   : &quot;navigate-menu&quot;,
+        DEBUG_MENU      : &quot;debug-menu&quot;,     &#x2F;&#x2F; Note: not present in some configurations of Brackets (getMenu() will return null)
+        HELP_MENU       : &quot;help-menu&quot;
+    };</code></pre>
+                </div>
+                <div class="member public">
+
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>BEFORE</h4>
+                    <dl>
+                    </dl>
+                    <p>Insertion position constants<br />Used by addMenu(), addMenuItem(), and addSubMenu() to<br />specify the relative position of a newly created menu object</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var BEFORE =            &quot;before&quot;;
+    var AFTER =             &quot;after&quot;;
+    var FIRST =             &quot;first&quot;;
+    var LAST =              &quot;last&quot;;
+    var FIRST_IN_SECTION =  &quot;firstInSection&quot;;
+    var LAST_IN_SECTION =   &quot;lastInSection&quot;;</code></pre>
+                </div>
+                <div class="member public">
+
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>ContextMenuIds</h4>
+                    <dl>
+                    </dl>
+                    <p>Brackets Context Menu Constants</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var ContextMenuIds = {
+        EDITOR_MENU:        &quot;editor-context-menu&quot;,
+        INLINE_EDITOR_MENU: &quot;inline-editor-context-menu&quot;,
+        PROJECT_MENU:       &quot;project-context-menu&quot;,
+        WORKING_SET_MENU:   &quot;working-set-context-menu&quot;
+    };</code></pre>
+                </div>
+                <div class="member public">
+
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>DIVIDER</h4>
+                    <dl>
+                    </dl>
+                    <p>Other constants</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var DIVIDER = &quot;---&quot;;</code></pre>
+                </div>
+                <div class="member public">
+
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>MenuSection</h4>
+                    <dl>
+                    </dl>
+                    <p>Brackets Application Menu Section Constants<br />It is preferred that plug-ins specify the location of new MenuItems<br />in terms of a menu section rather than a specific MenuItem. This provides<br />looser coupling to Bracket's internal MenuItems and makes menu organization<br />more semantic. <br />Use these constants as the "relativeID" parameter when calling addMenuItem() and<br />specify a position of FIRST_IN_SECTION or LAST_IN_SECTION.</p>
+
+<p>Menu sections are denoted by dividers or the beginning/end of a menu</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var MenuSection = {
+        &#x2F;&#x2F; Menu Section                     Command ID to mark the section
+        FILE_OPEN_CLOSE_COMMANDS:           {sectionMarker: Commands.FILE_NEW},
+        FILE_SAVE_COMMANDS:                 {sectionMarker: Commands.FILE_SAVE},
+        FILE_LIVE:                          {sectionMarker: Commands.FILE_LIVE_FILE_PREVIEW},
+
+        EDIT_SELECTION_COMMANDS:            {sectionMarker: Commands.EDIT_SELECT_ALL},
+        EDIT_FIND:                          {sectionMarker: Commands.EDIT_FIND},
+        EDIT_REPLACE_COMMANDS:              {sectionMarker: Commands.EDIT_REPLACE},
+        EDIT_MODIFY_SELECTION:              {sectionMarker: Commands.EDIT_INDENT},
+
+        VIEW_HIDESHOW_COMMANDS:             {sectionMarker: Commands.VIEW_HIDE_SIDEBAR},
+        VIEW_FONTSIZE_COMMANDS:             {sectionMarker: Commands.VIEW_INCREASE_FONT_SIZE},
+
+        NAVIGATE_GOTO_COMMANDS:             {sectionMarker: Commands.NAVIGATE_QUICK_OPEN},
+        NAVIGATE_QUICK_EDIT_COMMANDS:       {sectionMarker: Commands.TOGGLE_QUICK_EDIT}
+    };</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>contextMenuMap</h4>
+                    <dl>
+                            <dt>Type</dt>
+                                <dd>Object.<string, </dd>
+                    </dl>
+                    <p>Maps contextMenuID's to ContextMenu objects</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var contextMenuMap = {};</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>menuItemMap</h4>
+                    <dl>
+                            <dt>Type</dt>
+                                <dd>Object.<string, </dd>
+                    </dl>
+                    <p>Maps menuItemID's to MenuItem objects</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var menuItemMap = {};</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>menuMap</h4>
+                    <dl>
+                            <dt>Type</dt>
+                                <dd>Object.<string, </dd>
+                    </dl>
+                    <p>Maps menuID's to Menu objects</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var menuMap = {};</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>project_cmenu</h4>
+                    <dl>
+                    </dl>
+                    <p>Context Menus</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var project_cmenu = registerContextMenu(ContextMenuIds.PROJECT_MENU);
+        project_cmenu.addMenuItem(Commands.FILE_NEW);
+        project_cmenu.addMenuItem(Commands.FILE_NEW_FOLDER);
+        project_cmenu.addMenuItem(Commands.FILE_RENAME);
+        project_cmenu.addMenuDivider();
+        project_cmenu.addMenuItem(Commands.EDIT_FIND_IN_SUBTREE);
+
+        var working_set_cmenu = registerContextMenu(ContextMenuIds.WORKING_SET_MENU);
+        working_set_cmenu.addMenuItem(Commands.FILE_CLOSE);
+        working_set_cmenu.addMenuItem(Commands.FILE_SAVE);
+        working_set_cmenu.addMenuItem(Commands.FILE_RENAME);
+        working_set_cmenu.addMenuItem(Commands.NAVIGATE_SHOW_IN_FILE_TREE);
+        working_set_cmenu.addMenuDivider();
+        working_set_cmenu.addMenuItem(Commands.EDIT_FIND_IN_SUBTREE);
+        working_set_cmenu.addMenuDivider();
+        working_set_cmenu.addMenuItem(Commands.SORT_WORKINGSET_BY_ADDED);
+        working_set_cmenu.addMenuItem(Commands.SORT_WORKINGSET_BY_NAME);
+        working_set_cmenu.addMenuItem(Commands.SORT_WORKINGSET_BY_TYPE);
+        working_set_cmenu.addMenuDivider();
+        working_set_cmenu.addMenuItem(Commands.SORT_WORKINGSET_AUTO);
+
+        var editor_cmenu = registerContextMenu(ContextMenuIds.EDITOR_MENU);
+        editor_cmenu.addMenuItem(Commands.TOGGLE_QUICK_EDIT);
+        editor_cmenu.addMenuItem(Commands.EDIT_SELECT_ALL);
+
+        var inline_editor_cmenu = registerContextMenu(ContextMenuIds.INLINE_EDITOR_MENU);
+        inline_editor_cmenu.addMenuItem(Commands.TOGGLE_QUICK_EDIT);
+        inline_editor_cmenu.addMenuItem(Commands.EDIT_SELECT_ALL);
+        inline_editor_cmenu.addMenuDivider();
+        inline_editor_cmenu.addMenuItem(Commands.QUICK_EDIT_PREV_MATCH);
+        inline_editor_cmenu.addMenuItem(Commands.QUICK_EDIT_NEXT_MATCH);</code></pre>
+                </div>
+                <!--</ul>-->
+            </section>
+
+            <section id="functions">
+                <h3>Functions <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>addMenu</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>name</dt>
+                            <dd>(<em>!string</em>) - - display text for menu </dd>
+                            <dt>id</dt>
+                            <dd>(<em>!string</em>) - - unique identifier for a menu.</dd>
+                            <dt>position</dt>
+                            <dd>(<em>?string</em>) - - constant defining the position of new the Menu relative</dd>
+                            <dt>relativeID</dt>
+                            <dd>(<em>?string</em>) - - id of Menu the new Menu will be positioned relative to. Required</dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>?Menu</em>) - the newly created Menu</dd>
+                    </dl>
+                    <p>Adds a top-level menu to the application menu bar which may be native or HTML-based.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function addMenu(name, id, position, relativeID) {
+        name = StringUtils.htmlEscape(name);
+        var $menubar = $(&quot;#main-toolbar .nav&quot;),
+            menu;
+
+        if (!name || !id) {
+            console.error(&quot;call to addMenu() is missing required parameters&quot;);
+            return null;
+        }
+        
+        &#x2F;&#x2F; Guard against duplicate menu ids
+        if (menuMap[id]) {
+            console.log(&quot;Menu added with same name and id of existing Menu: &quot; + id);
+            return null;
+        }
+
+        menu = new Menu(id);
+        menuMap[id] = menu;
+
+        var $toggle = $(&quot;&lt;a href=&#39;#&#39; class=&#39;dropdown-toggle&#39;&gt;&quot; + name + &quot;&lt;&#x2F;a&gt;&quot;),
+            $popUp = $(&quot;&lt;ul class=&#39;dropdown-menu&#39;&gt;&lt;&#x2F;ul&gt;&quot;),
+            $newMenu = $(&quot;&lt;li class=&#39;dropdown&#39; id=&#39;&quot; + id + &quot;&#39;&gt;&lt;&#x2F;li&gt;&quot;).append($toggle).append($popUp);
+
+        &#x2F;&#x2F; Insert menu
+        var $relativeElement = relativeID &amp;&amp; $(_getHTMLMenu(relativeID));
+        _insertInList($menubar, $newMenu, position, $relativeElement);
+        
+        &#x2F;&#x2F; Install ESC key handling
+        PopUpManager.addPopUp($popUp, closeAll, false);
+
+        &#x2F;&#x2F; todo error handling
+
+        return menu;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>closeAll</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Closes all menus that are open</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function closeAll() {
+        $(&quot;.dropdown&quot;).removeClass(&quot;open&quot;);
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>getContextMenu</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>id</dt>
+                            <dd>(<em>string</em>) - </dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>ContextMenu</em>) - </dd>
+                    </dl>
+                    <p>Retrieves the ContextMenu object for the corresponding id. </p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function getContextMenu(id) {
+        return contextMenuMap[id];
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>getMenu</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>id</dt>
+                            <dd>(<em>string</em>) - </dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>Menu</em>) - </dd>
+                    </dl>
+                    <p>Retrieves the Menu object for the corresponding id. </p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function getMenu(id) {
+        return menuMap[id];
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>getMenuItem</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>id</dt>
+                            <dd>(<em>string</em>) - </dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>MenuItem</em>) - </dd>
+                    </dl>
+                    <p>Retrieves the MenuItem object for the corresponding id. </p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function getMenuItem(id) {
+        return menuItemMap[id];
+    }
+
+    function _getHTMLMenu(id) {
+        return $(&quot;#&quot; + StringUtils.jQueryIdEscape(id)).get(0);
+    }
+
+    function _getHTMLMenuItem(id) {
+        return $(&quot;#&quot; + StringUtils.jQueryIdEscape(id)).get(0);
+    }
+    
+    function _addKeyBindingToMenuItem($menuItem, key, displayKey) {
+        var $shortcut = $menuItem.find(&quot;.menu-shortcut&quot;);
+        
+        if ($shortcut.length === 0) {
+            $shortcut = $(&quot;&lt;span class=&#39;menu-shortcut&#39; &#x2F;&gt;&quot;);
+            $menuItem.append($shortcut);
+        }
+        
+        $shortcut.data(&quot;key&quot;, key);
+        $shortcut.text(KeyBindingManager.formatKeyDescriptor(displayKey));
+    }
+    
+    function _addExistingKeyBinding(menuItem) {
+        var bindings = KeyBindingManager.getKeyBindings(menuItem.getCommand().getID()),
+            binding = null;
+        
+        if (bindings.length &gt; 0) {
+            &#x2F;&#x2F; add the latest key binding
+            binding = bindings[bindings.length - 1];
+            _addKeyBindingToMenuItem($(_getHTMLMenuItem(menuItem.id)), binding.key, binding.displayKey);
+        }
+        
+        return binding;
+    }
+    
+    var _menuDividerIDCount = 1;
+    function _getNextMenuItemDividerID() {
+        return &quot;brackets-menuDivider-&quot; + _menuDividerIDCount++;
+    }
+
+    &#x2F;&#x2F; Help function for inserting elements into a list
+    function _insertInList($list, $element, position, $relativeElement) {
+        &#x2F;&#x2F; Determine where to insert. Default is LAST.
+        var inserted = false;
+        if (position) {
+
+            &#x2F;&#x2F; Adjust relative position for menu section positions since $relativeElement
+            &#x2F;&#x2F; has already been resolved by _getRelativeMenuItem() to a menuItem
+            if (position === FIRST_IN_SECTION) {
+                position = BEFORE;
+            } else if (position === LAST_IN_SECTION) {
+                position = AFTER;
+            }
+
+            if (position === FIRST) {
+                $list.prepend($element);
+                inserted = true;
+            } else if ($relativeElement &amp;&amp; $relativeElement.length &gt; 0) {
+                if (position === AFTER) {
+                    $relativeElement.after($element);
+                    inserted = true;
+                } else if (position === BEFORE) {
+                    $relativeElement.before($element);
+                    inserted = true;
+                }
+            }
+        }
+
+        &#x2F;&#x2F; Default to LAST
+        if (!inserted) {
+            $list.append($element);
+        }
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>registerContextMenu</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>id</dt>
+                            <dd>(<em>string</em>) - - unique identifier for context menu.</dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>?ContextMenu</em>) - the newly created context menu</dd>
+                    </dl>
+                    <p>Registers new context menu with Brackets. </p>
+
+<p>Extensions should generally use the predefined context menus built into Brackets. Use this <br />API to add a new context menu to UI that is specific to an extension.</p>
+
+<p>After registering  a new context menu clients should:<br />     - use addMenuItem() to add items to the context menu<br />     - call open() to show the context menu. <br />     For example:<br />     $("#my_ID").contextmenu(function (e) {<br />         if (e.which === 3) {<br />             my_cmenu.open(e);<br />         }<br />     });</p>
+
+<p>To make menu items be contextual to things like selection, listen for the "beforeContextMenuOpen"<br />to make changes to Command objects before the context menu is shown. MenuItems are views of<br />Commands, which control a MenuItem's name, enabled state, and checked state.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function registerContextMenu(id) {
+        if (!id) {
+            console.error(&quot;call to registerContextMenu() is missing required parameters&quot;);
+            return null;
+        }
+        
+        &#x2F;&#x2F; Guard against duplicate menu ids
+        if (contextMenuMap[id]) {
+            console.log(&quot;Context Menu added with same name and id of existing Context Menu: &quot; + id);
+            return null;
+        }
+
+        var cmenu = new ContextMenu(id);
+        contextMenuMap[id] = cmenu;
+        return cmenu;
+    }</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

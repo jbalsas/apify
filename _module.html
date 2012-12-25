@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{name}}</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/jquery-1.7.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="page-header">
+                <h1>{{name}}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <div class="left-section">
+                <ul class="nav nav-list">
+                    <li class="nav-header">
+                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules ({{otherModulesCount}})</a>
+                    </li>
+                </ul>
+                <ul id="other-module" class="nav nav-list">
+                    {{#otherModules}}
+                    <li><a href="{{1}}.html">{{1}}</a></li>
+                    {{/otherModules}}
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <section>
+                <div id="description">
+                    {{{description}}}
+                </div>
+            </section>
+
+            <section id="dependencies">
+                <h3>Dependencies</h3>
+                <ul class="nav nav-list">
+                    {{#dependencies}}
+                    <li><a href="{{.}}.html">{{.}}</a></li>
+                    {{/dependencies}}
+                </ul>
+            </section>
+
+            <section id="variables">
+                <h3>Variables <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <!--<ul>-->
+                {{#variables}}
+                <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+
+                    <span class="pull-right scope">
+                        {{#isPrivate}}Private{{/isPrivate}}
+                        {{#isPublicAPI}}Public API{{/isPublicAPI}}
+                    </span>
+                    <h4>{{ctx.name}}</h4>
+                    <dl>
+                    {{#tags}}
+                        {{#.}}
+                            <dt>{{key}}</dt>
+                            {{#value}}
+                                <dd>{{{value}}}</dd>
+                            {{/value}}
+                        {{/.}}
+                    {{/tags}}
+                    </dl>
+                    {{{description.full}}}
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>{{code}}</code></pre>
+                </div>
+                {{/variables}}
+                <!--</ul>-->
+            </section>
+
+            <section id="functions">
+                <h3>Functions <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                {{#functions}}
+                <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+                    <span class="pull-right scope">
+                        {{#isPrivate}}Private{{/isPrivate}}
+                        {{#isPublicAPI}}Public API{{/isPublicAPI}}
+                    </span>
+                    <h4>{{ctx.name}}</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                        {{#params}}
+                            <dt>{{name}}</dt>
+                            <dd>(<em>{{types}}</em>) - {{{description}}}</dd>
+                        {{/params}}
+                    </dl>
+                    {{{description.full}}}
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>{{code}}</code></pre>
+                </div>
+                {{/functions}}
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

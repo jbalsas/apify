@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>utils.UpdateNotification</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/jquery-1.7.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="page-header">
+                <h1>utils.UpdateNotification</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <div class="left-section">
+                <ul class="nav nav-list">
+                    <li class="nav-header">
+                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (109)</a>
+                    </li>
+                </ul>
+                <ul id="other-module" class="nav nav-list">
+                    <li><a href="brackets.html">brackets</a></li>
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="command.KeyBindingManager.html">command.KeyBindingManager</a></li>
+                    <li><a href="command.Menus.html">command.Menus</a></li>
+                    <li><a href="debug.DebugCommandHandlers.html">debug.DebugCommandHandlers</a></li>
+                    <li><a href="document.ChangedDocumentTracker.html">document.ChangedDocumentTracker</a></li>
+                    <li><a href="document.DocumentCommandHandlers.html">document.DocumentCommandHandlers</a></li>
+                    <li><a href="document.DocumentManager.html">document.DocumentManager</a></li>
+                    <li><a href="document.TextRange.html">document.TextRange</a></li>
+                    <li><a href="editor.CodeHintList.html">editor.CodeHintList</a></li>
+                    <li><a href="editor.CodeHintManager.html">editor.CodeHintManager</a></li>
+                    <li><a href="editor.CSSInlineEditor.html">editor.CSSInlineEditor</a></li>
+                    <li><a href="editor.Editor.html">editor.Editor</a></li>
+                    <li><a href="editor.EditorCommandHandlers.html">editor.EditorCommandHandlers</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="editor.EditorUtils.html">editor.EditorUtils</a></li>
+                    <li><a href="editor.InlineTextEditor.html">editor.InlineTextEditor</a></li>
+                    <li><a href="editor.InlineWidget.html">editor.InlineWidget</a></li>
+                    <li><a href="editor.MultiRangeInlineEditor.html">editor.MultiRangeInlineEditor</a></li>
+                    <li><a href="file.FileUtils.html">file.FileUtils</a></li>
+                    <li><a href="file.NativeFileError.html">file.NativeFileError</a></li>
+                    <li><a href="file.NativeFileSystem.html">file.NativeFileSystem</a></li>
+                    <li><a href="help.HelpCommandHandlers.html">help.HelpCommandHandlers</a></li>
+                    <li><a href="language.CSSUtils.html">language.CSSUtils</a></li>
+                    <li><a href="language.HTMLUtils.html">language.HTMLUtils</a></li>
+                    <li><a href="language.JSLintUtils.html">language.JSLintUtils</a></li>
+                    <li><a href="language.JSUtils.html">language.JSUtils</a></li>
+                    <li><a href="LiveDevelopment.Agents.ConsoleAgent.html">LiveDevelopment.Agents.ConsoleAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.CSSAgent.html">LiveDevelopment.Agents.CSSAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMAgent.html">LiveDevelopment.Agents.DOMAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMHelpers.html">LiveDevelopment.Agents.DOMHelpers</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMNode.html">LiveDevelopment.Agents.DOMNode</a></li>
+                    <li><a href="LiveDevelopment.Agents.EditAgent.html">LiveDevelopment.Agents.EditAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.GotoAgent.html">LiveDevelopment.Agents.GotoAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.HighlightAgent.html">LiveDevelopment.Agents.HighlightAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.NetworkAgent.html">LiveDevelopment.Agents.NetworkAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteAgent.html">LiveDevelopment.Agents.RemoteAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteFunctions.html">LiveDevelopment.Agents.RemoteFunctions</a></li>
+                    <li><a href="LiveDevelopment.Agents.ScriptAgent.html">LiveDevelopment.Agents.ScriptAgent</a></li>
+                    <li><a href="LiveDevelopment.Documents.CSSDocument.html">LiveDevelopment.Documents.CSSDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.HTMLDocument.html">LiveDevelopment.Documents.HTMLDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.JSDocument.html">LiveDevelopment.Documents.JSDocument</a></li>
+                    <li><a href="LiveDevelopment.Inspector.Inspector.html">LiveDevelopment.Inspector.Inspector</a></li>
+                    <li><a href="LiveDevelopment.LiveDevelopment.html">LiveDevelopment.LiveDevelopment</a></li>
+                    <li><a href="LiveDevelopment.main.html">LiveDevelopment.main</a></li>
+                    <li><a href="nls.de.strings.html">nls.de.strings</a></li>
+                    <li><a href="nls.de.urls.html">nls.de.urls</a></li>
+                    <li><a href="nls.es.strings.html">nls.es.strings</a></li>
+                    <li><a href="nls.es.urls.html">nls.es.urls</a></li>
+                    <li><a href="nls.fr.strings.html">nls.fr.strings</a></li>
+                    <li><a href="nls.fr.urls.html">nls.fr.urls</a></li>
+                    <li><a href="nls.it.strings.html">nls.it.strings</a></li>
+                    <li><a href="nls.it.urls.html">nls.it.urls</a></li>
+                    <li><a href="nls.ja.strings.html">nls.ja.strings</a></li>
+                    <li><a href="nls.nb.strings.html">nls.nb.strings</a></li>
+                    <li><a href="nls.pt-br.strings.html">nls.pt-br.strings</a></li>
+                    <li><a href="nls.pt-br.urls.html">nls.pt-br.urls</a></li>
+                    <li><a href="nls.root.strings.html">nls.root.strings</a></li>
+                    <li><a href="nls.root.urls.html">nls.root.urls</a></li>
+                    <li><a href="nls.ru.strings.html">nls.ru.strings</a></li>
+                    <li><a href="nls.ru.urls.html">nls.ru.urls</a></li>
+                    <li><a href="nls.strings.html">nls.strings</a></li>
+                    <li><a href="nls.tr.strings.html">nls.tr.strings</a></li>
+                    <li><a href="nls.urls.html">nls.urls</a></li>
+                    <li><a href="preferences.PreferencesDialogs.html">preferences.PreferencesDialogs</a></li>
+                    <li><a href="preferences.PreferencesManager.html">preferences.PreferencesManager</a></li>
+                    <li><a href="preferences.PreferenceStorage.html">preferences.PreferenceStorage</a></li>
+                    <li><a href="project.FileIndexManager.html">project.FileIndexManager</a></li>
+                    <li><a href="project.FileSyncManager.html">project.FileSyncManager</a></li>
+                    <li><a href="project.FileViewController.html">project.FileViewController</a></li>
+                    <li><a href="project.ProjectManager.html">project.ProjectManager</a></li>
+                    <li><a href="project.SidebarView.html">project.SidebarView</a></li>
+                    <li><a href="project.WorkingSetSort.html">project.WorkingSetSort</a></li>
+                    <li><a href="project.WorkingSetView.html">project.WorkingSetView</a></li>
+                    <li><a href="search.FindInFiles.html">search.FindInFiles</a></li>
+                    <li><a href="search.FindReplace.html">search.FindReplace</a></li>
+                    <li><a href="search.QuickOpen.html">search.QuickOpen</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.AppInit.html">utils.AppInit</a></li>
+                    <li><a href="utils.Async.html">utils.Async</a></li>
+                    <li><a href="utils.BuildInfoUtils.html">utils.BuildInfoUtils</a></li>
+                    <li><a href="utils.CollectionUtils.html">utils.CollectionUtils</a></li>
+                    <li><a href="utils.ExtensionLoader.html">utils.ExtensionLoader</a></li>
+                    <li><a href="utils.ExtensionUtils.html">utils.ExtensionUtils</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                    <li><a href="utils.NativeApp.html">utils.NativeApp</a></li>
+                    <li><a href="utils.PerfUtils.html">utils.PerfUtils</a></li>
+                    <li><a href="utils.Resizer.html">utils.Resizer</a></li>
+                    <li><a href="utils.ShellAPI.html">utils.ShellAPI</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="utils.TokenUtils.html">utils.TokenUtils</a></li>
+                    <li><a href="utils.UpdateNotification.html">utils.UpdateNotification</a></li>
+                    <li><a href="utils.UrlParams.html">utils.UrlParams</a></li>
+                    <li><a href="utils.ViewUtils.html">utils.ViewUtils</a></li>
+                    <li><a href="view.ViewCommandHandlers.html">view.ViewCommandHandlers</a></li>
+                    <li><a href="widgets.bootstrap-alerts.html">widgets.bootstrap-alerts</a></li>
+                    <li><a href="widgets.bootstrap-buttons.html">widgets.bootstrap-buttons</a></li>
+                    <li><a href="widgets.bootstrap-dropdown.html">widgets.bootstrap-dropdown</a></li>
+                    <li><a href="widgets.bootstrap-modal.html">widgets.bootstrap-modal</a></li>
+                    <li><a href="widgets.bootstrap-popover.html">widgets.bootstrap-popover</a></li>
+                    <li><a href="widgets.bootstrap-scrollspy.html">widgets.bootstrap-scrollspy</a></li>
+                    <li><a href="widgets.bootstrap-tabs.html">widgets.bootstrap-tabs</a></li>
+                    <li><a href="widgets.bootstrap-twipsy.html">widgets.bootstrap-twipsy</a></li>
+                    <li><a href="widgets.Dialogs.html">widgets.Dialogs</a></li>
+                    <li><a href="widgets.ModalBar.html">widgets.ModalBar</a></li>
+                    <li><a href="widgets.PopUpManager.html">widgets.PopUpManager</a></li>
+                    <li><a href="widgets.StatusBar.html">widgets.StatusBar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <section>
+                <div id="description">
+                    <p>Utilities functions for displaying update notifications</p>
+                </div>
+            </section>
+
+            <section id="dependencies">
+                <h3>Dependencies</h3>
+                <ul class="nav nav-list">
+                    <li><a href="preferences.PreferencesManager.html">preferences.PreferencesManager</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="text!htmlContent.update-dialog.html.html">text!htmlContent.update-dialog.html</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.NativeApp.html">utils.NativeApp</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="widgets.Dialogs.html">widgets.Dialogs</a></li>
+                </ul>
+            </section>
+
+            <section id="variables">
+                <h3>Variables <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <!--<ul>-->
+                <div class="member private">
+
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_addedClickHandler</h4>
+                    <dl>
+                            <dt>Private</dt>
+                    </dl>
+                    <p>Flag that indicates if we've added a click handler to the update notification icon.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var _addedClickHandler = false;</code></pre>
+                </div>
+                <!--</ul>-->
+            </section>
+
+            <section id="functions">
+                <h3>Functions <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_getUpdateInformation</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Get a data structure that has information for all builds of Brackets.</p>
+
+<p>If force is true, the information is always fetched from _versionInfoURL.<br />If force is false, we try to use cached information. If more than<br />24 hours have passed since the last fetch, or if cached data can't be found, <br />the data is fetched again.</p>
+
+<p>If new data is fetched and dontCache is false, the data is saved in preferences<br />for quick fetching later.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _getUpdateInformation(force, dontCache) {
+        var result = new $.Deferred();
+        var fetchData = false;
+        var data;
+        
+        &#x2F;&#x2F; If force is true, always fetch
+        if (force) {
+            fetchData = true;
+        }
+        
+        &#x2F;&#x2F; If we don&#39;t have data saved in prefs, fetch
+        data = _prefs.getValue(&quot;updateInfo&quot;);
+        if (!data) {
+            fetchData = true;
+        }
+        
+        &#x2F;&#x2F; If more than 24 hours have passed since our last fetch, fetch again
+        if ((new Date()).getTime() &gt; _lastInfoURLFetchTime + (1000 * 60 * 60 * 24)) {
+            fetchData = true;
+        }
+        
+        if (fetchData) {
+            $.ajax(_versionInfoURL, {
+                dataType: &quot;text&quot;,
+                cache: false,
+                complete: function (jqXHR, status) {
+                    if (status === &quot;success&quot;) {
+                        try {
+                            data = JSON.parse(jqXHR.responseText);
+                            if (!dontCache) {
+                                _lastInfoURLFetchTime = (new Date()).getTime();
+                                _prefs.setValue(&quot;lastInfoURLFetchTime&quot;, _lastInfoURLFetchTime);
+                                _prefs.setValue(&quot;updateInfo&quot;, data);
+                            }
+                            result.resolve(data);
+                        } catch (e) {
+                            console.log(&quot;Error parsing version information&quot;);
+                            console.log(e);
+                            result.reject();
+                        }
+                    }
+                },
+                error: function (jqXHR, status, error) {
+                    &#x2F;&#x2F; When loading data for unit tests, the error handler is 
+                    &#x2F;&#x2F; called but the responseText is valid. Try to use it here,
+                    &#x2F;&#x2F; but *don&#39;t* save the results in prefs.
+                    
+                    if (!jqXHR.responseText) {
+                        &#x2F;&#x2F; Text is NULL or empty string, reject().
+                        result.reject();
+                        return;
+                    }
+                    
+                    try {
+                        data = JSON.parse(jqXHR.responseText);
+                        result.resolve(data);
+                    } catch (e) {
+                        result.reject();
+                    }
+                }
+            });
+        } else {
+            result.resolve(data);
+        }
+        
+        return result.promise();
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_showUpdateNotificationDialog</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Show a dialog that shows the update</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _showUpdateNotificationDialog(updates) {
+        Dialogs.showModalDialogUsingTemplate(Mustache.render(UpdateDialogTemplate, Strings))
+            .done(function (id) {
+                if (id === Dialogs.DIALOG_BTN_DOWNLOAD) {
+                    &#x2F;&#x2F; The first entry in the updates array has the latest download link
+                    NativeApp.openURLInDefaultBrowser(updates[0].downloadURL);
+                }
+            });
+        
+        &#x2F;&#x2F; Populate the update data
+        var $dlg = $(&quot;.update-dialog.instance&quot;);
+        var $updateList = $dlg.find(&quot;.update-info&quot;);
+        
+        &#x2F;&#x2F; TODO: Use a template instead of hand-rolling HTML code
+        updates.forEach(function (item, index) {
+            var $features = $(&quot;&lt;ul&gt;&quot;);
+            
+            item.newFeatures.forEach(function (feature, index) {
+                $features.append(
+                    &quot;&lt;li&gt;&lt;b&gt;&quot; +
+                        StringUtils.htmlEscape(feature.name) +
+                        &quot;&lt;&#x2F;b&gt; - &quot; +
+                        StringUtils.htmlEscape(feature.description) +
+                        &quot;&lt;&#x2F;li&gt;&quot;
+                );
+            });
+            
+            var $item = $(&quot;&lt;div&gt;&quot;)
+                .append(&quot;&lt;h3&gt;&quot; +
+                        StringUtils.htmlEscape(item.versionString) +
+                        &quot; - &quot; +
+                        StringUtils.htmlEscape(item.dateString) +
+                        &quot; (&lt;a href=&#39;#&#39; data-url=&#39;&quot; + item.releaseNotesURL + &quot;&#39;&gt;&quot; +
+                        Strings.RELEASE_NOTES +
+                        &quot;&lt;&#x2F;a&gt;)&lt;&#x2F;h3&gt;&quot;)
+                .append($features)
+                .appendTo($updateList);
+        });
+        
+        $dlg.on(&quot;click&quot;, &quot;a&quot;, function (e) {
+            var url = $(e.target).attr(&quot;data-url&quot;);
+            
+            if (url) {
+                &#x2F;&#x2F; Make sure the URL has a domain that we know about
+                if (&#x2F;(brackets\.io|github\.com|adobe\.com)$&#x2F;i.test(PathUtils.parseUrl(url).hostname)) {
+                    NativeApp.openURLInDefaultBrowser(url);
+                }
+            }
+        });
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_stripOldVersionInfo</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Return a new array of version information that is newer than "buildNumber".<br />Returns null if there is no new version information.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _stripOldVersionInfo(versionInfo, buildNumber) {
+        &#x2F;&#x2F; Do a simple linear search. Since we are going in reverse-chronological order, we
+        &#x2F;&#x2F; should get through the search quickly.
+        var lastIndex = 0;
+        var len = versionInfo.length;
+        
+        while (lastIndex &lt; len) {
+            if (versionInfo[lastIndex].buildNumber &lt;= buildNumber) {
+                break;
+            }
+            lastIndex++;
+        }
+        
+        if (lastIndex &gt; 0) {
+            return versionInfo.slice(0, lastIndex);
+        }
+        
+        &#x2F;&#x2F; No new version info
+        return null;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>checkForUpdate</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>force</dt>
+                            <dd>(<em>boolean</em>) - If true, always show the notification dialog.</dd>
+                            <dt>_testValues</dt>
+                            <dd>(<em>Object</em>) - This should only be used for testing purposes. See comments for details.</dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>$.Promise</em>) - jQuery Promise object that is resolved or rejected after the update check is complete.</dd>
+                    </dl>
+                    <p>Check for updates. If "force" is true, update notification dialogs are always displayed <br />(if an update is available). If "force" is false, the update notification is only <br />displayed for newly available updates.</p>
+
+<p>If an update is available, show the "update available" notification icon in the title bar.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function checkForUpdate(force, _testValues) {
+        &#x2F;&#x2F; The second param, if non-null, is an Object containing value overrides. Values
+        &#x2F;&#x2F; in the object temporarily override the local values. This should *only* be used for testing.
+        &#x2F;&#x2F; If any overrides are set, permanent changes are not made (including showing
+        &#x2F;&#x2F; the update notification icon and saving prefs).
+        var oldValues;
+        var usingOverrides = false; &#x2F;&#x2F; true if any of the values are overridden.
+        var result = new $.Deferred();
+        
+        if (_testValues) {
+            oldValues = {};
+            
+            if (_testValues.hasOwnProperty(&quot;_buildNumber&quot;)) {
+                oldValues._buildNumber = _buildNumber;
+                _buildNumber = _testValues._buildNumber;
+                usingOverrides = true;
+            }
+
+            if (_testValues.hasOwnProperty(&quot;_lastNotifiedBuildNumber&quot;)) {
+                oldValues._lastNotifiedBuildNumber = _lastNotifiedBuildNumber;
+                _lastNotifiedBuildNumber = _testValues._lastNotifiedBuildNumber;
+                usingOverrides = true;
+            }
+
+            if (_testValues.hasOwnProperty(&quot;_versionInfoURL&quot;)) {
+                oldValues._versionInfoURL = _versionInfoURL;
+                _versionInfoURL = _testValues._versionInfoURL;
+                usingOverrides = true;
+            }
+        }
+        
+        _getUpdateInformation(force || usingOverrides, usingOverrides)
+            .done(function (versionInfo) {
+                &#x2F;&#x2F; Get all available updates
+                var allUpdates = _stripOldVersionInfo(versionInfo, _buildNumber);
+                
+                &#x2F;&#x2F; When running directly from GitHub source (as opposed to 
+                &#x2F;&#x2F; an installed build), _buildNumber is 0. In this case, if the
+                &#x2F;&#x2F; test is not forced, don&#39;t show the update notification icon or
+                &#x2F;&#x2F; dialog.
+                if (_buildNumber === 0 &amp;&amp; !force) {
+                    result.resolve();
+                    return;
+                }
+                
+                if (allUpdates) {
+                    &#x2F;&#x2F; Always show the &quot;update available&quot; icon if any updates are available
+                    var $updateNotification = $(&quot;#update-notification&quot;);
+                    
+                    $updateNotification.css(&quot;display&quot;, &quot;inline-block&quot;);
+                    if (!_addedClickHandler) {
+                        _addedClickHandler = true;
+                        $updateNotification.on(&quot;click&quot;, function () {
+                            checkForUpdate(true);
+                        });
+                    }
+                
+                    &#x2F;&#x2F; Only show the update dialog if force = true, or if the user hasn&#39;t been 
+                    &#x2F;&#x2F; alerted of this update
+                    if (force || allUpdates[0].buildNumber &gt;  _lastNotifiedBuildNumber) {
+                        _showUpdateNotificationDialog(allUpdates);
+                        
+                        &#x2F;&#x2F; Update prefs with the last notified build number
+                        _lastNotifiedBuildNumber = allUpdates[0].buildNumber;
+                        &#x2F;&#x2F; Don&#39;t save prefs is we have overridden values
+                        if (!usingOverrides) {
+                            _prefs.setValue(&quot;lastNotifiedBuildNumber&quot;, _lastNotifiedBuildNumber);
+                        }
+                    }
+                } else if (force) {
+                    &#x2F;&#x2F; No updates are available. If force == true, let the user know.
+                    Dialogs.showModalDialog(
+                        Dialogs.DIALOG_ID_ERROR,
+                        Strings.NO_UPDATE_TITLE,
+                        Strings.NO_UPDATE_MESSAGE
+                    );
+                }
+        
+                if (oldValues) {
+                    if (oldValues.hasOwnProperty(&quot;_buildNumber&quot;)) {
+                        _buildNumber = oldValues._buildNumber;
+                    }
+                    if (oldValues.hasOwnProperty(&quot;_lastNotifiedBuildNumber&quot;)) {
+                        _lastNotifiedBuildNumber = oldValues._lastNotifiedBuildNumber;
+                    }
+                    if (oldValues.hasOwnProperty(&quot;_versionInfoURL&quot;)) {
+                        _versionInfoURL = oldValues._versionInfoURL;
+                    }
+                }
+                result.resolve();
+            })
+            .fail(function () {
+                &#x2F;&#x2F; Error fetching the update data. If this is a forced check, alert the user
+                if (force) {
+                    Dialogs.showModalDialog(
+                        Dialogs.DIALOG_ID_ERROR,
+                        Strings.ERROR_FETCHING_UPDATE_INFO_TITLE,
+                        Strings.ERROR_FETCHING_UPDATE_INFO_MSG
+                    );
+                }
+                result.reject();
+            });
+        
+        return result.promise();
+    }
+    
+    &#x2F;&#x2F; Append locale to version info URL
+    _versionInfoURL = brackets.config.update_info_url + brackets.getLocale() + &quot;.json&quot;;
+    
+    &#x2F;&#x2F; Define public API
+    exports.checkForUpdate = checkForUpdate;
+});</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

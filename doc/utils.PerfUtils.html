@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>utils.PerfUtils</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/jquery-1.7.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="page-header">
+                <h1>utils.PerfUtils</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <div class="left-section">
+                <ul class="nav nav-list">
+                    <li class="nav-header">
+                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (109)</a>
+                    </li>
+                </ul>
+                <ul id="other-module" class="nav nav-list">
+                    <li><a href="brackets.html">brackets</a></li>
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="command.KeyBindingManager.html">command.KeyBindingManager</a></li>
+                    <li><a href="command.Menus.html">command.Menus</a></li>
+                    <li><a href="debug.DebugCommandHandlers.html">debug.DebugCommandHandlers</a></li>
+                    <li><a href="document.ChangedDocumentTracker.html">document.ChangedDocumentTracker</a></li>
+                    <li><a href="document.DocumentCommandHandlers.html">document.DocumentCommandHandlers</a></li>
+                    <li><a href="document.DocumentManager.html">document.DocumentManager</a></li>
+                    <li><a href="document.TextRange.html">document.TextRange</a></li>
+                    <li><a href="editor.CodeHintList.html">editor.CodeHintList</a></li>
+                    <li><a href="editor.CodeHintManager.html">editor.CodeHintManager</a></li>
+                    <li><a href="editor.CSSInlineEditor.html">editor.CSSInlineEditor</a></li>
+                    <li><a href="editor.Editor.html">editor.Editor</a></li>
+                    <li><a href="editor.EditorCommandHandlers.html">editor.EditorCommandHandlers</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="editor.EditorUtils.html">editor.EditorUtils</a></li>
+                    <li><a href="editor.InlineTextEditor.html">editor.InlineTextEditor</a></li>
+                    <li><a href="editor.InlineWidget.html">editor.InlineWidget</a></li>
+                    <li><a href="editor.MultiRangeInlineEditor.html">editor.MultiRangeInlineEditor</a></li>
+                    <li><a href="file.FileUtils.html">file.FileUtils</a></li>
+                    <li><a href="file.NativeFileError.html">file.NativeFileError</a></li>
+                    <li><a href="file.NativeFileSystem.html">file.NativeFileSystem</a></li>
+                    <li><a href="help.HelpCommandHandlers.html">help.HelpCommandHandlers</a></li>
+                    <li><a href="language.CSSUtils.html">language.CSSUtils</a></li>
+                    <li><a href="language.HTMLUtils.html">language.HTMLUtils</a></li>
+                    <li><a href="language.JSLintUtils.html">language.JSLintUtils</a></li>
+                    <li><a href="language.JSUtils.html">language.JSUtils</a></li>
+                    <li><a href="LiveDevelopment.Agents.ConsoleAgent.html">LiveDevelopment.Agents.ConsoleAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.CSSAgent.html">LiveDevelopment.Agents.CSSAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMAgent.html">LiveDevelopment.Agents.DOMAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMHelpers.html">LiveDevelopment.Agents.DOMHelpers</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMNode.html">LiveDevelopment.Agents.DOMNode</a></li>
+                    <li><a href="LiveDevelopment.Agents.EditAgent.html">LiveDevelopment.Agents.EditAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.GotoAgent.html">LiveDevelopment.Agents.GotoAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.HighlightAgent.html">LiveDevelopment.Agents.HighlightAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.NetworkAgent.html">LiveDevelopment.Agents.NetworkAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteAgent.html">LiveDevelopment.Agents.RemoteAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteFunctions.html">LiveDevelopment.Agents.RemoteFunctions</a></li>
+                    <li><a href="LiveDevelopment.Agents.ScriptAgent.html">LiveDevelopment.Agents.ScriptAgent</a></li>
+                    <li><a href="LiveDevelopment.Documents.CSSDocument.html">LiveDevelopment.Documents.CSSDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.HTMLDocument.html">LiveDevelopment.Documents.HTMLDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.JSDocument.html">LiveDevelopment.Documents.JSDocument</a></li>
+                    <li><a href="LiveDevelopment.Inspector.Inspector.html">LiveDevelopment.Inspector.Inspector</a></li>
+                    <li><a href="LiveDevelopment.LiveDevelopment.html">LiveDevelopment.LiveDevelopment</a></li>
+                    <li><a href="LiveDevelopment.main.html">LiveDevelopment.main</a></li>
+                    <li><a href="nls.de.strings.html">nls.de.strings</a></li>
+                    <li><a href="nls.de.urls.html">nls.de.urls</a></li>
+                    <li><a href="nls.es.strings.html">nls.es.strings</a></li>
+                    <li><a href="nls.es.urls.html">nls.es.urls</a></li>
+                    <li><a href="nls.fr.strings.html">nls.fr.strings</a></li>
+                    <li><a href="nls.fr.urls.html">nls.fr.urls</a></li>
+                    <li><a href="nls.it.strings.html">nls.it.strings</a></li>
+                    <li><a href="nls.it.urls.html">nls.it.urls</a></li>
+                    <li><a href="nls.ja.strings.html">nls.ja.strings</a></li>
+                    <li><a href="nls.nb.strings.html">nls.nb.strings</a></li>
+                    <li><a href="nls.pt-br.strings.html">nls.pt-br.strings</a></li>
+                    <li><a href="nls.pt-br.urls.html">nls.pt-br.urls</a></li>
+                    <li><a href="nls.root.strings.html">nls.root.strings</a></li>
+                    <li><a href="nls.root.urls.html">nls.root.urls</a></li>
+                    <li><a href="nls.ru.strings.html">nls.ru.strings</a></li>
+                    <li><a href="nls.ru.urls.html">nls.ru.urls</a></li>
+                    <li><a href="nls.strings.html">nls.strings</a></li>
+                    <li><a href="nls.tr.strings.html">nls.tr.strings</a></li>
+                    <li><a href="nls.urls.html">nls.urls</a></li>
+                    <li><a href="preferences.PreferencesDialogs.html">preferences.PreferencesDialogs</a></li>
+                    <li><a href="preferences.PreferencesManager.html">preferences.PreferencesManager</a></li>
+                    <li><a href="preferences.PreferenceStorage.html">preferences.PreferenceStorage</a></li>
+                    <li><a href="project.FileIndexManager.html">project.FileIndexManager</a></li>
+                    <li><a href="project.FileSyncManager.html">project.FileSyncManager</a></li>
+                    <li><a href="project.FileViewController.html">project.FileViewController</a></li>
+                    <li><a href="project.ProjectManager.html">project.ProjectManager</a></li>
+                    <li><a href="project.SidebarView.html">project.SidebarView</a></li>
+                    <li><a href="project.WorkingSetSort.html">project.WorkingSetSort</a></li>
+                    <li><a href="project.WorkingSetView.html">project.WorkingSetView</a></li>
+                    <li><a href="search.FindInFiles.html">search.FindInFiles</a></li>
+                    <li><a href="search.FindReplace.html">search.FindReplace</a></li>
+                    <li><a href="search.QuickOpen.html">search.QuickOpen</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.AppInit.html">utils.AppInit</a></li>
+                    <li><a href="utils.Async.html">utils.Async</a></li>
+                    <li><a href="utils.BuildInfoUtils.html">utils.BuildInfoUtils</a></li>
+                    <li><a href="utils.CollectionUtils.html">utils.CollectionUtils</a></li>
+                    <li><a href="utils.ExtensionLoader.html">utils.ExtensionLoader</a></li>
+                    <li><a href="utils.ExtensionUtils.html">utils.ExtensionUtils</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                    <li><a href="utils.NativeApp.html">utils.NativeApp</a></li>
+                    <li><a href="utils.PerfUtils.html">utils.PerfUtils</a></li>
+                    <li><a href="utils.Resizer.html">utils.Resizer</a></li>
+                    <li><a href="utils.ShellAPI.html">utils.ShellAPI</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="utils.TokenUtils.html">utils.TokenUtils</a></li>
+                    <li><a href="utils.UpdateNotification.html">utils.UpdateNotification</a></li>
+                    <li><a href="utils.UrlParams.html">utils.UrlParams</a></li>
+                    <li><a href="utils.ViewUtils.html">utils.ViewUtils</a></li>
+                    <li><a href="view.ViewCommandHandlers.html">view.ViewCommandHandlers</a></li>
+                    <li><a href="widgets.bootstrap-alerts.html">widgets.bootstrap-alerts</a></li>
+                    <li><a href="widgets.bootstrap-buttons.html">widgets.bootstrap-buttons</a></li>
+                    <li><a href="widgets.bootstrap-dropdown.html">widgets.bootstrap-dropdown</a></li>
+                    <li><a href="widgets.bootstrap-modal.html">widgets.bootstrap-modal</a></li>
+                    <li><a href="widgets.bootstrap-popover.html">widgets.bootstrap-popover</a></li>
+                    <li><a href="widgets.bootstrap-scrollspy.html">widgets.bootstrap-scrollspy</a></li>
+                    <li><a href="widgets.bootstrap-tabs.html">widgets.bootstrap-tabs</a></li>
+                    <li><a href="widgets.bootstrap-twipsy.html">widgets.bootstrap-twipsy</a></li>
+                    <li><a href="widgets.Dialogs.html">widgets.Dialogs</a></li>
+                    <li><a href="widgets.ModalBar.html">widgets.ModalBar</a></li>
+                    <li><a href="widgets.PopUpManager.html">widgets.PopUpManager</a></li>
+                    <li><a href="widgets.StatusBar.html">widgets.StatusBar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <section>
+                <div id="description">
+                    <p>This is a collection of utility functions for gathering performance data.</p>
+                </div>
+            </section>
+
+            <section id="dependencies">
+                <h3>Dependencies</h3>
+                <ul class="nav nav-list">
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                </ul>
+            </section>
+
+            <section id="variables">
+                <h3>Variables <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <!--<ul>-->
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>activeTests</h4>
+                    <dl>
+                    </dl>
+                    <p>Active tests. This is a hash of all tests that have had markStart() called,<br />but have not yet had addMeasurement() called.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var activeTests = {};</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>enabled</h4>
+                    <dl>
+                            <dt>Type</dt>
+                                <dd>boolean</dd>
+                    </dl>
+                    <p>Flag to enable/disable performance data gathering. Default is true (enabled)</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var enabled = brackets &amp;&amp; !!brackets.app.getElapsedMilliseconds;</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>perfData</h4>
+                    <dl>
+                    </dl>
+                    <p>Peformance data is stored in this hash object. The key is the name of the<br />test (passed to markStart/addMeasurement), and the value is the time, in <br />milliseconds, that it took to run the test. If multiple runs of the same test<br />are made, the value is an Array with each run stored as an entry in the Array.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var perfData = {};</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>perfMeasurementIds</h4>
+                    <dl>
+                    </dl>
+                    <p>Hash of measurement IDs</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var perfMeasurementIds = {};</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>updatableTests</h4>
+                    <dl>
+                    </dl>
+                    <p>Updatable tests. This is a hash of all tests that have had markStart() called,<br />and have had updateMeasurement() called. Caller must explicitly remove tests<br />from this list using finalizeMeasurement()</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var updatableTests = {};</code></pre>
+                </div>
+                <!--</ul>-->
+            </section>
+
+            <section id="functions">
+                <h3>Functions <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>PerfMeasurement</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>id</dt>
+                            <dd>(<em>!string</em>) - Unique ID for this measurement name</dd>
+                            <dt>name</dt>
+                            <dd>(<em>!name</em>) - A short name for this measurement</dd>
+                    </dl>
+                    <p>A unique key to log performance data</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function PerfMeasurement(id, name) {
+        this.id = id;
+        this.name = name;
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_markStart</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>name</dt>
+                            <dd>(<em>string</em>) - Timer name.</dd>
+                            <dt>time</dt>
+                            <dd>(<em>number</em>) - Timer start time.</dd>
+                    </dl>
+                    <p>Helper function for markStart()</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _markStart(name, time) {
+        if (activeTests[name]) {
+            console.error(&quot;Recursive tests with the same name are not supported. Timer name: &quot; + name);
+        }
+        
+        activeTests[name] = { startTime: time };
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>addMeasurement</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>name</dt>
+                            <dd>(<em>string</em>) - Timer name.</dd>
+                    </dl>
+                    <p>Stop a timer and add its measurements to the performance data.</p>
+
+<p>Multiple measurements can be stored for any given name. If there are<br />multiple values for a name, they are stored in an Array.</p>
+
+<p>If markStart() was not called for the specified timer, the<br />measured time is relative to app startup.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function addMeasurement(name) {
+        if (!enabled) {
+            return;
+        }
+
+        var elapsedTime = brackets.app.getElapsedMilliseconds();
+        name = toMeasurementId(name);
+        
+        if (activeTests[name]) {
+            elapsedTime -= activeTests[name].startTime;
+            delete activeTests[name];
+        }
+        
+        if (perfData[name]) {
+            &#x2F;&#x2F; We have existing data, add to it
+            if (Array.isArray(perfData[name])) {
+                perfData[name].push(elapsedTime);
+            } else {
+                &#x2F;&#x2F; Current data is a number, convert to Array
+                perfData[name] = [perfData[name], elapsedTime];
+            }
+        } else {
+            perfData[name] = elapsedTime;
+        }
+
+        &#x2F;&#x2F; Real time logging
+        &#x2F;&#x2F;console.log(name + &quot; &quot; + elapsedTime);
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>clear</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Clear all logs including metric data and active tests.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function clear() {
+        perfData = {};
+        activeTests = {};
+        updatableTests = {};
+    }
+    
+    &#x2F;&#x2F; create performance measurement constants
+    createPerfMeasurement(&quot;INLINE_EDITOR_OPEN&quot;, &quot;Open inline editor&quot;);
+    createPerfMeasurement(&quot;INLINE_EDITOR_CLOSE&quot;, &quot;Close inline editor&quot;);
+    
+    &#x2F;&#x2F; extensions may create additional measurement constants during their lifecycle
+
+    exports.addMeasurement          = addMeasurement;
+    exports.finalizeMeasurement     = finalizeMeasurement;
+    exports.isActive                = isActive;
+    exports.markStart               = markStart;
+    exports.getData                 = getData;
+    exports.searchData              = searchData;
+    exports.updateMeasurement       = updateMeasurement;
+    exports.getDelimitedPerfData    = getDelimitedPerfData;
+    exports.createPerfMeasurement   = createPerfMeasurement;
+    exports.clear                   = clear;
+});</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>createPerfMeasurement</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>id</dt>
+                            <dd>(<em>!string</em>) - Unique ID for this measurement name</dd>
+                            <dt>name</dt>
+                            <dd>(<em>!name</em>) - A short name for this measurement</dd>
+                    </dl>
+                    <p>Create a new PerfMeasurement key. Adds itself to the module export.<br />Can be accessed on the module, e.g. PerfUtils.MY_PERF_KEY.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function createPerfMeasurement(id, name) {
+        if (perfMeasurementIds[id]) {
+            console.error(&quot;Performance measurement &quot; + id + &quot; is already defined&quot;);
+        }
+        
+        var pm = new PerfMeasurement(id, name);
+        exports[id] = pm;
+        
+        return pm;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>finalizeMeasurement</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>name</dt>
+                            <dd>(<em>string</em>) - Timer name.</dd>
+                    </dl>
+                    <p>Remove timer from lists so next action starts a new measurement</p>
+
+<p>updateMeasurement may not have been called, so timer may be<br />in either or neither list, but should never be in both.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function finalizeMeasurement(name) {
+
+        name = toMeasurementId(name);
+
+        if (activeTests[name]) {
+            delete activeTests[name];
+        }
+
+        if (updatableTests[name]) {
+            delete updatableTests[name];
+        }
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>getData</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>name</dt>
+                            <dd>(<em>string, PerfMeasurement</em>) - The measurement to retreive.</dd>
+                    </dl>
+                    <p>Returns the measured value for the given measurement name.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function getData(name) {
+        if (!name) {
+            return perfData;
+        }
+        
+        return perfData[toMeasurementId(name)];
+    }
+    
+    function searchData(regExp) {
+        var keys = Object.keys(perfData).filter(function (key) {
+            return regExp.test(key);
+        });
+        
+        var datas = [];
+        
+        keys.forEach(function (key) {
+            datas.push(perfData[key]);
+        });
+        
+        return datas;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>getDelimitedPerfData</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Returns the performance data as a tab deliminted string</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function getDelimitedPerfData() {
+        var getValue = function (entry) {
+            &#x2F;&#x2F; return single value, or tab deliminted values for an array
+            if (Array.isArray(entry)) {
+                var i, values = &quot;&quot;;
+                 
+                for (i = 0; i &lt; entry.length; i++) {
+                    values += entry[i];
+                    if (i &lt; entry.length - 1) {
+                        values += &quot;, &quot;;
+                    }
+                }
+                return values;
+            } else {
+                return entry;
+            }
+        };
+
+        var testName,
+            index,
+            result = &quot;&quot;;
+        $.each(perfData, function (testName, entry) {
+            result += getValue(entry) + &quot;\t&quot; + testName + &quot;\n&quot;;
+        });
+
+        return result;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>isActive</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>name</dt>
+                            <dd>(<em>string</em>) - Timer name.</dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>boolean</em>) - Whether a timer is active or not.</dd>
+                    </dl>
+                    <p>Returns whether a timer is active or not, where "active" means that<br />timer has been started with addMark(), but has not been added to perfdata<br />with addMeasurement().</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function isActive(name) {
+        return (activeTests[name]) ? true : false;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>markStart</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>name</dt>
+                            <dd>(<em>(string, Array.&lt;string&gt;)</em>) - Single name or an Array of names.</dd>
+                    </dl>
+                    <p>Start a new named timer. The name should be as descriptive as possible, since<br />this name will appear as an entry in the performance report. <br />For example: "Open file: /Users/brackets/src/ProjectManager.js"</p>
+
+<p>Multiple timers can be opened simultaneously, but all open timers must have<br />a unique name.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function markStart(name) {
+        if (!enabled) {
+            return;
+        }
+
+        var time = brackets.app.getElapsedMilliseconds();
+        name = toMeasurementId(name);
+
+        &#x2F;&#x2F; Array of names can be passed in to have multiple timers with same start time
+        if (Array.isArray(name)) {
+            var i;
+            for (i = 0; i &lt; name.length; i++) {
+                _markStart(name[i], time);
+            }
+        } else {
+            _markStart(name, time);
+        }
+
+        return name;
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>toMeasurementId</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Convert a PerfMeasurement instance to it's id. Otherwise uses the string name for backwards compatibility.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function toMeasurementId(o) {
+        return (o instanceof PerfMeasurement) ? o.id : o;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>updateMeasurement</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>name</dt>
+                            <dd>(<em>string</em>) - Timer name.</dd>
+                    </dl>
+                    <p>This function is similar to addMeasurement(), but it allows timing the<br /><em>last</em> event, when you don't know which event will be the last one.</p>
+
+<p>Tests that are in the activeTests list, have not yet been added, so add<br />measurements to the performance data, and move test to updatableTests list.<br />A test is moved to the updatable list so that it no longer passes isActive().</p>
+
+<p>Tests that are already in the updatableTests list are updated.</p>
+
+<p>Caller must explicitly remove test from the updatableTests list using<br />finalizeMeasurement().</p>
+
+<p>If markStart() was not called for the specified timer, there is no way to<br />determine if this is the first or subsequent call, so the measurement is<br />not updatable, and it is handled in addMeasurement().</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function updateMeasurement(name) {
+        var elapsedTime = brackets.app.getElapsedMilliseconds();
+
+        name = toMeasurementId(name);
+
+        if (updatableTests[name]) {
+            &#x2F;&#x2F; update existing measurement
+            elapsedTime -= updatableTests[name].startTime;
+            
+            &#x2F;&#x2F; update
+            if (perfData[name] &amp;&amp; Array.isArray(perfData[name])) {
+                &#x2F;&#x2F; We have existing data and it&#39;s an array, so update the last entry
+                perfData[name][perfData[name].length - 1] = elapsedTime;
+            } else {
+                &#x2F;&#x2F; No current data or a single entry, so set&#x2F;update it
+                perfData[name] = elapsedTime;
+            }
+            
+        } else {
+            &#x2F;&#x2F; not yet in updatable list
+
+            if (activeTests[name]) {
+                &#x2F;&#x2F; save startTime in updatable list before addMeasurement() deletes it
+                updatableTests[name] = { startTime: activeTests[name].startTime };
+            }
+            
+            &#x2F;&#x2F; let addMeasurement() handle the initial case
+            addMeasurement(name);
+        }
+    }</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "brackets-api",
+  "version": "0.0.1",
+  "author": "Aleksandr Motsjonov <soswow@gmail.com>",
+  "description": "API documentation generator for brackets project",
+  "dependencies" : {
+    "dox"    :  "*",
+    "underscore":  "*",
+    "file"     :  "*",
+    "mustache"  :  "*"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}

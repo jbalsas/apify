@@ -1,0 +1,77 @@
+[class^="icon-"]{
+    background: none;
+}
+body{
+    padding-top: 40px;
+}
+#other-module{
+    display: none;
+    height: 300px;
+    overflow: scroll;
+}
+#toggle-other-modules i{
+    font-size: 28px;
+}
+.left-section{
+    border:1px solid #f6f6f6;
+    border-radius: 5px;
+}
+.nav-header{
+    border-bottom:1px solid #f6f6f6;
+}
+section > h3{
+    padding-top: 40px;
+    margin-top: -30px;
+}
+h3 .checkbox{
+    display: inline-block;
+    margin-left: 20px;
+    width: 200px;
+}
+#dependencies ul{
+    margin: 0;
+    padding: 0;
+}
+#dependencies ul li{
+    display: inline-block;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 0;
+}
+#dependencies ul li a{
+    padding-top:0;
+    padding-bottom:0;
+}
+.member{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f6f6f6;
+}
+/*.member:last-of-type{*/
+    /*margin-bottom: 0;*/
+/*}*/
+.member h4{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    padding-left: 0px;
+}
+.member .code{
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.member.private{
+    display: none;
+    background: #f6f6f6;
+}
+.show-private .member.private{
+    display: block;
+}
+.member .scope{
+    font-style: italic;
+}

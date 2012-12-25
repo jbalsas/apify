@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>search.QuickOpen</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/jquery-1.7.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="page-header">
+                <h1>search.QuickOpen</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <div class="left-section">
+                <ul class="nav nav-list">
+                    <li class="nav-header">
+                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (109)</a>
+                    </li>
+                </ul>
+                <ul id="other-module" class="nav nav-list">
+                    <li><a href="brackets.html">brackets</a></li>
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="command.KeyBindingManager.html">command.KeyBindingManager</a></li>
+                    <li><a href="command.Menus.html">command.Menus</a></li>
+                    <li><a href="debug.DebugCommandHandlers.html">debug.DebugCommandHandlers</a></li>
+                    <li><a href="document.ChangedDocumentTracker.html">document.ChangedDocumentTracker</a></li>
+                    <li><a href="document.DocumentCommandHandlers.html">document.DocumentCommandHandlers</a></li>
+                    <li><a href="document.DocumentManager.html">document.DocumentManager</a></li>
+                    <li><a href="document.TextRange.html">document.TextRange</a></li>
+                    <li><a href="editor.CodeHintList.html">editor.CodeHintList</a></li>
+                    <li><a href="editor.CodeHintManager.html">editor.CodeHintManager</a></li>
+                    <li><a href="editor.CSSInlineEditor.html">editor.CSSInlineEditor</a></li>
+                    <li><a href="editor.Editor.html">editor.Editor</a></li>
+                    <li><a href="editor.EditorCommandHandlers.html">editor.EditorCommandHandlers</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="editor.EditorUtils.html">editor.EditorUtils</a></li>
+                    <li><a href="editor.InlineTextEditor.html">editor.InlineTextEditor</a></li>
+                    <li><a href="editor.InlineWidget.html">editor.InlineWidget</a></li>
+                    <li><a href="editor.MultiRangeInlineEditor.html">editor.MultiRangeInlineEditor</a></li>
+                    <li><a href="file.FileUtils.html">file.FileUtils</a></li>
+                    <li><a href="file.NativeFileError.html">file.NativeFileError</a></li>
+                    <li><a href="file.NativeFileSystem.html">file.NativeFileSystem</a></li>
+                    <li><a href="help.HelpCommandHandlers.html">help.HelpCommandHandlers</a></li>
+                    <li><a href="language.CSSUtils.html">language.CSSUtils</a></li>
+                    <li><a href="language.HTMLUtils.html">language.HTMLUtils</a></li>
+                    <li><a href="language.JSLintUtils.html">language.JSLintUtils</a></li>
+                    <li><a href="language.JSUtils.html">language.JSUtils</a></li>
+                    <li><a href="LiveDevelopment.Agents.ConsoleAgent.html">LiveDevelopment.Agents.ConsoleAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.CSSAgent.html">LiveDevelopment.Agents.CSSAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMAgent.html">LiveDevelopment.Agents.DOMAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMHelpers.html">LiveDevelopment.Agents.DOMHelpers</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMNode.html">LiveDevelopment.Agents.DOMNode</a></li>
+                    <li><a href="LiveDevelopment.Agents.EditAgent.html">LiveDevelopment.Agents.EditAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.GotoAgent.html">LiveDevelopment.Agents.GotoAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.HighlightAgent.html">LiveDevelopment.Agents.HighlightAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.NetworkAgent.html">LiveDevelopment.Agents.NetworkAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteAgent.html">LiveDevelopment.Agents.RemoteAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteFunctions.html">LiveDevelopment.Agents.RemoteFunctions</a></li>
+                    <li><a href="LiveDevelopment.Agents.ScriptAgent.html">LiveDevelopment.Agents.ScriptAgent</a></li>
+                    <li><a href="LiveDevelopment.Documents.CSSDocument.html">LiveDevelopment.Documents.CSSDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.HTMLDocument.html">LiveDevelopment.Documents.HTMLDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.JSDocument.html">LiveDevelopment.Documents.JSDocument</a></li>
+                    <li><a href="LiveDevelopment.Inspector.Inspector.html">LiveDevelopment.Inspector.Inspector</a></li>
+                    <li><a href="LiveDevelopment.LiveDevelopment.html">LiveDevelopment.LiveDevelopment</a></li>
+                    <li><a href="LiveDevelopment.main.html">LiveDevelopment.main</a></li>
+                    <li><a href="nls.de.strings.html">nls.de.strings</a></li>
+                    <li><a href="nls.de.urls.html">nls.de.urls</a></li>
+                    <li><a href="nls.es.strings.html">nls.es.strings</a></li>
+                    <li><a href="nls.es.urls.html">nls.es.urls</a></li>
+                    <li><a href="nls.fr.strings.html">nls.fr.strings</a></li>
+                    <li><a href="nls.fr.urls.html">nls.fr.urls</a></li>
+                    <li><a href="nls.it.strings.html">nls.it.strings</a></li>
+                    <li><a href="nls.it.urls.html">nls.it.urls</a></li>
+                    <li><a href="nls.ja.strings.html">nls.ja.strings</a></li>
+                    <li><a href="nls.nb.strings.html">nls.nb.strings</a></li>
+                    <li><a href="nls.pt-br.strings.html">nls.pt-br.strings</a></li>
+                    <li><a href="nls.pt-br.urls.html">nls.pt-br.urls</a></li>
+                    <li><a href="nls.root.strings.html">nls.root.strings</a></li>
+                    <li><a href="nls.root.urls.html">nls.root.urls</a></li>
+                    <li><a href="nls.ru.strings.html">nls.ru.strings</a></li>
+                    <li><a href="nls.ru.urls.html">nls.ru.urls</a></li>
+                    <li><a href="nls.strings.html">nls.strings</a></li>
+                    <li><a href="nls.tr.strings.html">nls.tr.strings</a></li>
+                    <li><a href="nls.urls.html">nls.urls</a></li>
+                    <li><a href="preferences.PreferencesDialogs.html">preferences.PreferencesDialogs</a></li>
+                    <li><a href="preferences.PreferencesManager.html">preferences.PreferencesManager</a></li>
+                    <li><a href="preferences.PreferenceStorage.html">preferences.PreferenceStorage</a></li>
+                    <li><a href="project.FileIndexManager.html">project.FileIndexManager</a></li>
+                    <li><a href="project.FileSyncManager.html">project.FileSyncManager</a></li>
+                    <li><a href="project.FileViewController.html">project.FileViewController</a></li>
+                    <li><a href="project.ProjectManager.html">project.ProjectManager</a></li>
+                    <li><a href="project.SidebarView.html">project.SidebarView</a></li>
+                    <li><a href="project.WorkingSetSort.html">project.WorkingSetSort</a></li>
+                    <li><a href="project.WorkingSetView.html">project.WorkingSetView</a></li>
+                    <li><a href="search.FindInFiles.html">search.FindInFiles</a></li>
+                    <li><a href="search.FindReplace.html">search.FindReplace</a></li>
+                    <li><a href="search.QuickOpen.html">search.QuickOpen</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.AppInit.html">utils.AppInit</a></li>
+                    <li><a href="utils.Async.html">utils.Async</a></li>
+                    <li><a href="utils.BuildInfoUtils.html">utils.BuildInfoUtils</a></li>
+                    <li><a href="utils.CollectionUtils.html">utils.CollectionUtils</a></li>
+                    <li><a href="utils.ExtensionLoader.html">utils.ExtensionLoader</a></li>
+                    <li><a href="utils.ExtensionUtils.html">utils.ExtensionUtils</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                    <li><a href="utils.NativeApp.html">utils.NativeApp</a></li>
+                    <li><a href="utils.PerfUtils.html">utils.PerfUtils</a></li>
+                    <li><a href="utils.Resizer.html">utils.Resizer</a></li>
+                    <li><a href="utils.ShellAPI.html">utils.ShellAPI</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="utils.TokenUtils.html">utils.TokenUtils</a></li>
+                    <li><a href="utils.UpdateNotification.html">utils.UpdateNotification</a></li>
+                    <li><a href="utils.UrlParams.html">utils.UrlParams</a></li>
+                    <li><a href="utils.ViewUtils.html">utils.ViewUtils</a></li>
+                    <li><a href="view.ViewCommandHandlers.html">view.ViewCommandHandlers</a></li>
+                    <li><a href="widgets.bootstrap-alerts.html">widgets.bootstrap-alerts</a></li>
+                    <li><a href="widgets.bootstrap-buttons.html">widgets.bootstrap-buttons</a></li>
+                    <li><a href="widgets.bootstrap-dropdown.html">widgets.bootstrap-dropdown</a></li>
+                    <li><a href="widgets.bootstrap-modal.html">widgets.bootstrap-modal</a></li>
+                    <li><a href="widgets.bootstrap-popover.html">widgets.bootstrap-popover</a></li>
+                    <li><a href="widgets.bootstrap-scrollspy.html">widgets.bootstrap-scrollspy</a></li>
+                    <li><a href="widgets.bootstrap-tabs.html">widgets.bootstrap-tabs</a></li>
+                    <li><a href="widgets.bootstrap-twipsy.html">widgets.bootstrap-twipsy</a></li>
+                    <li><a href="widgets.Dialogs.html">widgets.Dialogs</a></li>
+                    <li><a href="widgets.ModalBar.html">widgets.ModalBar</a></li>
+                    <li><a href="widgets.PopUpManager.html">widgets.PopUpManager</a></li>
+                    <li><a href="widgets.StatusBar.html">widgets.StatusBar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <section>
+                <div id="description">
+                    <p>Displays an auto suggest pop-up list of files to allow the user to quickly navigate to a file and lines<br />within a file.<br />Uses FileIndexManger to supply the file list.</p>
+
+<p>TODO (issue 333) - currently jquery smart auto complete is used for the pop-up list. While it mostly works<br />it has several issues, so it should be replace with an alternative. Issues:<br />- the pop-up position logic has flaws that require CSS workarounds<br />- the pop-up properties cannot be modified once the object is constructed</p>
+                </div>
+            </section>
+
+            <section id="dependencies">
+                <h3>Dependencies</h3>
+                <ul class="nav nav-list">
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="document.DocumentManager.html">document.DocumentManager</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="project.FileIndexManager.html">project.FileIndexManager</a></li>
+                    <li><a href="project.ProjectManager.html">project.ProjectManager</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="widgets.ModalBar.html">widgets.ModalBar</a></li>
+                </ul>
+            </section>
+
+            <section id="variables">
+                <h3>Variables <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <!--<ul>-->
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>currentPlugin</h4>
+                    <dl>
+                    </dl>
+                    <p>@type {QuickOpenPlugin}</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var currentPlugin = null;</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>dialogOpen</h4>
+                    <dl>
+                    </dl>
+                    <p>@type {boolean}</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var dialogOpen = false;</code></pre>
+                </div>
+                <div class="member">
+
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>plugins</h4>
+                    <dl>
+                    </dl>
+                    <p>@type Array.<QuickOpenPlugin></p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var plugins = [];</code></pre>
+                </div>
+                <!--</ul>-->
+            </section>
+
+            <section id="functions">
+                <h3>Functions <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>QuickNavigateDialog</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>QuickNavigateDialog class</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function QuickNavigateDialog() {
+        this.$searchField = undefined; &#x2F;&#x2F; defined when showDialog() is called
+        
+        &#x2F;&#x2F; Bind event handlers
+        this._handleItemSelect         = this._handleItemSelect.bind(this);
+        this._handleItemFocus          = this._handleItemFocus.bind(this);
+        this._handleKeyUp              = this._handleKeyUp.bind(this);
+        this._handleKeyDown            = this._handleKeyDown.bind(this);
+        this._handleResultsReady       = this._handleResultsReady.bind(this);
+        this._handleBlur               = this._handleBlur.bind(this);
+        this._handleDocumentMouseDown  = this._handleDocumentMouseDown.bind(this);
+        
+        &#x2F;&#x2F; Bind callbacks from smart-autocomplete
+        this._filterCallback           = this._filterCallback.bind(this);
+        this._resultsFormatterCallback = this._resultsFormatterCallback.bind(this);
+    }
+
+    function _filenameFromPath(path, includeExtension) {
+        var end;
+        if (includeExtension) {
+            end = path.length;
+        } else {
+            end = path.lastIndexOf(&quot;.&quot;);
+            if (end === -1) {
+                end = path.length;
+            }
+        }
+        return path.slice(path.lastIndexOf(&quot;&#x2F;&quot;) + 1, end);
+    }</code></pre>
+                </div>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>QuickOpenPlugin</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Defines API for new QuickOpen plug-ins</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function QuickOpenPlugin(name, fileTypes, done, search, match, itemFocus, itemSelect, resultsFormatter) {
+        this.name = name;
+        this.fileTypes = fileTypes;
+        this.done = done;
+        this.search = search;
+        this.match = match;
+        this.itemFocus = itemFocus;
+        this.itemSelect = itemSelect;
+        this.resultsFormatter = resultsFormatter;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>SearchResult</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Object representing a search result with associated metadata (added as extra ad hoc fields)</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function SearchResult(label) {
+        this.label = label;
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_adjustScoreForSegment</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>The current scoring gives a boost for matches in the "most specific" (generally farthest right) <br />segment of the string being tested against the query.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _adjustScoreForSegment(segmentCounter, score) {
+        if (segmentCounter === 0) {
+            &#x2F;&#x2F; Multiplier used for matches within the most-specific part of the name (filename, for example)
+            return score * 3;
+        } else {
+            return score;
+        }
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_boostForMatches</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Additional points are added when multiple characters in the string<br />being tested match against query characters.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _boostForMatches(sequentialMatches) {
+        &#x2F;&#x2F; Multiplier for the number of sequential matched characters
+        return sequentialMatches * sequentialMatches * 5;
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_boostForPathSegmentStart</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>The score is boosted for matches that occur at the beginning<br />of a segment of string that is being tested against the query.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _boostForPathSegmentStart(sequentialMatches) {
+        &#x2F;&#x2F; Multiplier for sequential matched characters at the beginning
+        &#x2F;&#x2F; of a delimited section (after a &#39;&#x2F;&#39; in a path, for example)
+        return sequentialMatches * sequentialMatches * 5;
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_boostForUpperCase</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Upper case characters are boosted to help match MixedCase strings better.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _boostForUpperCase(c) {
+        return c.toUpperCase() === c ? 50 : 0;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>addQuickOpenPlugin</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>name:</dt>
+                            <dd>(<em></em>) - string, </dd>
+                    </dl>
+                    <p>Creates and registers a new QuickOpenPlugin</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function addQuickOpenPlugin(pluginDef) {
+        plugins.push(new QuickOpenPlugin(
+            pluginDef.name,
+            pluginDef.fileTypes,
+            pluginDef.done,
+            pluginDef.search,
+            pluginDef.match,
+            pluginDef.itemFocus,
+            pluginDef.itemSelect,
+            pluginDef.resultsFormatter
+        ));
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>basicMatchSort</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Sorts search results generated by stringMatch(): results are sorted into several<br />tiers based on how well they matched the search query, then sorted alphabetically<br />within each tier.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function basicMatchSort(searchResults) {
+        multiFieldSort(searchResults, { matchGoodness: 0, label: 1 });
+    }
+    
+    
+    function searchFileList(query) {
+        &#x2F;&#x2F; FileIndexManager may still be loading asynchronously - if so, can&#39;t return a result yet
+        if (!fileList) {
+            &#x2F;&#x2F; Smart Autocomplete allows us to return a Promise instead...
+            var asyncResult = new $.Deferred();
+            fileListPromise.done(function () {
+                &#x2F;&#x2F; ...but it&#39;s not very robust. If a previous Promise is obsoleted by the query string changing, it
+                &#x2F;&#x2F; keeps listening to it anyway. So the last Promise to resolve &quot;wins&quot; the UI update even if it&#39;s for
+                &#x2F;&#x2F; a stale query. Guard from that by checking that filter text hasn&#39;t changed while we were waiting:
+                var currentQuery = $(&quot;input#quickOpenSearch&quot;).val();
+                if (currentQuery === query) {
+                    &#x2F;&#x2F; We&#39;re still the current query. Synchronously re-run the search call and resolve with its results
+                    asyncResult.resolve(searchFileList(query));
+                } else {
+                    asyncResult.reject();
+                }
+            });
+            return asyncResult.promise();
+        }
+        
+        &#x2F;&#x2F; First pass: filter based on search string; convert to SearchResults containing extra info
+        &#x2F;&#x2F; for sorting &amp; display
+        var filteredList = $.map(fileList, function (fileInfo) {
+            &#x2F;&#x2F; Is it a match at all?
+            &#x2F;&#x2F; match query against the full path (with gaps between query characters allowed)
+            var searchResult = stringMatch(ProjectManager.makeProjectRelativeIfPossible(fileInfo.fullPath), query);
+            if (searchResult) {
+                searchResult.label = fileInfo.name;
+                searchResult.fullPath = fileInfo.fullPath;
+                searchResult.filenameWithoutExtension = _filenameFromPath(fileInfo.name, false);
+            }
+            return searchResult;
+        });
+        
+        &#x2F;&#x2F; Sort by &quot;match goodness&quot; tier first, then within each tier sort alphabetically - first by filename
+        &#x2F;&#x2F; sans extension, (so that &quot;abc.js&quot; comes before &quot;abc-d.js&quot;), then by filename, and finally (for
+        &#x2F;&#x2F; identically-named files) by full path
+        multiFieldSort(filteredList, { matchGoodness: 0, filenameWithoutExtension: 1, label: 2, fullPath: 3 });
+
+        return filteredList;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>beginSearch</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>prefix</dt>
+                            <dd>(<em>?string</em>) - </dd>
+                            <dt>initialString</dt>
+                            <dd>(<em>?string</em>) - </dd>
+                    </dl>
+                    <p>Opens the Quick Open bar prepopulated with the given prefix (to select a mode) and optionally<br />with the given query text too. Updates text field contents if Quick Open already open.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function beginSearch(prefix, initialString) {
+        if (dialogOpen) {
+            _curDialog.setSearchFieldValue(prefix, initialString);
+        } else {
+            _curDialog = new QuickNavigateDialog();
+            _curDialog.showDialog(prefix, initialString);
+        }
+    }
+
+    function doFileSearch() {
+        beginSearch(&quot;&quot;, getCurrentEditorSelectedText());
+    }
+
+    function doGotoLine() {
+        &#x2F;&#x2F; TODO: Brackets doesn&#39;t support disabled menu items right now, when it does goto line and
+        &#x2F;&#x2F; goto definition should be disabled when there is not a current document
+        if (DocumentManager.getCurrentDocument()) {
+            beginSearch(&quot;:&quot;, &quot;&quot;);
+        }
+    }
+
+
+    &#x2F;&#x2F; TODO: should provide a way for QuickOpenJSSymbol to create this function as a plug-in
+    function doDefinitionSearch() {
+        if (DocumentManager.getCurrentDocument()) {
+            beginSearch(&quot;@&quot;, getCurrentEditorSelectedText());
+        }
+    }
+
+
+
+    &#x2F;&#x2F; TODO: allow QuickOpenJS to register it&#39;s own commands and key bindings
+    CommandManager.register(Strings.CMD_QUICK_OPEN,         Commands.NAVIGATE_QUICK_OPEN,       doFileSearch);
+    CommandManager.register(Strings.CMD_GOTO_DEFINITION,    Commands.NAVIGATE_GOTO_DEFINITION,  doDefinitionSearch);
+    CommandManager.register(Strings.CMD_GOTO_LINE,          Commands.NAVIGATE_GOTO_LINE,        doGotoLine);
+
+    exports.beginSearch         = beginSearch;
+    exports.addQuickOpenPlugin  = addQuickOpenPlugin;
+    exports.SearchResult        = SearchResult;
+    exports.stringMatch         = stringMatch;
+    exports.basicMatchSort      = basicMatchSort;
+    exports.multiFieldSort      = multiFieldSort;
+    exports.highlightMatch      = highlightMatch;
+});</code></pre>
+                </div>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>domItemToSearchResult</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>domItem</dt>
+                            <dd>(<em>jQueryObject</em>) - </dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>SearchResult, string</em>) - value returned from search()</dd>
+                    </dl>
+                    <p>Converts from list item DOM node to search provider list object</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function domItemToSearchResult(domItem) {
+        if (!domItem) {
+            return null;
+        }
+        
+        &#x2F;&#x2F; Smart Autocomplete uses this assumption internally: index of DOM node in results list container
+        &#x2F;&#x2F; exactly matches index of search result in list returned by _filterCallback()
+        var index = $(domItem).index();
+        
+        &#x2F;&#x2F; This is just the last return value of _filterCallback(), which smart autocomplete helpfully caches
+        var lastFilterResult = $(&quot;input#quickOpenSearch&quot;).data(&quot;smart-autocomplete&quot;).rawResults;
+        return lastFilterResult[index];
+    }</code></pre>
+                </div>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>extractLineNumber</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>query</dt>
+                            <dd>(<em>string</em>) - string to extract line number from</dd>
+                    </dl>
+                    <p>Attempts to extract a line number from the query where the line number<br />is followed by a colon. Callers should explicitly test result with isNaN()</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function extractLineNumber(query) {
+        &#x2F;&#x2F; only match : at beginning of query for now
+        &#x2F;&#x2F; TODO: match any location of : when QuickOpen._handleItemFocus() is modified to
+        &#x2F;&#x2F; dynamic open files
+        if (query.indexOf(&quot;:&quot;) !== 0) {
+            return NaN;
+        }
+
+        var result = NaN;
+        var regInfo = query.match(&#x2F;(!?:)(\d+)&#x2F;); &#x2F;&#x2F; colon followed by a digit
+        if (regInfo) {
+            result = regInfo[2] - 1;
+        }
+
+        return result;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>highlightMatch</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>item</dt>
+                            <dd>(<em>!string, SearchResult</em>) - </dd>
+                            <dt>matchClass</dt>
+                            <dd>(<em>?string</em>) - CSS class for highlighting matched text</dd>
+                            <dt>string):string}</dt>
+                            <dd>(<em>?function(number, </em>) - rangeFilter</dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>!string</em>) - bolded, HTML-escaped result</dd>
+                    </dl>
+                    <p>Formats item's label as properly escaped HTML text, highlighting sections that match 'query'.<br />If item is a SearchResult generated by stringMatch(), uses its metadata about which string ranges<br />matched; else formats the label with no highlighting.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function highlightMatch(item, matchClass, rangeFilter) {
+        var label = item.label || item;
+        matchClass = matchClass || &quot;quicksearch-namematch&quot;;
+        
+        var stringRanges = item.stringRanges;
+        if (!stringRanges) {
+            &#x2F;&#x2F; If result didn&#39;t come from stringMatch(), highlight nothing
+            stringRanges = [{
+                text: label,
+                matched: false,
+                segment: 0
+            }];
+        }
+        
+        var displayName = &quot;&quot;;
+        
+        &#x2F;&#x2F; Put the path pieces together, highlighting the matched parts
+        stringRanges.forEach(function (range) {
+            if (range.matched) {
+                displayName += &quot;&lt;span class=&#39;&quot; + matchClass + &quot;&#39;&gt;&quot;;
+            }
+            
+            var rangeText = rangeFilter ? rangeFilter(range.segment, range.text) : range.text;
+            displayName += StringUtils.breakableUrl(StringUtils.htmlEscape(rangeText));
+            
+            if (range.matched) {
+                displayName += &quot;&lt;&#x2F;span&gt;&quot;;
+            }
+        });
+        return displayName;
+    }
+    
+    function defaultResultsFormatter(item, query) {
+        query = query.slice(query.indexOf(&quot;@&quot;) + 1, query.length);
+
+        var displayName = highlightMatch(item);
+        return &quot;&lt;li&gt;&quot; + displayName + &quot;&lt;&#x2F;li&gt;&quot;;
+    }
+    
+    function _filenameResultsFormatter(item, query) {
+        &#x2F;&#x2F; For main label, we just want filename: drop most of the string
+        function fileNameFilter(segment, rangeText) {
+            if (segment === 0) {
+                var rightmostSlash = rangeText.lastIndexOf(&#39;&#x2F;&#39;);
+                return rangeText.substring(rightmostSlash + 1);  &#x2F;&#x2F; safe even if rightmostSlash is -1
+            } else {
+                return &quot;&quot;;
+            }
+        }
+        var displayName = highlightMatch(item, null, fileNameFilter);
+        var displayPath = highlightMatch(item, &quot;quicksearch-pathmatch&quot;);
+        
+        return &quot;&lt;li&gt;&quot; + displayName + &quot;&lt;br &#x2F;&gt;&lt;span class=&#39;quick-open-path&#39;&gt;&quot; + displayPath + &quot;&lt;&#x2F;span&gt;&lt;&#x2F;li&gt;&quot;;
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>multiFieldSort</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>searchResults</dt>
+                            <dd>(<em>!Array.&lt;SearchResult&gt;</em>) - </dd>
+                            <dt>number&gt;}</dt>
+                            <dd>(<em>!Object.&lt;string, </em>) - fields</dd>
+                    </dl>
+                    <p>Sorts an array of SearchResult objects on a primary field, followed by secondary fields<br />in case of ties. 'fields' maps field name to priority, where 0 is the primary field. E.g.:<br />     multiFieldSort(bugList, { milestone: 0, severity: 1 });<br />Would sort a bug list by milestone, and within each milestone sort bugs by severity.</p>
+
+<p>Any fields that have a string value are compared case-insensitively. Fields used should be<br />present on all SearchResult objects (no optional/undefined fields).</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function multiFieldSort(searchResults, fields) {
+        &#x2F;&#x2F; Move field names into an array, with primary field first
+        var fieldNames = [];
+        $.each(fields, function (key, priority) {
+            fieldNames[priority] = key;
+        });
+        
+        searchResults.sort(function (a, b) {
+            var priority;
+            for (priority = 0; priority &lt; fieldNames.length; priority++) {
+                var fieldName = fieldNames[priority];
+                var valueA = a[fieldName];
+                var valueB = b[fieldName];
+                if (typeof valueA === &quot;string&quot;) {
+                    valueA = valueA.toLowerCase();
+                    valueB = valueB.toLowerCase();
+                }
+                
+                if (valueA &lt; valueB) {
+                    return -1;
+                } else if (valueA &gt; valueB) {
+                    return 1;
+                }
+                &#x2F;&#x2F; otherwise, move on to next sort priority
+            }
+            return 0; &#x2F;&#x2F; all sort fields are equal
+        });
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>stringMatch</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>str</dt>
+                            <dd>(<em>!string</em>) - </dd>
+                            <dt>query</dt>
+                            <dd>(<em>!string</em>) - </dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>?SearchResult</em>) - </dd>
+                    </dl>
+                    <p>Performs matching of a string based on a query, and scores<br />the result based on specificity (assuming that the rightmost<br />side of the input is the most specific) and how clustered the<br />query characters are in the input string. The matching is<br />case-insensitive, but case is taken into account in the scoring.</p>
+
+<p>If the query characters cannot be found in order (but not necessarily all together), <br />undefined is returned.</p>
+
+<p>The returned SearchResult has a matchGoodness score that can be used<br />for sorting. It also has a stringRanges array, each entry with<br />"text", "matched" and "segment". If you string the "text" properties together, you will<br />get the original str. Using the matched property, you can highlight<br />the string matches. The segment property tells you the most specific (rightmost)<br />segment covered by the range, though there may be more than one segment covered.<br />Segments are currently determined by "/"s.</p>
+
+<p>Use basicMatchSort() to sort the filtered results taking this ranking into account.<br />The label of the SearchResult is set to 'str'.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function stringMatch(str, query) {
+        var result;
+        
+        &#x2F;&#x2F; start at the end and work backward, because we give preference
+        &#x2F;&#x2F; to matches in the name (last) segment
+        var strCounter = str.length - 1;
+        
+        &#x2F;&#x2F; stringRanges are used to keep track of which parts of
+        &#x2F;&#x2F; the input str matched the query
+        var stringRanges = [];
+        
+        &#x2F;&#x2F; segmentCounter tracks which &quot;segment&quot; (delimited section) of the
+        &#x2F;&#x2F; str we are in so that we can treat certain (generally most-specific) segments
+        &#x2F;&#x2F; specially.
+        var segmentCounter = 0;
+        
+        &#x2F;&#x2F; Keeps track of the most specific segment that the current stringRange
+        &#x2F;&#x2F; is associated with.
+        var rangeSegment = 0;
+        
+        &#x2F;&#x2F; addToStringRanges is used when we transition between matched and unmatched
+        &#x2F;&#x2F; parts of the string.
+        function addToStringRanges(numberOfCharacters, matched) {
+            var segment = rangeSegment;
+            rangeSegment = segmentCounter;
+            stringRanges.unshift({
+                text: str.substr(strCounter + 1, numberOfCharacters),
+                matched: matched,
+                segment: segment
+            });
+        }
+
+        &#x2F;&#x2F; No query? Short circuit the normal work done and just
+        &#x2F;&#x2F; return a single range that covers the whole string.
+        if (!query) {
+            result = new SearchResult(str);
+            result.matchGoodness = 0;
+            strCounter = -1;
+            addToStringRanges(str.length, false);
+            result.stringRanges = stringRanges;
+            return result;
+        }
+        
+        var queryChars = query.toLowerCase().split(&quot;&quot;);
+        
+        &#x2F;&#x2F; start at the end of the query
+        var queryCounter = queryChars.length - 1;
+
+        var score = 0;
+        
+        &#x2F;&#x2F; sequentialMatches is positive when we are stepping through matched
+        &#x2F;&#x2F; characters and negative when stepping through unmatched characters
+        var sequentialMatches = 0;
+        
+        while (strCounter &gt;= 0 &amp;&amp; queryCounter &gt;= 0) {
+            var curChar = str.charAt(strCounter);
+            
+            &#x2F;&#x2F; Ideally, this function will work with different delimiters used in
+            &#x2F;&#x2F; different contexts. For now, this is used for paths delimited by &#39;&#x2F;&#39;.
+            if (curChar === &#39;&#x2F;&#39;) {
+                &#x2F;&#x2F; Beginning of segment, apply boost for a matching
+                &#x2F;&#x2F; string of characters, if there is one
+                if (sequentialMatches &gt; 0) {
+                    score += _boostForPathSegmentStart(sequentialMatches);
+                }
+                
+                score = _adjustScoreForSegment(segmentCounter, score);
+                segmentCounter++;
+            }
+            
+            if (queryChars[queryCounter] === curChar.toLowerCase()) {
+                
+                score += _boostForUpperCase(curChar);
+                
+                &#x2F;&#x2F; are we ending a string of unmatched characters?
+                if (sequentialMatches &lt; 0) {
+                    addToStringRanges(-sequentialMatches, false);
+                    sequentialMatches = 0;
+                }
+                
+                &#x2F;&#x2F; matched character, chalk up another match
+                &#x2F;&#x2F; and move both counters back a character
+                sequentialMatches++;
+                queryCounter--;
+                strCounter--;
+            } else {
+                &#x2F;&#x2F; are we ending a string of matched characters?
+                if (sequentialMatches &gt; 0) {
+                    addToStringRanges(sequentialMatches, true);
+                    score += _boostForMatches(sequentialMatches);
+                    sequentialMatches = 0;
+                }
+                &#x2F;&#x2F; character didn&#39;t match, apply sequential matches
+                &#x2F;&#x2F; to score and keep looking
+                strCounter--;
+                sequentialMatches--;
+            }
+        }
+        
+        &#x2F;&#x2F; if there are still query characters left, we don&#39;t
+        &#x2F;&#x2F; have a match
+        if (queryCounter &gt;= 0) {
+            return undefined;
+        }
+        
+        if (sequentialMatches) {
+            addToStringRanges(Math.abs(sequentialMatches), sequentialMatches &gt; 0);
+        }
+        
+        if (strCounter &gt;= 0) {
+            stringRanges.unshift({
+                text: str.substring(0, strCounter + 1),
+                matched: false,
+                segment: rangeSegment
+            });
+        }
+        
+        &#x2F;&#x2F; now, we need to apply any score we&#39;ve accumulated
+        &#x2F;&#x2F; before we ran out of query characters
+        score += _boostForMatches(sequentialMatches);
+        
+        if (sequentialMatches &amp;&amp; strCounter &gt;= 0) {
+            if (str.charAt(strCounter) === &#39;&#x2F;&#39;) {
+                score += _boostForPathSegmentStart(sequentialMatches);
+            }
+        }
+        score = _adjustScoreForSegment(segmentCounter, score);
+        
+        &#x2F;&#x2F; Produce a SearchResult that is augmented with matchGoodness
+        &#x2F;&#x2F; (used for sorting) and stringRanges (used for highlighting
+        &#x2F;&#x2F; matched areas of the string)
+        result = new SearchResult(str);
+        result.matchGoodness = -1 * score;
+        result.stringRanges = stringRanges;
+        return result;
+    }</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

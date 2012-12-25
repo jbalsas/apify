@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>editor.CodeHintManager</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/jquery-1.7.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="page-header">
+                <h1>editor.CodeHintManager</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <div class="left-section">
+                <ul class="nav nav-list">
+                    <li class="nav-header">
+                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (109)</a>
+                    </li>
+                </ul>
+                <ul id="other-module" class="nav nav-list">
+                    <li><a href="brackets.html">brackets</a></li>
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="command.KeyBindingManager.html">command.KeyBindingManager</a></li>
+                    <li><a href="command.Menus.html">command.Menus</a></li>
+                    <li><a href="debug.DebugCommandHandlers.html">debug.DebugCommandHandlers</a></li>
+                    <li><a href="document.ChangedDocumentTracker.html">document.ChangedDocumentTracker</a></li>
+                    <li><a href="document.DocumentCommandHandlers.html">document.DocumentCommandHandlers</a></li>
+                    <li><a href="document.DocumentManager.html">document.DocumentManager</a></li>
+                    <li><a href="document.TextRange.html">document.TextRange</a></li>
+                    <li><a href="editor.CodeHintList.html">editor.CodeHintList</a></li>
+                    <li><a href="editor.CodeHintManager.html">editor.CodeHintManager</a></li>
+                    <li><a href="editor.CSSInlineEditor.html">editor.CSSInlineEditor</a></li>
+                    <li><a href="editor.Editor.html">editor.Editor</a></li>
+                    <li><a href="editor.EditorCommandHandlers.html">editor.EditorCommandHandlers</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="editor.EditorUtils.html">editor.EditorUtils</a></li>
+                    <li><a href="editor.InlineTextEditor.html">editor.InlineTextEditor</a></li>
+                    <li><a href="editor.InlineWidget.html">editor.InlineWidget</a></li>
+                    <li><a href="editor.MultiRangeInlineEditor.html">editor.MultiRangeInlineEditor</a></li>
+                    <li><a href="file.FileUtils.html">file.FileUtils</a></li>
+                    <li><a href="file.NativeFileError.html">file.NativeFileError</a></li>
+                    <li><a href="file.NativeFileSystem.html">file.NativeFileSystem</a></li>
+                    <li><a href="help.HelpCommandHandlers.html">help.HelpCommandHandlers</a></li>
+                    <li><a href="language.CSSUtils.html">language.CSSUtils</a></li>
+                    <li><a href="language.HTMLUtils.html">language.HTMLUtils</a></li>
+                    <li><a href="language.JSLintUtils.html">language.JSLintUtils</a></li>
+                    <li><a href="language.JSUtils.html">language.JSUtils</a></li>
+                    <li><a href="LiveDevelopment.Agents.ConsoleAgent.html">LiveDevelopment.Agents.ConsoleAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.CSSAgent.html">LiveDevelopment.Agents.CSSAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMAgent.html">LiveDevelopment.Agents.DOMAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMHelpers.html">LiveDevelopment.Agents.DOMHelpers</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMNode.html">LiveDevelopment.Agents.DOMNode</a></li>
+                    <li><a href="LiveDevelopment.Agents.EditAgent.html">LiveDevelopment.Agents.EditAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.GotoAgent.html">LiveDevelopment.Agents.GotoAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.HighlightAgent.html">LiveDevelopment.Agents.HighlightAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.NetworkAgent.html">LiveDevelopment.Agents.NetworkAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteAgent.html">LiveDevelopment.Agents.RemoteAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteFunctions.html">LiveDevelopment.Agents.RemoteFunctions</a></li>
+                    <li><a href="LiveDevelopment.Agents.ScriptAgent.html">LiveDevelopment.Agents.ScriptAgent</a></li>
+                    <li><a href="LiveDevelopment.Documents.CSSDocument.html">LiveDevelopment.Documents.CSSDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.HTMLDocument.html">LiveDevelopment.Documents.HTMLDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.JSDocument.html">LiveDevelopment.Documents.JSDocument</a></li>
+                    <li><a href="LiveDevelopment.Inspector.Inspector.html">LiveDevelopment.Inspector.Inspector</a></li>
+                    <li><a href="LiveDevelopment.LiveDevelopment.html">LiveDevelopment.LiveDevelopment</a></li>
+                    <li><a href="LiveDevelopment.main.html">LiveDevelopment.main</a></li>
+                    <li><a href="nls.de.strings.html">nls.de.strings</a></li>
+                    <li><a href="nls.de.urls.html">nls.de.urls</a></li>
+                    <li><a href="nls.es.strings.html">nls.es.strings</a></li>
+                    <li><a href="nls.es.urls.html">nls.es.urls</a></li>
+                    <li><a href="nls.fr.strings.html">nls.fr.strings</a></li>
+                    <li><a href="nls.fr.urls.html">nls.fr.urls</a></li>
+                    <li><a href="nls.it.strings.html">nls.it.strings</a></li>
+                    <li><a href="nls.it.urls.html">nls.it.urls</a></li>
+                    <li><a href="nls.ja.strings.html">nls.ja.strings</a></li>
+                    <li><a href="nls.nb.strings.html">nls.nb.strings</a></li>
+                    <li><a href="nls.pt-br.strings.html">nls.pt-br.strings</a></li>
+                    <li><a href="nls.pt-br.urls.html">nls.pt-br.urls</a></li>
+                    <li><a href="nls.root.strings.html">nls.root.strings</a></li>
+                    <li><a href="nls.root.urls.html">nls.root.urls</a></li>
+                    <li><a href="nls.ru.strings.html">nls.ru.strings</a></li>
+                    <li><a href="nls.ru.urls.html">nls.ru.urls</a></li>
+                    <li><a href="nls.strings.html">nls.strings</a></li>
+                    <li><a href="nls.tr.strings.html">nls.tr.strings</a></li>
+                    <li><a href="nls.urls.html">nls.urls</a></li>
+                    <li><a href="preferences.PreferencesDialogs.html">preferences.PreferencesDialogs</a></li>
+                    <li><a href="preferences.PreferencesManager.html">preferences.PreferencesManager</a></li>
+                    <li><a href="preferences.PreferenceStorage.html">preferences.PreferenceStorage</a></li>
+                    <li><a href="project.FileIndexManager.html">project.FileIndexManager</a></li>
+                    <li><a href="project.FileSyncManager.html">project.FileSyncManager</a></li>
+                    <li><a href="project.FileViewController.html">project.FileViewController</a></li>
+                    <li><a href="project.ProjectManager.html">project.ProjectManager</a></li>
+                    <li><a href="project.SidebarView.html">project.SidebarView</a></li>
+                    <li><a href="project.WorkingSetSort.html">project.WorkingSetSort</a></li>
+                    <li><a href="project.WorkingSetView.html">project.WorkingSetView</a></li>
+                    <li><a href="search.FindInFiles.html">search.FindInFiles</a></li>
+                    <li><a href="search.FindReplace.html">search.FindReplace</a></li>
+                    <li><a href="search.QuickOpen.html">search.QuickOpen</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.AppInit.html">utils.AppInit</a></li>
+                    <li><a href="utils.Async.html">utils.Async</a></li>
+                    <li><a href="utils.BuildInfoUtils.html">utils.BuildInfoUtils</a></li>
+                    <li><a href="utils.CollectionUtils.html">utils.CollectionUtils</a></li>
+                    <li><a href="utils.ExtensionLoader.html">utils.ExtensionLoader</a></li>
+                    <li><a href="utils.ExtensionUtils.html">utils.ExtensionUtils</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                    <li><a href="utils.NativeApp.html">utils.NativeApp</a></li>
+                    <li><a href="utils.PerfUtils.html">utils.PerfUtils</a></li>
+                    <li><a href="utils.Resizer.html">utils.Resizer</a></li>
+                    <li><a href="utils.ShellAPI.html">utils.ShellAPI</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="utils.TokenUtils.html">utils.TokenUtils</a></li>
+                    <li><a href="utils.UpdateNotification.html">utils.UpdateNotification</a></li>
+                    <li><a href="utils.UrlParams.html">utils.UrlParams</a></li>
+                    <li><a href="utils.ViewUtils.html">utils.ViewUtils</a></li>
+                    <li><a href="view.ViewCommandHandlers.html">view.ViewCommandHandlers</a></li>
+                    <li><a href="widgets.bootstrap-alerts.html">widgets.bootstrap-alerts</a></li>
+                    <li><a href="widgets.bootstrap-buttons.html">widgets.bootstrap-buttons</a></li>
+                    <li><a href="widgets.bootstrap-dropdown.html">widgets.bootstrap-dropdown</a></li>
+                    <li><a href="widgets.bootstrap-modal.html">widgets.bootstrap-modal</a></li>
+                    <li><a href="widgets.bootstrap-popover.html">widgets.bootstrap-popover</a></li>
+                    <li><a href="widgets.bootstrap-scrollspy.html">widgets.bootstrap-scrollspy</a></li>
+                    <li><a href="widgets.bootstrap-tabs.html">widgets.bootstrap-tabs</a></li>
+                    <li><a href="widgets.bootstrap-twipsy.html">widgets.bootstrap-twipsy</a></li>
+                    <li><a href="widgets.Dialogs.html">widgets.Dialogs</a></li>
+                    <li><a href="widgets.ModalBar.html">widgets.ModalBar</a></li>
+                    <li><a href="widgets.PopUpManager.html">widgets.PopUpManager</a></li>
+                    <li><a href="widgets.StatusBar.html">widgets.StatusBar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <section>
+                <div id="description">
+                    <p>lobal define, $, brackets</p>
+                </div>
+            </section>
+
+            <section id="dependencies">
+                <h3>Dependencies</h3>
+                <ul class="nav nav-list">
+                    <li><a href="editor.CodeHintList.html">editor.CodeHintList</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                </ul>
+            </section>
+
+            <section id="variables">
+                <h3>Variables <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <!--<ul>-->
+                <!--</ul>-->
+            </section>
+
+            <section id="functions">
+                <h3>Functions <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_beginSession</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>editor</dt>
+                            <dd>(<em>Editor</em>) - </dd>
+                    </dl>
+                    <p>Try to begin a new hinting session. </p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _beginSession(editor) {
+        &#x2F;&#x2F; Find a suitable provider, if any
+        var mode = editor.getModeForSelection(),
+            enabledProviders = _getProvidersForMode(mode);
+        
+        $.each(enabledProviders, function (index, item) {
+            if (item.provider.hasHints(editor, lastChar)) {
+                sessionProvider = item.provider;
+                return false;
+            }
+            return true;
+        });
+
+        &#x2F;&#x2F; If a provider is found, initialize the hint list and update it
+        if (sessionProvider) {
+            sessionEditor = editor;
+
+            hintList = new CodeHintList(sessionEditor);
+            hintList.onSelect(function (hint) {
+                var restart = sessionProvider.insertHint(hint),
+                    previousEditor = sessionEditor;
+                _endSession();
+                if (restart) {
+                    _beginSession(previousEditor);
+                }
+            });
+            hintList.onClose(_endSession);
+
+            _updateHintList();
+        }
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_endSession</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>End the current hinting session</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _endSession() {
+        hintList.close();
+        hintList = null;
+        sessionProvider = null;
+        sessionEditor = null;
+        if (deferredHints) {
+            deferredHints.reject();
+            deferredHints = null;
+        }
+    }</code></pre>
+                </div>
+                <div class="member private public">
+                    <span class="pull-right scope">
+                        Private
+                        Public API
+                    </span>
+                    <h4>_getCodeHintList</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Expose CodeHintList for unit testing</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _getCodeHintList() {
+        return hintList;
+    }
+    exports._getCodeHintList        = _getCodeHintList;
+    
+    &#x2F;&#x2F; Define public API
+    exports.handleKeyEvent          = handleKeyEvent;
+    exports.handleChange            = handleChange;
+    exports.registerHintProvider    = registerHintProvider;
+});</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_getProvidersForMode</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>string&gt;)}</dt>
+                            <dd>(<em>(string, Object&lt;name:</em>) - mode</dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>Array.&lt;provider:</em>) - Object, modes: Array.<string>, priority: number}>}</dd>
+                    </dl>
+                    <p>Return the array of hint providers for the given mode.<br /> This gets called (potentially) on every keypress. So, it should be fast.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _getProvidersForMode(mode) {
+        var modeName = (typeof mode === &quot;string&quot;) ? mode : mode.name;
+        return hintProviders[modeName] || hintProviders.all;
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_inSession</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>editor</dt>
+                            <dd>(<em>Editor</em>) - </dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>boolean</em>) - </dd>
+                    </dl>
+                    <p>Is there a hinting session active for a given editor?</p>
+
+<p>NOTE: the sessionEditor, sessionProvider and hintList objects are<br />only guaranteed to be initialized during an active session. </p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _inSession(editor) {
+        if (sessionEditor) {
+            if (sessionEditor === editor &amp;&amp;
+                    (hintList.isOpen() ||
+                     (deferredHints &amp;&amp; !deferredHints.isResolved() &amp;&amp; !deferredHints.isRejected()))) {
+                return true;
+            } else {
+                &#x2F;&#x2F; the editor has changed
+                _endSession();
+            }
+        }
+        return false;
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_providerSort</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Comparator to sort providers based on their priority</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _providerSort(a, b) {
+        return b.priority - a.priority;
+    }</code></pre>
+                </div>
+                <div class="member private">
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_updateHintList</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>From an active hinting session, get hints from the current provider and<br />render the hint list window.</p>
+
+<p>Assumes that it is called when a session is active (i.e. sessionProvider is not null).</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function _updateHintList() {
+        if (deferredHints) {
+            deferredHints.reject();
+            deferredHints = null;
+        }
+        
+        var response = sessionProvider.getHints(lastChar);
+        lastChar = null;
+        
+        if (!response) {
+            &#x2F;&#x2F; the provider wishes to close the session
+            _endSession();
+        } else if (response.hasOwnProperty(&quot;hints&quot;)) { &#x2F;&#x2F; a synchronous response
+            if (hintList.isOpen()) {
+                &#x2F;&#x2F; the session is open 
+                hintList.update(response);
+            } else {
+                hintList.open(response);
+            }
+        } else { &#x2F;&#x2F; response is a deferred
+            deferredHints = response;
+            response.done(function (hints) {
+                if (hintList.isOpen()) {
+                    &#x2F;&#x2F; the session is open 
+                    hintList.update(hints);
+                } else {
+                    hintList.open(hints);
+                }
+            });
+        }
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>handleChange</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Start a new implicit hinting session, or update the existing hint list. <br />Called by the editor after handleKeyEvent, which is responsible for setting<br />the lastChar.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function handleChange(editor) {
+        if (_inSession(editor)) {
+            _updateHintList();
+        } else {
+            if (lastChar) {
+                _beginSession(editor);
+            }
+        }
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>handleKeyEvent</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>editor</dt>
+                            <dd>(<em>Editor</em>) - </dd>
+                            <dt>event</dt>
+                            <dd>(<em>KeyboardEvent</em>) - </dd>
+                    </dl>
+                    <p>Handles keys related to displaying, searching, and navigating the hint list. <br />This gets called before handleChange.</p>
+
+<p>TODO: Ideally, we'd get a more semantic event from the editor that told us<br />what changed so that we could do all of this logic without looking at<br />key events. Then, the purposes of handleKeyEvent and handleChange could be<br />combined. Doing this well requires changing CodeMirror.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function handleKeyEvent(editor, event) {
+        if (event.type === &quot;keydown&quot;) {
+            if (event.keyCode === 32 &amp;&amp; event.ctrlKey) { &#x2F;&#x2F; User pressed Ctrl+Space
+                event.preventDefault();
+                lastChar = null;
+                if (_inSession(editor)) {
+                    _endSession();
+                }
+                &#x2F;&#x2F; Begin a new explicit session
+                _beginSession(editor);
+            } else if (_inSession(editor)) {
+                &#x2F;&#x2F; Pass event to the hint list, if it&#39;s open
+                hintList.handleKeyEvent(event);
+            }
+        } else if (event.type === &quot;keypress&quot;) {
+            &#x2F;&#x2F; Last inserted character, used later by handleChange
+            lastChar = String.fromCharCode(event.charCode);
+        } else if (event.type === &quot;keyup&quot;) {
+            if (_inSession(editor)) {
+                if ((event.keyCode !== 32 &amp;&amp; event.ctrlKey) || event.altKey || event.metaKey) {
+                    &#x2F;&#x2F; End the session if the user presses any key with a modifier (other than Ctrl+Space).
+                    _endSession();
+                } else if (event.keyCode === KeyEvent.DOM_VK_LEFT ||
+                        event.keyCode === KeyEvent.DOM_VK_RIGHT) {
+                    &#x2F;&#x2F; Update the list after a simple navigation.
+                    &#x2F;&#x2F; We do this in &quot;keyup&quot; because we want the cursor position to be updated before
+                    &#x2F;&#x2F; we redraw the list.
+                    _updateHintList();
+                }
+            }
+        }
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>registerHintProvider</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>provider</dt>
+                            <dd>(<em>CodeHintProvider</em>) - </dd>
+                            <dt>string&gt;)]}</dt>
+                            <dd>(<em>Array[(string, Object&lt;name:</em>) - modes</dd>
+                            <dt>priority</dt>
+                            <dd>(<em>Integer</em>) - </dd>
+                    </dl>
+                    <p>The method by which a CodeHintProvider registers its willingness to<br />providing hints for editors in a given mode.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function registerHintProvider(providerInfo, modes, priority) {
+        var providerObj = { provider: providerInfo,
+                            priority: priority || 0 };
+                
+        if (modes) {
+            var modeNames = [], registerInAllModes = false;
+            var i, currentModeName;
+            for (i = 0; i &lt; modes.length; i++) {
+                currentModeName = (typeof modes[i] === &quot;string&quot;) ? modes[i] : modes[i].name;
+                if (currentModeName) {
+                    if (currentModeName === &quot;all&quot;) {
+                        registerInAllModes = true;
+                        break;
+                    } else {
+                        modeNames.push(currentModeName);
+                    }
+                }
+            }
+
+            if (registerInAllModes) {
+                &#x2F;&#x2F; if we&#39;re registering in all, then we ignore the modeNames array
+                &#x2F;&#x2F; so that we avoid registering a provider twice
+                var modeName;
+                for (modeName in hintProviders) {
+                    if (hintProviders.hasOwnProperty(modeName)) {
+                        hintProviders[modeName].push(providerObj);
+                        hintProviders[modeName].sort(_providerSort);
+                    }
+                }
+            } else {
+                modeNames.forEach(function (modeName) {
+                    if (modeName) {
+                        if (!hintProviders[modeName]) {
+                            &#x2F;&#x2F; initialize a new mode with all providers
+                            hintProviders[modeName] = Array.prototype.concat(hintProviders.all);
+                        }
+                        hintProviders[modeName].push(providerObj);
+                        hintProviders[modeName].sort(_providerSort);
+                    }
+                });
+            }
+        }
+    }</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

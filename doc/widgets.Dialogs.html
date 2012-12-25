@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>widgets.Dialogs</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/jquery-1.7.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="page-header">
+                <h1>widgets.Dialogs</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <div class="left-section">
+                <ul class="nav nav-list">
+                    <li class="nav-header">
+                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (109)</a>
+                    </li>
+                </ul>
+                <ul id="other-module" class="nav nav-list">
+                    <li><a href="brackets.html">brackets</a></li>
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="command.KeyBindingManager.html">command.KeyBindingManager</a></li>
+                    <li><a href="command.Menus.html">command.Menus</a></li>
+                    <li><a href="debug.DebugCommandHandlers.html">debug.DebugCommandHandlers</a></li>
+                    <li><a href="document.ChangedDocumentTracker.html">document.ChangedDocumentTracker</a></li>
+                    <li><a href="document.DocumentCommandHandlers.html">document.DocumentCommandHandlers</a></li>
+                    <li><a href="document.DocumentManager.html">document.DocumentManager</a></li>
+                    <li><a href="document.TextRange.html">document.TextRange</a></li>
+                    <li><a href="editor.CodeHintList.html">editor.CodeHintList</a></li>
+                    <li><a href="editor.CodeHintManager.html">editor.CodeHintManager</a></li>
+                    <li><a href="editor.CSSInlineEditor.html">editor.CSSInlineEditor</a></li>
+                    <li><a href="editor.Editor.html">editor.Editor</a></li>
+                    <li><a href="editor.EditorCommandHandlers.html">editor.EditorCommandHandlers</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="editor.EditorUtils.html">editor.EditorUtils</a></li>
+                    <li><a href="editor.InlineTextEditor.html">editor.InlineTextEditor</a></li>
+                    <li><a href="editor.InlineWidget.html">editor.InlineWidget</a></li>
+                    <li><a href="editor.MultiRangeInlineEditor.html">editor.MultiRangeInlineEditor</a></li>
+                    <li><a href="file.FileUtils.html">file.FileUtils</a></li>
+                    <li><a href="file.NativeFileError.html">file.NativeFileError</a></li>
+                    <li><a href="file.NativeFileSystem.html">file.NativeFileSystem</a></li>
+                    <li><a href="help.HelpCommandHandlers.html">help.HelpCommandHandlers</a></li>
+                    <li><a href="language.CSSUtils.html">language.CSSUtils</a></li>
+                    <li><a href="language.HTMLUtils.html">language.HTMLUtils</a></li>
+                    <li><a href="language.JSLintUtils.html">language.JSLintUtils</a></li>
+                    <li><a href="language.JSUtils.html">language.JSUtils</a></li>
+                    <li><a href="LiveDevelopment.Agents.ConsoleAgent.html">LiveDevelopment.Agents.ConsoleAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.CSSAgent.html">LiveDevelopment.Agents.CSSAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMAgent.html">LiveDevelopment.Agents.DOMAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMHelpers.html">LiveDevelopment.Agents.DOMHelpers</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMNode.html">LiveDevelopment.Agents.DOMNode</a></li>
+                    <li><a href="LiveDevelopment.Agents.EditAgent.html">LiveDevelopment.Agents.EditAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.GotoAgent.html">LiveDevelopment.Agents.GotoAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.HighlightAgent.html">LiveDevelopment.Agents.HighlightAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.NetworkAgent.html">LiveDevelopment.Agents.NetworkAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteAgent.html">LiveDevelopment.Agents.RemoteAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteFunctions.html">LiveDevelopment.Agents.RemoteFunctions</a></li>
+                    <li><a href="LiveDevelopment.Agents.ScriptAgent.html">LiveDevelopment.Agents.ScriptAgent</a></li>
+                    <li><a href="LiveDevelopment.Documents.CSSDocument.html">LiveDevelopment.Documents.CSSDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.HTMLDocument.html">LiveDevelopment.Documents.HTMLDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.JSDocument.html">LiveDevelopment.Documents.JSDocument</a></li>
+                    <li><a href="LiveDevelopment.Inspector.Inspector.html">LiveDevelopment.Inspector.Inspector</a></li>
+                    <li><a href="LiveDevelopment.LiveDevelopment.html">LiveDevelopment.LiveDevelopment</a></li>
+                    <li><a href="LiveDevelopment.main.html">LiveDevelopment.main</a></li>
+                    <li><a href="nls.de.strings.html">nls.de.strings</a></li>
+                    <li><a href="nls.de.urls.html">nls.de.urls</a></li>
+                    <li><a href="nls.es.strings.html">nls.es.strings</a></li>
+                    <li><a href="nls.es.urls.html">nls.es.urls</a></li>
+                    <li><a href="nls.fr.strings.html">nls.fr.strings</a></li>
+                    <li><a href="nls.fr.urls.html">nls.fr.urls</a></li>
+                    <li><a href="nls.it.strings.html">nls.it.strings</a></li>
+                    <li><a href="nls.it.urls.html">nls.it.urls</a></li>
+                    <li><a href="nls.ja.strings.html">nls.ja.strings</a></li>
+                    <li><a href="nls.nb.strings.html">nls.nb.strings</a></li>
+                    <li><a href="nls.pt-br.strings.html">nls.pt-br.strings</a></li>
+                    <li><a href="nls.pt-br.urls.html">nls.pt-br.urls</a></li>
+                    <li><a href="nls.root.strings.html">nls.root.strings</a></li>
+                    <li><a href="nls.root.urls.html">nls.root.urls</a></li>
+                    <li><a href="nls.ru.strings.html">nls.ru.strings</a></li>
+                    <li><a href="nls.ru.urls.html">nls.ru.urls</a></li>
+                    <li><a href="nls.strings.html">nls.strings</a></li>
+                    <li><a href="nls.tr.strings.html">nls.tr.strings</a></li>
+                    <li><a href="nls.urls.html">nls.urls</a></li>
+                    <li><a href="preferences.PreferencesDialogs.html">preferences.PreferencesDialogs</a></li>
+                    <li><a href="preferences.PreferencesManager.html">preferences.PreferencesManager</a></li>
+                    <li><a href="preferences.PreferenceStorage.html">preferences.PreferenceStorage</a></li>
+                    <li><a href="project.FileIndexManager.html">project.FileIndexManager</a></li>
+                    <li><a href="project.FileSyncManager.html">project.FileSyncManager</a></li>
+                    <li><a href="project.FileViewController.html">project.FileViewController</a></li>
+                    <li><a href="project.ProjectManager.html">project.ProjectManager</a></li>
+                    <li><a href="project.SidebarView.html">project.SidebarView</a></li>
+                    <li><a href="project.WorkingSetSort.html">project.WorkingSetSort</a></li>
+                    <li><a href="project.WorkingSetView.html">project.WorkingSetView</a></li>
+                    <li><a href="search.FindInFiles.html">search.FindInFiles</a></li>
+                    <li><a href="search.FindReplace.html">search.FindReplace</a></li>
+                    <li><a href="search.QuickOpen.html">search.QuickOpen</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.AppInit.html">utils.AppInit</a></li>
+                    <li><a href="utils.Async.html">utils.Async</a></li>
+                    <li><a href="utils.BuildInfoUtils.html">utils.BuildInfoUtils</a></li>
+                    <li><a href="utils.CollectionUtils.html">utils.CollectionUtils</a></li>
+                    <li><a href="utils.ExtensionLoader.html">utils.ExtensionLoader</a></li>
+                    <li><a href="utils.ExtensionUtils.html">utils.ExtensionUtils</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                    <li><a href="utils.NativeApp.html">utils.NativeApp</a></li>
+                    <li><a href="utils.PerfUtils.html">utils.PerfUtils</a></li>
+                    <li><a href="utils.Resizer.html">utils.Resizer</a></li>
+                    <li><a href="utils.ShellAPI.html">utils.ShellAPI</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="utils.TokenUtils.html">utils.TokenUtils</a></li>
+                    <li><a href="utils.UpdateNotification.html">utils.UpdateNotification</a></li>
+                    <li><a href="utils.UrlParams.html">utils.UrlParams</a></li>
+                    <li><a href="utils.ViewUtils.html">utils.ViewUtils</a></li>
+                    <li><a href="view.ViewCommandHandlers.html">view.ViewCommandHandlers</a></li>
+                    <li><a href="widgets.bootstrap-alerts.html">widgets.bootstrap-alerts</a></li>
+                    <li><a href="widgets.bootstrap-buttons.html">widgets.bootstrap-buttons</a></li>
+                    <li><a href="widgets.bootstrap-dropdown.html">widgets.bootstrap-dropdown</a></li>
+                    <li><a href="widgets.bootstrap-modal.html">widgets.bootstrap-modal</a></li>
+                    <li><a href="widgets.bootstrap-popover.html">widgets.bootstrap-popover</a></li>
+                    <li><a href="widgets.bootstrap-scrollspy.html">widgets.bootstrap-scrollspy</a></li>
+                    <li><a href="widgets.bootstrap-tabs.html">widgets.bootstrap-tabs</a></li>
+                    <li><a href="widgets.bootstrap-twipsy.html">widgets.bootstrap-twipsy</a></li>
+                    <li><a href="widgets.Dialogs.html">widgets.Dialogs</a></li>
+                    <li><a href="widgets.ModalBar.html">widgets.ModalBar</a></li>
+                    <li><a href="widgets.PopUpManager.html">widgets.PopUpManager</a></li>
+                    <li><a href="widgets.StatusBar.html">widgets.StatusBar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <section>
+                <div id="description">
+                    <p>Utilities for creating and managing standard modal dialogs.</p>
+                </div>
+            </section>
+
+            <section id="dependencies">
+                <h3>Dependencies</h3>
+                <ul class="nav nav-list">
+                    <li><a href="command.KeyBindingManager.html">command.KeyBindingManager</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                    <li><a href="utils.NativeApp.html">utils.NativeApp</a></li>
+                </ul>
+            </section>
+
+            <section id="variables">
+                <h3>Variables <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <!--<ul>-->
+                <!--</ul>-->
+            </section>
+
+            <section id="functions">
+                <h3>Functions <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>cancelModalDialogIfOpen</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Immediately closes any dialog instances with the given class. The dialog callback for each instance will <br />be called with the special buttonId DIALOG_CANCELED (note: callback is run asynchronously).</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function cancelModalDialogIfOpen(dlgClass) {
+        $(&quot;.&quot; + dlgClass + &quot;.instance&quot;).each(function (index, dlg) {
+            if ($(dlg).is(&quot;:visible&quot;)) {   &#x2F;&#x2F; Bootstrap breaks if try to hide dialog that&#39;s already hidden
+                _dismissDialog($(dlg), DIALOG_CANCELED);
+            }
+        });
+    }
+    
+    exports.DIALOG_BTN_CANCEL   = DIALOG_BTN_CANCEL;
+    exports.DIALOG_BTN_OK       = DIALOG_BTN_OK;
+    exports.DIALOG_BTN_DONTSAVE = DIALOG_BTN_DONTSAVE;
+    exports.DIALOG_CANCELED     = DIALOG_CANCELED;
+    exports.DIALOG_BTN_DOWNLOAD = DIALOG_BTN_DOWNLOAD;
+    
+    exports.DIALOG_ID_ERROR             = DIALOG_ID_ERROR;
+    exports.DIALOG_ID_INFO              = DIALOG_ID_INFO;
+    exports.DIALOG_ID_SAVE_CLOSE        = DIALOG_ID_SAVE_CLOSE;
+    exports.DIALOG_ID_EXT_CHANGED       = DIALOG_ID_EXT_CHANGED;
+    exports.DIALOG_ID_EXT_DELETED       = DIALOG_ID_EXT_DELETED;
+    exports.DIALOG_ID_LIVE_DEVELOPMENT  = DIALOG_ID_LIVE_DEVELOPMENT;
+    
+    exports.showModalDialog              = showModalDialog;
+    exports.showModalDialogUsingTemplate = showModalDialogUsingTemplate;
+    exports.cancelModalDialogIfOpen      = cancelModalDialogIfOpen;
+});</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>showModalDialog</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>dlgClass</dt>
+                            <dd>(<em>string</em>) - The class of the dialog node in the HTML.</dd>
+                            <dt>title</dt>
+                            <dd>(<em>string=</em>) - The title of the error dialog. Can contain HTML markup. If unspecified, title in</dd>
+                            <dt>message</dt>
+                            <dd>(<em>string=</em>) - The message to display in the error dialog. Can contain HTML markup. If</dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>$.Promise</em>) - a promise that will be resolved with the ID of the clicked button when the dialog</dd>
+                    </dl>
+                    <p>General purpose modal dialog. Assumes that:<br />-- the root tag of the dialog is marked with a unique class name (passed as dlgClass), as well as the<br />   classes "template modal hide".<br />-- the HTML for the dialog contains elements with "title" and "message" classes, as well as a number <br />   of elements with "dialog-button" class, each of which has a "data-button-id".</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function showModalDialog(dlgClass, title, message) {
+        &#x2F;&#x2F; We clone the HTML rather than using it directly so that if two dialogs of the same
+        &#x2F;&#x2F; type happen to show up, they can appear at the same time. (This is an edge case that
+        &#x2F;&#x2F; shouldn&#39;t happen often, but we can&#39;t prevent it from happening since everything is
+        &#x2F;&#x2F; asynchronous.)
+        var $template = $(&quot;.&quot; + dlgClass + &quot;.template&quot;)
+            .clone()
+            .removeClass(&quot;template&quot;);
+        if ($template.length === 0) {
+            console.error(&quot;Dialog id &quot; + dlgClass + &quot; does not exist&quot;);
+            return;
+        }
+        return showModalDialogUsingTemplate($template, title, message);
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>showModalDialogUsingTemplate</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>template</dt>
+                            <dd>(<em>string</em>) - A string template or jQuery object to use as the dialog HTML.</dd>
+                            <dt>title</dt>
+                            <dd>(<em>string=</em>) - The title of the error dialog. Can contain HTML markup. If unspecified, title in</dd>
+                            <dt>message</dt>
+                            <dd>(<em>string=</em>) - The message to display in the error dialog. Can contain HTML markup. If</dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>$.Promise</em>) - a promise that will be resolved with the ID of the clicked button when the dialog</dd>
+                    </dl>
+                    <p>Like showModalDialog(), but takes a template as a parameter rather than assuming the template is embedded<br />in the current DOM. The template can either be a string or a jQuery object representing a DOM node that is<br /><em>not</em> in the current DOM.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function showModalDialogUsingTemplate(template, title, message) {
+        var result = $.Deferred(),
+            promise = result.promise();
+        
+        var $dlg = $(template)
+            .addClass(&quot;instance&quot;)
+            .appendTo(window.document.body);
+        
+        &#x2F;&#x2F; Save the dialog promise for unit tests
+        $dlg.data(&quot;promise&quot;, promise);
+
+        &#x2F;&#x2F; Set title and message
+        if (title) {
+            $(&quot;.dialog-title&quot;, $dlg).html(title);
+        }
+        if (message) {
+            $(&quot;.dialog-message&quot;, $dlg).html(message);
+        }
+
+        $(&quot;.clickable-link&quot;, $dlg).on(&quot;click&quot;, function _handleLink(e) {
+            &#x2F;&#x2F; Links use data-href (not href) attribute so Brackets itself doesn&#39;t redirect
+            if (e.target.dataset &amp;&amp; e.target.dataset.href) {
+                NativeApp.openURLInDefaultBrowser(e.target.dataset.href);
+            }
+        });
+
+        var handleKeyDown = _handleKeyDown.bind($dlg);
+
+        &#x2F;&#x2F; Pipe dialog-closing notification back to client code
+        $dlg.one(&quot;hidden&quot;, function () {
+            var buttonId = $dlg.data(&quot;buttonId&quot;);
+            if (!buttonId) {    &#x2F;&#x2F; buttonId will be undefined if closed via Bootstrap&#39;s &quot;x&quot; button
+                buttonId = DIALOG_BTN_CANCEL;
+            }
+            
+            &#x2F;&#x2F; Let call stack return before notifying that dialog has closed; this avoids issue #191
+            &#x2F;&#x2F; if the handler we&#39;re triggering might show another dialog (as long as there&#39;s no
+            &#x2F;&#x2F; fade-out animation)
+            window.setTimeout(function () {
+                result.resolve(buttonId);
+            }, 0);
+            
+            &#x2F;&#x2F; Remove the dialog instance from the DOM.
+            $dlg.remove();
+
+            &#x2F;&#x2F; Remove keydown event handler
+            window.document.body.removeEventListener(&quot;keydown&quot;, handleKeyDown, true);
+            KeyBindingManager.setEnabled(true);
+        }).one(&quot;shown&quot;, function () {
+            &#x2F;&#x2F; Set focus to the default button
+            var primaryBtn = $dlg.find(&quot;.primary&quot;);
+
+            if (primaryBtn) {
+                primaryBtn.focus();
+            }
+
+            &#x2F;&#x2F; Listen for dialog keyboard shortcuts
+            window.document.body.addEventListener(&quot;keydown&quot;, handleKeyDown, true);
+            KeyBindingManager.setEnabled(false);
+        });
+        
+        &#x2F;&#x2F; Click handler for buttons
+        $dlg.one(&quot;click&quot;, &quot;.dialog-button&quot;, function (e) {
+            _dismissDialog($dlg, $(this).attr(&quot;data-button-id&quot;));
+        });
+
+        &#x2F;&#x2F; Run the dialog
+        $dlg.modal({
+            backdrop: &quot;static&quot;,
+            show: true,
+            keyboard: true
+        });
+
+        return promise;
+    }</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

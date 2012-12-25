@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>project.FileSyncManager</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+    <![endif]-->
+    <script type="text/javascript" src="../assets/js/jquery-1.7.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="page-header">
+                <h1>project.FileSyncManager</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span3">
+            <div class="left-section">
+                <ul class="nav nav-list">
+                    <li class="nav-header">
+                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (109)</a>
+                    </li>
+                </ul>
+                <ul id="other-module" class="nav nav-list">
+                    <li><a href="brackets.html">brackets</a></li>
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="command.KeyBindingManager.html">command.KeyBindingManager</a></li>
+                    <li><a href="command.Menus.html">command.Menus</a></li>
+                    <li><a href="debug.DebugCommandHandlers.html">debug.DebugCommandHandlers</a></li>
+                    <li><a href="document.ChangedDocumentTracker.html">document.ChangedDocumentTracker</a></li>
+                    <li><a href="document.DocumentCommandHandlers.html">document.DocumentCommandHandlers</a></li>
+                    <li><a href="document.DocumentManager.html">document.DocumentManager</a></li>
+                    <li><a href="document.TextRange.html">document.TextRange</a></li>
+                    <li><a href="editor.CodeHintList.html">editor.CodeHintList</a></li>
+                    <li><a href="editor.CodeHintManager.html">editor.CodeHintManager</a></li>
+                    <li><a href="editor.CSSInlineEditor.html">editor.CSSInlineEditor</a></li>
+                    <li><a href="editor.Editor.html">editor.Editor</a></li>
+                    <li><a href="editor.EditorCommandHandlers.html">editor.EditorCommandHandlers</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="editor.EditorUtils.html">editor.EditorUtils</a></li>
+                    <li><a href="editor.InlineTextEditor.html">editor.InlineTextEditor</a></li>
+                    <li><a href="editor.InlineWidget.html">editor.InlineWidget</a></li>
+                    <li><a href="editor.MultiRangeInlineEditor.html">editor.MultiRangeInlineEditor</a></li>
+                    <li><a href="file.FileUtils.html">file.FileUtils</a></li>
+                    <li><a href="file.NativeFileError.html">file.NativeFileError</a></li>
+                    <li><a href="file.NativeFileSystem.html">file.NativeFileSystem</a></li>
+                    <li><a href="help.HelpCommandHandlers.html">help.HelpCommandHandlers</a></li>
+                    <li><a href="language.CSSUtils.html">language.CSSUtils</a></li>
+                    <li><a href="language.HTMLUtils.html">language.HTMLUtils</a></li>
+                    <li><a href="language.JSLintUtils.html">language.JSLintUtils</a></li>
+                    <li><a href="language.JSUtils.html">language.JSUtils</a></li>
+                    <li><a href="LiveDevelopment.Agents.ConsoleAgent.html">LiveDevelopment.Agents.ConsoleAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.CSSAgent.html">LiveDevelopment.Agents.CSSAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMAgent.html">LiveDevelopment.Agents.DOMAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMHelpers.html">LiveDevelopment.Agents.DOMHelpers</a></li>
+                    <li><a href="LiveDevelopment.Agents.DOMNode.html">LiveDevelopment.Agents.DOMNode</a></li>
+                    <li><a href="LiveDevelopment.Agents.EditAgent.html">LiveDevelopment.Agents.EditAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.GotoAgent.html">LiveDevelopment.Agents.GotoAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.HighlightAgent.html">LiveDevelopment.Agents.HighlightAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.NetworkAgent.html">LiveDevelopment.Agents.NetworkAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteAgent.html">LiveDevelopment.Agents.RemoteAgent</a></li>
+                    <li><a href="LiveDevelopment.Agents.RemoteFunctions.html">LiveDevelopment.Agents.RemoteFunctions</a></li>
+                    <li><a href="LiveDevelopment.Agents.ScriptAgent.html">LiveDevelopment.Agents.ScriptAgent</a></li>
+                    <li><a href="LiveDevelopment.Documents.CSSDocument.html">LiveDevelopment.Documents.CSSDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.HTMLDocument.html">LiveDevelopment.Documents.HTMLDocument</a></li>
+                    <li><a href="LiveDevelopment.Documents.JSDocument.html">LiveDevelopment.Documents.JSDocument</a></li>
+                    <li><a href="LiveDevelopment.Inspector.Inspector.html">LiveDevelopment.Inspector.Inspector</a></li>
+                    <li><a href="LiveDevelopment.LiveDevelopment.html">LiveDevelopment.LiveDevelopment</a></li>
+                    <li><a href="LiveDevelopment.main.html">LiveDevelopment.main</a></li>
+                    <li><a href="nls.de.strings.html">nls.de.strings</a></li>
+                    <li><a href="nls.de.urls.html">nls.de.urls</a></li>
+                    <li><a href="nls.es.strings.html">nls.es.strings</a></li>
+                    <li><a href="nls.es.urls.html">nls.es.urls</a></li>
+                    <li><a href="nls.fr.strings.html">nls.fr.strings</a></li>
+                    <li><a href="nls.fr.urls.html">nls.fr.urls</a></li>
+                    <li><a href="nls.it.strings.html">nls.it.strings</a></li>
+                    <li><a href="nls.it.urls.html">nls.it.urls</a></li>
+                    <li><a href="nls.ja.strings.html">nls.ja.strings</a></li>
+                    <li><a href="nls.nb.strings.html">nls.nb.strings</a></li>
+                    <li><a href="nls.pt-br.strings.html">nls.pt-br.strings</a></li>
+                    <li><a href="nls.pt-br.urls.html">nls.pt-br.urls</a></li>
+                    <li><a href="nls.root.strings.html">nls.root.strings</a></li>
+                    <li><a href="nls.root.urls.html">nls.root.urls</a></li>
+                    <li><a href="nls.ru.strings.html">nls.ru.strings</a></li>
+                    <li><a href="nls.ru.urls.html">nls.ru.urls</a></li>
+                    <li><a href="nls.strings.html">nls.strings</a></li>
+                    <li><a href="nls.tr.strings.html">nls.tr.strings</a></li>
+                    <li><a href="nls.urls.html">nls.urls</a></li>
+                    <li><a href="preferences.PreferencesDialogs.html">preferences.PreferencesDialogs</a></li>
+                    <li><a href="preferences.PreferencesManager.html">preferences.PreferencesManager</a></li>
+                    <li><a href="preferences.PreferenceStorage.html">preferences.PreferenceStorage</a></li>
+                    <li><a href="project.FileIndexManager.html">project.FileIndexManager</a></li>
+                    <li><a href="project.FileSyncManager.html">project.FileSyncManager</a></li>
+                    <li><a href="project.FileViewController.html">project.FileViewController</a></li>
+                    <li><a href="project.ProjectManager.html">project.ProjectManager</a></li>
+                    <li><a href="project.SidebarView.html">project.SidebarView</a></li>
+                    <li><a href="project.WorkingSetSort.html">project.WorkingSetSort</a></li>
+                    <li><a href="project.WorkingSetView.html">project.WorkingSetView</a></li>
+                    <li><a href="search.FindInFiles.html">search.FindInFiles</a></li>
+                    <li><a href="search.FindReplace.html">search.FindReplace</a></li>
+                    <li><a href="search.QuickOpen.html">search.QuickOpen</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.AppInit.html">utils.AppInit</a></li>
+                    <li><a href="utils.Async.html">utils.Async</a></li>
+                    <li><a href="utils.BuildInfoUtils.html">utils.BuildInfoUtils</a></li>
+                    <li><a href="utils.CollectionUtils.html">utils.CollectionUtils</a></li>
+                    <li><a href="utils.ExtensionLoader.html">utils.ExtensionLoader</a></li>
+                    <li><a href="utils.ExtensionUtils.html">utils.ExtensionUtils</a></li>
+                    <li><a href="utils.Global.html">utils.Global</a></li>
+                    <li><a href="utils.KeyEvent.html">utils.KeyEvent</a></li>
+                    <li><a href="utils.NativeApp.html">utils.NativeApp</a></li>
+                    <li><a href="utils.PerfUtils.html">utils.PerfUtils</a></li>
+                    <li><a href="utils.Resizer.html">utils.Resizer</a></li>
+                    <li><a href="utils.ShellAPI.html">utils.ShellAPI</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="utils.TokenUtils.html">utils.TokenUtils</a></li>
+                    <li><a href="utils.UpdateNotification.html">utils.UpdateNotification</a></li>
+                    <li><a href="utils.UrlParams.html">utils.UrlParams</a></li>
+                    <li><a href="utils.ViewUtils.html">utils.ViewUtils</a></li>
+                    <li><a href="view.ViewCommandHandlers.html">view.ViewCommandHandlers</a></li>
+                    <li><a href="widgets.bootstrap-alerts.html">widgets.bootstrap-alerts</a></li>
+                    <li><a href="widgets.bootstrap-buttons.html">widgets.bootstrap-buttons</a></li>
+                    <li><a href="widgets.bootstrap-dropdown.html">widgets.bootstrap-dropdown</a></li>
+                    <li><a href="widgets.bootstrap-modal.html">widgets.bootstrap-modal</a></li>
+                    <li><a href="widgets.bootstrap-popover.html">widgets.bootstrap-popover</a></li>
+                    <li><a href="widgets.bootstrap-scrollspy.html">widgets.bootstrap-scrollspy</a></li>
+                    <li><a href="widgets.bootstrap-tabs.html">widgets.bootstrap-tabs</a></li>
+                    <li><a href="widgets.bootstrap-twipsy.html">widgets.bootstrap-twipsy</a></li>
+                    <li><a href="widgets.Dialogs.html">widgets.Dialogs</a></li>
+                    <li><a href="widgets.ModalBar.html">widgets.ModalBar</a></li>
+                    <li><a href="widgets.PopUpManager.html">widgets.PopUpManager</a></li>
+                    <li><a href="widgets.StatusBar.html">widgets.StatusBar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="span9">
+            <section>
+                <div id="description">
+                    <p>FileSyncManager is a set of utilities to help track external modifications to the files and folders<br />in the currently open project.</p>
+
+<p>Currently, we look for external changes purely by checking file timestamps against the last-sync<br />timestamp recorded on Document. Later, we will use actual native directory-watching callbacks<br />instead.</p>
+
+<p>FUTURE: Whenever we have a 'project file tree model,' we should manipulate that instead of notifying<br />DocumentManager directly. DocumentManager, the tree UI, etc. then all listen to that model for changes.</p>
+                </div>
+            </section>
+
+            <section id="dependencies">
+                <h3>Dependencies</h3>
+                <ul class="nav nav-list">
+                    <li><a href="command.CommandManager.html">command.CommandManager</a></li>
+                    <li><a href="command.Commands.html">command.Commands</a></li>
+                    <li><a href="document.DocumentManager.html">document.DocumentManager</a></li>
+                    <li><a href="editor.EditorManager.html">editor.EditorManager</a></li>
+                    <li><a href="file.FileUtils.html">file.FileUtils</a></li>
+                    <li><a href="file.NativeFileError.html">file.NativeFileError</a></li>
+                    <li><a href="project.ProjectManager.html">project.ProjectManager</a></li>
+                    <li><a href="strings.html">strings</a></li>
+                    <li><a href="utils.Async.html">utils.Async</a></li>
+                    <li><a href="utils.StringUtils.html">utils.StringUtils</a></li>
+                    <li><a href="widgets.Dialogs.html">widgets.Dialogs</a></li>
+                </ul>
+            </section>
+
+            <section id="variables">
+                <h3>Variables <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <!--<ul>-->
+                <div class="member private">
+
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_alreadyChecking</h4>
+                    <dl>
+                            <dt>Type</dt>
+                                <dd>boolean</dd>
+                            <dt>Private</dt>
+                    </dl>
+                    <p>Guard to spot re-entrancy while syncOpenDocuments() is still in progress</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var _alreadyChecking = false;</code></pre>
+                </div>
+                <div class="member private">
+
+                    <span class="pull-right scope">
+                        Private
+                        
+                    </span>
+                    <h4>_restartPending</h4>
+                    <dl>
+                            <dt>Type</dt>
+                                <dd>boolean</dd>
+                            <dt>Private</dt>
+                    </dl>
+                    <p>If true, we should bail from the syncOpenDocuments() process and then re-run it. See<br />comments in syncOpenDocuments() for how this works.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>var _restartPending = false;</code></pre>
+                </div>
+                <!--</ul>-->
+            </section>
+
+            <section id="functions">
+                <h3>Functions <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label></h3>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>closeDeletedDocs</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Closes all the documents in "toClose" silently (no prompts). Completes synchronously.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function closeDeletedDocs() {
+        toClose.forEach(function (doc) {
+            DocumentManager.notifyFileDeleted(doc.file);
+        });
+    }</code></pre>
+                </div>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>findExternalChanges</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>docs</dt>
+                            <dd>(<em>!Array.&lt;Document&gt;</em>) - </dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>$.Promise</em>) - Resolved when all scanning done, or rejected immediately if there's any</dd>
+                    </dl>
+                    <p>Scans all the given Documents for changes on disk, and sorts them into four buckets,<br />populating the corresponding arrays:<br /> toReload        - changed on disk; unchanged within Brackets<br /> toClose         - deleted on disk; unchanged within Brackets<br /> editConflicts   - changed on disk; also dirty in Brackets<br /> deleteConflicts - deleted on disk; also dirty in Brackets</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function findExternalChanges(docs) {
+
+        toReload = [];
+        toClose = [];
+        editConflicts = [];
+        deleteConflicts = [];
+    
+        function checkDoc(doc) {
+            var result = new $.Deferred();
+            
+            &#x2F;&#x2F; Check file timestamp &#x2F; existence
+            doc.file.getMetadata(
+                function (metadata) {
+                    &#x2F;&#x2F; Does file&#39;s timestamp differ from last sync time on the Document?
+                    if (metadata.modificationTime.getTime() !== doc.diskTimestamp.getTime()) {
+                        if (doc.isDirty) {
+                            editConflicts.push(doc);
+                        } else {
+                            toReload.push(doc);
+                        }
+                    }
+                    result.resolve();
+                },
+                function (error) {
+                    &#x2F;&#x2F; File has been deleted externally
+                    if (error.name === NativeFileError.NOT_FOUND_ERR) {
+                        if (doc.isDirty) {
+                            deleteConflicts.push(doc);
+                        } else {
+                            toClose.push(doc);
+                        }
+                        result.resolve();
+                    } else {
+                        &#x2F;&#x2F; Some other error fetching metadata: treat as a real error
+                        console.log(&quot;Error checking modification status of &quot; + doc.file.fullPath, error.name);
+                        result.reject();
+                    }
+                }
+            );
+            return result.promise();
+        }
+        
+        &#x2F;&#x2F; Check all docs in parallel
+        &#x2F;&#x2F; (fail fast b&#x2F;c we won&#39;t continue syncing if there was any error fetching timestamps)
+        return Async.doInParallel(docs, checkDoc, true);
+    }</code></pre>
+                </div>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>presentConflicts</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>Returns</dt>
+                            <dd>(<em>$.Promise</em>) - Resolved/rejected after all documents have been prompted and (if</dd>
+                    </dl>
+                    <p>Walks through all the documents in "editConflicts" &amp; "deleteConflicts" and prompts the user<br />about each one. Processing is sequential: if the user chooses to reload a document, the next<br />prompt is not shown until after the reload has completed.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function presentConflicts() {
+        
+        var allConflicts = editConflicts.concat(deleteConflicts);
+        
+        function presentConflict(doc, i) {
+            var result = new $.Deferred(), promise = result.promise();
+            
+            &#x2F;&#x2F; If window has been re-focused, skip all remaining conflicts so the sync can bail &amp; restart
+            if (_restartPending) {
+                result.resolve();
+                return promise;
+            }
+            
+            var message;
+            var dialogId;
+            var toClose;
+            
+            &#x2F;&#x2F; Prompt UI varies depending on whether the file on disk was modified vs. deleted
+            if (i &lt; editConflicts.length) {
+                toClose = false;
+                dialogId = Dialogs.DIALOG_ID_EXT_CHANGED;
+                message = StringUtils.format(
+                    Strings.EXT_MODIFIED_MESSAGE,
+                    StringUtils.htmlEscape(ProjectManager.makeProjectRelativeIfPossible(doc.file.fullPath))
+                );
+                
+            } else {
+                toClose = true;
+                dialogId = Dialogs.DIALOG_ID_EXT_DELETED;
+                message = StringUtils.format(
+                    Strings.EXT_DELETED_MESSAGE,
+                    StringUtils.htmlEscape(ProjectManager.makeProjectRelativeIfPossible(doc.file.fullPath))
+                );
+            }
+            
+            Dialogs.showModalDialog(dialogId, Strings.EXT_MODIFIED_TITLE, message)
+                .done(function (id) {
+                    if (id === Dialogs.DIALOG_BTN_DONTSAVE) {
+                        if (toClose) {
+                            &#x2F;&#x2F; Discard - close all editors
+                            DocumentManager.notifyFileDeleted(doc.file);
+                            result.resolve();
+                        } else {
+                            &#x2F;&#x2F; Discard - load changes from disk
+                            reloadDoc(doc)
+                                .done(function () {
+                                    result.resolve();
+                                })
+                                .fail(function (error) {
+                                    &#x2F;&#x2F; Unable to load changed version from disk - show error UI
+                                    showReloadError(error, doc)
+                                        .always(function () {
+                                            &#x2F;&#x2F; After user dismisses, move on to next conflict prompt
+                                            result.reject();
+                                        });
+                                });
+                        }
+                        
+                    } else {
+                        &#x2F;&#x2F; Cancel - if user doesn&#39;t manually save or close, we&#39;ll prompt again next
+                        &#x2F;&#x2F; time window is reactivated;
+                        &#x2F;&#x2F; OR programmatically canceled due to _resetPending - we&#39;ll skip all
+                        &#x2F;&#x2F; remaining files in the conflicts list (see above)
+                        result.resolve();
+                    }
+                });
+            
+            return promise;
+        }
+        
+        &#x2F;&#x2F; Begin walking through the conflicts, one at a time
+        return Async.doSequentially(allConflicts, presentConflict, false);
+    }</code></pre>
+                </div>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>reloadChangedDocs</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>Returns</dt>
+                            <dd>(<em>$.Promise</em>) - Resolved/rejected after all reloads done; will be rejected if any one</dd>
+                    </dl>
+                    <p>Reloads all the documents in "toReload" silently (no prompts). The operations are all run<br />in parallel.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function reloadChangedDocs() {
+        &#x2F;&#x2F; Reload each doc in turn, and once all are (async) done, signal that we&#39;re done
+        return Async.doInParallel(toReload, reloadDoc, false);
+    }</code></pre>
+                </div>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>reloadDoc</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>doc</dt>
+                            <dd>(<em>!Document</em>) - </dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>$.Promise</em>) - Resolved after editor has been refreshed; rejected if unable to load the</dd>
+                    </dl>
+                    <p>Reloads the Document's contents from disk, discarding any unsaved changes in the editor.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function reloadDoc(doc) {
+        
+        var promise = FileUtils.readAsText(doc.file);
+        
+        promise.done(function (text, readTimestamp) {
+            doc.refreshText(text, readTimestamp);
+        });
+        promise.fail(function (error) {
+            console.log(&quot;Error reloading contents of &quot; + doc.file.fullPath, error.name);
+        });
+        return promise;
+    }</code></pre>
+                </div>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>showReloadError</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                            <dt>doc</dt>
+                            <dd>(<em>!Document</em>) - </dd>
+                            <dt>Returns</dt>
+                            <dd>(<em>$.Promise</em>) - </dd>
+                    </dl>
+                    <p>@param {FileError} error</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function showReloadError(error, doc) {
+        return Dialogs.showModalDialog(
+            Dialogs.DIALOG_ID_ERROR,
+            Strings.ERROR_RELOADING_FILE_TITLE,
+            StringUtils.format(
+                Strings.ERROR_RELOADING_FILE,
+                StringUtils.htmlEscape(doc.file.fullPath),
+                FileUtils.getFileErrorString(error.name)
+            )
+        );
+    }</code></pre>
+                </div>
+                <div class="member public">
+                    <span class="pull-right scope">
+                        
+                        Public API
+                    </span>
+                    <h4>syncOpenDocuments</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Check to see whether any open files have been modified by an external app since the last time<br />Brackets synced up with the copy on disk (either by loading or saving the file). For clean<br />files, we silently upate the editor automatically. For files with unsaved changes, we prompt<br />the user.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function syncOpenDocuments() {
+        
+        &#x2F;&#x2F; We can become &quot;re-entrant&quot; if the user leaves &amp; then returns to Brackets before we&#39;re
+        &#x2F;&#x2F; done -- easy if a prompt dialog is left open. Since the user may have left Brackets to
+        &#x2F;&#x2F; revert some of the disk changes, etc. we want to cancel the current sync and immediately
+        &#x2F;&#x2F; begin a new one. We let the orig sync run until the user-visible dialog phase, then
+        &#x2F;&#x2F; bail; if we&#39;re already there we programmatically close the dialog to bail right away.
+        if (_alreadyChecking) {
+            _restartPending = true;
+            
+            &#x2F;&#x2F; Close dialog if it was open. This will &#39;unblock&#39; presentConflict(), which bails back
+            &#x2F;&#x2F; to us immediately upon seeing _restartPending. We then restart the sync - see below
+            Dialogs.cancelModalDialogIfOpen(Dialogs.DIALOG_ID_EXT_CHANGED);
+            Dialogs.cancelModalDialogIfOpen(Dialogs.DIALOG_ID_EXT_DELETED);
+            
+            return;
+        }
+        
+        _alreadyChecking = true;
+        
+        
+        &#x2F;&#x2F; Syncing proceeds in four phases:
+        &#x2F;&#x2F;  1) Check all open files for external modifications
+        &#x2F;&#x2F;  2) Check any other working set entries (that are not open) for deletion, and remove
+        &#x2F;&#x2F;     from working set if deleted
+        &#x2F;&#x2F;  3) Refresh all Documents that are clean (if file changed on disk)
+        &#x2F;&#x2F;  4) Close all Documents that are clean (if file deleted on disk)
+        &#x2F;&#x2F;  5) Prompt about any Documents that are dirty (if file changed&#x2F;deleted on disk)
+        &#x2F;&#x2F; Each phase fully completes (asynchronously) before the next one begins.
+        
+        
+        &#x2F;&#x2F; 1) Check for external modifications
+        var allDocs = DocumentManager.getAllOpenDocuments();
+        
+        findExternalChanges(allDocs)
+            .done(function () {
+                &#x2F;&#x2F; 2) Check un-open working set entries for deletion (&amp; &quot;close&quot; if needed)
+                syncUnopenWorkingSet()
+                    .always(function () {
+                        &#x2F;&#x2F; If we were unable to check any un-open files for deletion, silently ignore
+                        &#x2F;&#x2F; (after logging to console). This doesn&#39;t have any bearing on syncing truly
+                        &#x2F;&#x2F; open Documents (which we&#39;ve already successfully checked).
+                        
+                        &#x2F;&#x2F; 3) Reload clean docs as needed
+                        reloadChangedDocs()
+                            .always(function () {
+                                &#x2F;&#x2F; 4) Close clean docs as needed
+                                &#x2F;&#x2F; This phase completes synchronously
+                                closeDeletedDocs();
+                                
+                                &#x2F;&#x2F; 5) Prompt for dirty editors (conflicts)
+                                presentConflicts()
+                                    .always(function () {
+                                        if (_restartPending) {
+                                            &#x2F;&#x2F; Restart the sync if needed
+                                            _restartPending = false;
+                                            _alreadyChecking = false;
+                                            syncOpenDocuments();
+                                        } else {
+                                            &#x2F;&#x2F; We&#39;re really done!
+                                            _alreadyChecking = false;
+                                            
+                                            &#x2F;&#x2F; If we showed a dialog, restore focus to editor
+                                            if (editConflicts.length &gt; 0 || deleteConflicts.length &gt; 0) {
+                                                EditorManager.focusEditor();
+                                            }
+                                            
+                                            &#x2F;&#x2F; (Any errors that ocurred during presentConflicts() have already
+                                            &#x2F;&#x2F; shown UI &amp; been dismissed, so there&#39;s no fail() handler here)
+                                        }
+                                    });
+                            });
+                            &#x2F;&#x2F; Note: if any auto-reloads failed, we silently ignore (after logging to console)
+                            &#x2F;&#x2F; and we still continue onto phase 4 and try to process those files anyway.
+                            &#x2F;&#x2F; (We&#39;ll retry the auto-reloads next time window is activated... and evenually
+                            &#x2F;&#x2F; we&#39;ll also be double checking before each Save).
+                    });
+            }).fail(function () {
+                &#x2F;&#x2F; Unable to fetch timestamps for some reason - silently ignore (after logging to console)
+                &#x2F;&#x2F; (We&#39;ll retry next time window is activated... and evenually we&#39;ll also be double
+                &#x2F;&#x2F; checking before each Save).
+                
+                &#x2F;&#x2F; We can&#39;t go on without knowing which files are dirty, so bail now
+                _alreadyChecking = false;
+            });
+        
+    }
+    
+    
+    &#x2F;&#x2F; Define public API
+    exports.syncOpenDocuments = syncOpenDocuments;
+});</code></pre>
+                </div>
+                <div class="member">
+                    <span class="pull-right scope">
+                        
+                        
+                    </span>
+                    <h4>syncUnopenWorkingSet</h4>
+                    <!--<strong>Params:</strong>-->
+                    <dl>
+                    </dl>
+                    <p>Scans all the files in the working set that do not have Documents (and thus were not scanned<br />by findExternalChanges()). If any were deleted on disk, removes them from the working set.</p>
+                    <button class="btn btn-small show-code">Show code</button>
+                    <pre class="code"><code>function syncUnopenWorkingSet() {
+        &#x2F;&#x2F; We only care about working set entries that have never been open (have no Document).
+        var unopenWorkingSetFiles = DocumentManager.getWorkingSet().filter(function (wsFile) {
+            return !DocumentManager.getOpenDocumentForPath(wsFile.fullPath);
+        });
+        
+        function checkWorkingSetFile(file) {
+            var result = new $.Deferred();
+            
+            file.getMetadata(
+                function (metadata) {
+                    &#x2F;&#x2F; File still exists
+                    result.resolve();
+                },
+                function (error) {
+                    &#x2F;&#x2F; File has been deleted externally
+                    if (error.name === NativeFileError.NOT_FOUND_ERR) {
+                        DocumentManager.notifyFileDeleted(file);
+                        result.resolve();
+                    } else {
+                        &#x2F;&#x2F; Some other error fetching metadata: treat as a real error
+                        console.log(&quot;Error checking for deletion of &quot; + file.fullPath, error.name);
+                        result.reject();
+                    }
+                }
+            );
+            return result.promise();
+        }
+        
+        &#x2F;&#x2F; Check all these files in parallel
+        return Async.doInParallel(unopenWorkingSetFiles, checkWorkingSetFile, false);
+    }</code></pre>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>
