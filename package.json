@@ -7,7 +7,10 @@
     "dox"    :  "*",
     "underscore":  "*",
     "file"     :  "*",
-    "mustache"  :  "*"
+    "mustache"  :  "*",
+    "fs2" : "*",
+    "es6" : "*",
+    "deferred": "*"
   },
   "license": "MIT",
   "engines": {
