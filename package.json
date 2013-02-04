@@ -4,7 +4,7 @@
   "author": "Aleksandr Motsjonov <soswow@gmail.com>",
   "description": "API documentation generator for brackets project",
   "dependencies" : {
-    "dox"    :  "*",
+    "dox"    :  "https://github.com/soswow/dox/tarball/master",
     "underscore":  "*",
     "file"     :  "*",
     "mustache"  :  "*",
