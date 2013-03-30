@@ -30,7 +30,7 @@
      * @param {string} output Path to the output folder
      */
     function generateIndexPage(data, output) {
-        var template = fs.readFileSync('_index.html', 'UTF-8');
+        var template = fs.readFileSync('templates/index.html', 'UTF-8');
         var result = Mustache.render(template, data);
         fs.writeFileSync(path.join(output, "index.html"), result, 'UTF-8');
     }
@@ -41,7 +41,7 @@
      * @param {string} output Path to the output folder
      */
     function generateModulePage(module, output) {
-        var template = fs.readFileSync('_module.html', 'UTF-8');
+        var template = fs.readFileSync('templates/module.html', 'UTF-8');
         var result = Mustache.render(template, module);
         fs.writeFileSync(path.join(output, module.name + ".html"), result, 'UTF-8');
     }
