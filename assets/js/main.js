@@ -26,4 +26,12 @@ $(function () {
             section.removeClass("show-private");
         }
     });
+    
+    // Typeahead initialization
+    $("input.typeahead").typeahead([
+        {
+            name: "modules",
+            local: "assets/data/modules.json"
+        }
+    ]);
 });

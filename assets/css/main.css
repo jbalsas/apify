@@ -75,3 +75,18 @@ h3 .checkbox{
 .member .scope{
     font-style: italic;
 }
+
+/* Typeahead styles (Bootstrap conflicts) */
+
+span.twitter-typeahead {
+    float: right;
+    margin: 5px;
+}
+
+input.typeahead, input.tt-hint {
+    margin: 0;
+}
+
+input.tt-hint {
+    color: #999;
+}
