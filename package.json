@@ -4,14 +4,15 @@
     "author": "Aleksandr Motsjonov <soswow@gmail.com>",
     "description": "API documentation generator for brackets project",
     "dependencies" : {
-        "commander": "*",
-        "deferred": "*",
-        "dox"    :  "https://github.com/soswow/dox/tarball/master",
-        "es6" : "*",
-        "file"     :  "*",
-        "fs2" : "*",
-        "mustache"  :  "*",
-        "underscore":  "*"
+        "commander" : "*",
+        "deferred"  : "*",
+        "dox"       : "https://github.com/soswow/dox/tarball/master",
+        "es6"       : "*",
+        "file"      : "*",
+        "fs2"       : "*",
+        "mustache"  : "*",
+        "ncp"       : "*",
+        "underscore": "*"
     },
     "license": "MIT",
     "engines": {
