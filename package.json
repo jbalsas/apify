@@ -9,6 +9,7 @@
         "dox"       : "https://github.com/soswow/dox/tarball/master",
         "es6"       : "*",
         "file"      : "*",
+        "filequeue" : "*",
         "fs2"       : "*",
         "mustache"  : "*",
         "ncp"       : "*",
