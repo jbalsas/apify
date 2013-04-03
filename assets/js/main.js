@@ -33,5 +33,7 @@ $(function () {
             name: "modules",
             local: {{{modules}}}
         }
-    ]);
+    ]).on("typeahead:selected", function(evt){
+        window.location.href = evt.currentTarget.value + ".html";
+    });
 });
