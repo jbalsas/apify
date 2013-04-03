@@ -8,7 +8,7 @@
         "deferred"  : "*",
         "dox"       : "https://github.com/soswow/dox/tarball/master",
         "es6"       : "*",
-        "file"      : "*",
+        "find"      : "*",
         "filequeue" : "*",
         "fs2"       : "*",
         "mustache"  : "*",
