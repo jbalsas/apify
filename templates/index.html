@@ -35,10 +35,22 @@
         <div class="span12">
             <h2>Modules ({{otherModulesCount}})</h2>
             <ul class="nav nav-list">
-                {{#otherModules}}
-                <li><a href="{{name}}.html">{{name}}</a></li>
-                {{/otherModules}}
+                <li class="nav-header">
+                    <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules ({{otherModulesCount}})</a>
+                </li>
             </ul>
+            {{#otherModules}}
+            <ul class="nav nav-list package-list">
+                <li class="nav-header">
+                    <a href="#" class="toggle-package" data-package="package_{{pkg_class}}"><i class="icon-folder-open"></i>{{pkg}}</a>
+                </li>
+            </ul>
+            <ul id="package_{{pkg_class}}" class="nav nav-list">
+                {{#modules}}
+                <li><a href="{{name}}.html">{{name}}</a></li>
+                {{/modules}}
+            </ul>                
+            {{/otherModules}}
         </div>
     </div>
 </div>
