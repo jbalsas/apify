@@ -27,7 +27,7 @@ $(function () {
         }
     });
 
-    $(".toggle-package").click(function(evt) {
+    $(".toggle-package").click(function() {
         var package = $(this).data().package,
             $modules = $("#" + package);
         
