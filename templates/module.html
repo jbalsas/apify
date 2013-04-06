@@ -45,21 +45,28 @@
         </div>
     </div>
     <div class="row">
-        <div class="span3">
+        <div class="span4">
             <div class="left-section">
                 <ul class="nav nav-list">
                     <li class="nav-header">
                         <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules ({{otherModulesCount}})</a>
                     </li>
                 </ul>
-                <ul id="other-module" class="nav nav-list">
-                    {{#otherModules}}
-                    <li><a href="{{name}}.html">{{name}}</a></li>
-                    {{/otherModules}}
+                {{#otherModules}}
+                <ul class="nav nav-list package-list">
+                    <li class="nav-header">
+                        <a href="#" class="toggle-package" data-package="package_{{pkg_class}}"><i class="icon-folder-open"></i>{{pkg}}</a>
+                    </li>
                 </ul>
+                <ul id="package_{{pkg_class}}" class="nav nav-list">
+                    {{#modules}}
+                    <li><a href="{{name}}.html">{{name}}</a></li>
+                    {{/modules}}
+                </ul>                
+                {{/otherModules}}
             </div>
         </div>
-        <div class="span9">
+        <div class="span8">
             <section>
                 <div id="description">
                     {{{description}}}

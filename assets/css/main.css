@@ -6,7 +6,6 @@ body{
 }
 #other-module{
     display: none;
-    height: 300px;
     overflow: scroll;
 }
 #toggle-other-modules i{
@@ -89,4 +88,12 @@ input.typeahead, input.tt-hint {
 
 input.tt-hint {
     color: #999;
+}
+
+/* */
+.package-list .nav-header {
+    border-bottom: none;
+    border-top: 1px solid #f6f6f6;
+    overflow: hidden;
+    text-transform: none;
 }

@@ -26,6 +26,19 @@ $(function () {
             section.removeClass("show-private");
         }
     });
+
+    $(".toggle-package").click(function(evt) {
+        var package = $(this).data().package,
+            $modules = $("#" + package);
+        
+        $modules.toggle();
+        $(this).find("i").removeClass();
+        if ($modules.is(":visible")) {
+            $(this).find("i").addClass("icon-folder-open");
+        } else {
+            $(this).find("i").addClass("icon-folder-close");
+        }
+    });
     
     // Typeahead initialization
     $("input.typeahead").typeahead([
