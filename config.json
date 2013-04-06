@@ -1,0 +1,10 @@
+{
+    "source": "/Users/jbalsas/dev/adobe/brackets/upstream/src",
+    "output": "/Users/jbalsas/doc",
+    "excludes": [
+        "thirdparty",
+        "node_modules",
+        "unittest",
+        "nls"
+    ]
+}

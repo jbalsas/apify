@@ -9,6 +9,7 @@
         "es6"       : "0.0.x",
         "find"      : "0.1.x",
         "filequeue" : "0.1.x",
+        "fmerge"    : "1.0.x",
         "mustache"  : "0.7.x",
         "ncp"       : "0.4.x",
         "underscore": "1.4.x",
