@@ -28,7 +28,7 @@
         config = JSON.parse(fs.readFileSync(program.config, "UTF-8"));
         program = merge(program, config);
     }
-        
-    generator.init(program.source, program.output, program.excludes);
+    
+    generator.init(program);
 
 }());
