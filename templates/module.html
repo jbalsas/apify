@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <title>{{name}}</title>
-    <link rel="stylesheet" href="{{{level}}}/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="{{{level}}}/assets/css/typeahead.js-bootstrap.css">
-    <link rel="stylesheet" href="{{{level}}}/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="{{{level}}}/assets/css/main.css">
+    <link rel="stylesheet" href="{{module.level}}/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="{{module.level}}/assets/css/typeahead.js-bootstrap.css">
+    <link rel="stylesheet" href="{{module.level}}/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="{{module.level}}/assets/css/main.css">
     <!--[if IE 7]>
     <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
     <![endif]-->
-    <script type="text/javascript" src="{{{level}}}/assets/js/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="{{{level}}}/assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="{{{level}}}/assets/js/typeahead.js"></script>
-    <script type="text/javascript" src="{{{level}}}/assets/js/main.js"></script>
+    <script type="text/javascript" src="{{module.level}}/assets/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="{{module.level}}/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{{module.level}}/assets/js/typeahead.js"></script>
+    <script type="text/javascript" src="{{module.level}}/assets/js/main.js"></script>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -23,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="{{level}}/index.html">Brackets API</a>
+            <a class="brand" href="{{module.level}}/index.html">Brackets API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -40,7 +40,7 @@
     <div class="row">
         <div class="span12">
             <div class="page-header">
-                <h1>{{name}}</h1>
+                <h1>{{module.name}}</h1>
             </div>
         </div>
     </div>
@@ -49,10 +49,10 @@
             <div class="left-section">
                 <ul class="nav nav-list">
                     <li class="nav-header">
-                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules ({{otherModulesCount}})</a>
+                        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules ({{fileset.length}})</a>
                     </li>
                 </ul>
-                {{#otherModules}}
+                {{#fileset.groups}}
                 <ul class="nav nav-list package-list">
                     <li class="nav-header">
                         <a href="#" class="toggle-package" data-package="package_{{ns_class}}"><i class="icon-folder-open"></i>{{ns}}</a>
@@ -60,25 +60,25 @@
                 </ul>
                 <ul id="package_{{ns_class}}" class="nav nav-list">
                     {{#files}}
-                    <li><a href="{{level}}/modules{{docPath}}{{name}}.html">{{name}}</a></li>
+                    <li><a href="{{module.level}}/modules{{docPath}}{{name}}.html">{{name}}</a></li>
                     {{/files}}
                 </ul>                
-                {{/otherModules}}
+                {{/fileset.groups}}
             </div>
         </div>
         <div class="span8">
             <section>
                 <div id="description">
-                    {{{description}}}
+                    {{{module.description}}}
                 </div>
             </section>
 
             <section id="dependencies">
                 <h3>Dependencies</h3>
                 <ul class="nav nav-list">
-                    {{#dependencies}}
-                    <li><a href="{{level}}/modules/{{.}}.html">{{.}}</a></li>
-                    {{/dependencies}}
+                    {{#module.dependencies}}
+                    <li><a href="{{module.level}}/modules/{{.}}.html">{{.}}</a></li>
+                    {{/module.dependencies}}
                 </ul>
             </section>
 
@@ -86,7 +86,7 @@
                 <h3>Variables <label class="checkbox">
                     <input class="toggle-public" type="checkbox"> Show Private Members
                 </label></h3>
-                {{#variables}}
+                {{#module.variables}}
                 <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
 
                     <span class="pull-right scope">
@@ -108,7 +108,7 @@
                     <button class="btn btn-small show-code">Show code</button>
                     <pre class="code"><code>{{code}}</code></pre>
                 </div>
-                {{/variables}}
+                {{/module.variables}}
                 <!--</ul>-->
             </section>
 
@@ -116,7 +116,7 @@
                 <h3>Functions <label class="checkbox">
                     <input class="toggle-public" type="checkbox"> Show Private Members
                 </label></h3>
-                {{#functions}}
+                {{#module.functions}}
                 <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
                     <span class="pull-right scope">
                         {{#isPrivate}}Private{{/isPrivate}}
@@ -134,13 +134,13 @@
                     <button class="btn btn-small show-code">Show code</button>
                     <pre class="code"><code>{{code}}</code></pre>
                 </div>
-                {{/functions}}
+                {{/module.functions}}
             </section>
 
 
             <section id="classes">
                 <h2>Classes</h2>
-                {{#classes}}
+                {{#module.classes}}
                     <div class="member public">
                         <span class="pull-right scope">
                             Constructor
@@ -210,7 +210,7 @@
                         </div>
                         {{/methods}}
                     </section>
-                {{/classes}}
+                {{/module.classes}}
             </section>
         </div>
     </div>

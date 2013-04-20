@@ -1,4 +1,5 @@
 {
+    "language": "js",
     "source": "/Users/jbalsas/dev/adobe/brackets/upstream/src",
     "output": "/Users/jbalsas/doc",
     "includes": [
@@ -12,7 +13,6 @@
     ],
     "templates": {
         "index": "templates/index.html",
-        "module": "templates/module.html",
-        "navbar": "templates/navbar.html"
+        "module": "templates/module.html"
     }
 }

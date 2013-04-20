@@ -5,11 +5,11 @@
     
     "use strict";
     
-    var fs          = require("fs"),
+    var documenter  = require("./lib/Documenter"),
+        fs          = require("fs"),
         merge       = require("fmerge"),
         path        = require("path"),
         program     = require("commander"),
-        generator   = require("./lib/JSGenerator"),
         config;
     
     function parseExcludes(list) {
@@ -29,6 +29,6 @@
         program = merge(program, config);
     }
     
-    generator.init(program);
+    documenter.init(program);
 
 }());

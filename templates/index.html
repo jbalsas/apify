@@ -33,13 +33,13 @@
     </div>
     <div class="row">
         <div class="span12">
-            <h2>Modules ({{otherModulesCount}})</h2>
+            <h2>Modules ({{length}})</h2>
             <ul class="nav nav-list">
                 <li class="nav-header">
-                    <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules ({{otherModulesCount}})</a>
+                    <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules ({{length}})</a>
                 </li>
             </ul>
-            {{#otherModules}}
+            {{#groups}}
             <ul class="nav nav-list package-list">
                 <li class="nav-header">
                     <a href="#" class="toggle-package" data-package="package_{{ns_class}}"><i class="icon-folder-open"></i>{{ns}}</a>
@@ -50,7 +50,7 @@
                 <li><a href="modules{{docPath}}{{name}}.html">{{name}}</a></li>
                 {{/files}}
             </ul>                
-            {{/otherModules}}
+            {{/groups}}
         </div>
     </div>
 </div>
