@@ -10,7 +10,8 @@
         merge       = require("fmerge"),
         path        = require("path"),
         program     = require("commander"),
-        config;
+        config,
+        defaults;
     
     function parseExcludes(list) {
         return list.split(",");
@@ -18,17 +19,18 @@
     
     program
         .version("0.0.1")
-        .option("-s, --source <s>", "Source folder")
-        .option("-o, --output <s>", "Output folder")
-        .option("-c, --config <s>", "Config file")
+        .option("-s, --source <s> [value]", "Source folder")
+        .option("-o, --output <s> [value]", "Output folder")
+        .option("-c, --config <s> [value]", "Config file")
         .option("--excludes <excludes>", "Excludes", parseExcludes)
         .parse(process.argv);
     
+    defaults = JSON.parse(fs.readFileSync("./lib/defaults.json", "UTF-8"));
+        
     if (program.config) {
         config = JSON.parse(fs.readFileSync(program.config, "UTF-8"));
-        program = merge(program, config);
     }
+        
+    documenter.init(merge(defaults, program, config));
     
-    documenter.init(program);
-
 }());
