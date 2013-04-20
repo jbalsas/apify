@@ -1,21 +1,29 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, indent: 4, maxerr: 50 */
-/*global require, process */
+/*global require, process, __dirname */
 
 (function () {
     
     "use strict";
     
-    var documenter  = require("./lib/Documenter"),
+    var defaults    = require("./lib/defaults.json"),
+        documenter  = require("./lib/Documenter"),
         fs          = require("fs"),
         merge       = require("fmerge"),
         path        = require("path"),
         program     = require("commander"),
-        config,
-        defaults;
+        config;
     
     function parseExcludes(list) {
         return list.split(",");
     }
+    
+    // Resolve absolute path for default templates and assets
+    var templates = Object.keys(defaults.templates);
+    templates.forEach(function (templateName) {
+        defaults.templates[templateName] = __dirname + defaults.templates[templateName];
+    });
+    
+    defaults.assets = __dirname + defaults.assets;
     
     program
         .version("0.0.1")
@@ -25,8 +33,6 @@
         .option("--excludes <excludes>", "Excludes", parseExcludes)
         .parse(process.argv);
     
-    defaults = JSON.parse(fs.readFileSync("./lib/defaults.json", "UTF-8"));
-        
     if (program.config) {
         config = JSON.parse(fs.readFileSync(program.config, "UTF-8"));
     }

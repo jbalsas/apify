@@ -1,7 +1,5 @@
 {
     "language": "js",
-    "source": "/Users/jbalsas/dev/adobe/brackets/upstream/src",
-    "output": "/Users/jbalsas/doc",
     "includes": [
         "/.js$/"
     ],
@@ -12,7 +10,8 @@
         "nls"
     ],
     "templates": {
-        "index": "templates/index.html",
-        "module": "templates/module.html"
-    }
+        "index": "/templates/index.html",
+        "module": "/templates/module.html"
+    },
+    "assets": "/assets"
 }
