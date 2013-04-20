@@ -47,6 +47,6 @@ $(function () {
             local: {{{modules}}}
         }
     ]).on("typeahead:selected", function(evt){
-        window.location.href = evt.currentTarget.value + ".html";
+        window.location.href = window.moduleLevel + "/modules/" + evt.currentTarget.value + ".html";
     });
 });
