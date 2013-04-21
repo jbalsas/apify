@@ -10,6 +10,7 @@
         "nls"
     ],
     "templates": {
+        "filelist": "/templates/filelist.html",
         "index": "/templates/index.html",
         "module": "/templates/module.html"
     },
