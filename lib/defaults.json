@@ -12,7 +12,8 @@
     "templates": {
         "filelist": "/templates/filelist.html",
         "index": "/templates/index.html",
-        "module": "/templates/module.html"
+        "module": "/templates/module.html",
+        "navbar": "/templates/navbar.html"
     },
     "assets": "/assets"
 }
