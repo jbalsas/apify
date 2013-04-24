@@ -5,6 +5,7 @@
     "description": "API documentation generator for brackets project",
     "dependencies" : {
         "commander" : "1.1.x",
+        "deferred"  : "0.6.x",
         "dox"       : "https://github.com/soswow/dox/tarball/master",
         "es6"       : "0.0.x",
         "find"      : "0.1.x",
