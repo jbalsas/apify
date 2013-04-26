@@ -1,164 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>{{name}}</title>
-    <link rel="stylesheet" href="{{level}}/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="{{level}}/assets/css/typeahead.js-bootstrap.css">
-    <link rel="stylesheet" href="{{level}}/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="{{level}}/assets/css/main.css">
-    <!--[if IE 7]>
-    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
-    <![endif]-->
-    <script type="text/javascript" src="{{level}}/assets/js/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="{{level}}/assets/js/bootstrap.js"></script>
-    <script type="text/javascript" src="{{level}}/assets/js/typeahead.js"></script>
-    <script type="text/javascript" src="{{level}}/assets/js/main.js"></script>
-    
-    <script>
-        window.moduleLevel = "{{{level}}}";
-    </script>
-</head>
-<body>
-{{{fragments.navbar}}}
-<div class="container">
-    <div class="row">
-        <div class="span12">
-            <div class="page-header">
-                <h1>{{module.name}}</h1>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="span4">
-            <div class="left-section">
-                {{{fragments.filelist}}}
-            </div>
-        </div>
-        <div class="span8">
-            <section>
-                <div id="description">
-                    {{{module.description}}}
-                </div>
-            </section>
-
-            <section id="dependencies">
-                <h3>Dependencies</h3>
-                <ul class="nav nav-list">
-                    {{#module.dependencies}}
-                    <li><a href="{{level}}/modules/{{.}}.html">{{.}}</a></li>
-                    {{/module.dependencies}}
-                </ul>
-            </section>
-
-            <section id="variables">
-                <h3>Variables <label class="checkbox">
-                    <input class="toggle-public" type="checkbox"> Show Private Members
-                </label></h3>
-                {{#module.variables}}
-                <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
-
-                    <span class="pull-right scope">
-                        {{#isPrivate}}Private{{/isPrivate}}
-                        {{#isPublicAPI}}Public API{{/isPublicAPI}}
-                    </span>
-                    <h4>{{ctx.name}}</h4>
-                    <dl>
-                    {{#tags}}
-                        {{#.}}
-                            <dt>{{key}}</dt>
-                            {{#value}}
-                                <dd>{{{value}}}</dd>
-                            {{/value}}
-                        {{/.}}
-                    {{/tags}}
-                    </dl>
-                    {{{description.full}}}
-                    <button class="btn btn-small show-code">Show code</button>
-                    <pre class="code"><code>{{code}}</code></pre>
-                </div>
-                {{/module.variables}}
-                <!--</ul>-->
-            </section>
-
-            <section id="functions">
-                <h3>Functions <label class="checkbox">
-                    <input class="toggle-public" type="checkbox"> Show Private Members
-                </label></h3>
-                {{#module.functions}}
-                <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
-                    <span class="pull-right scope">
-                        {{#isPrivate}}Private{{/isPrivate}}
-                        {{#isPublicAPI}}Public API{{/isPublicAPI}}
-                    </span>
-                    <h4>{{ctx.name}}</h4>
-                    <!--<strong>Params:</strong>-->
-                    <dl>
-                        {{#params}}
-                            <dt>{{name}}</dt>
-                            <dd>(<em>{{types}}</em>) - {{{description}}}</dd>
-                        {{/params}}
-                    </dl>
-                    {{{description.full}}}
-                    <button class="btn btn-small show-code">Show code</button>
-                    <pre class="code"><code>{{code}}</code></pre>
-                </div>
-                {{/module.functions}}
-            </section>
-
-
-            <section id="classes">
-                <h2>Classes</h2>
-                {{#module.classes}}
-                    <div class="member public">
-                        <span class="pull-right scope">
-                            Constructor
-                        </span>
-                        <h4>{{constructor.ctx.name}}</h4>
-                        <!--<strong>Params:</strong>-->
-                        <dl>
-                            {{#constructor.params}}
-                            <dt>{{name}}</dt>
-                            <dd>(<em>{{types}}</em>) - {{{description}}}</dd>
-                            {{/constructor.params}}
-                        </dl>
-                        {{{constructor.description.full}}}
-                        <button class="btn btn-small show-code">Show code</button>
-                        <pre class="code"><code>{{constructor.code}}</code></pre>
+    <head>
+        <title>{{name}}</title>
+        <link rel="stylesheet" href="{{level}}/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="{{level}}/assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="{{level}}/assets/css/font-awesome.css">
+        <link rel="stylesheet" href="{{level}}/assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="{{level}}/assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="{{level}}/assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="{{level}}/assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="{{level}}/assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "{{{level}}}";
+        </script>
+    </head>
+    <body>
+        {{{fragments.navbar}}}
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>{{module.name}}</h1>
                     </div>
-
-                    <section class="properties">
-                        <h3>Properties<label class="checkbox">
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        {{{fragments.filelist}}}
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            {{{module.description}}}
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            {{#module.dependencies}}
+                            <li><a href="{{level}}/modules/{{.}}.html">{{.}}</a></li>
+                            {{/module.dependencies}}
+                        </ul>
+                    </section>
+        
+                    <section id="variables">
+                        <h3>Variables <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
-                        {{#properties}}
+                        {{#module.variables}}
                         <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+        
                             <span class="pull-right scope">
                                 {{#isPrivate}}Private{{/isPrivate}}
                                 {{#isPublicAPI}}Public API{{/isPublicAPI}}
                             </span>
                             <h4>{{ctx.name}}</h4>
                             <dl>
-                                {{#tags}}
+                            {{#tags}}
                                 {{#.}}
-                                <dt>{{key}}</dt>
-                                {{#value}}
-                                <dd>{{{value}}}</dd>
-                                {{/value}}
+                                    <dt>{{key}}</dt>
+                                    {{#value}}
+                                        <dd>{{{value}}}</dd>
+                                    {{/value}}
                                 {{/.}}
-                                {{/tags}}
+                            {{/tags}}
                             </dl>
                             {{{description.full}}}
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>{{code}}</code></pre>
                         </div>
-                        {{/properties}}
+                        {{/module.variables}}
+                        <!--</ul>-->
                     </section>
-
-                    <section class="methods">
-                        <h3>Methods<label class="checkbox">
+        
+                    <section id="functions">
+                        <h3>Functions <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
-                        {{#methods}}
+                        {{#module.functions}}
                         <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
                             <span class="pull-right scope">
                                 {{#isPrivate}}Private{{/isPrivate}}
@@ -168,20 +94,94 @@
                             <!--<strong>Params:</strong>-->
                             <dl>
                                 {{#params}}
-                                <dt>{{name}}</dt>
-                                <dd>(<em>{{types}}</em>) - {{{description}}}</dd>
+                                    <dt>{{name}}</dt>
+                                    <dd>(<em>{{types}}</em>) - {{{description}}}</dd>
                                 {{/params}}
                             </dl>
                             {{{description.full}}}
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>{{code}}</code></pre>
                         </div>
-                        {{/methods}}
+                        {{/module.functions}}
                     </section>
-                {{/module.classes}}
-            </section>
+        
+        
+                    <section id="classes">
+                        <h2>Classes</h2>
+                        {{#module.classes}}
+                            <div class="member public">
+                                <span class="pull-right scope">
+                                    Constructor
+                                </span>
+                                <h4>{{constructor.ctx.name}}</h4>
+                                <!--<strong>Params:</strong>-->
+                                <dl>
+                                    {{#constructor.params}}
+                                    <dt>{{name}}</dt>
+                                    <dd>(<em>{{types}}</em>) - {{{description}}}</dd>
+                                    {{/constructor.params}}
+                                </dl>
+                                {{{constructor.description.full}}}
+                                <button class="btn btn-small show-code">Show code</button>
+                                <pre class="code"><code>{{constructor.code}}</code></pre>
+                            </div>
+        
+                            <section class="properties">
+                                <h3>Properties<label class="checkbox">
+                                    <input class="toggle-public" type="checkbox"> Show Private Members
+                                </label></h3>
+                                {{#properties}}
+                                <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+                                    <span class="pull-right scope">
+                                        {{#isPrivate}}Private{{/isPrivate}}
+                                        {{#isPublicAPI}}Public API{{/isPublicAPI}}
+                                    </span>
+                                    <h4>{{ctx.name}}</h4>
+                                    <dl>
+                                        {{#tags}}
+                                        {{#.}}
+                                        <dt>{{key}}</dt>
+                                        {{#value}}
+                                        <dd>{{{value}}}</dd>
+                                        {{/value}}
+                                        {{/.}}
+                                        {{/tags}}
+                                    </dl>
+                                    {{{description.full}}}
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>{{code}}</code></pre>
+                                </div>
+                                {{/properties}}
+                            </section>
+        
+                            <section class="methods">
+                                <h3>Methods<label class="checkbox">
+                                    <input class="toggle-public" type="checkbox"> Show Private Members
+                                </label></h3>
+                                {{#methods}}
+                                <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+                                    <span class="pull-right scope">
+                                        {{#isPrivate}}Private{{/isPrivate}}
+                                        {{#isPublicAPI}}Public API{{/isPublicAPI}}
+                                    </span>
+                                    <h4>{{ctx.name}}</h4>
+                                    <!--<strong>Params:</strong>-->
+                                    <dl>
+                                        {{#params}}
+                                        <dt>{{name}}</dt>
+                                        <dd>(<em>{{types}}</em>) - {{{description}}}</dd>
+                                        {{/params}}
+                                    </dl>
+                                    {{{description.full}}}
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>{{code}}</code></pre>
+                                </div>
+                                {{/methods}}
+                            </section>
+                        {{/module.classes}}
+                    </section>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>
