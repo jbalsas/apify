@@ -1,17 +1,5 @@
 {
-    "language": "js",
-    "source": "/Users/jbalsas/dev/adobe/brackets/upstream/src",
-    "output": "/Users/jbalsas/doc",
-    "includes": [
-        "/.js$/"
-    ],
-    "excludes": [
-        "thirdparty",
-        "node_modules",
-        "unittest",
-        "nls"
-    ],
     "templates": {
-        "module": "demos/minimalist/templates/module.html"
+        "module": "templates/module.html"
     }
 }
