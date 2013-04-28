@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>RequireProcessor</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (8)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/Documenter.html">Documenter</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language_js"><i class="icon-folder-open"></i>language.js</a>
+    </li>
+</ul>
+<ul id="package_language_js" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;GoogleClosureProcessor.html">GoogleClosureProcessor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;IndexGenerator.html">IndexGenerator</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;ModuleGenerator.html">ModuleGenerator</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;ModuleParser.html">ModuleParser</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;RequireProcessor.html">RequireProcessor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;SearchGenerator.html">SearchGenerator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;Workspace.html">Workspace</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>A custom comment post-processor to add support for require dependencies and exports</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;..&#x2F;../modules/underscore.html">underscore</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_findAllMatches</h4>
+                            <!--<strong>Params:</strong>-->
+                            <dl>
+                                    <dt>reg</dt>
+                                    <dd>(<em>Regexp</em>) - Regular expression for the serach</dd>
+                                    <dt>data</dt>
+                                    <dd>(<em>string</em>) - Block of data</dd>
+                                    <dt>Returns</dt>
+                                    <dd>(<em>Array.&lt;string&gt;</em>) - An array containing all matches for the regexp</dd>
+                            </dl>
+                            <p>Finds all matches for a given rule in a block of data</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _findAllMatches(reg, data) {
+        var result = [];
+        var match = reg.exec(data);
+        
+        if (match) {
+            do {
+                result.push(match[1]);
+                match = reg.exec(data);
+            } while (match);
+        }
+        
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_findDependencies</h4>
+                            <!--<strong>Params:</strong>-->
+                            <dl>
+                                    <dt>Contents</dt>
+                                    <dd>(<em>data</em>) - of the module</dd>
+                                    <dt>Returns</dt>
+                                    <dd>(<em>Array.&lt;string&gt;</em>) - Array with all the dependencies of the module</dd>
+                            </dl>
+                            <p>Finds all dependencies in a module</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _findDependencies(data) {
+        return _findAllMatches(REQUIRE_REGEXP, data);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_findExports</h4>
+                            <!--<strong>Params:</strong>-->
+                            <dl>
+                                    <dt>Contents</dt>
+                                    <dd>(<em>data</em>) - of the module</dd>
+                            </dl>
+                            <p>Finds all exported variables in a module</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _findExports(data) {
+        return _findAllMatches(EXPORTS_REGEXP, data);
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes">
+                        <h2>Classes</h2>
+                            <div class="member public">
+                                <span class="pull-right scope">
+                                    Constructor
+                                </span>
+                                <h4>RequireProcessor</h4>
+                                <!--<strong>Params:</strong>-->
+                                <dl>
+                                    <dt>data</dt>
+                                    <dd>(<em>Object</em>) - Raw data of the module being processed</dd>
+                                </dl>
+                                <p>A custom comment post-processor for requirejs patterns</p>
+                                <button class="btn btn-small show-code">Show code</button>
+                                <pre class="code"><code>var RequireProcessor = function (data) {
+        this.rawData = data;
+    };</code></pre>
+                            </div>
+        
+                            <section class="properties">
+                                <h3>Properties<label class="checkbox">
+                                    <input class="toggle-public" type="checkbox"> Show Private Members
+                                </label></h3>
+                            </section>
+        
+                            <section class="methods">
+                                <h3>Methods<label class="checkbox">
+                                    <input class="toggle-public" type="checkbox"> Show Private Members
+                                </label></h3>
+                                <div class="member">
+                                    <span class="pull-right scope">
+                                        
+                                        
+                                    </span>
+                                    <h4>processComment</h4>
+                                    <!--<strong>Params:</strong>-->
+                                    <dl>
+                                        <dt>comment</dt>
+                                        <dd>(<em>Object</em>) - Dox parsed data for a comment in the module</dd>
+                                        <dt>Returns</dt>
+                                        <dd>(<em>Object</em>) - Augmented comment with Require support</dd>
+                                    </dl>
+                                    <p>Parses special comment conventions defined by Requirejs AMD support</p>
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>RequireProcessor.prototype.processComment = function (comment) {
+        var data    = this.rawData,
+            exports = _findExports(data);
+        
+        if (comment.ctx) {
+            
+            if (_.contains(exports, comment.ctx.name)) {
+                comment.isPublicAPI = true;
+            }
+            
+        } else {
+            
+            if (comment.code &amp;&amp; (comment.code.indexOf(&quot;define(&quot;) === 0)) {
+                comment.type = &quot;description&quot;;
+            }
+            
+        }
+        
+        return comment;
+    };
+    
+    module.exports = RequireProcessor;
+    
+}());</code></pre>
+                                </div>
+                                <div class="member">
+                                    <span class="pull-right scope">
+                                        
+                                        
+                                    </span>
+                                    <h4>processModule</h4>
+                                    <!--<strong>Params:</strong>-->
+                                    <dl>
+                                        <dt>module</dt>
+                                        <dd>(<em>Object</em>) - The current module being processed</dd>
+                                        <dt>Returns</dt>
+                                        <dd>(<em>Object</em>) - Agumented module with Require support</dd>
+                                    </dl>
+                                    <p>Parses special module conventions defined by Requirejs AMD support</p>
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>RequireProcessor.prototype.processModule = function (module) {
+        module.dependencies = _findDependencies(this.rawData);
+        
+        return module;
+    };</code></pre>
+                                </div>
+                            </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

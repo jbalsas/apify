@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>Workspace</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (8)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/Documenter.html">Documenter</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language_js"><i class="icon-folder-open"></i>language.js</a>
+    </li>
+</ul>
+<ul id="package_language_js" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;js&#x2F;GoogleClosureProcessor.html">GoogleClosureProcessor</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;js&#x2F;IndexGenerator.html">IndexGenerator</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;js&#x2F;ModuleGenerator.html">ModuleGenerator</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;js&#x2F;ModuleParser.html">ModuleParser</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;js&#x2F;RequireProcessor.html">RequireProcessor</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;js&#x2F;SearchGenerator.html">SearchGenerator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;Workspace.html">Workspace</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/deferred.html">deferred</a></li>
+                            <li><a href="..&#x2F;../modules/find.html">find</a></li>
+                            <li><a href="..&#x2F;../modules/fs.html">fs</a></li>
+                            <li><a href="..&#x2F;../modules/fs2.html">fs2</a></li>
+                            <li><a href="..&#x2F;../modules/ncp.html">ncp</a></li>
+                            <li><a href="..&#x2F;../modules/path.html">path</a></li>
+                            <li><a href="..&#x2F;../modules/underscore.html">underscore</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_clearOutputFolder</h4>
+                            <!--<strong>Params:</strong>-->
+                            <dl>
+                                    <dt>dir</dt>
+                                    <dd>(<em>string</em>) - Path of a directory to be cleaned</dd>
+                            </dl>
+                            <p>Recursively clean a directory</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _clearOutputFolder(folder) {
+        return fs2.rmdir(folder, { recursive: true, force: true }).then(null, function (e) {
+            &#x2F;&#x2F; Ignore &quot;No such dir&quot; error, otherwise propagate further
+            if (e.code === &#39;ENOENT&#39;) {
+                return null;
+            }
+            throw e;
+        }).then(fs2.mkdir.bind(fs2, folder));
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_createModulesSkeleton</h4>
+                            <!--<strong>Params:</strong>-->
+                            <dl>
+                                    <dt>fileset</dt>
+                                    <dd>(<em>object</em>) - The fileset to be documented</dd>
+                                    <dt>folder</dt>
+                                    <dd>(<em>string</em>) - The output folder in to which create the skeleton for the docs return {Promise} A deferred promise to be resolved when the final skeleton is ready</dd>
+                            </dl>
+                            <p>Creates the folder skeleton for all the files in a given fileset</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _createModulesSkeleton(fileset, folder) {
+        var def = deferred();
+        
+        fs.mkdirSync(folder);
+        
+        deferred.map(fileset.groups, function (group) {
+            return fs2.mkdir(path.join(folder, group.path), {intermediate: true});
+        }).then(function () {
+            def.resolve(fileset);
+        });
+        
+        return def.promise;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>createOutputSkeleton</h4>
+                            <!--<strong>Params:</strong>-->
+                            <dl>
+                                    <dt>output</dt>
+                                    <dd>(<em>string</em>) - Output folder for the docs</dd>
+                                    <dt>fileset</dt>
+                                    <dd>(<em>object</em>) - Fileset to be documented</dd>
+                                    <dt>Returns</dt>
+                                    <dd>(<em>Promise</em>) - A promise to be fulfilled when the skeleton is created</dd>
+                            </dl>
+                            <p>Creates the output skeleton folders for a given fileset</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var createOutputSkeleton = function (output, fileset, assets) {
+        var def = deferred(),
+            assetsPath = path.join(output, ASSETS_FOLDER),
+            modulesPath = path.join(output, MODULES_FOLDER);
+        
+        _clearOutputFolder(output).then(function () {
+            
+            &#x2F;&#x2F; Copy assets to output folder
+            p_ncp(assets, assetsPath).then(function () {
+                
+                _createModulesSkeleton(fileset, modulesPath).then(function (fileset) {
+                    def.resolve(fileset);
+                });
+                
+            });
+            
+        });
+        
+        return def.promise;
+    };
+    
+    exports.createOutputSkeleton = createOutputSkeleton;
+    exports.load = load;
+}());</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>load</h4>
+                            <!--<strong>Params:</strong>-->
+                            <dl>
+                                    <dt>src</dt>
+                                    <dd>(<em>string</em>) - Source tree to be analyzed</dd>
+                                    <dt>includes</dt>
+                                    <dd>(<em>array.&lt;RegExp&gt;</em>) - Rule set for including files</dd>
+                                    <dt>excludes</dt>
+                                    <dd>(<em>array.&lt;RegExp&gt;</em>) - Rule set for excluding files</dd>
+                                    <dt>Returns</dt>
+                                    <dd>(<em>fileset</em>) - The set of files to be documented</dd>
+                            </dl>
+                            <p>Analyzes a source tree executing different sets of inclussion and exclussion<br />rules to generate a working space with the matching files</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var load = function (src, includes, excludes) {
+        var groups, files,
+            def = deferred();
+        
+        &#x2F;&#x2F; TODO, use includes array of regexps to add 
+        &#x2F;&#x2F; files to the workspace insted of just .js
+        find.file(&#x2F;\.js$&#x2F;, src, function (fileSet) {
+            
+            &#x2F;&#x2F; Excludes all files that match any of the exclusion rules,
+            &#x2F;&#x2F; and maps each of result to an object containing the
+            &#x2F;&#x2F; name of the file, folder and full path
+            files = fileSet.filter(function (file) {
+                return excludes.every(function (rule) {
+                    return !(new RegExp(rule).test(file));
+                });
+            }).map(function (file) {
+                var data = PATH_REGEXP.exec(file);
+                return {
+                    fullPath: data[0],
+                    path: data[1],
+                    name: data[2],
+                    docPath: data[1].replace(src, &quot;&quot;)
+                };
+            });
+            
+            &#x2F;&#x2F; Sorts files alphabetically by fullPath
+            files = _.sortBy(files, function (file) {
+                return file.fullPath.toLowerCase();
+            });
+            
+            &#x2F;&#x2F; Groups files based on their path and maps each
+            &#x2F;&#x2F; result to an object containing the path and package
+            &#x2F;&#x2F; of each final folder and the group of files it contains
+            groups = _.map(_.groupBy(files, function (file) {
+                return file.path;
+            }), function (files, key) {
+                return {
+                    path: key.replace(src, &quot;&quot;),
+                    ns: key.replace(src, &quot;&quot;).replace(&#x2F;\&#x2F;&#x2F;g, &quot;.&quot;).slice(0, -1),
+                    ns_class: key.replace(src, &quot;&quot;).replace(&#x2F;\&#x2F;&#x2F;g, &quot;_&quot;).slice(0, -1),
+                    files: files
+                };
+            });
+            
+            &#x2F;&#x2F; Resolve the promise returning a &#39;fileset&#39; object
+            def.resolve({
+                files: files,
+                groups: groups,
+                length: files.length
+            });
+        });
+        
+        return def.promise;
+    };</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

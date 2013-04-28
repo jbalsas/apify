@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>IndexGenerator</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (8)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/Documenter.html">Documenter</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language_js"><i class="icon-folder-open"></i>language.js</a>
+    </li>
+</ul>
+<ul id="package_language_js" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;GoogleClosureProcessor.html">GoogleClosureProcessor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;IndexGenerator.html">IndexGenerator</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;ModuleGenerator.html">ModuleGenerator</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;ModuleParser.html">ModuleParser</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;RequireProcessor.html">RequireProcessor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;js&#x2F;SearchGenerator.html">SearchGenerator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;Workspace.html">Workspace</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>Generator module for the index of the documentation</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;..&#x2F;../modules/fs.html">fs</a></li>
+                            <li><a href="..&#x2F;..&#x2F;../modules/mustache.html">mustache</a></li>
+                            <li><a href="..&#x2F;..&#x2F;../modules/path.html">path</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>generate</h4>
+                            <!--<strong>Params:</strong>-->
+                            <dl>
+                                    <dt>templates</dt>
+                                    <dd>(<em>Object.&lt;string, string&gt;</em>) - Map of registered templates for the current process</dd>
+                                    <dt>fileset</dt>
+                                    <dd>(<em>Fileset</em>) - File set being documented</dd>
+                                    <dt>output</dt>
+                                    <dd>(<em>string</em>) - Base output folder</dd>
+                            </dl>
+                            <p>Generates the documentation index page</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function generate(templates, fileset, output) {
+        var template    = fs.readFileSync(templates.index, &#39;UTF-8&#39;),
+            indexFolder = path.join(output, &quot;index.html&quot;),
+            fragments   = [],
+            fragment,
+            data;
+        
+        data = {
+            level: &quot;.&quot;,
+            fileset: fileset,
+            fragments: {}
+        };
+        
+        &#x2F;&#x2F; Parse and render first-level fragments
+        &#x2F;&#x2F; TODO Refactor for recursion and generators
+        fragment = FRAGMENT_REGEXP.exec(template);
+        
+        if (fragment) {
+            data.fragments = {};
+            do {
+                fragments.push(fragment[1]);
+                fragment = FRAGMENT_REGEXP.exec(template);
+            } while (fragment);
+        }
+        
+        fragments.forEach(function (fragmentName) {
+            var fragmentTPL = fs.readFileSync(templates[fragmentName], &quot;UTF-8&quot;),
+                fragment    = Mustache.render(fragmentTPL, data);
+                
+            data.fragments[fragmentName] = fragment;
+        });
+        
+        fs.writeFileSync(indexFolder, Mustache.render(template, data), &#39;UTF-8&#39;);
+    }
+    
+    exports.generate = generate;
+    
+}());</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
