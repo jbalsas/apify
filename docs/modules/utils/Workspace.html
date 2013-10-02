@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
         <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
         <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
         <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
         <!--[if IE 7]>
         <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
@@ -12,6 +13,7 @@
         <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
         <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
         
         <script>
@@ -123,7 +125,7 @@
                             <!--<strong>Params:</strong>-->
                             <dl>
                                     <dt>dir</dt>
-                                    <dd>(<em>string</em>) - Path of a directory to be cleaned</dd>
+                                    <dd>string - Path of a directory to be cleaned</dd>
                             </dl>
                             <p>Recursively clean a directory</p>
                             <button class="btn btn-small show-code">Show code</button>
@@ -146,9 +148,9 @@
                             <!--<strong>Params:</strong>-->
                             <dl>
                                     <dt>fileset</dt>
-                                    <dd>(<em>object</em>) - The fileset to be documented</dd>
+                                    <dd>object - The fileset to be documented</dd>
                                     <dt>folder</dt>
-                                    <dd>(<em>string</em>) - The output folder in to which create the skeleton for the docs return {Promise} A deferred promise to be resolved when the final skeleton is ready</dd>
+                                    <dd>string - The output folder in to which create the skeleton for the docs return {Promise} A deferred promise to be resolved when the final skeleton is ready</dd>
                             </dl>
                             <p>Creates the folder skeleton for all the files in a given fileset</p>
                             <button class="btn btn-small show-code">Show code</button>
@@ -175,11 +177,11 @@
                             <!--<strong>Params:</strong>-->
                             <dl>
                                     <dt>output</dt>
-                                    <dd>(<em>string</em>) - Output folder for the docs</dd>
+                                    <dd>string - Output folder for the docs</dd>
                                     <dt>fileset</dt>
-                                    <dd>(<em>object</em>) - Fileset to be documented</dd>
+                                    <dd>object - Fileset to be documented</dd>
                                     <dt>Returns</dt>
-                                    <dd>(<em>Promise</em>) - A promise to be fulfilled when the skeleton is created</dd>
+                                    <dd>Promise - A promise to be fulfilled when the skeleton is created</dd>
                             </dl>
                             <p>Creates the output skeleton folders for a given fileset</p>
                             <button class="btn btn-small show-code">Show code</button>
@@ -217,13 +219,13 @@
                             <!--<strong>Params:</strong>-->
                             <dl>
                                     <dt>src</dt>
-                                    <dd>(<em>string</em>) - Source tree to be analyzed</dd>
+                                    <dd>string - Source tree to be analyzed</dd>
                                     <dt>includes</dt>
-                                    <dd>(<em>array.&lt;RegExp&gt;</em>) - Rule set for including files</dd>
+                                    <dd>array.<RegExp> - Rule set for including files</dd>
                                     <dt>excludes</dt>
-                                    <dd>(<em>array.&lt;RegExp&gt;</em>) - Rule set for excluding files</dd>
+                                    <dd>array.<RegExp> - Rule set for excluding files</dd>
                                     <dt>Returns</dt>
-                                    <dd>(<em>fileset</em>) - The set of files to be documented</dd>
+                                    <dd>fileset - The set of files to be documented</dd>
                             </dl>
                             <p>Analyzes a source tree executing different sets of inclussion and exclussion<br />rules to generate a working space with the matching files</p>
                             <button class="btn btn-small show-code">Show code</button>
@@ -248,7 +250,7 @@
                     fullPath: data[0],
                     path: data[1],
                     name: data[2],
-                    docPath: data[1].replace(src, &quot;&quot;)
+                    docPath: data[1].replace(src, &quot;&quot;).replace(&#x2F;^\&#x2F;&#x2F;, &quot;&quot;)
                 };
             });
             
@@ -291,5 +293,7 @@
                 </div>
             </div>
         </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

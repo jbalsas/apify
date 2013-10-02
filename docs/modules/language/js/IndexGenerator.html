@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/bootstrap.css">
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/typeahead.js-bootstrap.css">
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/highlight.css">
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/main.css">
         <!--[if IE 7]>
         <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
@@ -12,6 +13,7 @@
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/highlight.pack.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/main.js"></script>
         
         <script>
@@ -119,11 +121,11 @@
                             <!--<strong>Params:</strong>-->
                             <dl>
                                     <dt>templates</dt>
-                                    <dd>(<em>Object.&lt;string, string&gt;</em>) - Map of registered templates for the current process</dd>
+                                    <dd>Object.<string, string> - Map of registered templates for the current process</dd>
                                     <dt>fileset</dt>
-                                    <dd>(<em>Fileset</em>) - File set being documented</dd>
+                                    <dd>Fileset - File set being documented</dd>
                                     <dt>output</dt>
-                                    <dd>(<em>string</em>) - Base output folder</dd>
+                                    <dd>string - Base output folder</dd>
                             </dl>
                             <p>Generates the documentation index page</p>
                             <button class="btn btn-small show-code">Show code</button>
@@ -175,5 +177,7 @@
                 </div>
             </div>
         </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

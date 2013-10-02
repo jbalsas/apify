@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/bootstrap.css">
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/typeahead.js-bootstrap.css">
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/highlight.css">
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/main.css">
         <!--[if IE 7]>
         <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
@@ -12,6 +13,7 @@
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/highlight.pack.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/main.js"></script>
         
         <script>
@@ -120,9 +122,9 @@
                             <!--<strong>Params:</strong>-->
                             <dl>
                                     <dt>The</dt>
-                                    <dd>(<em>Array.&lt;Object&gt;</em>) - array of module members</dd>
+                                    <dd>Array.<Object> - array of module members</dd>
                                     <dt>Returns</dt>
-                                    <dd>(<em>Array.&lt;Object&gt;</em>) - The sorted array</dd>
+                                    <dd>Array.<Object> - The sorted array</dd>
                             </dl>
                             <p>Sorts an array of module members by their names</p>
                             <button class="btn btn-small show-code">Show code</button>
@@ -173,9 +175,9 @@
                                     <!--<strong>Params:</strong>-->
                                     <dl>
                                         <dt>url</dt>
-                                        <dd>(<em>string</em>) - Path of the module to analyze</dd>
+                                        <dd>string - Path of the module to analyze</dd>
                                         <dt>Returns</dt>
-                                        <dd>(<em>Promise</em>) - A promise to be resolved with the parsed module</dd>
+                                        <dd>Promise - A promise to be resolved with the parsed module</dd>
                                     </dl>
                                     <p>Analyzes and parses a module</p>
                                     <button class="btn btn-small show-code">Show code</button>
@@ -294,5 +296,7 @@
                 </div>
             </div>
         </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

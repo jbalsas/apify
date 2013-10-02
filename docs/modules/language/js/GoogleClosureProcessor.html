@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/bootstrap.css">
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/typeahead.js-bootstrap.css">
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/highlight.css">
         <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/main.css">
         <!--[if IE 7]>
         <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
@@ -12,6 +13,7 @@
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/highlight.pack.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/main.js"></script>
         
         <script>
@@ -125,7 +127,7 @@
                                 <!--<strong>Params:</strong>-->
                                 <dl>
                                     <dt>data</dt>
-                                    <dd>(<em>Object</em>) - Raw data of the module being processed</dd>
+                                    <dd>Object - Raw data of the module being processed</dd>
                                 </dl>
                                 <p>A custom comment post-processor for Closure Compiler support</p>
                                 <button class="btn btn-small show-code">Show code</button>
@@ -144,6 +146,57 @@
                                 <h3>Methods<label class="checkbox">
                                     <input class="toggle-public" type="checkbox"> Show Private Members
                                 </label></h3>
+                                <div class="member private">
+                                    <span class="pull-right scope">
+                                        Private
+                                        
+                                    </span>
+                                    <h4>_parseTypeExpression</h4>
+                                    <!--<strong>Params:</strong>-->
+                                    <dl>
+                                    </dl>
+                                    <p>Parses a type expression</p>
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>GoogleClosureProcessor.prototype._parseTypeExpression = function (types) {
+        var PARAM_OBJECT_REGEXP         = new RegExp(&quot;^{(.*)}$&quot;),
+            PARAM_FUNCTION_REGEXP       = new RegExp(&quot;^function\\((.*)\\)$&quot;),
+            PARAM_NULLABLE_REGEXP       = new RegExp(&quot;^\\?(.*)$&quot;),
+            PARAM_NON_NULLABLE_REGEXP   = new RegExp(&quot;^!(.*)$&quot;);
+
+        var param_function_open     = &quot;&lt;span class=&#39;param_function&#39;&gt;function(&lt;&#x2F;span&gt;&quot;,
+            param_function_close    = &quot;&lt;span class=&#39;param_function&#39;&gt;)&lt;&#x2F;span&gt;&quot;,
+            param_object_open       = &quot;&lt;span class=&#39;param_object&#39;&gt;{&lt;&#x2F;span&gt;&quot;,
+            param_object_close      = &quot;&lt;span class=&#39;param_object&#39;&gt;}&lt;&#x2F;span&gt;&quot;,
+            param_nullable          = &quot;&lt;span class=&#39;param_nullable&#39;&#x2F;&gt;&quot;,
+            param_non_nullable      = &quot;&lt;span class=&#39;param_non_nullable&#39;&#x2F;&gt;&quot;,
+            param_tag_close         = &quot;&lt;&#x2F;span&gt;&quot;;
+
+        var expr = types,
+            match;
+
+        match = PARAM_OBJECT_REGEXP.exec(types);
+        if (match) {
+            return (param_object_open + this._parseTypeExpression(match[1]) + param_object_close);
+        }
+
+        match = PARAM_FUNCTION_REGEXP.exec(types);
+        if (match) {
+            return (param_function_open + this._parseTypeExpression(match[1]) + param_function_close);
+        }
+
+        match = PARAM_NULLABLE_REGEXP.exec(types);
+        if (match) {
+            return (param_nullable + this._parseTypeExpression(match[1]));
+        }
+
+        match = PARAM_NON_NULLABLE_REGEXP.exec(types);
+        if (match) {
+            return (param_non_nullable + this._parseTypeExpression(match[1]));
+        }
+
+        return expr;
+    };</code></pre>
+                                </div>
                                 <div class="member">
                                     <span class="pull-right scope">
                                         
@@ -153,14 +206,15 @@
                                     <!--<strong>Params:</strong>-->
                                     <dl>
                                         <dt>comment</dt>
-                                        <dd>(<em>Object</em>) - Dox parsed data for a comment in the module</dd>
+                                        <dd>Object - Dox parsed data for a comment in the module</dd>
                                         <dt>Returns</dt>
-                                        <dd>(<em>Object</em>) - Augmented comment with Closure Compiler support</dd>
+                                        <dd>Object - Augmented comment with Closure Compiler support</dd>
                                     </dl>
                                     <p>Parses special comment tags defined by the Closure Compiler</p>
                                     <button class="btn btn-small show-code">Show code</button>
                                     <pre class="code"><code>GoogleClosureProcessor.prototype.processComment = function (comment) {
-        var data    = this.rawData,
+        var instance    = this,
+            data        = instance.rawData,
             params  = [];
         
         if (comment.ctx) {
@@ -186,7 +240,7 @@
                         value: &quot;&lt;a href=&#39;#&#39;&gt;&quot; + tag.local + &quot;&lt;&#x2F;a&gt;&quot;
                     };
                 } else if (tag.type === &quot;param&quot; || tag.type === &quot;return&quot;) {
-                    tag.types = tag.types.join(&#39;, &#39;);
+                    tag.types = instance._parseTypeExpression(tag.types.join(&#39;, &#39;));
                     if (tag.type === &quot;return&quot;) {
                         tag.name = &quot;Returns&quot;;
                     }
@@ -223,5 +277,7 @@
                 </div>
             </div>
         </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>

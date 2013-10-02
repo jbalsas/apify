@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="../assets/css/bootstrap.css">
         <link rel="stylesheet" href="../assets/css/typeahead.js-bootstrap.css">
         <link rel="stylesheet" href="../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="../assets/css/highlight.css">
         <link rel="stylesheet" href="../assets/css/main.css">
         <!--[if IE 7]>
         <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
@@ -12,6 +13,7 @@
         <script type="text/javascript" src="../assets/js/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
         <script type="text/javascript" src="../assets/js/main.js"></script>
         
         <script>
@@ -131,7 +133,7 @@
                             <!--<strong>Params:</strong>-->
                             <dl>
                                     <dt>config</dt>
-                                    <dd>(<em>object</em>) - A configuration object</dd>
+                                    <dd>object - A configuration object</dd>
                             </dl>
                             <p>Initializes the docs generation process</p>
                             <button class="btn btn-small show-code">Show code</button>
@@ -191,5 +193,7 @@
                 </div>
             </div>
         </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
     </body>
 </html>
