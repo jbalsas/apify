@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>EditorManager</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>EditorManager owns the UI for the editor area. This essentially mirrors the 'current document'<br />property maintained by DocumentManager's model.</p>
+
+<p>Note that there is a little bit of unusual overlap between EditorManager and DocumentManager:<br />because the Document state is actually stored in the CodeMirror editor UI, DocumentManager is<br />not a pure headless model. Each Document encapsulates an editor instance, and thus EditorManager<br />must have some knowledge about Document's internal state (we access its _editor property).</p>
+
+<p>This module dispatches the following events:<br />   - activeEditorChange --  Fires after the active editor (full or inline) changes and size/visibility<br />                            are complete. Doesn't fire when editor temporarily loses focus to a non-editor<br />                            control (e.g. search toolbar or modal dialog, or window deactivation). Does<br />                            fire when focus moves between inline editor and its full-size container.<br />                            This event tracks getActiveEditor() changes, while DocumentManager's<br />                            currentDocumentChange tracks getCurrentFullEditor() changes.<br />                            The 2nd arg to the listener is which Editor became active; the 3rd arg is<br />                            which Editor is deactivated as a result. Either one may be null.<br />                            NOTE (#1257): getFocusedEditor() sometimes lags behind this event. Listeners<br />                            should use the arguments or call getActiveEditor() to reliably see which Editor <br />                            just gained focus.</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+                            <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+                            <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+                            <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+                            <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+                            <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+                            <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+                            <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member public">
+        
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>REFRESH_FORCE</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>string</dd>
+                            </dl>
+                            <p>Flag for _onEditorAreaResize() to always force refresh.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var REFRESH_FORCE = &quot;force&quot;;</code></pre>
+                        </div>
+                        <div class="member public">
+        
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>REFRESH_SKIP</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>string</dd>
+                            </dl>
+                            <p>Flag for _onEditorAreaResize() to never refresh.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var REFRESH_SKIP = &quot;skip&quot;;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_currentEditor</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>?Editor</dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Currently visible full-size Editor, or null if no editors open</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _currentEditor = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_currentEditorsDocument</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>@type {?Document}</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _currentEditorsDocument = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_currentViewProvider</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>@type {?Object} view provider</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _currentViewProvider = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_currentlyViewedPath</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>@type {?string} full path to file</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _currentlyViewedPath = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_editorHolder</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>@type {jQueryObject} DOM node that contains all editors (visible and hidden alike)</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _editorHolder = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_inlineDocsProviders</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Array.<{priority:number, provider:function(...)}></dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Registered inline documentation widget providers sorted descending by priority.<br />See {@link #registerInlineDocsProvider()}.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _inlineDocsProviders = [];</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_inlineEditProviders</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Array.<{priority:number, provider:function(...)}></dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Registered inline-editor widget providers sorted descending by priority. <br />See {@link #registerInlineEditProvider()}.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _inlineEditProviders = [];</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_jumpToDefProviders</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Array.<function(...)></dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Registered jump-to-definition providers. See {@link #registerJumpToDefProvider()}.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _jumpToDefProviders = [];</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_lastEditorWidth</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Last known editor area width, used to detect when the window is resized horizontally.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _lastEditorWidth = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_lastFocusedEditor</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>?Editor</dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Currently focused Editor (full-size, inline, or otherwise)</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _lastFocusedEditor = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_viewStateCache</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Object<string, {scrollPos:{x:number, y:number}, selection:{start:{line:number, ch:number}, end:{line:number, ch:number}}}></dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Maps full path to scroll pos &amp; cursor/selection info. Not kept up to date while an editor is current.<br />Only updated when switching / closing editor, or when requested explicitly via _getViewState().</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _viewStateCache = {};</code></pre>
+                        </div>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_createEditorForDocument</h4>
+                            <em><p>Creates a new Editor bound to the given Document.<br />The editor is appended to the given container as a visible child.</p></em>
+                            <dl>
+                                    <dt>doc</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd>Document for the Editor's content</dd>
+                                    <dt>makeMasterEditor</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>If true, the Editor will set itself as the private "master" Editor for the Document. If false, the Editor will attach to the Document as a "slave."</dd>
+                                    <dt>container</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">jQueryObject</dd>
+                                    <dd>Container to add the editor to.</dd>
+                                    <dt>range</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">{startLine: number, endLine: number}</dd>
+                                    <dd>If specified, range of lines within the document to display in this editor. Inclusive.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _createEditorForDocument(doc, makeMasterEditor, container, range) {
+        var editor = new Editor(doc, makeMasterEditor, container, range);
+
+        $(editor).on(&quot;focus&quot;, function () {
+            _notifyActiveEditorChanged(this);
+        });
+        
+        return editor;
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_createFullEditorForDocument</h4>
+                            <em><p>Creates a new "full-size" (not inline) Editor for the given Document, and sets it as the<br />Document's master backing editor. The editor is not yet visible; to show it, use<br />DocumentManager.setCurrentDocument().<br />Semi-private: should only be called within this module or by Document.</p></em>
+                            <dl>
+                                    <dt>document</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd>Document whose main/full Editor to create</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _createFullEditorForDocument(document) {
+        &#x2F;&#x2F; Create editor; make it initially invisible
+        var container = _editorHolder.get(0);
+        var editor = _createEditorForDocument(document, true, container);
+        editor.setVisible(false);
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_destroyEditorIfUnneeded</h4>
+                            <em><p>Disposes the given Document's full-size editor if the doc is no longer "open" from the user's<br />standpoint - not in the working set and not currentDocument).</p>
+
+<p>Destroying the full-size editor releases ONE ref to the Document; if inline editors or other<br />UI elements are still referencing the Document it will still be 'open' (kept alive) from<br />DocumentManager's standpoint. However, destroying the full-size editor does remove the backing<br />"master" editor from the Document, rendering it immutable until either inline-editor edits or<br />currentDocument change triggers _createFullEditorForDocument() full-size editor again.</p>
+
+<p>In certain edge cases, this is called directly by DocumentManager; see _gcDocuments() for details.</p></em>
+                            <dl>
+                                    <dt>document</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd>Document whose "master" editor we may destroy</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _destroyEditorIfUnneeded(document) {
+        var editor = document._masterEditor;
+
+        if (!editor) {
+            if (!(document instanceof DocumentManager.Document)) {
+                throw new Error(&quot;_destroyEditorIfUnneeded() should be passed a Document&quot;);
+            }
+            return;
+        }
+        
+        &#x2F;&#x2F; If outgoing editor is no longer needed, dispose it
+        var isCurrentDocument = (DocumentManager.getCurrentDocument() === document);
+        var isInWorkingSet = (DocumentManager.findInWorkingSet(document.file.fullPath) !== -1);
+        if (!isCurrentDocument &amp;&amp; !isInWorkingSet) {
+            &#x2F;&#x2F; Destroy the editor widget (which un-refs the Document and reverts it to read-only mode)
+            editor.destroy();
+            
+            &#x2F;&#x2F; Our callers should really ensure this, but just for safety...
+            if (_currentEditor === editor) {
+                _currentEditorsDocument = null;
+                _currentEditor = null;
+            }
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_doJumpToDef</h4>
+                            <em><p>Asynchronously asks providers to handle jump-to-definition.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _doJumpToDef() {
+        var providers = _jumpToDefProviders;
+        var promise,
+            i,
+            result = new $.Deferred();
+        
+        if (_currentEditor) {
+            &#x2F;&#x2F; main editor has focus
+
+            PerfUtils.markStart(PerfUtils.JUMP_TO_DEFINITION);
+            
+            &#x2F;&#x2F; Run through providers until one responds
+            for (i = 0; i &lt; providers.length &amp;&amp; !promise; i++) {
+                var provider = providers[i];
+                promise = provider();
+            }
+
+            &#x2F;&#x2F; Will one of them will provide a result?
+            if (promise) {
+                promise.done(function () {
+                    PerfUtils.addMeasurement(PerfUtils.JUMP_TO_DEFINITION);
+                    result.resolve();
+                }).fail(function () {
+                    &#x2F;&#x2F; terminate timer that was started above
+                    PerfUtils.finalizeMeasurement(PerfUtils.JUMP_TO_DEFINITION);
+                    result.reject();
+                });
+            } else {
+                &#x2F;&#x2F; terminate timer that was started above
+                PerfUtils.finalizeMeasurement(PerfUtils.JUMP_TO_DEFINITION);
+                result.reject();
+            }
+            
+        } else {
+            result.reject();
+        }
+        
+        return result.promise();
+    }
+    
+    &#x2F;&#x2F; Initialize: command handlers
+    CommandManager.register(Strings.CMD_TOGGLE_QUICK_EDIT, Commands.TOGGLE_QUICK_EDIT, function () {
+        return _toggleInlineWidget(_inlineEditProviders);
+    });
+    CommandManager.register(Strings.CMD_TOGGLE_QUICK_DOCS, Commands.TOGGLE_QUICK_DOCS, function () {
+        return _toggleInlineWidget(_inlineDocsProviders);
+    });
+    CommandManager.register(Strings.CMD_JUMPTO_DEFINITION, Commands.NAVIGATE_JUMPTO_DEFINITION, _doJumpToDef);
+    
+    &#x2F;&#x2F; Create PerfUtils measurement
+    PerfUtils.createPerfMeasurement(&quot;JUMP_TO_DEFINITION&quot;, &quot;Jump-To-Definiiton&quot;);
+
+    &#x2F;&#x2F; Initialize: register listeners
+    $(DocumentManager).on(&quot;currentDocumentChange&quot;, _onCurrentDocumentChange);
+    $(DocumentManager).on(&quot;workingSetRemove&quot;,      _onWorkingSetRemove);
+    $(DocumentManager).on(&quot;workingSetRemoveList&quot;,  _onWorkingSetRemoveList);
+    $(DocumentManager).on(&quot;fileNameChange&quot;,        _onFileNameChange);
+    $(PanelManager).on(&quot;editorAreaResize&quot;,         _onEditorAreaResize);
+
+
+    &#x2F;&#x2F; For unit tests and internal use only
+    exports._openInlineWidget             = _openInlineWidget;
+    exports._createFullEditorForDocument  = _createFullEditorForDocument;
+    exports._destroyEditorIfUnneeded      = _destroyEditorIfUnneeded;
+    exports._getViewState                 = _getViewState;
+    exports._resetViewStates              = _resetViewStates;
+    exports._doShow                       = _doShow;
+    exports._notifyActiveEditorChanged    = _notifyActiveEditorChanged;
+    
+    exports.REFRESH_FORCE = REFRESH_FORCE;
+    exports.REFRESH_SKIP  = REFRESH_SKIP;
+    
+    &#x2F;&#x2F; Define public API
+    exports.setEditorHolder               = setEditorHolder;
+    exports.getCurrentFullEditor          = getCurrentFullEditor;
+    exports.createInlineEditorForDocument = createInlineEditorForDocument;
+    exports.focusEditor                   = focusEditor;
+    exports.getFocusedEditor              = getFocusedEditor;
+    exports.getActiveEditor               = getActiveEditor;
+    exports.getCurrentlyViewedPath        = getCurrentlyViewedPath;
+    exports.getFocusedInlineWidget        = getFocusedInlineWidget;
+    exports.resizeEditor                  = resizeEditor;
+    exports.registerInlineEditProvider    = registerInlineEditProvider;
+    exports.registerInlineDocsProvider    = registerInlineDocsProvider;
+    exports.registerJumpToDefProvider     = registerJumpToDefProvider;
+    exports.getInlineEditors              = getInlineEditors;
+    exports.closeInlineWidget             = closeInlineWidget;
+    exports.showCustomViewer              = showCustomViewer;
+    exports.getCustomViewerForPath        = getCustomViewerForPath;
+    exports.notifyPathDeleted             = notifyPathDeleted;
+    exports.closeCustomViewer             = closeCustomViewer;
+    exports.showingCustomViewerForPath    = showingCustomViewerForPath;
+});</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_doShow</h4>
+                            <em><p></p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _doShow(document) {
+        &#x2F;&#x2F; Show new editor
+        _currentEditorsDocument = document;
+        _currentEditor = document._masterEditor;
+        
+        &#x2F;&#x2F; Skip refreshing the editor since we&#39;re going to refresh it more explicitly below
+        _currentEditor.setVisible(true, false);
+        _currentEditor.focus();
+        
+        &#x2F;&#x2F; Resize and refresh the editor, since it might have changed size or had other edits applied
+        &#x2F;&#x2F; since it was last visible.
+        PanelManager._notifyLayoutChange(REFRESH_FORCE);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getFocusedInlineEditor</h4>
+                            <em><p>Returns the focused Editor within an inline text editor, or null if something else has focus</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getFocusedInlineEditor() {
+        var focusedWidget = getFocusedInlineWidget();
+        if (focusedWidget instanceof InlineTextEditor) {
+            return focusedWidget.getFocusedEditor();
+        }
+        return null;
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_getViewState</h4>
+                            <em><p>Returns up-to-date view state for the given file, or null if file not open and no state cached</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getViewState(fullPath) {
+        if (_currentEditorsDocument &amp;&amp; _currentEditorsDocument.file.fullPath === fullPath) {
+            _saveEditorViewState(_currentEditor);
+        }
+        return _viewStateCache[fullPath];
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_insertProviderSorted</h4>
+                            <em><p>Inserts a prioritized provider object into the array in sorted (descending) order.</p></em>
+                            <dl>
+                                    <dt>array</dt>
+                                    <dd class="label label-info pull-left">Array.&lt;{priority:number,provider:function(...)}&gt;</dd>
+                                    <dd></dd>
+                                    <dt>priority</dt>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd></dd>
+                                    <dt>provider</dt>
+                                    <dd class="label label-info pull-left">function(...)</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _insertProviderSorted(array, provider, priority) {
+        var index,
+            prioritizedProvider = {
+                priority: priority,
+                provider: provider
+            };
+        
+        for (index = 0; index &lt; array.length; index++) {
+            if (array[index].priority &lt; priority) {
+                break;
+            }
+        }
+        
+        array.splice(index, 0, prioritizedProvider);
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_notifyActiveEditorChanged</h4>
+                            <em><p></p></em>
+                            <dl>
+                                    <dt>current</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">Editor</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _notifyActiveEditorChanged(current) {
+        &#x2F;&#x2F; Skip if the Editor that gained focus was already the most recently focused editor.
+        &#x2F;&#x2F; This may happen e.g. if the window loses then regains focus.
+        if (_lastFocusedEditor === current) {
+            return;
+        }
+        var previous = _lastFocusedEditor;
+        _lastFocusedEditor = current;
+        
+        $(exports).triggerHandler(&quot;activeEditorChange&quot;, [current, previous]);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_nullifyEditor</h4>
+                            <em><p>resets editor state to make sure getFocusedEditor(), getActiveEditor() <br />and getCurrentFullEditor() return null when an image or the NoEditor <br />placeholder is displayed.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _nullifyEditor() {
+        if (_currentEditor) {
+            _saveEditorViewState(_currentEditor);
+            
+            &#x2F;&#x2F; This is a hack to deal with #5589. The issue is that CodeMirror&#39;s logic for polling its
+            &#x2F;&#x2F; hidden input field relies on whether there&#39;s a selection in the input field or not. When
+            &#x2F;&#x2F; we hide the editor, the input field loses its selection. Somehow, CodeMirror&#39;s readInput()
+            &#x2F;&#x2F; poll can get called before the resulting blur event is asynchronously sent. (Our guess is
+            &#x2F;&#x2F; that if the setTimeout() that the poll is on is overdue, it gets serviced before the backlog
+            &#x2F;&#x2F; of asynchronous events is flushed.) That means that readInput() thinks CM still has focus,
+            &#x2F;&#x2F; but that the hidden input has lost its selection, meaning the user has typed something, which
+            &#x2F;&#x2F; causes it to replace the editor selection (with the same text), leading to the erroneous
+            &#x2F;&#x2F; change event and selection change. To work around this, we simply blur CM&#39;s input field
+            &#x2F;&#x2F; before hiding the editor, which forces the blur event to be sent synchronously, before the
+            &#x2F;&#x2F; next readInput() triggers.
+            &#x2F;&#x2F;
+            &#x2F;&#x2F; Note that we only need to do this here, not in _showEditor(), because _showEditor()
+            &#x2F;&#x2F; ends up synchronously setting focus to another editor, which has the effect of
+            &#x2F;&#x2F; forcing a synchronous blur event as well.
+            _currentEditor._codeMirror.getInputField().blur();
+            
+            _currentEditor.setVisible(false);
+            _destroyEditorIfUnneeded(_currentEditorsDocument);
+            
+            _currentEditorsDocument = null;
+            _currentEditor = null;
+            _currentlyViewedPath = null;
+            
+            &#x2F;&#x2F; No other Editor is gaining focus, so in this one special case we must trigger event manually
+            _notifyActiveEditorChanged(null);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onCurrentDocumentChange</h4>
+                            <em><p>Handles changes to DocumentManager.getCurrentDocument()</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onCurrentDocumentChange() {
+        var doc = DocumentManager.getCurrentDocument(),
+            container = _editorHolder.get(0);
+        
+        var perfTimerName = PerfUtils.markStart(&quot;EditorManager._onCurrentDocumentChange():\t&quot; + (!doc || doc.file.fullPath));
+        
+        &#x2F;&#x2F; When the document or file in view changes clean up.
+        _removeCustomViewer();
+        &#x2F;&#x2F; Update the UI to show the right editor (or nothing), and also dispose old editor if no
+        &#x2F;&#x2F; longer needed.
+        if (doc) {
+            _showEditor(doc);
+            _setCurrentlyViewedPath(doc.file.fullPath);
+        } else {
+            _clearCurrentlyViewedPath();
+            _showNoEditor();
+        }
+
+        PerfUtils.addMeasurement(perfTimerName);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onEditorAreaResize</h4>
+                            <em><p>Update the current CodeMirror editor's size. Must be called any time the contents of the editor area<br />are swapped or any time the editor-holder area has changed height. EditorManager calls us in the swap<br />case. PanelManager calls us in the most common height-change cases (panel and/or window resize), but<br />some other cases are handled by external code calling resizeEditor() (e.g. ModalBar hide/show).</p></em>
+                            <dl>
+                                    <dt>editorAreaHt</dt>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd></dd>
+                                    <dt>refreshFlag</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>For internal use. Set to "force" to ensure the editor will refresh, "skip" to ensure the editor does not refresh, or leave undefined to let _onEditorAreaResize() determine whether it needs to refresh.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onEditorAreaResize(event, editorAreaHt, refreshFlag) {
+        if (_currentEditor) {
+            var curRoot = _currentEditor.getRootElement(),
+                curWidth = $(curRoot).width();
+            if (!curRoot.style.height || $(curRoot).height() !== editorAreaHt) {
+                &#x2F;&#x2F; Call setSize() instead of $.height() to allow CodeMirror to
+                &#x2F;&#x2F; check for options like line wrapping
+                _currentEditor.setSize(null, editorAreaHt);
+                if (refreshFlag === undefined) {
+                    refreshFlag = REFRESH_FORCE;
+                }
+            } else if (curWidth !== _lastEditorWidth) {
+                if (refreshFlag === undefined) {
+                    refreshFlag = REFRESH_FORCE;
+                }
+            }
+            _lastEditorWidth = curWidth;
+
+            if (refreshFlag === REFRESH_FORCE) {
+                _currentEditor.refreshAll(true);
+            }
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onFileNameChange</h4>
+                            <em><p>Update file name if necessary</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onFileNameChange(e, oldName, newName) {
+        if (_currentlyViewedPath === oldName) {
+            _setCurrentlyViewedPath(newName);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onWorkingSetRemove</h4>
+                            <em><p>Handles removals from DocumentManager's working set list</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onWorkingSetRemove(event, removedFile) {
+        &#x2F;&#x2F; There&#39;s one case where an editor should be disposed even though the current document
+        &#x2F;&#x2F; didn&#39;t change: removing a document from the working set (via the &quot;X&quot; button). (This may
+        &#x2F;&#x2F; also cover the case where the document WAS current, if the editor-swap happens before the
+        &#x2F;&#x2F; removal from the working set.
+        var doc = DocumentManager.getOpenDocumentForPath(removedFile.fullPath);
+        if (doc) {
+            _destroyEditorIfUnneeded(doc);
+        }
+        &#x2F;&#x2F; else, file was listed in working set but never shown in the editor - ignore
+    }
+
+    function _onWorkingSetRemoveList(event, removedFiles) {
+        removedFiles.forEach(function (removedFile) {
+            _onWorkingSetRemove(event, removedFile);
+        });
+    }
+
+    &#x2F;&#x2F; Note: there are several paths that can lead to an editor getting destroyed
+    &#x2F;&#x2F;  - file was in working set, but not in current editor; then closed (via working set &quot;X&quot; button)
+    &#x2F;&#x2F;      --&gt; handled by _onWorkingSetRemove()
+    &#x2F;&#x2F;  - file was in current editor, but not in working set; then navigated away from
+    &#x2F;&#x2F;      --&gt; handled by _onCurrentDocumentChange()
+    &#x2F;&#x2F;  - file was in current editor, but not in working set; then closed (via File &gt; Close) (and thus
+    &#x2F;&#x2F;    implicitly navigated away from)
+    &#x2F;&#x2F;      --&gt; handled by _onCurrentDocumentChange()
+    &#x2F;&#x2F;  - file was in current editor AND in working set; then closed (via File &gt; Close OR working set
+    &#x2F;&#x2F;    &quot;X&quot; button) (and thus implicitly navigated away from)
+    &#x2F;&#x2F;      --&gt; handled by _onWorkingSetRemove() currently, but could be _onCurrentDocumentChange()
+    &#x2F;&#x2F;      just as easily (depends on the order of events coming from DocumentManager)</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_openInlineWidget</h4>
+                            <em><p>Finds an inline widget provider from the given list that can offer a widget for the current cursor<br />position, and once the widget has been created inserts it into the editor.</p></em>
+                            <dl>
+                                    <dt>editor</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Editor</dd>
+                                    <dd>The host editor</dd>
+                                    <dt>prioritized</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Array.&lt;{priority:number, provider:function(!Editor, !{line:number, ch:number}):?$.Promise}&gt;</dd>
+                                    <dd>providers</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _openInlineWidget(editor, providers) {
+        PerfUtils.markStart(PerfUtils.INLINE_WIDGET_OPEN);
+        
+        &#x2F;&#x2F; Run through inline-editor providers until one responds
+        var pos = editor.getCursorPos(),
+            inlinePromise,
+            i,
+            result = new $.Deferred();
+        
+        for (i = 0; i &lt; providers.length &amp;&amp; !inlinePromise; i++) {
+            var provider = providers[i].provider;
+            inlinePromise = provider(editor, pos);
+        }
+        
+        &#x2F;&#x2F; If one of them will provide a widget, show it inline once ready
+        if (inlinePromise) {
+            inlinePromise.done(function (inlineWidget) {
+                editor.addInlineWidget(pos, inlineWidget).done(function () {
+                    PerfUtils.addMeasurement(PerfUtils.INLINE_WIDGET_OPEN);
+                    result.resolve();
+                });
+            }).fail(function () {
+                &#x2F;&#x2F; terminate timer that was started above
+                PerfUtils.finalizeMeasurement(PerfUtils.INLINE_WIDGET_OPEN);
+                result.reject();
+            });
+        } else {
+            &#x2F;&#x2F; terminate timer that was started above
+            PerfUtils.finalizeMeasurement(PerfUtils.INLINE_WIDGET_OPEN);
+            result.reject();
+        }
+        
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_removeCustomViewer</h4>
+                            <em><p>Remove existing custom view if present</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _removeCustomViewer() {
+        $(exports).triggerHandler(&quot;removeCustomViewer&quot;);
+        if (_$currentCustomViewer) {
+            _$currentCustomViewer.remove();
+        }
+        _$currentCustomViewer = null;
+        _currentViewProvider = null;
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_resetViewStates</h4>
+                            <em><p>Removes all cached view state info and replaces it with the given mapping</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _resetViewStates(viewStates) {
+        _viewStateCache = viewStates;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_restoreEditorViewState</h4>
+                            <em><p>Updates the given editor's actual state from _viewStateCache, if any state stored</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _restoreEditorViewState(editor) {
+        &#x2F;&#x2F; We want to ignore the current state of the editor, so don&#39;t call _getViewState()
+        var viewState = _viewStateCache[editor.document.file.fullPath];
+        if (viewState) {
+            if (viewState.selection) {
+                editor.setSelection(viewState.selection.start, viewState.selection.end);
+            }
+            if (viewState.scrollPos) {
+                editor.setScrollPos(viewState.scrollPos.x, viewState.scrollPos.y);
+            }
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_saveEditorViewState</h4>
+                            <em><p>Updates _viewStateCache from the given editor's actual current state</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _saveEditorViewState(editor) {
+        _viewStateCache[editor.document.file.fullPath] = {
+            selection: editor.getSelection(),
+            scrollPos: editor.getScrollPos()
+        };
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_showEditor</h4>
+                            <em><p>Make the given document's editor visible in the UI, hiding whatever was<br />visible before. Creates a new editor if none is assigned.</p></em>
+                            <dl>
+                                    <dt>document</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _showEditor(document) {
+        &#x2F;&#x2F; Hide whatever was visible before
+        if (!_currentEditor) {
+            $(&quot;#not-editor&quot;).css(&quot;display&quot;, &quot;none&quot;);
+        } else {
+            _saveEditorViewState(_currentEditor);
+            _currentEditor.setVisible(false);
+            _destroyEditorIfUnneeded(_currentEditorsDocument);
+        }
+        
+        &#x2F;&#x2F; Ensure a main editor exists for this document to show in the UI
+        var createdNewEditor = false;
+        if (!document._masterEditor) {
+            createdNewEditor = true;
+
+            &#x2F;&#x2F; Performance (see #4757) Chrome wastes time messing with selection
+            &#x2F;&#x2F; that will just be changed at end, so clear it for now
+            if (window.getSelection &amp;&amp; window.getSelection().empty) {  &#x2F;&#x2F; Chrome
+                window.getSelection().empty();
+            }
+            
+            &#x2F;&#x2F; Editor doesn&#39;t exist: populate a new Editor with the text
+            _createFullEditorForDocument(document);
+        }
+        
+        _doShow(document);
+        
+        if (createdNewEditor) {
+            _restoreEditorViewState(document._masterEditor);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_showNoEditor</h4>
+                            <em><p>Hide the currently visible editor and show a placeholder UI in its place</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _showNoEditor() {
+        $(&quot;#not-editor&quot;).css(&quot;display&quot;, &quot;&quot;);
+        _nullifyEditor();
+    }
+    
+    function getCurrentlyViewedPath() {
+        return _currentlyViewedPath;
+    }
+    
+    function _clearCurrentlyViewedPath() {
+        _currentlyViewedPath = null;
+        $(exports).triggerHandler(&quot;currentlyViewedFileChange&quot;);
+    }
+    
+    function _setCurrentlyViewedPath(fullPath) {
+        _currentlyViewedPath = fullPath;
+        $(exports).triggerHandler(&quot;currentlyViewedFileChange&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_toggleInlineWidget</h4>
+                            <em><p>Closes any focused inline widget. Else, asynchronously asks providers to create one.</p></em>
+                            <dl>
+                                    <dt>prioritized</dt>
+                                    <dd class="label label-info pull-left">Array.&lt;{priority:number,provider:function(...)}&gt;</dd>
+                                    <dd>providers</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _toggleInlineWidget(providers) {
+        var result = new $.Deferred();
+        
+        if (_currentEditor) {
+            var inlineWidget = getFocusedInlineWidget();
+            
+            if (inlineWidget) {
+                &#x2F;&#x2F; an inline widget&#39;s editor has focus, so close it
+                PerfUtils.markStart(PerfUtils.INLINE_WIDGET_CLOSE);
+                inlineWidget.close().done(function () {
+                    PerfUtils.addMeasurement(PerfUtils.INLINE_WIDGET_CLOSE);
+                    &#x2F;&#x2F; return a resolved promise to CommandManager
+                    result.resolve(false);
+                });
+            } else {
+                &#x2F;&#x2F; main editor has focus, so create an inline editor
+                _openInlineWidget(_currentEditor, providers).done(function () {
+                    result.resolve(true);
+                }).fail(function () {
+                    result.reject();
+                });
+            }
+        } else {
+            &#x2F;&#x2F; Can not open an inline editor without a host editor
+            result.reject();
+        }
+        
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>closeCustomViewer</h4>
+                            <em><p>Closes the customViewer currently displayed, shows the NoEditor view<br />and notifies the ProjectManager to update the file selection</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function closeCustomViewer() {
+        _removeCustomViewer();
+        _setCurrentlyViewedPath();
+        _showNoEditor();
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>closeInlineWidget</h4>
+                            <em><p>Removes the given widget UI from the given hostEditor (agnostic of what the widget's content<br />is). The widget's onClosed() callback will be run as a result.</p></em>
+                            <dl>
+                                    <dt>hostEditor</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Editor</dd>
+                                    <dd>The editor containing the widget.</dd>
+                                    <dt>inlineWidget</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">InlineWidget</dd>
+                                    <dd>The inline widget to close.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function closeInlineWidget(hostEditor, inlineWidget) {
+        &#x2F;&#x2F; If widget has focus, return it to the hostEditor &amp; move the cursor to where the inline used to be
+        if (inlineWidget.hasFocus()) {
+            &#x2F;&#x2F; Place cursor back on the line just above the inline (the line from which it was opened)
+            &#x2F;&#x2F; If cursor&#39;s already on that line, leave it be to preserve column position
+            var widgetLine = hostEditor._codeMirror.getLineNumber(inlineWidget.info.line);
+            var cursorLine = hostEditor.getCursorPos().line;
+            if (cursorLine !== widgetLine) {
+                hostEditor.setCursorPos({ line: widgetLine, pos: 0 });
+            }
+            
+            hostEditor.focus();
+        }
+        
+        return hostEditor.removeInlineWidget(inlineWidget);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>createInlineEditorForDocument</h4>
+                            <em><p>Creates a new inline Editor instance for the given Document.<br />The editor is not yet visible or attached to a host editor.</p></em>
+                            <dl>
+                                    <dt>doc</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd>Document for the Editor's content</dd>
+                                    <dt>range</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">{startLine:Number, endLine:Number}</dd>
+                                    <dd>If specified, all lines outside the given range are hidden from the editor. Range is inclusive. Line numbers start at 0.</dd>
+                                    <dt>inlineContent</dt>
+                                    <dd class="label label-info pull-left">HTMLDivContainer</dd>
+                                    <dd></dd>
+                                    <dt>closeThisInline</dt>
+                                    <dd class="label label-info pull-left">function(inlineWidget)</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function createInlineEditorForDocument(doc, range, inlineContent) {
+        &#x2F;&#x2F; Hide the container for the editor before creating it so that CodeMirror doesn&#39;t do extra work
+        &#x2F;&#x2F; when initializing the document. When we construct the editor, we have to set its text and then
+        &#x2F;&#x2F; set the (small) visible range that we show in the editor. If the editor is visible, CM has to
+        &#x2F;&#x2F; render a large portion of the document before setting the visible range. By hiding the editor
+        &#x2F;&#x2F; first and showing it after the visible range is set, we avoid that initial render.
+        $(inlineContent).hide();
+        var inlineEditor = _createEditorForDocument(doc, false, inlineContent, range);
+        $(inlineContent).show();
+        
+        return { content: inlineContent, editor: inlineEditor };
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>focusEditor</h4>
+                            <em><p>Returns focus to the last visible editor that had focus. If no editor visible, does nothing.<br />This function should be called to restore editor focus after it has been temporarily<br />removed. For example, after a dialog with editable text is closed.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function focusEditor() {
+        if (_lastFocusedEditor) {
+            _lastFocusedEditor.focus();
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getActiveEditor</h4>
+                            <em><p>Returns the current active editor (full-sized OR inline editor). This editor may not <br />have focus at the moment, but it is visible and was the last editor that was given <br />focus. Returns null if no editors are active.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getActiveEditor() {
+        return _lastFocusedEditor;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getCurrentFullEditor</h4>
+                            <em><p>Returns the visible full-size Editor corresponding to DocumentManager.getCurrentDocument()</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getCurrentFullEditor() {
+        &#x2F;&#x2F; This *should* always be equivalent to DocumentManager.getCurrentDocument()._masterEditor
+        return _currentEditor;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getCustomViewerForPath</h4>
+                            <em><p>Return the provider of a custom viewer for the given path if one exists.<br />Otherwise, return null.</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>- file path to be checked for a custom viewer</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getCustomViewerForPath(fullPath) {
+        var lang = LanguageManager.getLanguageForPath(fullPath);
+        if (lang.getId() === &quot;image&quot;) {
+            &#x2F;&#x2F; TODO: Extensibility
+            &#x2F;&#x2F; For now we only have the image viewer, so just return ImageViewer object.
+            &#x2F;&#x2F; Once we have each viewer registers with EditorManager as a provider,
+            &#x2F;&#x2F; then we return the provider registered with the language id.
+            return ImageViewer;
+        }
+        
+        return null;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getFocusedEditor</h4>
+                            <em><p>Returns the currently focused editor instance (full-sized OR inline editor).<br />This function is similar to getActiveEditor(), with one main difference: this<br />function will only return editors that currently have focus, whereas <br />getActiveEditor() will return the last visible editor that was given focus (but<br />may not currently have focus because, for example, a dialog with editable text<br />is open).</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getFocusedEditor() {
+        if (_currentEditor) {
+            
+            &#x2F;&#x2F; See if any inlines have focus
+            var focusedInline = _getFocusedInlineEditor();
+            if (focusedInline) {
+                return focusedInline;
+            }
+
+            &#x2F;&#x2F; otherwise, see if full-sized editor has focus
+            if (_currentEditor.hasFocus()) {
+                return _currentEditor;
+            }
+        }
+        
+        return null;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getFocusedInlineWidget</h4>
+                            <em><p>Returns the currently focused inline widget, if any.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getFocusedInlineWidget() {
+        var result = null;
+        
+        if (_currentEditor) {
+            _currentEditor.getInlineWidgets().forEach(function (widget) {
+                if (widget.hasFocus()) {
+                    result = widget;
+                }
+            });
+        }
+        
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>getInlineEditors</h4>
+                            <em><p>Given a host editor, return a list of all Editors in all its open inline widgets. (Ignoring<br />any other inline widgets that might be open but don't contain Editors).</p></em>
+                            <dl>
+                                    <dt>hostEditor</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Editor</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getInlineEditors(hostEditor) {
+        var inlineEditors = [];
+        
+        if (hostEditor) {
+            hostEditor.getInlineWidgets().forEach(function (widget) {
+                if (widget instanceof InlineTextEditor &amp;&amp; widget.editor) {
+                    inlineEditors.push(widget.editor);
+                }
+            });
+        }
+
+        return inlineEditors;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>notifyPathDeleted</h4>
+                            <em><p>Clears custom viewer for a file with a given path and displays <br />either a file from the working set or the no editor view.</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>- file path of deleted file.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function notifyPathDeleted(fullPath) {
+        if (_currentlyViewedPath === fullPath) {
+            var fileToOpen = DocumentManager.getNextPrevFile(1);
+            if (fileToOpen) {
+                CommandManager.execute(Commands.FILE_OPEN, {fullPath: fileToOpen.fullPath});
+            } else {
+                _removeCustomViewer();
+                _showNoEditor();
+            }
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>registerInlineDocsProvider</h4>
+                            <em><p>Registers a new inline docs provider. When Quick Docs is invoked each registered provider is<br />asked if it wants to provide inline docs given the current editor and cursor location.<br />An optional priority parameter is used to give providers with higher priority an opportunity<br />to provide an inline editor before providers with lower priority.</p></em>
+                            <dl>
+                                    <dt>provider</dt>
+                                    <dd class="label label-info pull-left">function(!Editor,!{line:number,ch:number}):?$.Promise</dd>
+                                    <dd></dd>
+                                    <dt>priority</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>The provider returns a promise that will be resolved with an InlineWidget, or returns null to indicate the provider doesn't want to respond to this case.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function registerInlineDocsProvider(provider, priority) {
+        if (priority === undefined) {
+            priority = 0;
+        }
+        _insertProviderSorted(_inlineDocsProviders, provider, priority);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>registerInlineEditProvider</h4>
+                            <em><p>Registers a new inline editor provider. When Quick Edit is invoked each registered provider is<br />asked if it wants to provide an inline editor given the current editor and cursor location.<br />An optional priority parameter is used to give providers with higher priority an opportunity<br />to provide an inline editor before providers with lower priority.</p></em>
+                            <dl>
+                                    <dt>provider</dt>
+                                    <dd class="label label-info pull-left">function(!Editor,!{line:number,ch:number}):?$.Promise</dd>
+                                    <dd></dd>
+                                    <dt>priority</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>The provider returns a promise that will be resolved with an InlineWidget, or returns null to indicate the provider doesn't want to respond to this case.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function registerInlineEditProvider(provider, priority) {
+        if (priority === undefined) {
+            priority = 0;
+        }
+        _insertProviderSorted(_inlineEditProviders, provider, priority);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>registerJumpToDefProvider</h4>
+                            <em><p>Registers a new jump-to-definition provider. When jump-to-definition is invoked each<br />registered provider is asked if it wants to provide jump-to-definition results, given<br />the current editor and cursor location. </p></em>
+                            <dl>
+                                    <dt>provider</dt>
+                                    <dd class="label label-info pull-left">function(!Editor,!{line:number,ch:number}):?$.Promise</dd>
+                                    <dd>The provider returns a promise that will be resolved with jump-to-definition results, or returns null to indicate the provider doesn't want to respond to this case.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function registerJumpToDefProvider(provider) {
+        _jumpToDefProviders.push(provider);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>resizeEditor</h4>
+                            <em><p>Must be called whenever the size/visibility of editor area siblings is changed without going through<br />PanelManager or Resizer. Resizable panels created via PanelManager do not require this manual call.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function resizeEditor() {
+        if (!_editorHolder) {
+            return;  &#x2F;&#x2F; still too early during init
+        }
+        &#x2F;&#x2F; PanelManager computes the correct editor-holder size &amp; calls us back with it, via _onEditorAreaResize()
+        PanelManager._notifyLayoutChange();
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>setEditorHolder</h4>
+                            <em><p>Designates the DOM node that will contain the currently active editor instance. EditorManager<br />will own the content of this DOM node.</p></em>
+                            <dl>
+                                    <dt>holder</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">jQueryObject</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function setEditorHolder(holder) {
+        if (_currentEditor) {
+            console.error(&quot;Cannot change editor area after an editor has already been created!&quot;);
+            return;
+        }
+        
+        _editorHolder = holder;
+        
+        resizeEditor();  &#x2F;&#x2F; if no files open at startup, we won&#39;t get called back later to resize the &quot;no-editor&quot; placeholder
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>showCustomViewer</h4>
+                            <em><p>Append custom view to editor-holder</p></em>
+                            <dl>
+                                    <dt>provider</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Object</dd>
+                                    <dd>custom view provider</dd>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>path to the file displayed in the custom view</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function showCustomViewer(provider, fullPath) {
+        &#x2F;&#x2F; Don&#39;t show the same custom view again if file path
+        &#x2F;&#x2F; and view provider are still the same.
+        if (_currentlyViewedPath === fullPath &amp;&amp;
+                _currentViewProvider === provider) {
+            return;
+        }
+        
+        &#x2F;&#x2F; Clean up currently viewing document or custom viewer
+        DocumentManager._clearCurrentDocument();
+        _removeCustomViewer();
+    
+        &#x2F;&#x2F; Hide the not-editor or reset current editor
+        $(&quot;#not-editor&quot;).css(&quot;display&quot;, &quot;none&quot;);
+        _nullifyEditor();
+
+        _currentViewProvider = provider;
+        _$currentCustomViewer = provider.getCustomViewHolder(fullPath);
+
+        &#x2F;&#x2F; place in window
+        $(&quot;#editor-holder&quot;).append(_$currentCustomViewer);
+        
+        &#x2F;&#x2F; add path, dimensions and file size to the view after loading image
+        provider.render(fullPath);
+        
+        _setCurrentlyViewedPath(fullPath);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>showingCustomViewerForPath</h4>
+                            <em><p>Check whether the given file is currently open in a custom viewer.</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>file path to check</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function showingCustomViewerForPath(fullPath) {
+        return (_currentViewProvider &amp;&amp; _currentlyViewedPath === fullPath);
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="hide">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>Dialogs</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>Utilities for creating and managing standard modal dialogs.</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+                            <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+                            <li><a href="..&#x2F;../modules/text!htmlContent&#x2F;dialog-template.html.html">dialog-template.html</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member public">
+        
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>DIALOG_BTN_CANCEL</h4>
+                            <dl>
+                            </dl>
+                            <p>Dialog Buttons IDs</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var DIALOG_BTN_CANCEL           = &quot;cancel&quot;,
+        DIALOG_BTN_OK               = &quot;ok&quot;,
+        DIALOG_BTN_DONTSAVE         = &quot;dontsave&quot;,
+        DIALOG_CANCELED             = &quot;_canceled&quot;,
+        DIALOG_BTN_DOWNLOAD         = &quot;download&quot;;</code></pre>
+                        </div>
+                        <div class="member public">
+        
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>DIALOG_BTN_CLASS_PRIMARY</h4>
+                            <dl>
+                            </dl>
+                            <p>Dialog Buttons Class Names</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var DIALOG_BTN_CLASS_PRIMARY    = &quot;primary&quot;,
+        DIALOG_BTN_CLASS_NORMAL     = &quot;&quot;,
+        DIALOG_BTN_CLASS_LEFT       = &quot;left&quot;;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>zIndex</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {number} The z-index used for the dialogs. Each new dialog increase this number by 2</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var zIndex = 1050;</code></pre>
+                        </div>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_dismissDialog</h4>
+                            <em><p>Dismises a modal dialog</p></em>
+                            <dl>
+                                    <dt>$dlg</dt>
+                                    <dd class="label label-info pull-left">$.Element</dd>
+                                    <dd></dd>
+                                    <dt>buttonId</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _dismissDialog($dlg, buttonId) {
+        $dlg.data(&quot;buttonId&quot;, buttonId);
+        $dlg.modal(&quot;hide&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_handleTab</h4>
+                            <em><p>Handles the use of Tab so that it stays inside the Dialog</p></em>
+                            <dl>
+                                    <dt>event</dt>
+                                    <dd class="label label-info pull-left">$.Event</dd>
+                                    <dd></dd>
+                                    <dt>$dlg</dt>
+                                    <dd class="label label-info pull-left">$.Element</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _handleTab(event, $dlg) {
+        var $inputs = $(&quot;:input:enabled, a&quot;, $dlg).filter(&quot;:visible&quot;);
+
+        if ($(event.target).closest($dlg).length) {
+            &#x2F;&#x2F; If it&#39;s the first or last tabbable element, focus the last&#x2F;first element
+            if ((!event.shiftKey &amp;&amp; event.target === $inputs[$inputs.length - 1]) ||
+                    (event.shiftKey &amp;&amp; event.target === $inputs[0])) {
+                $inputs.filter(event.shiftKey ? &quot;:last&quot; : &quot;:first&quot;).focus();
+                event.preventDefault();
+
+            &#x2F;&#x2F; If there is no element to focus, don&#39;t let it focus outside of the dialog
+            } else if (!$inputs.length) {
+                event.preventDefault();
+            }
+
+        &#x2F;&#x2F; If the focus left the dialog, focus the first element in the dialog
+        } else {
+            $inputs.first().focus();
+            event.preventDefault();
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_hasButton</h4>
+                            <em><p>Returns true if the modal dialog has a button with the given ID</p></em>
+                            <dl>
+                                    <dt>$dlg</dt>
+                                    <dd class="label label-info pull-left">$.Element</dd>
+                                    <dd></dd>
+                                    <dt>buttonId</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _hasButton($dlg, buttonId) {
+        return ($dlg.find(&quot;[data-button-id=&#39;&quot; + buttonId + &quot;&#39;]&quot;).length &gt; 0);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_keydownHook</h4>
+                            <em><p>Handles the keyDown event for the dialogs</p></em>
+                            <dl>
+                                    <dt>e</dt>
+                                    <dd class="label label-info pull-left">$.Event</dd>
+                                    <dd></dd>
+                                    <dt>autoDismiss</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _keydownHook = function (e, autoDismiss) {
+        var $primaryBtn     = this.find(&quot;.primary&quot;),
+            buttonId        = null,
+            which           = String.fromCharCode(e.which),
+            $focusedElement = this.find(&quot;.dialog-button:focus, a:focus&quot;);
+        
+        &#x2F;&#x2F; There might be a textfield in the dialog&#39;s UI; don&#39;t want to mistake normal typing for dialog dismissal
+        var inTextArea    = (e.target.tagName === &quot;TEXTAREA&quot;),
+            inTypingField = inTextArea || ($(e.target).filter(&quot;:text, :password&quot;).length &gt; 0);
+        
+        if (e.which === KeyEvent.DOM_VK_TAB) {
+            _handleTab(e, this);
+        } else if (e.which === KeyEvent.DOM_VK_ESCAPE) {
+            buttonId = DIALOG_BTN_CANCEL;
+        } else if (e.which === KeyEvent.DOM_VK_RETURN &amp;&amp; !inTextArea) {  &#x2F;&#x2F; enter key in single-line text input still dismisses
+            &#x2F;&#x2F; Click primary
+            $primaryBtn.click();
+        } else if (e.which === KeyEvent.DOM_VK_SPACE) {
+            &#x2F;&#x2F; Space bar on focused button or link
+            $focusedElement.click();
+        } else if (brackets.platform === &quot;mac&quot;) {
+            &#x2F;&#x2F; CMD+D Don&#39;t Save
+            if (e.metaKey &amp;&amp; (which === &quot;D&quot;)) {
+                if (_hasButton(this, DIALOG_BTN_DONTSAVE)) {
+                    buttonId = DIALOG_BTN_DONTSAVE;
+                }
+            &#x2F;&#x2F; FIXME (issue #418) CMD+. Cancel swallowed by native shell
+            } else if (e.metaKey &amp;&amp; (e.which === KeyEvent.DOM_VK_PERIOD)) {
+                buttonId = DIALOG_BTN_CANCEL;
+            }
+        } else { &#x2F;&#x2F; if (brackets.platform === &quot;win&quot;) {
+            &#x2F;&#x2F; &#39;N&#39; Don&#39;t Save
+            if (which === &quot;N&quot; &amp;&amp; !inTypingField) {
+                if (_hasButton(this, DIALOG_BTN_DONTSAVE)) {
+                    buttonId = DIALOG_BTN_DONTSAVE;
+                }
+            }
+        }
+        
+        if (autoDismiss &amp;&amp; buttonId) {
+            _dismissDialog(this, buttonId);
+        }
+        
+        &#x2F;&#x2F; Stop any other global hooks from processing the event (but
+        &#x2F;&#x2F; allow it to continue bubbling if we haven&#39;t otherwise stopped it).
+        return true;
+    };</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>cancelModalDialogIfOpen</h4>
+                            <em><p>Immediately closes any dialog instances with the given class. The dialog callback for each instance will<br />be called with the special buttonId DIALOG_CANCELED (note: callback is run asynchronously).</p></em>
+                            <dl>
+                                    <dt>dlgClass</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The class name identifier for the dialog.</dd>
+                                    <dt>buttonId</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The button id to use when closing the dialog. Defaults to DIALOG_CANCELED</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function cancelModalDialogIfOpen(dlgClass, buttonId) {
+        $(&quot;.&quot; + dlgClass + &quot;.instance&quot;).each(function () {
+            if ($(this).is(&quot;:visible&quot;)) {   &#x2F;&#x2F; Bootstrap breaks if try to hide dialog that&#39;s already hidden
+                _dismissDialog($(this), buttonId || DIALOG_CANCELED);
+            }
+        });
+    }
+    
+    
+    exports.DIALOG_BTN_CANCEL            = DIALOG_BTN_CANCEL;
+    exports.DIALOG_BTN_OK                = DIALOG_BTN_OK;
+    exports.DIALOG_BTN_DONTSAVE          = DIALOG_BTN_DONTSAVE;
+    exports.DIALOG_CANCELED              = DIALOG_CANCELED;
+    exports.DIALOG_BTN_DOWNLOAD          = DIALOG_BTN_DOWNLOAD;
+    
+    exports.DIALOG_BTN_CLASS_PRIMARY     = DIALOG_BTN_CLASS_PRIMARY;
+    exports.DIALOG_BTN_CLASS_NORMAL      = DIALOG_BTN_CLASS_NORMAL;
+    exports.DIALOG_BTN_CLASS_LEFT        = DIALOG_BTN_CLASS_LEFT;
+    
+    exports.showModalDialog              = showModalDialog;
+    exports.showModalDialogUsingTemplate = showModalDialogUsingTemplate;
+    exports.cancelModalDialogIfOpen      = cancelModalDialogIfOpen;
+});</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>showModalDialog</h4>
+                            <em><p>Creates a new general purpose modal dialog using the default template and the template variables given<br />as parameters as described.</p></em>
+                            <dl>
+                                    <dt>dlgClass</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>A class name identifier for the dialog. Typically one of DefaultDialogs.*</dd>
+                                    <dt>title</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The title of the dialog. Can contain HTML markup. Defaults to "".</dd>
+                                    <dt>message</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The message to display in the dialog. Can contain HTML markup. Defaults to "".</dd>
+                                    <dt>buttons</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">Array.&lt;{className: string, id: string, text: string}&gt;</dd>
+                                    <dd>An array of buttons where each button has a class, id and text property. The id is used in "data-button-id". Defaults to a single Ok button. Typically className is one of DIALOG_BTN_CLASS_*, id is one of DIALOG_BTN_*</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function showModalDialog(dlgClass, title, message, buttons) {
+        var templateVars = {
+            dlgClass: dlgClass,
+            title:    title   || &quot;&quot;,
+            message:  message || &quot;&quot;,
+            buttons:  buttons || [{ className: DIALOG_BTN_CLASS_PRIMARY, id: DIALOG_BTN_OK, text: Strings.OK }]
+        };
+        var template = Mustache.render(DialogTemplate, templateVars);
+        
+        return showModalDialogUsingTemplate(template);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>showModalDialogUsingTemplate</h4>
+                            <em><p>Creates a new modal dialog from a given template.<br />The template can either be a string or a jQuery object representing a DOM node that is <em>not</em> in the current DOM.</p></em>
+                            <dl>
+                                    <dt>template</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>A string template or jQuery object to use as the dialog HTML.</dd>
+                                    <dt>autoDismiss</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>Whether to automatically dismiss the dialog when one of the buttons is clicked. Default true. If false, you'll need to manually handle button clicks and the Esc key, and dismiss the dialog yourself when ready with `cancelModalDialogIfOpen()`.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function showModalDialogUsingTemplate(template, autoDismiss) {
+        if (autoDismiss === undefined) {
+            autoDismiss = true;
+        }
+        
+        $(&quot;body&quot;).append(&quot;&lt;div class=&#39;modal-wrapper&#39;&gt;&lt;div class=&#39;modal-inner-wrapper&#39;&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&quot;);
+        
+        var result  = $.Deferred(),
+            promise = result.promise(),
+            $dlg    = $(template)
+                .addClass(&quot;instance&quot;)
+                .appendTo(&quot;.modal-inner-wrapper:last&quot;);
+        
+        &#x2F;&#x2F; Save the dialog promise for unit tests
+        $dlg.data(&quot;promise&quot;, promise);
+
+        var keydownHook = function (e) {
+            return _keydownHook.call($dlg, e, autoDismiss);
+        };
+
+        &#x2F;&#x2F; Pipe dialog-closing notification back to client code
+        $dlg.one(&quot;hidden&quot;, function () {
+            var buttonId = $dlg.data(&quot;buttonId&quot;);
+            if (!buttonId) {    &#x2F;&#x2F; buttonId will be undefined if closed via Bootstrap&#39;s &quot;x&quot; button
+                buttonId = DIALOG_BTN_CANCEL;
+            }
+            
+            &#x2F;&#x2F; Let call stack return before notifying that dialog has closed; this avoids issue #191
+            &#x2F;&#x2F; if the handler we&#39;re triggering might show another dialog (as long as there&#39;s no
+            &#x2F;&#x2F; fade-out animation)
+            window.setTimeout(function () {
+                result.resolve(buttonId);
+            }, 0);
+            
+            &#x2F;&#x2F; Remove the dialog instance from the DOM.
+            $dlg.remove();
+            $(&quot;.modal-backdrop:last&quot;).addClass(&quot;last-backdrop&quot;);
+
+            &#x2F;&#x2F; Remove our global keydown handler.
+            KeyBindingManager.removeGlobalKeydownHook(keydownHook);
+            
+            &#x2F;&#x2F;Remove wrapper
+            $(&quot;.modal-wrapper:last&quot;).remove();
+        }).one(&quot;shown&quot;, function () {
+            &#x2F;&#x2F; Set focus to the default button
+            var primaryBtn = $dlg.find(&quot;.primary&quot;);
+
+            if (primaryBtn) {
+                primaryBtn.focus();
+            }
+
+            &#x2F;&#x2F; Push our global keydown handler onto the global stack of handlers.
+            KeyBindingManager.addGlobalKeydownHook(keydownHook);
+        });
+        
+        &#x2F;&#x2F; Click handler for buttons
+        if (autoDismiss) {
+            $dlg.one(&quot;click&quot;, &quot;.dialog-button&quot;, function (e) {
+                _dismissDialog($dlg, $(this).attr(&quot;data-button-id&quot;));
+            });
+        }
+        
+        $(&quot;.last-backdrop&quot;).removeClass(&quot;last-backdrop&quot;);
+        
+        &#x2F;&#x2F; Run the dialog
+        $dlg
+            .modal({
+                backdrop: &quot;static&quot;,
+                show:     true,
+                selector: &quot;.modal-inner-wrapper:last&quot;,
+                keyboard: false &#x2F;&#x2F; handle the ESC key ourselves so we can deal with nested dialogs
+            })
+            &#x2F;&#x2F; Updates the z-index of the modal dialog and the backdrop
+            .css(&quot;z-index&quot;, zIndex + 1)
+            .next()
+            .css(&quot;z-index&quot;, zIndex)
+            .addClass(&quot;last-backdrop&quot;);
+        
+        zIndex += 2;
+        
+        return (new Dialog($dlg, promise));
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="">
+                        <h2>Classes</h2>
+                            <div class="well">
+                                <div class="member public">
+                                    <span class="pull-right scope">
+                                        Constructor
+                                    </span>
+                                    <h4>Dialog</h4>
+                                    <em><p></p></em>
+                                    <dl>
+                                        <dt>$dlg</dt>
+                                        <dd class="label label-info pull-left">$.Element</dd>
+                                        <dd>The dialog jQuery element</dd>
+                                        <dt>promise</dt>
+                                        <dd class="label label-info pull-left">$.Promise</dd>
+                                        <dd>A promise that will be resolved with the ID of the clicked button when the dialog is dismissed. Never rejected.</dd>
+                                    </dl>
+                                    
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>function Dialog($dlg, promise) {
+        this._$dlg    = $dlg;
+        this._promise = promise;
+    }</code></pre>
+                                </div>
+            
+                                <section class="properties hide">
+                                    <h3>Properties<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                </section>
+            
+                                <section class="methods ">
+                                    <h3>Methods<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>close</h4>
+                                        <em><p>Closes the dialog if is visible</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Dialog.prototype.close = function () {
+        if (this._$dlg.is(&quot;:visible&quot;)) {   &#x2F;&#x2F; Bootstrap breaks if try to hide dialog that&#39;s already hidden
+            _dismissDialog(this._$dlg, DIALOG_CANCELED);
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>done</h4>
+                                        <em><p>Adds a done callback to the dialog promise</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Dialog.prototype.done = function (callback) {
+        this._promise.done(callback);
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getElement</h4>
+                                        <em><p>@type {$.Element} The dialog jQuery element</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Dialog.prototype.getElement = function () {
+        return this._$dlg;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getPromise</h4>
+                                        <em><p>@type {$.Promise} The dialog promise</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Dialog.prototype.getPromise = function () {
+        return this._promise;
+    };</code></pre>
+                                    </div>
+                                </section>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

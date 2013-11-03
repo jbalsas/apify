@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>FindInFiles</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>Adds a "find in files" command to allow the user to find all occurrences of a string in all files in<br />the project.</p>
+
+<p>The keyboard shortcut is Cmd(Ctrl)-Shift-F.</p>
+
+<p>FUTURE:<br /> - Proper UI for both dialog and results<br /> - Refactor dialog class and share with Quick File Open<br /> - Search files in working set that are <em>not</em> in the project<br /> - Handle matches that span multiple lines<br /> - Refactor UI from functionality to enable unit testing</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/thirdparty&#x2F;lodash.html">lodash</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+                            <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+                            <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+                            <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+                            <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+                            <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+                            <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+                            <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+                            <li><a href="..&#x2F;../modules/text!htmlContent&#x2F;search-dialog.html.html">search-dialog.html</a></li>
+                            <li><a href="..&#x2F;../modules/text!htmlContent&#x2F;search-panel.html.html">search-panel.html</a></li>
+                            <li><a href="..&#x2F;../modules/text!htmlContent&#x2F;search-summary.html.html">search-summary.html</a></li>
+                            <li><a href="..&#x2F;../modules/text!htmlContent&#x2F;search-results.html.html">search-results.html</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>RESULTS_PER_PAGE</h4>
+                            <dl>
+                            </dl>
+                            <p>@cost Constants used to define the maximum results show per page and found in a single file</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var RESULTS_PER_PAGE = 100,
+        FIND_IN_FILE_MAX = 300,
+        UPDATE_TIMEOUT   = 400;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>currentQuery</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {string} The current search query</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var currentQuery = &quot;&quot;;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>currentQueryExpr</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {RegExp} The current search query regular expression</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var currentQueryExpr = null;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>currentScope</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {Array.<FileEntry>} An array of the files where it should look or null/empty to search the entire project</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var currentScope = null;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>currentStart</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {number} The index of the first result that is displayed</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var currentStart = 0;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>dialog</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {FindInFilesDialog} dialog having the modalbar for search</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var dialog = null;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>maxHitsFoundInFile</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {boolean} True if the matches in a file reached FIND_IN_FILE_MAX</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var maxHitsFoundInFile = false;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>searchResults</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Object.<fullPath: string, {matches: Array.<Object>, collapsed: boolean}></dd>
+                            </dl>
+                            <p>Map of all the last search results</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var searchResults = {};</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>timeoutID</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {string} The setTimeout id, used to clear it if required</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var timeoutID = null;</code></pre>
+                        </div>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_addSearchMatches</h4>
+                            <em><p>Searches and stores the match results for the given file, if there are matches</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                                    <dt>contents</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                                    <dt>queryExpr</dt>
+                                    <dd class="label label-info pull-left">RegExp</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _addSearchMatches(fullPath, contents, queryExpr) {
+        var matches = _getSearchMatches(contents, queryExpr);
+        
+        if (matches &amp;&amp; matches.length) {
+            searchResults[fullPath] = {
+                matches:   matches,
+                collapsed: false
+            };
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_countFilesMatches</h4>
+                            <em><p>Count the total number of matches and files</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _countFilesMatches() {
+        var numFiles = 0, numMatches = 0;
+        _.forEach(searchResults, function (item) {
+            numFiles++;
+            numMatches += item.matches.length;
+        });
+
+        return {files: numFiles, matches: numMatches};
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_doFindInFiles</h4>
+                            <em><p>Displays a non-modal embedded dialog above the code mirror editor that allows the user to do<br />a find operation across all files in the project.</p></em>
+                            <dl>
+                                    <dt>scope</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">Entry</dd>
+                                    <dd>Project file/subfolder to search within; else searches whole project.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _doFindInFiles(scope) {
+        &#x2F;&#x2F; If the scope is a file with a custom viewer, then we
+        &#x2F;&#x2F; don&#39;t show find in files dialog.
+        if (scope &amp;&amp; EditorManager.getCustomViewerForPath(scope.fullPath)) {
+            return;
+        }
+        
+        if (scope instanceof NativeFileSystem.InaccessibleFileEntry) {
+            CommandManager.execute(Commands.FILE_OPEN, { fullPath: scope.fullPath }).done(function () {
+                CommandManager.execute(Commands.EDIT_FIND);
+            });
+            return;
+        }
+        
+        &#x2F;&#x2F; Default to searching for the current selection
+        var currentEditor = EditorManager.getActiveEditor(),
+            initialString = currentEditor &amp;&amp; currentEditor.getSelectedText();
+
+        dialog             = new FindInFilesDialog();
+        searchResults      = {};
+        currentStart       = 0;
+        currentQuery       = &quot;&quot;;
+        currentQueryExpr   = null;
+        currentScope       = scope;
+        maxHitsFoundInFile = false;
+                            
+        dialog.showDialog(initialString, scope);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_doFindInSubtree</h4>
+                            <em><p>Search within the file/subtree defined by the sidebar selection</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _doFindInSubtree() {
+        var selectedEntry = ProjectManager.getSelectedItem();
+        _doFindInFiles(selectedEntry);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_doSearch</h4>
+                            <em><p>Executes the Find in Files search inside the 'currentScope'</p></em>
+                            <dl>
+                                    <dt>query</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>String to be searched</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _doSearch(query) {
+        currentQuery     = query;
+        currentQueryExpr = _getQueryRegExp(query);
+        
+        if (!currentQueryExpr) {
+            StatusBar.hideBusyIndicator();
+            dialog._close();
+            dialog = null;
+            return;
+        }
+        FileIndexManager.getFileInfoList(&quot;all&quot;)
+            .done(function (fileListResult) {
+                Async.doInParallel(fileListResult, function (fileInfo) {
+                    var result = new $.Deferred();
+                    
+                    if (!_inScope(fileInfo, currentScope)) {
+                        result.resolve();
+                    } else {
+                        &#x2F;&#x2F; Search one file
+                        DocumentManager.getDocumentForPath(fileInfo.fullPath)
+                            .done(function (doc) {
+                                _addSearchMatches(fileInfo.fullPath, doc.getText(), currentQueryExpr);
+                                result.resolve();
+                            })
+                            .fail(function (error) {
+                                &#x2F;&#x2F; Error reading this file. This is most likely because the file isn&#39;t a text file.
+                                &#x2F;&#x2F; Resolve here so we move on to the next file.
+                                result.resolve();
+                            });
+                    }
+                    return result.promise();
+                })
+                    .done(function () {
+                        &#x2F;&#x2F; Done searching all files: show results
+                        _showSearchResults();
+                        StatusBar.hideBusyIndicator();
+                        $(DocumentModule).on(&quot;documentChange.findInFiles&quot;, _documentChangeHandler);
+                    })
+                    .fail(function () {
+                        console.log(&quot;find in files failed.&quot;);
+                        StatusBar.hideBusyIndicator();
+                    });
+            });
+    }
+    
+    
+    &#x2F;&#x2F; This dialog class was mostly copied from QuickOpen. We should have a common dialog
+    &#x2F;&#x2F; class that everyone can use.</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_documentChangeHandler</h4>
+                            <em><p>Tries to update the search result on document changes</p></em>
+                            <dl>
+                                    <dt>event</dt>
+                                    <dd class="label label-info pull-left">$.Event</dd>
+                                    <dd></dd>
+                                    <dt>document</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                                    <dt>change</dt>
+                                    <dd class="label label-info pull-left">{from: {line:number,ch:number},to: {line:number,ch:number},text: string,next: change}</dd>
+                                    <dd>A linked list as described in the Document constructor</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _documentChangeHandler(event, document, change) {
+        if (searchResultsPanel.isVisible() &amp;&amp; _inScope(document.file, currentScope)) {
+            var updateResults = _updateSearchResults(document, change, false);
+            
+            if (timeoutID) {
+                window.clearTimeout(timeoutID);
+                updateResults = true;
+            }
+            if (updateResults) {
+                timeoutID = window.setTimeout(function () {
+                    _restoreSearchResults();
+                    timeoutID = null;
+                }, UPDATE_TIMEOUT);
+            }
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_fileNameChangeHandler</h4>
+                            <em><p>Moves the search results from the previous path to the new one and updates the results list, if required</p></em>
+                            <dl>
+                                    <dt>event</dt>
+                                    <dd class="label label-info pull-left">$.Event</dd>
+                                    <dd></dd>
+                                    <dt>oldName</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                                    <dt>newName</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _fileNameChangeHandler(event, oldName, newName) {
+        var resultsChanged = false;
+        
+        if (searchResultsPanel.isVisible()) {
+            &#x2F;&#x2F; Update the search results
+            _.forEach(searchResults, function (item, fullPath) {
+                if (fullPath.match(oldName)) {
+                    searchResults[fullPath.replace(oldName, newName)] = item;
+                    delete searchResults[fullPath];
+                    resultsChanged = true;
+                }
+            });
+            
+            &#x2F;&#x2F; Restore the results if needed
+            if (resultsChanged) {
+                _restoreSearchResults();
+            }
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getLastCurrentStart</h4>
+                            <em><p>Returns the last possible current start based on the given number of matches</p></em>
+                            <dl>
+                                    <dt>numMatches</dt>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getLastCurrentStart(numMatches) {
+        return Math.floor((numMatches - 1) &#x2F; RESULTS_PER_PAGE) * RESULTS_PER_PAGE;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getQueryRegExp</h4>
+                            <em><p>Returns a regular expression from the given query and shows an error in the modal-bar if it was invalid</p></em>
+                            <dl>
+                                    <dt>query</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The query from the modal-bar input</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getQueryRegExp(query) {
+        if (!query) {
+            return null;
+        }
+        
+        &#x2F;&#x2F; Clear any pending RegEx error message
+        $(&quot;.modal-bar .message&quot;).css(&quot;display&quot;, &quot;inline-block&quot;);
+        $(&quot;.modal-bar .error&quot;).css(&quot;display&quot;, &quot;none&quot;);
+
+        &#x2F;&#x2F; If query is a regular expression, use it directly
+        var isRE = query.match(&#x2F;^\&#x2F;(.*)\&#x2F;(g|i)*$&#x2F;);
+        if (isRE) {
+            &#x2F;&#x2F; Make sure the &#39;g&#39; flag is set
+            var flags = isRE[2] || &quot;g&quot;;
+            if (flags.search(&quot;g&quot;) === -1) {
+                flags += &quot;g&quot;;
+            }
+            try {
+                return new RegExp(isRE[1], flags);
+            } catch (e) {
+                $(&quot;.modal-bar .message&quot;).css(&quot;display&quot;, &quot;none&quot;);
+                $(&quot;.modal-bar .error&quot;)
+                    .css(&quot;display&quot;, &quot;inline-block&quot;)
+                    .html(&quot;&lt;div class=&#39;alert&#39; style=&#39;margin-bottom: 0&#39;&gt;&quot; + e.message + &quot;&lt;&#x2F;div&gt;&quot;);
+                return null;
+            }
+        }
+
+        &#x2F;&#x2F; Query is a string. Turn it into a case-insensitive regexp
+        
+        &#x2F;&#x2F; Escape regex special chars
+        query = StringUtils.regexEscape(query);
+        return new RegExp(query, &quot;gi&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getSearchMatches</h4>
+                            <em><p>Searches through the contents an returns an array of matches</p></em>
+                            <dl>
+                                    <dt>contents</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                                    <dt>queryExpr</dt>
+                                    <dd class="label label-info pull-left">RegExp</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getSearchMatches(contents, queryExpr) {
+        &#x2F;&#x2F; Quick exit if not found
+        if (contents.search(queryExpr) === -1) {
+            return null;
+        }
+        
+        var match, lineNum, line, ch, matchLength,
+            lines   = StringUtils.getLines(contents),
+            matches = [];
+        
+        while ((match = queryExpr.exec(contents)) !== null) {
+            lineNum     = StringUtils.offsetToLineNum(lines, match.index);
+            line        = lines[lineNum];
+            ch          = match.index - contents.lastIndexOf(&quot;\n&quot;, match.index) - 1;  &#x2F;&#x2F; 0-based index
+            matchLength = match[0].length;
+            
+            &#x2F;&#x2F; Don&#39;t store more than 200 chars per line
+            line = line.substr(0, Math.min(200, line.length));
+            
+            matches.push({
+                start: {line: lineNum, ch: ch},
+                end:   {line: lineNum, ch: ch + matchLength},
+                line:  line
+            });
+
+            &#x2F;&#x2F; We have the max hits in just this 1 file. Stop searching this file.
+            &#x2F;&#x2F; This fixed issue #1829 where code hangs on too many hits.
+            if (matches.length &gt;= FIND_IN_FILE_MAX) {
+                queryExpr.lastIndex = 0;
+                maxHitsFoundInFile = true;
+                break;
+            }
+        }
+
+        return matches;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_hideSearchResults</h4>
+                            <em><p>Hides the Search Results Panel</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _hideSearchResults() {
+        if (searchResultsPanel.isVisible()) {
+            searchResultsPanel.hide();
+            $(DocumentModule).off(&quot;.findInFiles&quot;);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_inScope</h4>
+                            <em><p></p></em>
+                            <dl>
+                                    <dt>fileInfo</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">FileInfo</dd>
+                                    <dd>File in question</dd>
+                                    <dt>scope</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">Entry</dd>
+                                    <dd>Search scope, or null if whole project</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _inScope(fileInfo, scope) {
+        if (scope) {
+            if (scope.isDirectory) {
+                &#x2F;&#x2F; Dirs always have trailing slash, so we don&#39;t have to worry about being
+                &#x2F;&#x2F; a substring of another dir name
+                return fileInfo.fullPath.indexOf(scope.fullPath) === 0;
+            } else {
+                return fileInfo.fullPath === scope.fullPath;
+            }
+        }
+        return true;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_labelForScope</h4>
+                            <em><p>Returns label text to indicate the search scope. Already HTML-escaped.</p></em>
+                            <dl>
+                                    <dt>scope</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">Entry</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _labelForScope(scope) {
+        var projName = ProjectManager.getProjectRoot().name;
+        if (scope) {
+            return StringUtils.format(
+                Strings.FIND_IN_FILES_SCOPED,
+                StringUtils.breakableUrl(
+                    ProjectManager.makeProjectRelativeIfPossible(scope.fullPath)
+                )
+            );
+        } else {
+            return Strings.FIND_IN_FILES_NO_SCOPE;
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_pathDeletedHandler</h4>
+                            <em><p>Deletes the results from the deleted file and updates the results list, if required</p></em>
+                            <dl>
+                                    <dt>event</dt>
+                                    <dd class="label label-info pull-left">$.Event</dd>
+                                    <dd></dd>
+                                    <dt>path</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _pathDeletedHandler(event, path) {
+        var resultsChanged = false;
+        
+        if (searchResultsPanel.isVisible()) {
+            &#x2F;&#x2F; Update the search results
+            _.forEach(searchResults, function (item, fullPath) {
+                if (FileUtils.isAffectedWhenRenaming(fullPath, path)) {
+                    delete searchResults[fullPath];
+                    resultsChanged = true;
+                }
+            });
+            
+            &#x2F;&#x2F; Restore the results if needed
+            if (resultsChanged) {
+                _restoreSearchResults();
+            }
+        }
+    }
+    
+    
+    
+    &#x2F;&#x2F; Initialize items dependent on HTML DOM
+    AppInit.htmlReady(function () {
+        var panelHtml = Mustache.render(searchPanelTemplate, Strings);
+        searchResultsPanel = PanelManager.createBottomPanel(&quot;find-in-files.results&quot;, $(panelHtml), 100);
+        
+        $searchResults = $(&quot;#search-results&quot;);
+        $searchSummary = $searchResults.find(&quot;.title&quot;);
+        $searchContent = $(&quot;#search-results .table-container&quot;);
+    });
+    
+    &#x2F;&#x2F; Initialize: register listeners
+    $(DocumentManager).on(&quot;fileNameChange&quot;,    _fileNameChangeHandler);
+    $(DocumentManager).on(&quot;pathDeleted&quot;,       _pathDeletedHandler);
+    $(ProjectManager).on(&quot;beforeProjectClose&quot;, _hideSearchResults);
+    
+    &#x2F;&#x2F; Initialize: command handlers
+    CommandManager.register(Strings.CMD_FIND_IN_FILES,   Commands.EDIT_FIND_IN_FILES,   _doFindInFiles);
+    CommandManager.register(Strings.CMD_FIND_IN_SUBTREE, Commands.EDIT_FIND_IN_SUBTREE, _doFindInSubtree);
+});</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_restoreSearchResults</h4>
+                            <em><p>Shows the search results and tries to restore the previous scroll and selection</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _restoreSearchResults() {
+        if (searchResultsPanel.isVisible()) {
+            var scrollTop  = $searchContent.scrollTop(),
+                index      = $selectedRow ? $selectedRow.index() : null,
+                numMatches = _countFilesMatches().matches;
+            
+            if (currentStart &gt; numMatches) {
+                currentStart = _getLastCurrentStart(numMatches);
+            }
+            _showSearchResults();
+            
+            $searchContent.scrollTop(scrollTop);
+            if (index) {
+                $selectedRow = $searchContent.find(&quot;tr:eq(&quot; + index + &quot;)&quot;);
+                $selectedRow.addClass(&quot;selected&quot;);
+            }
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_showSearchResults</h4>
+                            <em><p>Shows the results in a table and adds the necessary event listeners</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _showSearchResults() {
+        if (!$.isEmptyObject(searchResults)) {
+            var count = _countFilesMatches();
+            
+            &#x2F;&#x2F; Show result summary in header
+            var numMatchesStr = &quot;&quot;;
+            if (maxHitsFoundInFile) {
+                numMatchesStr = Strings.FIND_IN_FILES_MORE_THAN;
+            }
+
+            &#x2F;&#x2F; This text contains some formatting, so all the strings are assumed to be already escaped
+            var summary = StringUtils.format(
+                Strings.FIND_IN_FILES_TITLE_PART3,
+                numMatchesStr,
+                String(count.matches),
+                (count.matches &gt; 1) ? Strings.FIND_IN_FILES_MATCHES : Strings.FIND_IN_FILES_MATCH,
+                count.files,
+                (count.files &gt; 1 ? Strings.FIND_IN_FILES_FILES : Strings.FIND_IN_FILES_FILE)
+            );
+            
+            &#x2F;&#x2F; The last result index displayed
+            var last = Math.min(currentStart + RESULTS_PER_PAGE, count.matches);
+            
+            &#x2F;&#x2F; Insert the search summary
+            $searchSummary.html(Mustache.render(searchSummaryTemplate, {
+                query:    currentQuery,
+                scope:    currentScope ? &quot;&amp;nbsp;&quot; + _labelForScope(currentScope) + &quot;&amp;nbsp;&quot; : &quot;&quot;,
+                summary:  summary,
+                hasPages: count.matches &gt; RESULTS_PER_PAGE,
+                results:  StringUtils.format(Strings.FIND_IN_FILES_PAGING, currentStart + 1, last),
+                hasPrev:  currentStart &gt; 0,
+                hasNext:  last &lt; count.matches,
+                Strings:  Strings
+            }));
+            
+            &#x2F;&#x2F; Create the results template search list
+            var searchItems, match, i,
+                searchList     = [],
+                matchesCounter = 0,
+                showMatches    = false;
+            
+            _.some(searchResults, function (item, fullPath) {
+                showMatches = true;
+                
+                &#x2F;&#x2F; Since the amount of matches on this item plus the amount of matches we skipped until
+                &#x2F;&#x2F; now is still smaller than the first match that we want to display, skip these.
+                if (matchesCounter + item.matches.length &lt; currentStart) {
+                    matchesCounter += item.matches.length;
+                    showMatches = false;
+                
+                &#x2F;&#x2F; If we still haven&#39;t skipped enough items to get to the first match, but adding the
+                &#x2F;&#x2F; item matches to the skipped ones is greater the the first match we want to display,
+                &#x2F;&#x2F; then we can display the matches from this item skipping the first ones
+                } else if (matchesCounter &lt; currentStart) {
+                    i = currentStart - matchesCounter;
+                    matchesCounter = currentStart;
+                
+                &#x2F;&#x2F; If we already skipped enough matches to get to the first match to display, we can start
+                &#x2F;&#x2F; displaying from the first match of this item
+                } else if (matchesCounter &lt; last) {
+                    i = 0;
+                
+                &#x2F;&#x2F; We can&#39;t display more items by now. Break the loop
+                } else {
+                    return true;
+                }
+                
+                if (showMatches &amp;&amp; i &lt; item.matches.length) {
+                    &#x2F;&#x2F; Add a row for each match in the file
+                    searchItems = [];
+                    
+                    &#x2F;&#x2F; Add matches until we get to the last match of this item, or filling the page
+                    while (i &lt; item.matches.length &amp;&amp; matchesCounter &lt; last) {
+                        match = item.matches[i];
+                        searchItems.push({
+                            file:      searchList.length,
+                            item:      searchItems.length,
+                            line:      match.start.line + 1,
+                            pre:       match.line.substr(0, match.start.ch),
+                            highlight: match.line.substring(match.start.ch, match.end.ch),
+                            post:      match.line.substr(match.end.ch),
+                            start:     match.start,
+                            end:       match.end
+                        });
+                        matchesCounter++;
+                        i++;
+                    }
+                                                            
+                    &#x2F;&#x2F; Add a row for each file
+                    var relativePath = FileUtils.getDirectoryPath(ProjectManager.makeProjectRelativeIfPossible(fullPath)),
+                        directoryPath = FileUtils.getDirectoryPath(relativePath),
+                        displayFileName = StringUtils.format(
+                            Strings.FIND_IN_FILES_FILE_PATH,
+                            StringUtils.breakableUrl(FileUtils.getBaseName(fullPath)),
+                            StringUtils.breakableUrl(directoryPath),
+                            directoryPath ? &quot;&amp;mdash;&quot; : &quot;&quot;
+                        );
+
+                    searchList.push({
+                        file:     searchList.length,
+                        filename: displayFileName,
+                        fullPath: fullPath,
+                        items:    searchItems
+                    });
+                }
+            });
+            
+            &#x2F;&#x2F; Add the listeners for close, prev and next
+            $searchResults
+                .off(&quot;.searchList&quot;)  &#x2F;&#x2F; Remove the old events
+                .one(&quot;click.searchList&quot;, &quot;.close&quot;, function () {
+                    _hideSearchResults();
+                })
+                &#x2F;&#x2F; The link to go the first page
+                .one(&quot;click.searchList&quot;, &quot;.first-page:not(.disabled)&quot;, function () {
+                    currentStart = 0;
+                    _showSearchResults();
+                })
+                &#x2F;&#x2F; The link to go the previous page
+                .one(&quot;click.searchList&quot;, &quot;.prev-page:not(.disabled)&quot;, function () {
+                    currentStart -= RESULTS_PER_PAGE;
+                    _showSearchResults();
+                })
+                &#x2F;&#x2F; The link to go to the next page
+                .one(&quot;click.searchList&quot;, &quot;.next-page:not(.disabled)&quot;, function () {
+                    currentStart += RESULTS_PER_PAGE;
+                    _showSearchResults();
+                })
+                &#x2F;&#x2F; The link to go to the last page
+                .one(&quot;click.searchList&quot;, &quot;.last-page:not(.disabled)&quot;, function () {
+                    currentStart = _getLastCurrentStart(count.matches);
+                    _showSearchResults();
+                });
+            
+            &#x2F;&#x2F; Insert the search results
+            $searchContent
+                .empty()
+                .append(Mustache.render(searchResultsTemplate, {searchList: searchList}))
+                .scrollTop(0)        &#x2F;&#x2F; Otherwise scroll pos from previous contents is remembered
+                .off(&quot;.searchList&quot;)  &#x2F;&#x2F; Remove the old events
+            
+                &#x2F;&#x2F; Add the click event listener directly on the table parent
+                .on(&quot;click.searchList&quot;, function (e) {
+                    var $row = $(e.target).closest(&quot;tr&quot;);
+                    
+                    if ($row.length) {
+                        if ($selectedRow) {
+                            $selectedRow.removeClass(&quot;selected&quot;);
+                        }
+                        $row.addClass(&quot;selected&quot;);
+                        $selectedRow = $row;
+                        
+                        var searchItem = searchList[$row.data(&quot;file&quot;)],
+                            fullPath   = searchItem.fullPath;
+                        
+                        &#x2F;&#x2F; This is a file title row, expand&#x2F;collapse on click
+                        if ($row.hasClass(&quot;file-section&quot;)) {
+                            &#x2F;&#x2F; Clicking the file section header collapses&#x2F;expands result rows for that file
+                            $row.nextUntil(&quot;.file-section&quot;).toggle();
+                            
+                            var $triangle = $(&quot;.disclosure-triangle&quot;, $row);
+                            $triangle.toggleClass(&quot;expanded&quot;).toggleClass(&quot;collapsed&quot;);
+                            
+                            searchResults[fullPath].collapsed = !searchResults[fullPath].collapsed;
+                        
+                        &#x2F;&#x2F; This is a file row, show the result on click
+                        } else {
+                            &#x2F;&#x2F; Grab the required item data
+                            var item = searchItem.items[$row.data(&quot;item&quot;)];
+                            
+                            CommandManager.execute(Commands.FILE_OPEN, {fullPath: fullPath})
+                                .done(function (doc) {
+                                    &#x2F;&#x2F; Opened document is now the current main editor
+                                    EditorManager.getCurrentFullEditor().setSelection(item.start, item.end, true);
+                                });
+                        }
+                    }
+                })
+                &#x2F;&#x2F; Add the file to the working set on double click
+                .on(&quot;dblclick.searchList&quot;, &quot;tr:not(.file-section)&quot;, function (e) {
+                    var item = searchList[$(this).data(&quot;file&quot;)];
+                    FileViewController.addToWorkingSetAndSelect(item.fullPath);
+                })
+                &#x2F;&#x2F; Restore the collapsed files
+                .find(&quot;.file-section&quot;).each(function () {
+                    var fullPath = searchList[$(this).data(&quot;file&quot;)].fullPath;
+                    
+                    if (searchResults[fullPath].collapsed) {
+                        searchResults[fullPath].collapsed = false;
+                        $(this).trigger(&quot;click&quot;);
+                    }
+                });
+            
+            if ($selectedRow) {
+                $selectedRow.removeClass(&quot;selected&quot;);
+                $selectedRow = null;
+            }
+            searchResultsPanel.show();
+
+            if (dialog) {
+                dialog._close();
+                dialog = null;
+            }
+        } else {
+
+            _hideSearchResults();
+
+            if (dialog) {
+                dialog.getDialogTextField().addClass(&quot;no-results&quot;)
+                                            .removeAttr(&quot;disabled&quot;)
+                                            .get(0).select();
+                                            
+                $(&quot;.modal-bar .message&quot;).css(&quot;display&quot;, &quot;none&quot;);
+                $(&quot;.modal-bar .error&quot;).css(&quot;display&quot;, &quot;inline-block&quot;).html(Strings.FIND_NO_RESULTS);
+            }
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_updateSearchResults</h4>
+                            <em><p>Update the search results using the given list of changes fr the given document</p></em>
+                            <dl>
+                                    <dt>doc</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd>The Document that changed, should be the current one</dd>
+                                    <dt>change</dt>
+                                    <dd class="label label-info pull-left">{from: {line:number,ch:number},to: {line:number,ch:number},text: string,next: change}</dd>
+                                    <dd>A linked list as described in the Document constructor</dd>
+                                    <dt>resultsChanged</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>True when the search results changed from a file change</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _updateSearchResults(doc, change, resultsChanged) {
+        var i, diff, matches,
+            fullPath = doc.file.fullPath,
+            lines    = [],
+            start    = 0,
+            howMany  = 0;
+            
+        &#x2F;&#x2F; There is no from or to positions, so the entire file changed, we must search all over again
+        if (!change.from || !change.to) {
+            _addSearchMatches(fullPath, doc.getText(), currentQueryExpr);
+            resultsChanged = true;
+        
+        } else {
+            &#x2F;&#x2F; Get only the lines that changed
+            for (i = 0; i &lt; change.text.length; i++) {
+                lines.push(doc.getLine(change.from.line + i));
+            }
+            
+            &#x2F;&#x2F; We need to know how many lines changed to update the rest of the lines
+            if (change.from.line !== change.to.line) {
+                diff = change.from.line - change.to.line;
+            } else {
+                diff = lines.length - 1;
+            }
+            
+            if (searchResults[fullPath]) {
+                &#x2F;&#x2F; Search the last match before a replacement, the amount of matches deleted and update
+                &#x2F;&#x2F; the lines values for all the matches after the change
+                searchResults[fullPath].matches.forEach(function (item) {
+                    if (item.end.line &lt; change.from.line) {
+                        start++;
+                    } else if (item.end.line &lt;= change.to.line) {
+                        howMany++;
+                    } else {
+                        item.start.line += diff;
+                        item.end.line   += diff;
+                    }
+                });
+                
+                &#x2F;&#x2F; Delete the lines that where deleted or replaced
+                if (howMany &gt; 0) {
+                    searchResults[fullPath].matches.splice(start, howMany);
+                }
+                resultsChanged = true;
+            }
+            
+            &#x2F;&#x2F; Searches only over the lines that changed
+            matches = _getSearchMatches(lines.join(&quot;\r\n&quot;), currentQueryExpr);
+            if (matches &amp;&amp; matches.length) {
+                &#x2F;&#x2F; Updates the line numbers, since we only searched part of the file
+                matches.forEach(function (value, key) {
+                    matches[key].start.line += change.from.line;
+                    matches[key].end.line   += change.from.line;
+                });
+                
+                &#x2F;&#x2F; If the file index exists, add the new matches to the file at the start index found before
+                if (searchResults[fullPath]) {
+                    Array.prototype.splice.apply(searchResults[fullPath].matches, [start, 0].concat(matches));
+                &#x2F;&#x2F; If not, add the matches to a new file index
+                } else {
+                    searchResults[fullPath] = {
+                        matches:   matches,
+                        collapsed: false
+                    };
+                }
+                resultsChanged = true;
+            }
+            
+            &#x2F;&#x2F; All the matches where deleted, remove the file from the results
+            if (searchResults[fullPath] &amp;&amp; !searchResults[fullPath].matches.length) {
+                delete searchResults[fullPath];
+                resultsChanged = true;
+            }
+            
+            &#x2F;&#x2F; This is link to the next change object, so we need to keep searching
+            if (change.next) {
+                return _updateSearchResults(doc, change.next, resultsChanged);
+            }
+        }
+        return resultsChanged;
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="">
+                        <h2>Classes</h2>
+                            <div class="well">
+                                <div class="member public">
+                                    <span class="pull-right scope">
+                                        Constructor
+                                    </span>
+                                    <h4>FindInFilesDialog</h4>
+                                    <em><p>FindInFilesDialog class</p></em>
+                                    <dl>
+                                    </dl>
+                                    
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>function FindInFilesDialog() {
+        this.closed = false;
+    }</code></pre>
+                                </div>
+            
+                                <section class="properties hide">
+                                    <h3>Properties<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                </section>
+            
+                                <section class="methods ">
+                                    <h3>Methods<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_close</h4>
+                                        <em><p>Closes the search dialog and resolves the promise that showDialog returned</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>FindInFilesDialog.prototype._close = function (value) {
+        if (this.closed) {
+            return;
+        }
+        
+        this.closed = true;
+        this.modalBar.close();
+        EditorManager.focusEditor();
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getDialogTextField</h4>
+                                        <em><p>Returns the input text field of the modalbar in the dialog</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">jQuery</dd>
+                                            <dd>Object pointing to input text field</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>FindInFilesDialog.prototype.getDialogTextField = function () {
+        return $(&quot;input[type=&#39;text&#39;]&quot;, this.modalBar.getRoot());
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>showDialog</h4>
+                                        <em><p>Shows the search dialog</p></em>
+                                        <dl>
+                                            <dt>initialString</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>Default text to prepopulate the search field with</dd>
+                                            <dt>scope</dt>
+                                            <dd class="label label-info pull-left">Entry</dd>
+                                            <dd>Search scope, or null to search whole project</dd>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>FindInFilesDialog.prototype.showDialog = function (initialString, scope) {
+        &#x2F;&#x2F; Note the prefix label is a simple &quot;Find:&quot; - the &quot;in ...&quot; part comes after the text field
+        var templateVars = {
+                value: initialString || &quot;&quot;,
+                label: _labelForScope(scope)
+            },
+            dialogHTML = Mustache.render(searchDialogTemplate, $.extend(templateVars, Strings)),
+            that       = this;
+        
+        this.modalBar    = new ModalBar(dialogHTML, false);
+        var $searchField = $(&quot;input#searchInput&quot;);
+        
+        $searchField.get(0).select();
+        $searchField
+            .bind(&quot;keydown&quot;, function (event) {
+                if (event.keyCode === KeyEvent.DOM_VK_RETURN || event.keyCode === KeyEvent.DOM_VK_ESCAPE) {  &#x2F;&#x2F; Enter&#x2F;Return key or Esc key
+                    event.stopPropagation();
+                    event.preventDefault();
+                    
+                    var query = $searchField.val();
+                    
+                    if (event.keyCode === KeyEvent.DOM_VK_ESCAPE) {
+                        that._close(null);
+                    } else if (event.keyCode === KeyEvent.DOM_VK_RETURN) {
+                        StatusBar.showBusyIndicator(true);
+                        that.getDialogTextField().attr(&quot;disabled&quot;, &quot;disabled&quot;);
+                        _doSearch(query);
+                    }
+                }
+            })
+            .bind(&quot;input&quot;, function (event) {
+                &#x2F;&#x2F; Check the query expression on every input event. This way the user is alerted
+                &#x2F;&#x2F; to any RegEx syntax errors immediately.
+                _getQueryRegExp($searchField.val());
+                that.getDialogTextField().removeClass(&quot;no-results&quot;);
+            })
+            .blur(function () {
+                if (that.getDialogTextField().attr(&quot;disabled&quot;)) {
+                    return;
+                }
+                that._close(null);
+            })
+            .focus();
+    };</code></pre>
+                                    </div>
+                                </section>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

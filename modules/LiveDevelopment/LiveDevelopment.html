@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>LiveDevelopment</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>LiveDevelopment manages the Inspector, all Agents, and the active LiveDocument</p>
+
+<h1>STARTING</h1>
+
+<p>To start a session call <code>open</code>. This will read the currentDocument from brackets,<br />launch the LiveBrowser (currently Chrome) with the remote debugger port open,<br />establish the Inspector connection to the remote debugger, and finally load all<br />agents.</p>
+
+<h1>STOPPING</h1>
+
+<p>To stop a session call <code>close</code>. This will close the active browser window,<br />disconnect the Inspector, unload all agents, and clean up.</p>
+
+<h1>STATUS</h1>
+
+<p>Status updates are dispatched as <code>statusChange</code> jQuery events. The status<br />is passed as the first parameter and the reason for the change as the second<br />parameter. Currently only the "Inactive" status supports the reason parameter.<br />The status codes are:</p>
+
+<p>-1: Error<br /> 0: Inactive<br /> 1: Connecting to the remote debugger<br /> 2: Loading agents<br /> 3: Active<br /> 4: Out of sync</p>
+
+<p>The reason codes are:<br />- null (Unknown reason)<br />- "explicit_close" (LiveDevelopment.close() was called)<br />- "navigated_away" (The browser changed to a location outside of the project)<br />- "detached_target_closed" (The tab or window was closed)<br />- "detached_replaced_with_devtools" (The developer tools were opened in the browser)</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+                            <li><a href="..&#x2F;../modules/thirdparty&#x2F;lodash.html">lodash</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+                            <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+                            <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+                            <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+                            <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+                            <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+                            <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+                            <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="hide">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_classForDocument</h4>
+                            <em><p>Determine which document class should be used for a given document</p></em>
+                            <dl>
+                                    <dt>document</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _classForDocument(doc) {
+        switch (doc.getLanguage().getId()) {
+        case &quot;css&quot;:
+            return CSSDocument;
+        case &quot;javascript&quot;:
+            return exports.config.experimental ? JSDocument : null;
+        }
+
+        if (_isHtmlFileExt(doc.file.fullPath)) {
+            return HTMLDocument;
+        }
+
+        return null;
+    }
+
+    function getLiveDocForPath(path) {
+        if (!_server) {
+            return undefined;
+        }
+        
+        return _server.get(path);
+    }
+    
+    function getLiveDocForEditor(editor) {
+        if (!editor) {
+            return null;
+        }
+        return getLiveDocForPath(editor.document.file.fullPath);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_close</h4>
+                            <em><p>Close the connection and the associated window asynchronously</p></em>
+                            <dl>
+                                    <dt>doCloseWindow</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>Use true to close the window/tab in the browser</dd>
+                                    <dt>reason</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Optional string key suffix to display to user (see LIVE_DEV_* keys)</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _close(doCloseWindow, reason) {
+        var deferred = $.Deferred();</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_closeDocument</h4>
+                            <em><p>Close a live document</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _closeDocument(liveDocument) {
+        _doClearErrors(liveDocument);
+        liveDocument.close();
+        
+        if (liveDocument.editor) {
+            $(liveDocument.editor).off(&quot;.livedev&quot;);
+        }
+        
+        $(liveDocument).off(&quot;.livedev&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_closeDocuments</h4>
+                            <em><p>Close all live documents</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _closeDocuments() {
+        if (_liveDocument) {
+            _closeDocument(_liveDocument);
+            _liveDocument = undefined;
+        }
+        
+        if (_relatedDocuments) {
+            _relatedDocuments.forEach(function (liveDoc) {
+                _closeDocument(liveDoc);
+            });
+            
+            _relatedDocuments = undefined;
+        }
+        
+        &#x2F;&#x2F; Clear all documents from request filtering
+        if (_server) {
+            _server.clear();
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_createDocument</h4>
+                            <em><p>Create a live version of a Brackets document</p></em>
+                            <dl>
+                                    <dt>doc</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                                    <dt>editor</dt>
+                                    <dd class="label label-info pull-left">Editor</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _createDocument(doc, editor) {
+        var DocClass        = _classForDocument(doc),
+            liveDocument    = new DocClass(doc, editor);
+
+        if (!DocClass) {
+            return null;
+        }
+
+        $(liveDocument).on(&quot;statusChanged.livedev&quot;, function () {
+            _handleLiveDocumentStatusChanged(liveDocument);
+        });
+
+        return liveDocument;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_doClearErrors</h4>
+                            <em><p>Clears errors from line number gutter (line class)</p></em>
+                            <dl>
+                                    <dt>liveDocument</dt>
+                                    <dd class="label label-info pull-left">HTMLDocument,CSSDocument</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _doClearErrors(liveDocument) {
+        var lineHandle;
+        
+        if (!liveDocument.editor ||
+                !liveDocument._errorLineHandles ||
+                !liveDocument._errorLineHandles.length) {
+            return;
+        }
+        
+        liveDocument.editor._codeMirror.operation(function () {
+            while (true) {
+                &#x2F;&#x2F; Iterate over all lines that were previously marked with an error
+                lineHandle = liveDocument._errorLineHandles.pop();
+                
+                if (!lineHandle) {
+                    break;
+                }
+                
+                liveDocument.editor._codeMirror.removeLineClass(lineHandle, &quot;wrap&quot;, SYNC_ERROR_CLASS);
+            }
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_doInspectorDisconnect</h4>
+                            <em><p>While still connected to the Inspector, do cleanup for agents,<br />documents and server.</p></em>
+                            <dl>
+                                    <dt>doCloseWindow</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>Use true to close the window/tab in the browser</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _doInspectorDisconnect(doCloseWindow) {
+        var closePromise,
+            deferred    = new $.Deferred(),
+            connected   = Inspector.connected();
+
+        $(Inspector.Page).off(&quot;.livedev&quot;);
+        $(Inspector).off(&quot;.livedev&quot;);
+
+        unloadAgents();
+        
+        &#x2F;&#x2F; Close live documents 
+        _closeDocuments();
+        
+        if (_server) {
+            &#x2F;&#x2F; Stop listening for requests when disconnected
+            _server.stop();
+
+            &#x2F;&#x2F; Dispose server
+            _server = null;
+        }
+
+        if (doCloseWindow &amp;&amp; connected) {
+            closePromise = Inspector.Runtime.evaluate(&quot;window.open(&#39;&#39;, &#39;_self&#39;).close();&quot;);
+
+            &#x2F;&#x2F; Add a timeout to continue cleanup if Inspector does not respond
+            closePromise = Async.withTimeout(closePromise, 5000);
+        } else {
+            closePromise = new $.Deferred().resolve();
+        }
+
+        closePromise.done(function () {
+            if (Inspector.connected()) {
+                Inspector.disconnect().always(deferred.resolve);
+            } else {
+                deferred.resolve();
+            }
+        });
+
+        return deferred.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_docIsOutOfSync</h4>
+                            <em><p>Documents are considered to be out-of-sync if they are dirty and<br /> do not have "update while editing" support</p></em>
+                            <dl>
+                                    <dt>doc</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _docIsOutOfSync(doc) {
+        var docClass = _classForDocument(doc);
+        return (doc.isDirty &amp;&amp; docClass !== CSSDocument &amp;&amp;
+                (!brackets.livehtml || docClass !== HTMLDocument));
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_enableAgents</h4>
+                            <em><p>Setup agents that need inspector domains enabled before loading</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _enableAgents() {
+        &#x2F;&#x2F; enable agents in parallel
+        return Async.doInParallel(
+            getEnabledAgents(),
+            function (name) {
+                return _invokeAgentMethod(name, &quot;enable&quot;);
+            },
+            true
+        );
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getCurrentDocument</h4>
+                            <em><p>Get the current document from the document manager<br />_adds extension, url and root to the document</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getCurrentDocument() {
+        return DocumentManager.getCurrentDocument();
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_getInitialDocFromCurrent</h4>
+                            <em><p>Determine an index file that can be used to start Live Development.<br />This function will inspect all files in a project to find the closest index file<br />available for currently opened document. We are searching for these files:<br /> - index.html<br /> - index.htm</p>
+
+<p>If the project is configured with a custom base url for live developmment, then<br />the list of possible index files is extended to contain these index files too:<br /> - index.php<br /> - index.php3<br /> - index.php4<br /> - index.php5<br /> - index.phtm<br /> - index.phtml<br /> - index.cfm<br /> - index.cfml<br /> - index.asp<br /> - index.aspx<br /> - index.jsp<br /> - index.jspx<br /> - index.shm<br /> - index.shml</p>
+
+<p>If a file was found, the promise will be resolved with the full path to this file. If no file<br />was found in the whole project tree, the promise will be resolved with null.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getInitialDocFromCurrent() {
+        var doc = _getCurrentDocument(),
+            refPath,
+            i;
+
+        &#x2F;&#x2F; TODO: FileUtils.getParentFolder()
+        function getParentFolder(path) {
+            return path.substring(0, path.lastIndexOf(&#39;&#x2F;&#39;, path.length - 2) + 1);
+        }
+
+        function getFilenameWithoutExtension(filename) {
+            var index = filename.lastIndexOf(&quot;.&quot;);
+            return index === -1 ? filename : filename.slice(0, index);
+        }
+
+        &#x2F;&#x2F; Is the currently opened document already a file we can use for Live Development?
+        if (doc) {
+            refPath = doc.file.fullPath;
+            if (FileUtils.isStaticHtmlFileExt(refPath) || FileUtils.isServerHtmlFileExt(refPath)) {
+                return new $.Deferred().resolve(doc);
+            }
+        }
+
+        var result = new $.Deferred();
+
+        var baseUrl = ProjectManager.getBaseUrl(),
+            hasOwnServerForLiveDevelopment = (baseUrl &amp;&amp; baseUrl.length);
+
+        FileIndexManager.getFileInfoList(&quot;all&quot;).done(function (allFiles) {
+            var projectRoot = ProjectManager.getProjectRoot().fullPath,
+                containingFolder,
+                indexFileFound = false,
+                stillInProjectTree = true;
+            
+            if (refPath) {
+                containingFolder = FileUtils.getDirectoryPath(refPath);
+            } else {
+                containingFolder = projectRoot;
+            }
+            
+            var filteredFiltered = allFiles.filter(function (item) {
+                var parent = getParentFolder(item.fullPath);
+                
+                return (containingFolder.indexOf(parent) === 0);
+            });
+            
+            var filterIndexFile = function (fileInfo) {
+                if (fileInfo.fullPath.indexOf(containingFolder) === 0) {
+                    if (getFilenameWithoutExtension(fileInfo.name) === &quot;index&quot;) {
+                        if (hasOwnServerForLiveDevelopment) {
+                            if ((FileUtils.isServerHtmlFileExt(fileInfo.name)) ||
+                                    (FileUtils.isStaticHtmlFileExt(fileInfo.name))) {
+                                return true;
+                            }
+                        } else if (FileUtils.isStaticHtmlFileExt(fileInfo.name)) {
+                            return true;
+                        }
+                    } else {
+                        return false;
+                    }
+                }
+            };
+
+            while (!indexFileFound &amp;&amp; stillInProjectTree) {
+                i = _.findIndex(filteredFiltered, filterIndexFile);
+
+                &#x2F;&#x2F; We found no good match
+                if (i === -1) {
+                    &#x2F;&#x2F; traverse the directory tree up one level
+                    containingFolder = getParentFolder(containingFolder);
+                    &#x2F;&#x2F; Are we still inside the project?
+                    if (containingFolder.indexOf(projectRoot) === -1) {
+                        stillInProjectTree = false;
+                    }
+                } else {
+                    indexFileFound = true;
+                }
+            }
+
+            if (i !== -1) {
+                DocumentManager.getDocumentForPath(filteredFiltered[i].fullPath).then(result.resolve, result.resolve);
+                return;
+            }
+            
+            result.resolve(null);
+        });
+
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getRelatedDocuments</h4>
+                            <em><p>Populate array of related documents reported by the browser agent(s)</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getRelatedDocuments() {
+        function createLiveStylesheet(url) {
+            var stylesheetDeferred  = $.Deferred(),
+                promise             = stylesheetDeferred.promise(),
+                path                = _server &amp;&amp; _server.urlToPath(url);
+
+            &#x2F;&#x2F; path may be null if loading an external stylesheet
+            if (path) {
+                DocumentManager.getDocumentForPath(path)
+                    .fail(function () {
+                        &#x2F;&#x2F; A failure to open a related file is benign
+                        stylesheetDeferred.resolve();
+                    })
+                    .done(function (doc) {
+                        &#x2F;&#x2F; CSSAgent includes containing HTMLDocument in list returned
+                        &#x2F;&#x2F; from getStyleSheetURLS() (which could be useful for collecting
+                        &#x2F;&#x2F; embedded style sheets) but we need to filter doc out here.
+                        if ((_classForDocument(doc) === CSSDocument) &amp;&amp;
+                                (!_liveDocument || (doc !== _liveDocument.doc))) {
+                            var liveDoc = _createDocument(doc);
+                            if (liveDoc) {
+                                _relatedDocuments.push(liveDoc);
+                                _server.add(liveDoc);
+                                
+                                $(liveDoc).on(&quot;deleted.livedev&quot;, _handleRelatedDocumentDeleted);
+                            }
+                        }
+                        stylesheetDeferred.resolve();
+                    });
+            } else {
+                stylesheetDeferred.resolve();
+            }
+
+            return promise;
+        }
+
+        &#x2F;&#x2F; Gather related CSS documents.
+        &#x2F;&#x2F; FUTURE: Gather related JS documents as well.
+        _relatedDocuments = [];
+        
+        return Async.doInParallel(agents.css.getStylesheetURLs(),
+                                  createLiveStylesheet,
+                                  false); &#x2F;&#x2F; don&#39;t fail fast
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_handleLiveDocumentStatusChanged</h4>
+                            <em><p>Event handler for live document errors. Displays error status in the editor gutter.</p></em>
+                            <dl>
+                                    <dt>event</dt>
+                                    <dd class="label label-info pull-left">$.Event</dd>
+                                    <dd></dd>
+                                    <dt>liveDocument</dt>
+                                    <dd class="label label-info pull-left">HTMLDocument,CSSDocument</dd>
+                                    <dd></dd>
+                                    <dt>errors</dt>
+                                    <dd class="label label-info pull-left">Array.&lt;{token: SimpleNode,startPos: Pos,endPos: Pos}&gt;</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _handleLiveDocumentStatusChanged(liveDocument) {
+        var startLine,
+            endLine,
+            lineInfo,
+            i,
+            lineHandle,
+            status = (liveDocument.errors.length) ? STATUS_SYNC_ERROR : STATUS_ACTIVE;
+
+        _setStatus(status);
+        
+        if (!liveDocument.editor) {
+            return;
+        }
+
+        &#x2F;&#x2F; Buffer addLineClass DOM changes in a CodeMirror operation
+        liveDocument.editor._codeMirror.operation(function () {
+            &#x2F;&#x2F; Remove existing errors before marking new ones
+            _doClearErrors(liveDocument);
+            
+            liveDocument._errorLineHandles = liveDocument._errorLineHandles || [];
+    
+            liveDocument.errors.forEach(function (error) {
+                startLine = error.startPos.line;
+                endLine = error.endPos.line;
+                
+                for (i = startLine; i &lt; endLine + 1; i++) {
+                    lineHandle = liveDocument.editor._codeMirror.addLineClass(i, &quot;wrap&quot;, SYNC_ERROR_CLASS);
+                    liveDocument._errorLineHandles.push(lineHandle);
+                }
+            });
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_handleRelatedDocumentDeleted</h4>
+                            <em><p>Removes the given CSS/JSDocument from _relatedDocuments. Signals that the<br />given file is no longer associated with the HTML document that is live (e.g.<br />if the related file has been deleted on disk).</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _handleRelatedDocumentDeleted(event, liveDoc) {
+        var index = _relatedDocuments.indexOf(liveDoc);
+        
+        if (index !== -1) {
+            _relatedDocuments.splice(index, 1);
+            
+            if (_server) {
+                _server.remove(liveDoc);
+            }
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_invokeAgentMethod</h4>
+                            <em><p>Invoke a no-arg method on an inspector agent</p></em>
+                            <dl>
+                                    <dt>name</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Agent name</dd>
+                                    <dt>methodName</dt>
+                                    <dd class="label label-info pull-left">stirng</dd>
+                                    <dd>Method name to call on the agent</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _invokeAgentMethod(name, methodName) {
+        var oneAgentPromise;
+
+        if (agents[name] &amp;&amp; agents[name][methodName]) {
+            oneAgentPromise = agents[name][methodName].call();
+        }
+
+        if (!oneAgentPromise) {
+            oneAgentPromise = new $.Deferred().resolve().promise();
+        } else {
+            oneAgentPromise.fail(function () {
+                console.error(methodName + &quot; failed on agent&quot;, name);
+            });
+        }
+
+        return oneAgentPromise;
+    }
+
+    function getEnabledAgents() {
+        var enabledAgents;
+
+        &#x2F;&#x2F; Select agents to use
+        if (exports.config.experimental) {
+            &#x2F;&#x2F; load all agents
+            enabledAgents = agents;
+        } else {
+            &#x2F;&#x2F; load only enabled agents
+            enabledAgents = _enabledAgentNames;
+        }
+        
+        return Object.keys(enabledAgents);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onConnect</h4>
+                            <em><p>Triggered by Inspector.connect</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onConnect(event) {
+        &#x2F;&#x2F; When the browser navigates away from the primary live document
+        $(Inspector.Page).on(&quot;frameNavigated.livedev&quot;, _onFrameNavigated);
+
+        &#x2F;&#x2F; When the Inspector WebSocket disconnects unexpectedely
+        $(Inspector).on(&quot;disconnect.livedev&quot;, _onDisconnect);
+		
+        _waitForInterstitialPageLoad()
+            .fail(function () {
+                close();
+
+                Dialogs.showModalDialog(
+                    DefaultDialogs.DIALOG_ID_ERROR,
+                    Strings.LIVE_DEVELOPMENT_ERROR_TITLE,
+                    Strings.LIVE_DEV_LOADING_ERROR_MESSAGE
+                );
+            })
+            .done(_onInterstitialPageLoad);
+    }
+
+    function _showWrongDocError() {
+        Dialogs.showModalDialog(
+            DefaultDialogs.DIALOG_ID_ERROR,
+            Strings.LIVE_DEVELOPMENT_ERROR_TITLE,
+            Strings.LIVE_DEV_NEED_HTML_MESSAGE
+        );
+        _openDeferred.reject();
+    }
+
+    function _showLiveDevServerNotReadyError() {
+        Dialogs.showModalDialog(
+            DefaultDialogs.DIALOG_ID_ERROR,
+            Strings.LIVE_DEVELOPMENT_ERROR_TITLE,
+            Strings.LIVE_DEV_SERVER_NOT_READY_MESSAGE
+        );
+        _openDeferred.reject();
+    }
+    
+    function _openInterstitialPage() {
+        var browserStarted  = false,
+            retryCount      = 0;
+        
+        &#x2F;&#x2F; Open the live browser if the connection fails, retry 6 times
+        Inspector.connectToURL(launcherUrl).fail(function onConnectFail(err) {
+            if (err === &quot;CANCEL&quot;) {
+                _openDeferred.reject(err);
+                return;
+            }
+
+            if (retryCount &gt; 6) {
+                _setStatus(STATUS_ERROR);
+
+                var dialogPromise = Dialogs.showModalDialog(
+                    DefaultDialogs.DIALOG_ID_LIVE_DEVELOPMENT,
+                    Strings.LIVE_DEVELOPMENT_RELAUNCH_TITLE,
+                    Strings.LIVE_DEVELOPMENT_ERROR_MESSAGE,
+                    [
+                        {
+                            className: Dialogs.DIALOG_BTN_CLASS_LEFT,
+                            id:        Dialogs.DIALOG_BTN_CANCEL,
+                            text:      Strings.CANCEL
+                        },
+                        {
+                            className: Dialogs.DIALOG_BTN_CLASS_PRIMARY,
+                            id:        Dialogs.DIALOG_BTN_OK,
+                            text:      Strings.RELAUNCH_CHROME
+                        }
+                    ]
+                );
+
+                dialogPromise.done(function (id) {
+                    if (id === Dialogs.DIALOG_BTN_OK) {
+                        &#x2F;&#x2F; User has chosen to reload Chrome, quit the running instance
+                        _setStatus(STATUS_INACTIVE);
+                        NativeApp.closeLiveBrowser()
+                            .done(function () {
+                                browserStarted = false;
+                                window.setTimeout(function () {
+                                    &#x2F;&#x2F; After browser closes, try to open the interstitial page again
+                                    _openInterstitialPage();
+                                });
+                            })
+                            .fail(function (err) {
+                                &#x2F;&#x2F; Report error?
+                                _setStatus(STATUS_ERROR);
+                                browserStarted = false;
+                                _openDeferred.reject(&quot;CLOSE_LIVE_BROWSER&quot;);
+                            });
+                    } else {
+                        _openDeferred.reject(&quot;CANCEL&quot;);
+                    }
+                });
+
+                return;
+            }
+            retryCount++;
+
+            if (!browserStarted &amp;&amp; exports.status !== STATUS_ERROR) {
+                NativeApp.openLiveBrowser(
+                    launcherUrl,
+                    true        &#x2F;&#x2F; enable remote debugging
+                )
+                    .done(function () {
+                        browserStarted = true;
+                    })
+                    .fail(function (err) {
+                        var message;
+
+                        _setStatus(STATUS_ERROR);
+                        if (err === NativeFileError.NOT_FOUND_ERR) {
+                            message = Strings.ERROR_CANT_FIND_CHROME;
+                        } else {
+                            message = StringUtils.format(Strings.ERROR_LAUNCHING_BROWSER, err);
+                        }
+                        
+                        &#x2F;&#x2F; Append a message to direct users to the troubleshooting page.
+                        if (message) {
+                            message += &quot; &quot; + StringUtils.format(Strings.LIVE_DEVELOPMENT_TROUBLESHOOTING, brackets.config.troubleshoot_url);
+                        }
+
+                        Dialogs.showModalDialog(
+                            DefaultDialogs.DIALOG_ID_ERROR,
+                            Strings.ERROR_LAUNCHING_BROWSER_TITLE,
+                            message
+                        );
+
+                        _openDeferred.reject(&quot;OPEN_LIVE_BROWSER&quot;);
+                    });
+            }
+                
+            if (exports.status !== STATUS_ERROR) {
+                window.setTimeout(function retryConnect() {
+                    Inspector.connectToURL(launcherUrl).fail(onConnectFail);
+                }, 500);
+            }
+        });
+    }
+    
+    &#x2F;&#x2F; helper function that actually does the launch once we are sure we have
+    &#x2F;&#x2F; a doc and the server for that doc is up and running.
+    function _doLaunchAfterServerReady(initialDoc) {
+        &#x2F;&#x2F; update status
+        _setStatus(STATUS_CONNECTING);
+        
+        &#x2F;&#x2F; create live document
+        initialDoc._ensureMasterEditor();
+        _liveDocument = _createDocument(initialDoc, initialDoc._masterEditor);
+
+        &#x2F;&#x2F; start listening for requests
+        _server.add(_liveDocument);
+        _server.start();
+
+        &#x2F;&#x2F; Install a one-time event handler when connected to the launcher page
+        $(Inspector).one(&quot;connect&quot;, _onConnect);
+        
+        &#x2F;&#x2F; open browser to the interstitial page to prepare for loading agents
+        _openInterstitialPage();
+    }
+    
+    function _prepareServer(doc) {
+        var deferred = new $.Deferred(),
+            showBaseUrlPrompt = false;
+        
+        _server = LiveDevServerManager.getServer(doc.file.fullPath);
+
+        &#x2F;&#x2F; Optionally prompt for a base URL if no server was found but the
+        &#x2F;&#x2F; file is a known server file extension
+        showBaseUrlPrompt = !exports.config.experimental &amp;&amp; !_server &amp;&amp;
+            FileUtils.isServerHtmlFileExt(doc.file.fullPath);
+
+        if (showBaseUrlPrompt) {
+            &#x2F;&#x2F; Prompt for a base URL
+            PreferencesDialogs.showProjectPreferencesDialog(&quot;&quot;, Strings.LIVE_DEV_NEED_BASEURL_MESSAGE)
+                .done(function (id) {
+                    if (id === Dialogs.DIALOG_BTN_OK &amp;&amp; ProjectManager.getBaseUrl()) {
+                        &#x2F;&#x2F; If base url is specifed, then re-invoke _prepareServer() to continue
+                        _prepareServer(doc).then(deferred.resolve, deferred.reject);
+                    } else {
+                        deferred.reject();
+                    }
+                });
+        } else if (_server) {
+            &#x2F;&#x2F; Startup the server
+            var readyPromise = _server.readyToServe();
+            if (!readyPromise) {
+                _showLiveDevServerNotReadyError();
+                deferred.reject();
+            } else {
+                readyPromise.then(deferred.resolve, function () {
+                    _showLiveDevServerNotReadyError();
+                    deferred.reject();
+                });
+            }
+        } else {
+            &#x2F;&#x2F; No server found
+            deferred.reject();
+        }
+        
+        return deferred.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onDirtyFlagChange</h4>
+                            <em><p>Triggered by a change in dirty flag from the DocumentManager</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onDirtyFlagChange(event, doc) {
+        if (doc &amp;&amp; Inspector.connected() &amp;&amp;
+                agents.network &amp;&amp; agents.network.wasURLRequested(doc.url)) {
+            &#x2F;&#x2F; Set status to out of sync if dirty. Otherwise, set it to active status.
+            _setStatus(_docIsOutOfSync(doc) ? STATUS_OUT_OF_SYNC : STATUS_ACTIVE);
+        }
+    }
+
+    function getCurrentProjectServerConfig() {
+        return {
+            baseUrl: ProjectManager.getBaseUrl(),
+            pathResolver: ProjectManager.makeProjectRelativeIfPossible,
+            root: ProjectManager.getProjectRoot().fullPath
+        };
+    }
+    
+    function _createUserServer() {
+        return new UserServer(getCurrentProjectServerConfig());
+    }
+    
+    function _createFileServer() {
+        return new FileServer(getCurrentProjectServerConfig());
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onDisconnect</h4>
+                            <em><p>Triggered by unexpected Inspector disconnect event</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onDisconnect(event) {
+        _close(false, &quot;closed_unknown_reason&quot;);
+    }
+
+    function _onDetached(event, res) {
+        var closeReason;
+
+        if (res &amp;&amp; res.reason) {
+            &#x2F;&#x2F; Get the explanation from res.reason, e.g. &quot;replaced_with_devtools&quot;, &quot;target_closed&quot;, &quot;canceled_by_user&quot;
+            &#x2F;&#x2F; Examples taken from https:&#x2F;&#x2F;chromiumcodereview.appspot.com&#x2F;10947037&#x2F;patch&#x2F;12001&#x2F;13004
+            &#x2F;&#x2F; However, the link refers to the Chrome Extension API, it may not apply 100% to the Inspector API
+            &#x2F;&#x2F; Prefix with &quot;detached_&quot; to create a quasi-namespace for Chrome&#39;s reasons
+            closeReason = &quot;detached_&quot; + res.reason;
+        }
+
+        _close(false, closeReason);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onDocumentChange</h4>
+                            <em><p>DocumentManager currentDocumentChange event handler.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onDocumentChange() {
+        var doc = _getCurrentDocument();
+        
+        if (!doc || !Inspector.connected()) {
+            return;
+        }
+
+        hideHighlight();
+        
+        &#x2F;&#x2F; close the current session and begin a new session if the current
+        &#x2F;&#x2F; document changes to an HTML document that was not loaded yet
+        var wasRequested = agents.network &amp;&amp; agents.network.wasURLRequested(doc.url),
+            isViewable = exports.config.experimental || (_server &amp;&amp; _server.canServe(doc.file.fullPath));
+        
+        if (!wasRequested &amp;&amp; isViewable) {
+            &#x2F;&#x2F; TODO (jasonsanjose): optimize this by reusing the same connection
+            &#x2F;&#x2F; no need to fully teardown.
+            close().done(open);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onDocumentSaved</h4>
+                            <em><p>Triggered by a documentSaved event from DocumentManager.</p></em>
+                            <dl>
+                                    <dt>event</dt>
+                                    <dd class="label label-info pull-left">$.Event</dd>
+                                    <dd></dd>
+                                    <dt>doc</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onDocumentSaved(event, doc) {
+        if (!Inspector.connected() || !_server) {
+            return;
+        }
+        
+        var absolutePath            = doc.file.fullPath,
+            liveDocument            = absolutePath &amp;&amp; _server.get(absolutePath),
+            liveEditingEnabled      = liveDocument &amp;&amp; liveDocument.isLiveEditingEnabled  &amp;&amp; liveDocument.isLiveEditingEnabled();
+        
+        &#x2F;&#x2F; Skip reload if the saved document has live editing enabled
+        if (liveEditingEnabled) {
+            return;
+        }
+        
+        var documentUrl     = _server.pathToUrl(absolutePath),
+            wasRequested    = agents.network &amp;&amp; agents.network.wasURLRequested(documentUrl);
+        
+        if (wasRequested) {
+            &#x2F;&#x2F; Unload and reload agents before reloading the page
+            reconnect();
+
+            &#x2F;&#x2F; Reload HTML page
+            Inspector.Page.reload();
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onError</h4>
+                            <em><p>Triggered by Inspector.error</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onError(event, error) {
+        var message;
+        
+        &#x2F;&#x2F; Sometimes error.message is undefined
+        if (!error.message) {
+            console.warn(&quot;Expected a non-empty string in error.message, got this instead:&quot;, error.message);
+            message = JSON.stringify(error);
+        } else {
+            message = error.message;
+        }
+
+        &#x2F;&#x2F; Remove &quot;Uncaught&quot; from the beginning to avoid the inspector popping up
+        if (message &amp;&amp; message.substr(0, 8) === &quot;Uncaught&quot;) {
+            message = message.substr(9);
+        }
+
+        &#x2F;&#x2F; Additional information, like exactly which parameter could not be processed.
+        var data = error.data;
+        if (Array.isArray(data)) {
+            message += &quot;\n&quot; + data.join(&quot;\n&quot;);
+        }
+
+        &#x2F;&#x2F; Show the message, but include the error object for further information (e.g. error code)
+        console.error(message, error);
+        _setStatus(STATUS_ERROR);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_onInterstitialPageLoad</h4>
+                            <em><p>Load agents and navigate to the target document once the <br />interstitial page has finished loading.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _onInterstitialPageLoad() {
+        &#x2F;&#x2F; Domains for some agents must be enabled first before loading
+        var enablePromise = Inspector.Page.enable().then(_enableAgents);
+        
+        enablePromise.done(function () {
+            &#x2F;&#x2F; Some agents (e.g. DOMAgent and RemoteAgent) require us to
+            &#x2F;&#x2F; navigate to the page first before loading can complete.
+            &#x2F;&#x2F; To accomodate this, we load all agents and navigate in
+            &#x2F;&#x2F; parallel.
+            loadAgents();
+
+            _getInitialDocFromCurrent().done(function (doc) {
+                if (doc) {
+                    &#x2F;&#x2F; Navigate from interstitial to the document
+                    &#x2F;&#x2F; Fires a frameNavigated event
+                    Inspector.Page.navigate(doc.url);
+                } else {
+                    &#x2F;&#x2F; Unlikely that we would get to this state where
+                    &#x2F;&#x2F; a connection is in process but there is no current
+                    &#x2F;&#x2F; document
+                    close();
+                }
+            });
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_setStatus</h4>
+                            <em><p>Update the status. Triggers a statusChange event.</p></em>
+                            <dl>
+                                    <dt>status</dt>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>new status</dd>
+                                    <dt>closeReason</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Optional string key suffix to display to user when closing the live development connection (see LIVE_DEV_* keys)</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _setStatus(status, closeReason) {
+        &#x2F;&#x2F; Don&#39;t send a notification when the status didn&#39;t actually change
+        if (status === exports.status) {
+            return;
+        }
+        
+        exports.status = status;
+        
+        var reason = status === STATUS_INACTIVE ? closeReason : null;
+        $(exports).triggerHandler(&quot;statusChange&quot;, [status, reason]);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_waitForInterstitialPageLoad</h4>
+                            <em><p>Create a promise that resolves when the interstitial page has<br />finished loading.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _waitForInterstitialPageLoad() {
+        var deferred    = $.Deferred(),
+            keepPolling = true,
+            timer       = window.setTimeout(function () {
+                keepPolling = false;
+                deferred.reject();
+            }, 10000); &#x2F;&#x2F; 10 seconds</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>cleanup</h4>
+                            <em><p>Finish closing the live development connection, including setting<br />the status accordingly.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function cleanup() {
+            _setStatus(STATUS_INACTIVE, reason || &quot;explicit_close&quot;);
+            deferred.resolve();
+        }
+
+        if (_openDeferred) {
+            _doInspectorDisconnect(doCloseWindow).done(cleanup);
+
+            if (_openDeferred.state() === &quot;pending&quot;) {
+                _openDeferred.reject();
+            }
+        } else {
+            &#x2F;&#x2F; Deferred may not be created yet
+            &#x2F;&#x2F; We always close attempt to close the live dev connection on
+            &#x2F;&#x2F; ProjectManager beforeProjectClose and beforeAppClose events
+            cleanup();
+        }
+        
+        return deferred.promise();
+    }
+
+    &#x2F;&#x2F; WebInspector Event: Page.frameNavigated
+    function _onFrameNavigated(event, res) {
+        &#x2F;&#x2F; res = {frame}
+        var url = res.frame.url,
+            baseUrl,
+            baseUrlRegExp;
+
+        &#x2F;&#x2F; Only check domain of root frame (with undefined parentId)
+        if (res.frame.parentId) {
+            return;
+        }
+
+        &#x2F;&#x2F; Any local file is OK
+        if (url.match(&#x2F;^file:\&#x2F;\&#x2F;&#x2F;i) || !_server) {
+            return;
+        }
+
+        &#x2F;&#x2F; Need base url to build reg exp
+        baseUrl = _server.getBaseUrl();
+        if (!baseUrl) {
+            return;
+        }
+
+        &#x2F;&#x2F; Test that url is within site
+        baseUrlRegExp = new RegExp(&quot;^&quot; + StringUtils.regexEscape(baseUrl), &quot;i&quot;);
+        if (!url.match(baseUrlRegExp)) {
+            &#x2F;&#x2F; No longer in site, so terminate live dev, but don&#39;t close browser window
+            _close(false, &quot;navigated_away&quot;);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>close</h4>
+                            <em><p>Close the connection and the associated window asynchronously</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function close() {
+        return _close(true);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>disableAgent</h4>
+                            <em><p>Disable an agent. Takes effect next time a connection is made. Does not affect<br /> current live development sessions.</p>
+
+<p>@param {string} name of agent to disable</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function disableAgent(name) {
+        if (_enabledAgentNames.hasOwnProperty(name)) {
+            delete _enabledAgentNames[name];
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>enableAgent</h4>
+                            <em><p>Enable an agent. Takes effect next time a connection is made. Does not affect<br /> current live development sessions.</p>
+
+<p>@param {string} name of agent to enable</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function enableAgent(name) {
+        if (agents.hasOwnProperty(name) &amp;&amp; !_enabledAgentNames.hasOwnProperty(name)) {
+            _enabledAgentNames[name] = true;
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>hideHighlight</h4>
+                            <em><p>Hide any active highlighting</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function hideHighlight() {
+        if (Inspector.connected() &amp;&amp; agents.highlight) {
+            agents.highlight.hide();
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>init</h4>
+                            <em><p>Initialize the LiveDevelopment Session</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function init(theConfig) {
+        exports.config = theConfig;
+        $(Inspector).on(&quot;error&quot;, _onError);
+        $(Inspector.Inspector).on(&quot;detached&quot;, _onDetached);
+        $(DocumentManager).on(&quot;currentDocumentChange&quot;, _onDocumentChange)
+            .on(&quot;documentSaved&quot;, _onDocumentSaved)
+            .on(&quot;dirtyFlagChange&quot;, _onDirtyFlagChange);
+        $(ProjectManager).on(&quot;beforeProjectClose beforeAppClose&quot;, close);
+
+        &#x2F;&#x2F; Register user defined server provider
+        LiveDevServerManager.registerServer({ create: _createUserServer }, 99);
+        LiveDevServerManager.registerServer({ create: _createFileServer }, 0);
+
+        &#x2F;&#x2F; Initialize exports.status
+        _setStatus(STATUS_INACTIVE);
+    }
+
+    function _getServer() {
+        return _server;
+    }
+
+    &#x2F;&#x2F; For unit testing
+    exports.launcherUrl               = launcherUrl;
+    exports._getServer                = _getServer;
+    exports._getInitialDocFromCurrent = _getInitialDocFromCurrent;
+
+    &#x2F;&#x2F; Export public functions
+    exports.agents              = agents;
+    exports.open                = open;
+    exports.close               = close;
+    exports.reconnect           = reconnect;
+    exports.enableAgent         = enableAgent;
+    exports.disableAgent        = disableAgent;
+    exports.getLiveDocForPath   = getLiveDocForPath;
+    exports.showHighlight       = showHighlight;
+    exports.hideHighlight       = hideHighlight;
+    exports.redrawHighlight     = redrawHighlight;
+    exports.init                = init;
+    exports.getCurrentProjectServerConfig = getCurrentProjectServerConfig;
+});</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>loadAgents</h4>
+                            <em><p>Load the agents</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function loadAgents() {
+        var result = new $.Deferred(),
+            promises = [],
+            enableAgentsPromise,
+            allAgentsPromise;
+
+        _setStatus(STATUS_LOADING_AGENTS);
+
+        &#x2F;&#x2F; load agents in parallel
+        allAgentsPromise = Async.doInParallel(
+            getEnabledAgents(),
+            function (name) {
+                return _invokeAgentMethod(name, &quot;load&quot;).done(function () {
+                    _loadedAgentNames.push(name);
+                });
+            },
+            true
+        );
+
+        &#x2F;&#x2F; wrap agent loading with a timeout
+        allAgentsPromise = Async.withTimeout(allAgentsPromise, 10000);
+
+        allAgentsPromise.done(function () {
+            &#x2F;&#x2F; After (1) the interstitial page loads, (2) then browser navigation
+            &#x2F;&#x2F; to the base URL is completed, and (3) the agents finish loading
+            &#x2F;&#x2F; gather related documents and finally set status to STATUS_ACTIVE.
+            var doc = _getCurrentDocument();  &#x2F;&#x2F; TODO: probably wrong...
+
+            if (doc) {
+                var status = STATUS_ACTIVE,
+                    relatedDocumentsPromise;
+
+                &#x2F;&#x2F; Note: the following promise is never explicitly rejected, so there
+                &#x2F;&#x2F; is no failure handler. If _getRelatedDocuments is changed so that rejection
+                &#x2F;&#x2F; is possible, failure should be managed accordingly.
+                relatedDocumentsPromise = Async.withTimeout(_getRelatedDocuments(), 5000);
+
+                relatedDocumentsPromise
+                    .done(function () {
+                        if (_docIsOutOfSync(doc)) {
+                            status = STATUS_OUT_OF_SYNC;
+                        }
+                        _setStatus(status);
+
+                        result.resolve();
+                    })
+                    .fail(result.reject);
+            } else {
+                result.reject();
+            }
+        });
+
+        allAgentsPromise.fail(result.reject);
+        
+        &#x2F;&#x2F; show error loading live dev dialog
+        result.fail(function () {
+            _setStatus(STATUS_ERROR);
+
+            Dialogs.showModalDialog(
+                Dialogs.DIALOG_ID_ERROR,
+                Strings.LIVE_DEVELOPMENT_ERROR_TITLE,
+                Strings.LIVE_DEV_LOADING_ERROR_MESSAGE
+            );
+        });
+
+        &#x2F;&#x2F; resolve&#x2F;reject the open() promise after agents complete
+        result.then(_openDeferred.resolve, _openDeferred.reject);
+
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>open</h4>
+                            <em><p>Open the Connection and go live</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function open() {
+        _openDeferred = new $.Deferred();
+        
+        &#x2F;&#x2F; TODO: need to run _onDocumentChange() after load if doc != currentDocument here? Maybe not, since activeEditorChange
+        &#x2F;&#x2F; doesn&#39;t trigger it, while inline editors can still cause edits in doc other than currentDoc...
+        _getInitialDocFromCurrent().done(function (doc) {
+            var prepareServerPromise = (doc &amp;&amp; _prepareServer(doc)) || new $.Deferred().reject(),
+                otherDocumentsInWorkingFiles;
+
+            if (doc &amp;&amp; !doc._masterEditor) {
+                otherDocumentsInWorkingFiles = DocumentManager.getWorkingSet().length;
+                DocumentManager.addToWorkingSet(doc.file);
+
+                if (!otherDocumentsInWorkingFiles) {
+                    DocumentManager.setCurrentDocument(doc);
+                }
+            }
+
+            &#x2F;&#x2F; wait for server (StaticServer, Base URL or file:)
+            prepareServerPromise
+                .done(function () {
+                    _doLaunchAfterServerReady(doc);
+                })
+                .fail(function () {
+                    _showWrongDocError();
+                    _openDeferred.reject();
+                });
+        });
+
+        return _openDeferred.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>pollInterstitialPage</h4>
+                            <em><p>Asynchronously check to see if the interstitial page has<br />finished loading; if not, check again until timing out.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function pollInterstitialPage() {
+            if (keepPolling &amp;&amp; Inspector.connected()) {
+                Inspector.Runtime.evaluate(&quot;window.isBracketsLiveDevelopmentInterstitialPageLoaded&quot;, function (response) {
+                    var result = response.result;
+                    
+                    if (result.type === &quot;boolean&quot; &amp;&amp; result.value) {
+                        window.clearTimeout(timer);
+                        deferred.resolve();
+                    } else {
+                        window.setTimeout(pollInterstitialPage, 100);
+                    }
+                });
+            } else {
+                deferred.reject();
+            }
+        }
+        
+        pollInterstitialPage();
+        return deferred.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>reconnect</h4>
+                            <em><p>Unload and reload agents</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function reconnect() {
+        unloadAgents();
+        loadAgents();
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>redrawHighlight</h4>
+                            <em><p>Redraw highlights *</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function redrawHighlight() {
+        if (Inspector.connected() &amp;&amp; agents.highlight) {
+            agents.highlight.redraw();
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>showHighlight</h4>
+                            <em><p>Enable highlighting</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function showHighlight() {
+        var doc = getLiveDocForEditor(EditorManager.getActiveEditor());
+        
+        if (doc.updateHighlight) {
+            doc.updateHighlight();
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>unloadAgents</h4>
+                            <em><p>Unload the agents</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function unloadAgents() {
+        _loadedAgentNames.forEach(function (name) {
+            agents[name].unload();
+        });
+        _loadedAgentNames = [];
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="hide">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

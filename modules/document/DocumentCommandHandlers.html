@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>DocumentCommandHandlers</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>lobal define, $, brackets, window</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+                            <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+                            <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+                            <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+                            <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+                            <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+                            <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+                            <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+                            <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>USER_CANCELED</h4>
+                            <dl>
+                            </dl>
+                            <p>Unique token used to indicate user-driven cancellation of Save As (as opposed to file IO error)</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var USER_CANCELED = { userCanceled: true };
+
+    function updateTitle() {
+        var currentDoc = DocumentManager.getCurrentDocument(),
+            windowTitle = brackets.config.app_title;
+
+        if (!brackets.nativeMenus) {
+            if (currentDoc) {
+                _$title.text(_currentTitlePath);
+                _$title.attr(&quot;title&quot;, currentDoc.file.fullPath);
+                &#x2F;&#x2F; dirty dot is always in DOM so layout doesn&#39;t change, and visibility is toggled
+                _$dirtydot.css(&quot;visibility&quot;, (currentDoc.isDirty) ? &quot;visible&quot; : &quot;hidden&quot;);
+            } else {
+                _$title.text(&quot;&quot;);
+                _$title.attr(&quot;title&quot;, &quot;&quot;);
+                _$dirtydot.css(&quot;visibility&quot;, &quot;hidden&quot;);
+            }
+        
+            &#x2F;&#x2F; Set _$titleWrapper to a fixed width just large enough to accomodate _$title. This seems equivalent to what
+            &#x2F;&#x2F; the browser would do automatically, but the CSS trick we use for layout requires _$titleWrapper to have a
+            &#x2F;&#x2F; fixed width set on it (see the &quot;#titlebar&quot; CSS rule for details).
+            _$titleWrapper.css(&quot;width&quot;, &quot;&quot;);
+            var newWidth = _$title.width();
+            _$titleWrapper.css(&quot;width&quot;, newWidth);
+            
+            &#x2F;&#x2F; Changing the width of the title may cause the toolbar layout to change height, which needs to resize the
+            &#x2F;&#x2F; editor beneath it (toolbar changing height due to window resize is already caught by EditorManager).
+            var newToolbarHeight = _$titleContainerToolbar.height();
+            if (_lastToolbarHeight !== newToolbarHeight) {
+                _lastToolbarHeight = newToolbarHeight;
+                EditorManager.resizeEditor();
+            }
+        }
+
+        &#x2F;&#x2F; build shell&#x2F;browser window title, e.g. &quot;• file.html — Brackets&quot;
+        if (currentDoc) {
+            windowTitle = StringUtils.format(WINDOW_TITLE_STRING, _currentTitlePath, windowTitle);
+            windowTitle = (currentDoc.isDirty) ? &quot;• &quot; + windowTitle : windowTitle;
+        }
+
+        &#x2F;&#x2F; update shell&#x2F;browser window title
+        window.document.title = windowTitle;
+    }</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>WINDOW_TITLE_STRING</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {string} String template for window title. Use emdash on mac only.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var WINDOW_TITLE_STRING = (brackets.platform !== &quot;mac&quot;) ? &quot;{0} - {1}&quot; : &quot;{0} \u2014 {1}&quot;;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_addedNavKeyHandler</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Are we already listening for a keyup to call detectDocumentNavEnd()?</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _addedNavKeyHandler = false;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_currentTitlePath</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>@type {string} Label shown above editor for current document: filename and potentially some of its path</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _currentTitlePath = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_defaultOpenDialogFullPath</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Used to track the default directory for the file open dialog</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _defaultOpenDialogFullPath = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_lastToolbarHeight</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>@type {Number} Last known height of _$titleContainerToolbar</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _lastToolbarHeight = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_nextUntitledIndexToUse</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>@type {Number} index to use for next, new Untitled document</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _nextUntitledIndexToUse = 1;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_windowGoingAway</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>- tracks our closing state if we get called again</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _windowGoingAway = false;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>fileNewInProgress</h4>
+                            <dl>
+                            </dl>
+                            <p>Prevents re-entrancy into handleFileNewInProject()</p>
+
+<p>handleFileNewInProject() first prompts the user to name a file and then asynchronously writes the file when the<br />filename field loses focus. This boolean prevent additional calls to handleFileNewInProject() when an existing<br />file creation call is outstanding</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var fileNewInProgress = false;</code></pre>
+                        </div>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_doOpenWithOptionalPath</h4>
+                            <em><p>Creates a document and displays an editor for the specified file path.<br />If no path is specified, a file prompt is provided for input.</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>- The path of the file to open; if it's null we'll prompt for it</dd>
+                                    <dt>silent</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>- If true, don't show error message</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _doOpenWithOptionalPath(fullPath, silent) {
+        var result;
+        if (!fullPath) {
+            &#x2F;&#x2F; Create placeholder deferred
+            result = new $.Deferred();
+            
+            &#x2F;&#x2F;first time through, default to the current project path
+            if (!_defaultOpenDialogFullPath) {
+                _defaultOpenDialogFullPath = ProjectManager.getProjectRoot().fullPath;
+            }
+            &#x2F;&#x2F; Prompt the user with a dialog
+            NativeFileSystem.showOpenDialog(true, false, Strings.OPEN_FILE, _defaultOpenDialogFullPath,
+                null, function (paths) {
+                    if (paths.length &gt; 0) {
+                        &#x2F;&#x2F; Add all files to the working set without verifying that
+                        &#x2F;&#x2F; they still exist on disk (for faster opening)
+                        var filesToOpen = [],
+                            filteredPaths = DragAndDrop.filterFilesToOpen(paths);
+                        
+                        filteredPaths.forEach(function (file) {
+                            filesToOpen.push(new NativeFileSystem.FileEntry(file));
+                        });
+                        DocumentManager.addListToWorkingSet(filesToOpen);
+                        
+                        doOpen(filteredPaths[filteredPaths.length - 1], silent)
+                            .done(function (doc) {
+                                &#x2F;&#x2F;  doc may be null, i.e. if an image has been opened.
+                                &#x2F;&#x2F; Then we do not add the opened file to the working set.
+                                if (doc) {
+                                    DocumentManager.addToWorkingSet(doc.file);
+                                }
+                                _defaultOpenDialogFullPath = FileUtils.getDirectoryPath(EditorManager.getCurrentlyViewedPath());
+                            })
+                            &#x2F;&#x2F; Send the resulting document that was opened
+                            .then(result.resolve, result.reject);
+                    } else {
+                        &#x2F;&#x2F; Reject if the user canceled the dialog
+                        result.reject();
+                    }
+                });
+        } else {
+            result = doOpen(fullPath, silent);
+        }
+        
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_doSaveAs</h4>
+                            <em><p>Opens the native OS save as dialog and saves document.<br />The original document is reverted in case it was dirty.<br />Text selection and cursor position from the original document<br />are preserved in the new document.<br />When saving to the original document the document is saved as if save was called.</p></em>
+                            <dl>
+                                    <dt>doc</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                                    <dt>settings</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">{cursorPos:!Object, selection:!Object, scrollPos:!Object}</dd>
+                                    <dd>- properties of the original document's editor that need to be carried over to the new document i.e. scrollPos, cursorPos and text selection</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _doSaveAs(doc, settings) {
+        var origPath,
+            saveAsDefaultPath,
+            defaultName,
+            result = new $.Deferred();
+        
+        function _doSaveAfterSaveDialog(path) {
+            var newFile = new NativeFileSystem.FileEntry(path);
+            
+            &#x2F;&#x2F; Reconstruct old doc&#39;s editor&#39;s view state, &amp; finally resolve overall promise
+            function _configureEditorAndResolve() {
+                var editor = EditorManager.getActiveEditor();
+                if (editor) {
+                    if (settings) {
+                        editor.setCursorPos(settings.cursorPos);
+                        editor.setSelection(settings.selection.start, settings.selection.end);
+                        editor.setScrollPos(settings.scrollPos.x, settings.scrollPos.y);
+                    }
+                }
+                result.resolve(newFile);
+            }
+            
+            &#x2F;&#x2F; Replace old document with new one in open editor &amp; working set
+            function openNewFile() {
+                var fileOpenPromise;
+
+                if (FileViewController.getFileSelectionFocus() === FileViewController.PROJECT_MANAGER) {
+                    &#x2F;&#x2F; If selection is in the tree, leave working set unchanged - even if orig file is in the list
+                    fileOpenPromise = FileViewController
+                        .openAndSelectDocument(path, FileViewController.PROJECT_MANAGER);
+                } else {
+                    &#x2F;&#x2F; If selection is in working set, replace orig item in place with the new file
+                    var index = DocumentManager.findInWorkingSet(doc.file.fullPath);
+                    &#x2F;&#x2F; Remove old file from working set; no redraw yet since there&#39;s a pause before the new file is opened
+                    DocumentManager.removeFromWorkingSet(doc.file, true);
+                    &#x2F;&#x2F; Add new file to working set, and ensure we now redraw (even if index hasn&#39;t changed)
+                    fileOpenPromise = handleFileAddToWorkingSet({fullPath: path, index: index, forceRedraw: true});
+                }
+
+                &#x2F;&#x2F; always configure editor after file is opened
+                fileOpenPromise.always(function () {
+                    _configureEditorAndResolve();
+                });
+            }
+            
+            if (!path) {
+                &#x2F;&#x2F; save as dialog was canceled; workaround for #4418
+                return result.reject(USER_CANCELED).promise();
+            }
+            
+            if (path === origPath) {
+                return doSave(doc);
+            }
+            
+            &#x2F;&#x2F; First, write document&#39;s current text to new file
+            FileUtils.writeText(newFile, doc.getText()).done(function () {
+                &#x2F;&#x2F; Add new file to project tree
+                ProjectManager.refreshFileTree().done(function () {
+                    &#x2F;&#x2F; If there were unsaved changes before Save As, they don&#39;t stay with the old
+                    &#x2F;&#x2F; file anymore - so must revert the old doc to match disk content.
+                    &#x2F;&#x2F; Only do this if the doc was dirty: doRevert on a file that is not dirty and
+                    &#x2F;&#x2F; not in the working set has the side effect of adding it to the working set.
+                    if (doc.isDirty &amp;&amp; !(doc.isUntitled())) {
+                        &#x2F;&#x2F; if the file is dirty it must be in the working set
+                        &#x2F;&#x2F; doRevert is side effect free in this case
+                        doRevert(doc).always(openNewFile);
+                    } else {
+                        openNewFile();
+                    }
+                }).fail(function (error) {
+                    result.reject(error);
+                });
+            }).fail(function (error) {
+                _showSaveFileError(error.name, path)
+                    .done(function () {
+                        result.reject(error);
+                    });
+            });
+        }
+        
+        if (doc) {
+            origPath = doc.file.fullPath;
+            &#x2F;&#x2F; If the document is an untitled document, we should default to project root.
+            if (doc.isUntitled()) {
+                &#x2F;&#x2F; (Issue #4489) if we&#39;re saving an untitled document, go ahead and switch to this document
+                &#x2F;&#x2F;   in the editor, so that if we&#39;re, for example, saving several files (ie. Save All),
+                &#x2F;&#x2F;   then the user can visually tell which document we&#39;re currently prompting them to save.
+                DocumentManager.setCurrentDocument(doc);
+
+                &#x2F;&#x2F; If the document is untitled, default to project root.
+                saveAsDefaultPath = ProjectManager.getProjectRoot().fullPath;
+            } else {
+                saveAsDefaultPath = FileUtils.getDirectoryPath(origPath);
+            }
+            defaultName = FileUtils.getBaseName(origPath);
+            NativeFileSystem.showSaveDialog(Strings.SAVE_FILE_AS, saveAsDefaultPath, defaultName,
+                _doSaveAfterSaveDialog,
+                function (error) {
+                    result.reject(error);
+                });
+        } else {
+            result.reject();
+        }
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getUntitledFileSuggestion</h4>
+                            <em><p>Ensures the suggested file name doesn't already exit.</p></em>
+                            <dl>
+                                    <dt>dir</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The directory to use</dd>
+                                    <dt>baseFileName</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The base to start with, "-n" will get appened to make unique</dd>
+                                    <dt>fileExt</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The file extension</dd>
+                                    <dt>isFolder</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>True if the suggestion is for a folder name</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getUntitledFileSuggestion(dir, baseFileName, fileExt, isFolder) {
+        var result = new $.Deferred();
+        var suggestedName = baseFileName + &quot;-&quot; + _nextUntitledIndexToUse++ + fileExt;
+        var dirEntry = new NativeFileSystem.DirectoryEntry(dir);
+
+        result.progress(function attemptNewName(suggestedName) {
+            if (_nextUntitledIndexToUse &gt; 99) {
+                &#x2F;&#x2F;we&#39;ve tried this enough
+                result.reject();
+                return;
+            }
+
+            &#x2F;&#x2F;check this name
+            var successCallback = function (entry) {
+                &#x2F;&#x2F;file exists, notify to the next progress
+                result.notify(baseFileName + &quot;-&quot; + _nextUntitledIndexToUse++ + fileExt);
+            };
+            var errorCallback = function (error) {
+                &#x2F;&#x2F;most likely error is FNF, user is better equiped to handle the rest
+                result.resolve(suggestedName);
+            };
+            
+            if (isFolder) {
+                dirEntry.getDirectory(
+                    suggestedName,
+                    {},
+                    successCallback,
+                    errorCallback
+                );
+            } else {
+                dirEntry.getFile(
+                    suggestedName,
+                    {},
+                    successCallback,
+                    errorCallback
+                );
+            }
+        });
+
+        &#x2F;&#x2F;kick it off
+        result.notify(suggestedName);
+
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_handleAbortQuit</h4>
+                            <em><p>Implementation for abortQuit callback to reset quit sequence settings</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _handleAbortQuit() {
+        _windowGoingAway = false;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_handleBeforeMenuPopup</h4>
+                            <em><p>Implementation for native APP_BEFORE_MENUPOPUP callback to trigger beforeMenuPopup event</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _handleBeforeMenuPopup() {
+        $(PopUpManager).triggerHandler(&quot;beforeMenuPopup&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_handleNewItemInProject</h4>
+                            <em><p>Bottleneck function for creating new files and folders in the project tree.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _handleNewItemInProject(isFolder) {
+        if (fileNewInProgress) {
+            ProjectManager.forceFinishRename();
+            return;
+        }
+        fileNewInProgress = true;
+
+        &#x2F;&#x2F; Determine the directory to put the new file
+        &#x2F;&#x2F; If a file is currently selected in the tree, put it next to it.
+        &#x2F;&#x2F; If a directory is currently selected in the tree, put it in it.
+        &#x2F;&#x2F; If an Untitled document is selected or nothing is selected in the tree, put it at the root of the project.
+        &#x2F;&#x2F; (Note: &#39;selected&#39; may be an item that&#39;s selected in the working set and not the tree; but in that case
+        &#x2F;&#x2F; ProjectManager.createNewItem() ignores the baseDir we give it and falls back to the project root on its own)
+        var baseDir,
+            selected = ProjectManager.getSelectedItem();
+        if ((!selected) || (selected instanceof NativeFileSystem.InaccessibleFileEntry)) {
+            selected = ProjectManager.getProjectRoot();
+        }
+        
+        baseDir = selected.fullPath;
+        if (selected.isFile) {
+            baseDir = baseDir.substr(0, baseDir.lastIndexOf(&quot;&#x2F;&quot;));
+        }
+        
+        &#x2F;&#x2F; Create the new node. The createNewItem function does all the heavy work
+        &#x2F;&#x2F; of validating file name, creating the new file and selecting.
+        var deferred = _getUntitledFileSuggestion(baseDir, Strings.UNTITLED, &quot;&quot;, isFolder);
+        var createWithSuggestedName = function (suggestedName) {
+            ProjectManager.createNewItem(baseDir, suggestedName, false, isFolder)
+                .then(deferred.resolve, deferred.reject, deferred.notify)
+                .always(function () { fileNewInProgress = false; });
+        };
+
+        deferred.done(createWithSuggestedName);
+        deferred.fail(function createWithDefault() { createWithSuggestedName(&quot;Untitled&quot;); });
+        return deferred;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_handleWindowGoingAway</h4>
+                            <em><p>Common implementation for close/quit/reload which all mostly<br />the same except for the final step</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _handleWindowGoingAway(commandData, postCloseHandler, failHandler) {
+        if (_windowGoingAway) {
+            &#x2F;&#x2F;if we get called back while we&#39;re closing, then just return
+            return (new $.Deferred()).reject().promise();
+        }
+
+        return CommandManager.execute(Commands.FILE_CLOSE_ALL, { promptOnly: true })
+            .done(function () {
+                _windowGoingAway = true;
+                
+                &#x2F;&#x2F; Give everyone a chance to save their state - but don&#39;t let any problems block
+                &#x2F;&#x2F; us from quitting
+                try {
+                    $(ProjectManager).triggerHandler(&quot;beforeAppClose&quot;);
+                } catch (ex) {
+                    console.error(ex);
+                }
+                
+                PreferencesManager.savePreferences();
+                
+                postCloseHandler();
+            })
+            .fail(function () {
+                _windowGoingAway = false;
+                if (failHandler) {
+                    failHandler();
+                }
+            });
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_parseDecoratedPath</h4>
+                            <em><p>Splits a decorated file path into its parts.</p></em>
+                            <dl>
+                                    <dt>path</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>- a string of the form "fullpath[:lineNumber[:columnNumber]]"</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _parseDecoratedPath(path) {
+        var result = {path: path, line: null, column: null};
+        if (path) {
+            &#x2F;&#x2F; If the path has a trailing :lineNumber and :columnNumber, strip
+            &#x2F;&#x2F; these off and assign to result.line and result.column.
+            var matchResult = &#x2F;(.+?):([0-9]+)(:([0-9]+))?$&#x2F;.exec(path);
+            if (matchResult) {
+                result.path = matchResult[1];
+                if (matchResult[2]) {
+                    result.line = parseInt(matchResult[2], 10);
+                }
+                if (matchResult[4]) {
+                    result.column = parseInt(matchResult[4], 10);
+                }
+            }
+        }
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_shortTitleForDocument</h4>
+                            <em><p>Returns a short title for a given document.</p></em>
+                            <dl>
+                                    <dt>doc</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _shortTitleForDocument(doc) {
+        var fullPath = doc.file.fullPath;
+        
+        &#x2F;&#x2F; If the document is untitled then return the filename, (&quot;Untitled-n.ext&quot;);
+        &#x2F;&#x2F; otherwise show the project-relative path if the file is inside the
+        &#x2F;&#x2F; current project or the full absolute path if it&#39;s not in the project.
+        if (doc.isUntitled()) {
+            return fullPath.substring(fullPath.lastIndexOf(&quot;&#x2F;&quot;) + 1);
+        } else {
+            return ProjectManager.makeProjectRelativeIfPossible(fullPath);
+        }
+    }
+    
+    function updateDocumentTitle() {
+        var newDocument = DocumentManager.getCurrentDocument();
+
+        &#x2F;&#x2F; TODO: This timer is causing a &quot;Recursive tests with the same name are not supporte&quot;
+        &#x2F;&#x2F; exception. This code should be removed (if not needed), or updated with a unique
+        &#x2F;&#x2F; timer name (if needed).
+        &#x2F;&#x2F; var perfTimerName = PerfUtils.markStart(&quot;DocumentCommandHandlers._onCurrentDocumentChange():\t&quot; + (!newDocument || newDocument.file.fullPath));
+        
+        if (newDocument) {
+            _currentTitlePath = _shortTitleForDocument(newDocument);
+        } else {
+            _currentTitlePath = null;
+        }
+        
+        &#x2F;&#x2F; Update title text &amp; &quot;dirty dot&quot; display
+        updateTitle();
+
+        &#x2F;&#x2F; PerfUtils.addMeasurement(perfTimerName);
+    }
+    
+    function handleDirtyChange(event, changedDoc) {
+        var currentDoc = DocumentManager.getCurrentDocument();
+        
+        if (currentDoc &amp;&amp; changedDoc.file.fullPath === currentDoc.file.fullPath) {
+            updateTitle();
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_showSaveFileError</h4>
+                            <em><p>Shows an Error modal dialog</p></em>
+                            <dl>
+                                    <dt>name</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                                    <dt>path</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _showSaveFileError(name, path) {
+        return Dialogs.showModalDialog(
+            DefaultDialogs.DIALOG_ID_ERROR,
+            Strings.ERROR_SAVING_FILE_TITLE,
+            StringUtils.format(
+                Strings.ERROR_SAVING_FILE,
+                StringUtils.breakableUrl(path),
+                FileUtils.getFileErrorString(name)
+            )
+        );
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>detectDocumentNavEnd</h4>
+                            <em><p>When the Ctrl key is released, if we were in the middle of a next/prev document navigation<br />sequence, now is the time to end it and update the MRU order. If we allowed the order to update<br />on every next/prev increment, the 1st &amp; 2nd entries would just switch places forever and we'd<br />never get further down the list.</p></em>
+                            <dl>
+                                    <dt>event</dt>
+                                    <dd class="label label-info pull-left">jQueryEvent</dd>
+                                    <dd>Key-up event</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function detectDocumentNavEnd(event) {
+        if (event.keyCode === KeyEvent.DOM_VK_CONTROL) {  &#x2F;&#x2F; Ctrl key
+            DocumentManager.finalizeDocumentNavigation();
+            
+            _addedNavKeyHandler = false;
+            $(window.document.body).off(&quot;keyup&quot;, detectDocumentNavEnd);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>doOpen</h4>
+                            <em><p>Creates a document and displays an editor for the specified file path.</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                                    <dt>silent</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>If true, don't show error message</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function doOpen(fullPath, silent) {
+        var result = new $.Deferred();
+
+        if (!fullPath) {
+            console.error(&quot;doOpen() called without fullPath&quot;);
+            result.reject();
+        } else {
+            var perfTimerName = PerfUtils.markStart(&quot;Open File:\t&quot; + fullPath);
+            result.always(function () {
+                PerfUtils.addMeasurement(perfTimerName);
+            });
+
+            var viewProvider = EditorManager.getCustomViewerForPath(fullPath);
+            if (viewProvider) {
+                EditorManager.showCustomViewer(viewProvider, fullPath);
+                result.resolve();
+            } else {
+                &#x2F;&#x2F; Load the file if it was never open before, and then switch to it in the UI
+                DocumentManager.getDocumentForPath(fullPath)
+                    .done(function (doc) {
+                        DocumentManager.setCurrentDocument(doc);
+                        result.resolve(doc);
+                    })
+                    .fail(function (fileError) {
+                        function _cleanup() {
+                            if (EditorManager.showingCustomViewerForPath(fullPath)) {
+                                &#x2F;&#x2F; We get here only after the user renames a file that makes it no longer belong to a
+                                &#x2F;&#x2F; custom viewer but the file is still showing in the current custom viewer. This only
+                                &#x2F;&#x2F; occurs on Mac since opening a non-text file always fails on Mac and triggers an error
+                                &#x2F;&#x2F; message that in turn calls _cleanup() after the user clicks OK in the message box.
+                                &#x2F;&#x2F; So we need to explicitly close the currently viewing image file whose filename is  
+                                &#x2F;&#x2F; no longer valid. Calling notifyPathDeleted will close the image vieer and then select 
+                                &#x2F;&#x2F; the previously opened text file or show no-editor if none exists.
+                                EditorManager.notifyPathDeleted(fullPath);
+                            } else {
+                                &#x2F;&#x2F; For performance, we do lazy checking of file existence, so it may be in working set
+                                DocumentManager.removeFromWorkingSet(new NativeFileSystem.FileEntry(fullPath));
+                                EditorManager.focusEditor();
+                            }
+                            result.reject();
+                        }
+                        
+                        if (silent) {
+                            _cleanup();
+                        } else {
+                            FileUtils.showFileOpenError(fileError.name, fullPath).done(_cleanup);
+                        }
+                    });
+            }
+        }
+
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>doRevert</h4>
+                            <em><p>Reverts the Document to the current contents of its file on disk. Discards any unsaved changes<br />in the Document.</p></em>
+                            <dl>
+                                    <dt>doc</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function doRevert(doc) {
+        var result = new $.Deferred();
+        
+        FileUtils.readAsText(doc.file)
+            .done(function (text, readTimestamp) {
+                doc.refreshText(text, readTimestamp);
+                result.resolve();
+            })
+            .fail(function (error) {
+                FileUtils.showFileOpenError(error.name, doc.file.fullPath)
+                    .done(function () {
+                        result.reject(error);
+                    });
+            });
+        
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>doSave</h4>
+                            <em><p>Saves a document to its existing path. Does NOT support untitled documents.</p></em>
+                            <dl>
+                                    <dt>docToSave</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function doSave(docToSave) {
+        var result = new $.Deferred(),
+            fileEntry = docToSave.file;
+        
+        function handleError(error) {
+            _showSaveFileError(error.name, fileEntry.fullPath)
+                .done(function () {
+                    result.reject(error);
+                });
+        }
+
+        if (docToSave.isDirty) {
+            var writeError = false;
+            
+            fileEntry.createWriter(
+                function (writer) {
+                    writer.onwriteend = function () {
+                        &#x2F;&#x2F; Per spec, onwriteend is called after onerror too
+                        if (!writeError) {
+                            docToSave.notifySaved();
+                            result.resolve(fileEntry);
+                        }
+                    };
+                    writer.onerror = function (error) {
+                        writeError = true;
+                        handleError(error);
+                    };
+
+                    &#x2F;&#x2F; We don&#39;t want normalized line endings, so it&#39;s important to pass true to getText()
+                    writer.write(docToSave.getText(true));
+                },
+                function (error) {
+                    handleError(error);
+                }
+            );
+        } else {
+            result.resolve(fileEntry);
+        }
+        result.always(function () {
+            EditorManager.focusEditor();
+        });
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>goNextPrevDoc</h4>
+                            <em><p>Navigate to the next/previous (MRU) document. Don't update MRU order yet</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function goNextPrevDoc(inc) {
+        var file = DocumentManager.getNextPrevFile(inc);
+        if (file) {
+            DocumentManager.beginDocumentNavigation();
+            CommandManager.execute(Commands.FILE_OPEN, { fullPath: file.fullPath });
+            
+            &#x2F;&#x2F; Listen for ending of Ctrl+Tab sequence
+            if (!_addedNavKeyHandler) {
+                _addedNavKeyHandler = true;
+                $(window.document.body).keyup(detectDocumentNavEnd);
+            }
+        }
+    }
+    
+    function handleGoNextDoc() {
+        goNextPrevDoc(+1);
+    }
+    function handleGoPrevDoc() {
+        goNextPrevDoc(-1);
+    }
+    
+    function handleShowInTree() {
+        ProjectManager.showInTree(DocumentManager.getCurrentDocument().file);
+    }
+    
+    function handleFileDelete() {
+        var entry = ProjectManager.getSelectedItem();
+        if (entry.isDirectory) {
+            Dialogs.showModalDialog(
+                DefaultDialogs.DIALOG_ID_EXT_DELETED,
+                Strings.CONFIRM_FOLDER_DELETE_TITLE,
+                StringUtils.format(
+                    Strings.CONFIRM_FOLDER_DELETE,
+                    StringUtils.breakableUrl(entry.name)
+                ),
+                [
+                    {
+                        className : Dialogs.DIALOG_BTN_CLASS_NORMAL,
+                        id        : Dialogs.DIALOG_BTN_CANCEL,
+                        text      : Strings.CANCEL
+                    },
+                    {
+                        className : Dialogs.DIALOG_BTN_CLASS_PRIMARY,
+                        id        : Dialogs.DIALOG_BTN_OK,
+                        text      : Strings.DELETE
+                    }
+                ]
+            )
+                .done(function (id) {
+                    if (id === Dialogs.DIALOG_BTN_OK) {
+                        ProjectManager.deleteItem(entry);
+                    }
+                });
+        } else {
+            ProjectManager.deleteItem(entry);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileAddToWorkingSet</h4>
+                            <em><p>Opens the given file, makes it the current document, AND adds it to the working set <br />only if the file does not have a custom viewer.</p></em>
+                            <dl>
+                                    <dt>commandData</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">{fullPath:string, index:number=, forceRedraw:boolean}</dd>
+                                    <dd>File to open; optional position in working set list (defaults to last); optional flag to force working set redraw</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileAddToWorkingSet(commandData) {
+        return handleFileOpen(commandData).done(function (doc) {
+            &#x2F;&#x2F; addToWorkingSet is synchronous
+            &#x2F;&#x2F; When opening a file with a custom viewer, we get a null doc.
+            &#x2F;&#x2F; So check it before we add it to the working set.
+            if (doc) {
+                DocumentManager.addToWorkingSet(doc.file, commandData.index, commandData.forceRedraw);
+            }
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileClose</h4>
+                            <em><p>Closes the specified file: removes it from the working set, and closes the main editor if one<br />is open. Prompts user about saving changes first, if document is dirty.</p></em>
+                            <dl>
+                                    <dt>commandData</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">{file: FileEntry, promptOnly:boolean}</dd>
+                                    <dd>Optional bag of arguments: file - File to close; assumes the current document if not specified. promptOnly - If true, only displays the relevant confirmation UI and does NOT actually close the document. This is useful when chaining file-close together with other user prompts that may be cancelable. _forceClose - If true, closes the document without prompting even if there are unsaved changes. Only for use in unit tests.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileClose(commandData) {
+        var file,
+            promptOnly,
+            _forceClose;
+        
+        if (commandData) {
+            file        = commandData.file;
+            promptOnly  = commandData.promptOnly;
+            _forceClose = commandData._forceClose;
+        }
+        
+        &#x2F;&#x2F; utility function for handleFileClose: closes document &amp; removes from working set
+        function doClose(fileEntry) {
+            if (!promptOnly) {
+                &#x2F;&#x2F; This selects a different document if the working set has any other options
+                DocumentManager.closeFullEditor(fileEntry);
+                
+                EditorManager.focusEditor();
+            }
+        }
+
+        var result = new $.Deferred(), promise = result.promise();
+        
+        function doCloseCustomViewer() {
+            if (!promptOnly) {
+                var nextFile = DocumentManager.getNextPrevFile(1);
+                if (nextFile) {
+                    &#x2F;&#x2F; opening a text file will automatically close the custom viewer.
+                    &#x2F;&#x2F; This is done in the currentDocumentChange handler in EditorManager
+                    doOpen(nextFile.fullPath).always(function () {
+                        EditorManager.focusEditor();
+                        result.resolve();
+                    });
+                } else {
+                    EditorManager.closeCustomViewer();
+                    result.resolve();
+                }
+            }
+        }
+
+        &#x2F;&#x2F; Close custom viewer if, either
+        &#x2F;&#x2F; - a custom viewer is currently displayed and no file specified in command data
+        &#x2F;&#x2F; - a custom viewer is currently displayed and the file specified in command data 
+        &#x2F;&#x2F;   is the file in the custom viewer
+        if (!DocumentManager.getCurrentDocument()) {
+            if ((EditorManager.getCurrentlyViewedPath() &amp;&amp; !file) ||
+                    (file &amp;&amp; file.fullPath === EditorManager.getCurrentlyViewedPath())) {
+                doCloseCustomViewer();
+                return promise;
+            }
+        }
+        
+        &#x2F;&#x2F; Default to current document if doc is null
+        if (!file &amp;&amp; DocumentManager.getCurrentDocument()) {
+            file = DocumentManager.getCurrentDocument().file;
+        }
+        
+        &#x2F;&#x2F; No-op if called when nothing is open; TODO: (issue #273) should command be grayed out instead?
+        if (!file) {
+            result.resolve();
+            return promise;
+        }
+        
+        var doc = DocumentManager.getOpenDocumentForPath(file.fullPath);
+        
+        if (doc &amp;&amp; doc.isDirty &amp;&amp; !_forceClose) {
+            &#x2F;&#x2F; Document is dirty: prompt to save changes before closing
+            var filename = FileUtils.getBaseName(doc.file.fullPath);
+            
+            Dialogs.showModalDialog(
+                DefaultDialogs.DIALOG_ID_SAVE_CLOSE,
+                Strings.SAVE_CLOSE_TITLE,
+                StringUtils.format(
+                    Strings.SAVE_CLOSE_MESSAGE,
+                    StringUtils.breakableUrl(filename)
+                ),
+                [
+                    {
+                        className : Dialogs.DIALOG_BTN_CLASS_LEFT,
+                        id        : Dialogs.DIALOG_BTN_DONTSAVE,
+                        text      : Strings.DONT_SAVE
+                    },
+                    {
+                        className : Dialogs.DIALOG_BTN_CLASS_NORMAL,
+                        id        : Dialogs.DIALOG_BTN_CANCEL,
+                        text      : Strings.CANCEL
+                    },
+                    {
+                        className : Dialogs.DIALOG_BTN_CLASS_PRIMARY,
+                        id        : Dialogs.DIALOG_BTN_OK,
+                        text      : Strings.SAVE
+                    }
+                ]
+            )
+                .done(function (id) {
+                    if (id === Dialogs.DIALOG_BTN_CANCEL) {
+                        result.reject();
+                    } else if (id === Dialogs.DIALOG_BTN_OK) {
+                        &#x2F;&#x2F; &quot;Save&quot; case: wait until we confirm save has succeeded before closing
+                        handleFileSave({doc: doc})
+                            .done(function (newFileEntry) {
+                                doClose(newFileEntry);
+                                result.resolve();
+                            })
+                            .fail(function () {
+                                result.reject();
+                            });
+                    } else {
+                        &#x2F;&#x2F; &quot;Don&#39;t Save&quot; case: even though we&#39;re closing the main editor, other views of
+                        &#x2F;&#x2F; the Document may remain in the UI. So we need to revert the Document to a clean
+                        &#x2F;&#x2F; copy of whatever&#39;s on disk.
+                        doClose(file);
+                        
+                        &#x2F;&#x2F; Only reload from disk if we&#39;ve executed the Close for real,
+                        &#x2F;&#x2F; *and* if at least one other view still exists
+                        if (!promptOnly &amp;&amp; DocumentManager.getOpenDocumentForPath(file.fullPath)) {
+                            doRevert(doc)
+                                .then(result.resolve, result.reject);
+                        } else {
+                            result.resolve();
+                        }
+                    }
+                });
+            result.always(function () {
+                EditorManager.focusEditor();
+            });
+        } else {
+            &#x2F;&#x2F; File is not open, or IS open but Document not dirty: close immediately
+            doClose(file);
+            EditorManager.focusEditor();
+            result.resolve();
+        }
+        return promise;
+    }
+        
+    function _doCloseDocumentList(list, promptOnly, clearCurrentDoc) {
+        var result      = new $.Deferred(),
+            unsavedDocs = [];
+        
+        list.forEach(function (file) {
+            var doc = DocumentManager.getOpenDocumentForPath(file.fullPath);
+            if (doc &amp;&amp; doc.isDirty) {
+                unsavedDocs.push(doc);
+            }
+        });
+        
+        if (unsavedDocs.length === 0) {
+            &#x2F;&#x2F; No unsaved changes, so we can proceed without a prompt
+            result.resolve();
+            
+        } else if (unsavedDocs.length === 1) {
+            &#x2F;&#x2F; Only one unsaved file: show the usual single-file-close confirmation UI
+            var fileCloseArgs = { file: unsavedDocs[0].file, promptOnly: promptOnly };
+
+            handleFileClose(fileCloseArgs).done(function () {
+                &#x2F;&#x2F; still need to close any other, non-unsaved documents
+                result.resolve();
+            }).fail(function () {
+                result.reject();
+            });
+            
+        } else {
+            &#x2F;&#x2F; Multiple unsaved files: show a single bulk prompt listing all files
+            var message = Strings.SAVE_CLOSE_MULTI_MESSAGE;
+            
+            message += &quot;&lt;ul class=&#39;dialog-list&#39;&gt;&quot;;
+            unsavedDocs.forEach(function (doc) {
+                var fullPath = doc.file.fullPath;
+                
+                message += &quot;&lt;li&gt;&lt;span class=&#39;dialog-filename&#39;&gt;&quot;;
+                message += StringUtils.breakableUrl(_shortTitleForDocument(doc));
+                message += &quot;&lt;&#x2F;span&gt;&lt;&#x2F;li&gt;&quot;;
+            });
+            message += &quot;&lt;&#x2F;ul&gt;&quot;;
+            
+            Dialogs.showModalDialog(
+                DefaultDialogs.DIALOG_ID_SAVE_CLOSE,
+                Strings.SAVE_CLOSE_TITLE,
+                message,
+                [
+                    {
+                        className : Dialogs.DIALOG_BTN_CLASS_LEFT,
+                        id        : Dialogs.DIALOG_BTN_DONTSAVE,
+                        text      : Strings.DONT_SAVE
+                    },
+                    {
+                        className : Dialogs.DIALOG_BTN_CLASS_NORMAL,
+                        id        : Dialogs.DIALOG_BTN_CANCEL,
+                        text      : Strings.CANCEL
+                    },
+                    {
+                        className : Dialogs.DIALOG_BTN_CLASS_PRIMARY,
+                        id        : Dialogs.DIALOG_BTN_OK,
+                        text      : Strings.SAVE
+                    }
+                ]
+            )
+                .done(function (id) {
+                    if (id === Dialogs.DIALOG_BTN_CANCEL) {
+                        result.reject();
+                    } else if (id === Dialogs.DIALOG_BTN_OK) {
+                        &#x2F;&#x2F; Save all unsaved files, then if that succeeds, close all
+                        _saveFileList(list).done(function () {
+                            result.resolve();
+                        }).fail(function () {
+                            result.reject();
+                        });
+                    } else {
+                        &#x2F;&#x2F; &quot;Don&#39;t Save&quot; case--we can just go ahead and close all  files.
+                        result.resolve();
+                    }
+                });
+        }
+        
+        &#x2F;&#x2F; If all the unsaved-changes confirmations pan out above, then go ahead &amp; close all editors
+        &#x2F;&#x2F; NOTE: this still happens before any done() handlers added by our caller, because jQ
+        &#x2F;&#x2F; guarantees that handlers run in the order they are added.
+        result.done(function () {
+            if (!promptOnly) {
+                DocumentManager.removeListFromWorkingSet(list, (clearCurrentDoc || true));
+            }
+        });
+        
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileCloseAll</h4>
+                            <em><p>Closes all open documents; equivalent to calling handleFileClose() for each document, except<br />that unsaved changes are confirmed once, in bulk.</p></em>
+                            <dl>
+                                    <dt>If</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">{promptOnly: boolean}</dd>
+                                    <dd>true, only displays the relevant confirmation UI and does NOT actually close any documents. This is useful when chaining close-all together with other user prompts that may be cancelable.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileCloseAll(commandData) {
+        return _doCloseDocumentList(DocumentManager.getWorkingSet(),
+                                    (commandData &amp;&amp; commandData.promptOnly)).done(function () {
+            if (!DocumentManager.getCurrentDocument()) {
+                EditorManager.closeCustomViewer();
+            }
+        });
+    }
+    
+    function handleFileCloseList(commandData) {
+        return _doCloseDocumentList((commandData &amp;&amp; commandData.documentList), false).done(function () {
+            if (!DocumentManager.getCurrentDocument()) {
+                EditorManager.closeCustomViewer();
+            }
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileCloseWindow</h4>
+                            <em><p>Confirms any unsaved changes, then closes the window</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileCloseWindow(commandData) {
+        return _handleWindowGoingAway(
+            commandData,
+            function () {
+                window.close();
+            },
+            function () {
+                &#x2F;&#x2F; if fail, tell the app to abort any pending quit operation.
+                &#x2F;&#x2F; TODO: remove this if statement when we move to the new CEF3 shell
+                if (brackets.app.abortQuit) {
+                    brackets.app.abortQuit();
+                }
+            }
+        );
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileNew</h4>
+                            <em><p>Create a new untitled document in the working set, and make it the current document.<br />Promise is resolved (synchronously) with the newly-created Document.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileNew() {
+        var doc = DocumentManager.createUntitledDocument(_nextUntitledIndexToUse++, &quot;&quot;);
+        DocumentManager.setCurrentDocument(doc);
+        EditorManager.focusEditor();
+        
+        return new $.Deferred().resolve(doc).promise();
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileNewInProject</h4>
+                            <em><p>Create a new file in the project tree.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileNewInProject() {
+        _handleNewItemInProject(false);
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileOpen</h4>
+                            <em><p>Opens the given file and makes it the current document. Does NOT add it to the working set.</p></em>
+                            <dl>
+                                    <dt>Params</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">{fullPath:string}</dd>
+                                    <dd>for FILE_OPEN command; the fullPath string is of the form "path[:lineNumber[:columnNumber]]" lineNumber and columnNumber are 1-origin: the very first line is line 1, and the very first column is column 1.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileOpen(commandData) {
+        var fileInfo = _parseDecoratedPath(commandData ? commandData.fullPath : null),
+            silent = commandData ? commandData.silent : false;
+        return _doOpenWithOptionalPath(fileInfo.path, silent)
+            .always(function () {
+                &#x2F;&#x2F; If a line and column number were given, position the editor accordingly.
+                if (fileInfo.line !== null) {
+                    if (fileInfo.column === null || (fileInfo.column &lt;= 0)) {
+                        fileInfo.column = 1;
+                    }
+                    &#x2F;&#x2F; setCursorPos expects line&#x2F;column numbers as 0-origin, so we subtract 1
+                    EditorManager.getCurrentFullEditor().setCursorPos(fileInfo.line - 1, fileInfo.column - 1, true);
+                }
+                
+                &#x2F;&#x2F; Give the editor focus
+                EditorManager.focusEditor();
+            });
+        &#x2F;&#x2F; Testing notes: here are some recommended manual tests for handleFileOpen, on macintosh.
+        &#x2F;&#x2F; Do all tests with brackets already running, and also with brackets not already running.
+        &#x2F;&#x2F;
+        &#x2F;&#x2F; drag a file onto brackets icon in desktop (this uses undecorated paths)
+        &#x2F;&#x2F; drag a file onto brackets icon in taskbar (this uses undecorated paths)
+        &#x2F;&#x2F; open a file from brackets sidebar (this uses undecorated paths)
+        &#x2F;&#x2F; from command line: .....&#x2F;Brackets.app&#x2F;Contents path         - where &#39;path&#39; is undecorated
+        &#x2F;&#x2F; from command line: .....&#x2F;Brackets.app path                  - where &#39;path&#39; has the form &quot;path:line&quot;
+        &#x2F;&#x2F; from command line: .....&#x2F;Brackets.app path                  - where &#39;path&#39; has the form &quot;path:line:column&quot;
+        &#x2F;&#x2F; from command line: open -a .....&#x2F;Brackets.app path          - where &#39;path&#39; is undecorated
+        &#x2F;&#x2F; do &quot;View Source&quot; from Adobe Scout version 1.2 or newer (this will use decorated paths of the form &quot;path:line:column&quot;)
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileQuit</h4>
+                            <em><p>Closes the window, then quits the app</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileQuit(commandData) {
+        return _handleWindowGoingAway(
+            commandData,
+            function () {
+                brackets.app.quit();
+            },
+            function () {
+                &#x2F;&#x2F; if fail, don&#39;t exit: user canceled (or asked us to save changes first, but we failed to do so)
+                &#x2F;&#x2F; TODO: remove this if statement when we move to the new CEF3 shell
+                if (brackets.app.abortQuit) {
+                    brackets.app.abortQuit();
+                }
+            }
+        );
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileRename</h4>
+                            <em><p>Show a textfield to rename whatever is currently selected in the sidebar (or current doc if nothing else selected)</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileRename() {
+        &#x2F;&#x2F; Prefer selected sidebar item (which could be a folder)
+        var entry = ProjectManager.getSelectedItem();
+        if (!entry) {
+            &#x2F;&#x2F; Else use current file (not selected in ProjectManager if not visible in tree or working set)
+            var doc = DocumentManager.getCurrentDocument();
+            entry = doc &amp;&amp; doc.file;
+        }
+        if (entry) {
+            ProjectManager.renameItemInline(entry);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileSave</h4>
+                            <em><p>Saves the given file. If no file specified, assumes the current document.</p></em>
+                            <dl>
+                                    <dt>commandData</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">{doc: ?Document}</dd>
+                                    <dd>Document to close, or null</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileSave(commandData) {
+        var activeEditor = EditorManager.getActiveEditor(),
+            activeDoc = activeEditor &amp;&amp; activeEditor.document,
+            doc = (commandData &amp;&amp; commandData.doc) || activeDoc,
+            settings;
+        
+        if (doc) {
+            if (doc.isUntitled()) {
+                if (doc === activeDoc) {
+                    settings = {
+                        selection: activeEditor.getSelection(),
+                        cursorPos: activeEditor.getCursorPos(),
+                        scrollPos: activeEditor.getScrollPos()
+                    };
+                }
+                
+                return _doSaveAs(doc, settings);
+            } else {
+                return doSave(doc);
+            }
+        }
+        
+        return $.Deferred().reject().promise();
+    }
+    
+    function _saveFileList(fileList) {
+        &#x2F;&#x2F; Do in serial because doSave shows error UI for each file, and we don&#39;t want to stack
+        &#x2F;&#x2F; multiple dialogs on top of each other
+        var userCanceled = false;
+        return Async.doSequentially(
+            fileList,
+            function (file) {
+                &#x2F;&#x2F; Abort remaining saves if user canceled any Save dialog
+                if (userCanceled) {
+                    return (new $.Deferred()).reject().promise();
+                }
+                
+                var doc = DocumentManager.getOpenDocumentForPath(file.fullPath);
+                if (doc) {
+                    var savePromise = handleFileSave({doc: doc});
+                    savePromise
+                        .done(function (newFile) {
+                            file.fullPath = newFile.fullPath;
+                            file.name = newFile.name;
+                        })
+                        .fail(function (error) {
+                            if (error === USER_CANCELED) {
+                                userCanceled = true;
+                            }
+                        });
+                    return savePromise;
+                } else {
+                    &#x2F;&#x2F; working set entry that was never actually opened - ignore
+                    return (new $.Deferred()).resolve().promise();
+                }
+            },
+            false
+        );
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileSaveAll</h4>
+                            <em><p>Saves all unsaved documents.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileSaveAll() {
+        return saveAll();
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleFileSaveAs</h4>
+                            <em><p>Prompts user with save as dialog and saves document.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleFileSaveAs(commandData) {
+        &#x2F;&#x2F; Default to current document if doc is null
+        var doc = null,
+            settings;
+        
+        if (commandData) {
+            doc = commandData.doc;
+        } else {
+            var activeEditor = EditorManager.getActiveEditor();
+            if (activeEditor) {
+                doc = activeEditor.document;
+                settings = {};
+                settings.selection = activeEditor.getSelection();
+                settings.cursorPos = activeEditor.getCursorPos();
+                settings.scrollPos = activeEditor.getScrollPos();
+            }
+        }
+            
+        &#x2F;&#x2F; doc may still be null, e.g. if no editors are open, but _doSaveAs() does a null check on
+        &#x2F;&#x2F; doc.
+        return _doSaveAs(doc, settings);
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleNewFolderInProject</h4>
+                            <em><p>Create a new folder in the project tree.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleNewFolderInProject() {
+        _handleNewItemInProject(true);
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>handleShowInOS</h4>
+                            <em><p>Show the selected sidebar (tree or working set) item in Finder/Explorer</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function handleShowInOS() {
+        var entry = ProjectManager.getSelectedItem();
+        if (entry) {
+            brackets.app.showOSFolder(entry.fullPath, function (err) {
+                if (err) {
+                    console.error(&quot;Error showing &#39;&quot; + entry.fullPath + &quot;&#39; in OS folder:&quot;, err);
+                }
+            });
+        }
+    }
+    
+    &#x2F;&#x2F; Init DOM elements
+    AppInit.htmlReady(function () {
+        _$titleContainerToolbar = $(&quot;#titlebar&quot;);
+        _$titleWrapper = $(&quot;.title-wrapper&quot;, _$titleContainerToolbar);
+        _$title = $(&quot;.title&quot;, _$titleWrapper);
+        _$dirtydot = $(&quot;.dirty-dot&quot;, _$titleWrapper);
+        
+    });
+
+    &#x2F;&#x2F; Exported for unit testing only
+    exports._parseDecoratedPath = _parseDecoratedPath;
+
+    &#x2F;&#x2F; Register global commands
+    CommandManager.register(Strings.CMD_FILE_OPEN,          Commands.FILE_OPEN, handleFileOpen);
+    CommandManager.register(Strings.CMD_ADD_TO_WORKING_SET, Commands.FILE_ADD_TO_WORKING_SET, handleFileAddToWorkingSet);
+    &#x2F;&#x2F; TODO: (issue #274) For now, hook up File &gt; New to the &quot;new in project&quot; handler. Eventually
+    &#x2F;&#x2F; File &gt; New should open a new blank tab, and handleFileNewInProject should
+    &#x2F;&#x2F; be called from a &quot;+&quot; button in the project
+    CommandManager.register(Strings.CMD_FILE_NEW_UNTITLED,  Commands.FILE_NEW_UNTITLED, handleFileNew);
+    CommandManager.register(Strings.CMD_FILE_NEW,           Commands.FILE_NEW, handleFileNewInProject);
+    CommandManager.register(Strings.CMD_FILE_NEW_FOLDER,    Commands.FILE_NEW_FOLDER, handleNewFolderInProject);
+    CommandManager.register(Strings.CMD_FILE_SAVE,          Commands.FILE_SAVE, handleFileSave);
+    CommandManager.register(Strings.CMD_FILE_SAVE_ALL,      Commands.FILE_SAVE_ALL, handleFileSaveAll);
+    CommandManager.register(Strings.CMD_FILE_SAVE_AS,       Commands.FILE_SAVE_AS, handleFileSaveAs);
+    CommandManager.register(Strings.CMD_FILE_RENAME,        Commands.FILE_RENAME, handleFileRename);
+    CommandManager.register(Strings.CMD_FILE_DELETE,        Commands.FILE_DELETE, handleFileDelete);
+    
+    CommandManager.register(Strings.CMD_FILE_CLOSE,         Commands.FILE_CLOSE, handleFileClose);
+    CommandManager.register(Strings.CMD_FILE_CLOSE_ALL,     Commands.FILE_CLOSE_ALL, handleFileCloseAll);
+    CommandManager.register(Strings.CMD_FILE_CLOSE_LIST,    Commands.FILE_CLOSE_LIST, handleFileCloseList);
+
+    if (brackets.platform === &quot;win&quot;) {
+        CommandManager.register(Strings.CMD_EXIT,           Commands.FILE_QUIT, handleFileQuit);
+    } else {
+        CommandManager.register(Strings.CMD_QUIT,           Commands.FILE_QUIT, handleFileQuit);
+    }
+
+    CommandManager.register(Strings.CMD_NEXT_DOC,           Commands.NAVIGATE_NEXT_DOC, handleGoNextDoc);
+    CommandManager.register(Strings.CMD_PREV_DOC,           Commands.NAVIGATE_PREV_DOC, handleGoPrevDoc);
+    CommandManager.register(Strings.CMD_SHOW_IN_TREE,       Commands.NAVIGATE_SHOW_IN_FILE_TREE, handleShowInTree);
+    CommandManager.register(Strings.CMD_SHOW_IN_OS,         Commands.NAVIGATE_SHOW_IN_OS, handleShowInOS);
+    
+    &#x2F;&#x2F; Those commands have no UI representation, and are only used internally 
+    CommandManager.registerInternal(Commands.APP_ABORT_QUIT,        _handleAbortQuit);
+    CommandManager.registerInternal(Commands.APP_BEFORE_MENUPOPUP,  _handleBeforeMenuPopup);
+    CommandManager.registerInternal(Commands.FILE_CLOSE_WINDOW,     handleFileCloseWindow);
+    
+    &#x2F;&#x2F; Listen for changes that require updating the editor titlebar
+    $(DocumentManager).on(&quot;dirtyFlagChange&quot;, handleDirtyChange);
+    $(DocumentManager).on(&quot;currentDocumentChange fileNameChange&quot;, updateDocumentTitle);
+
+    &#x2F;&#x2F; Reset the untitled document counter before changing projects
+    $(ProjectManager).on(&quot;beforeProjectClose&quot;, function () { _nextUntitledIndexToUse = 1; });
+});</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>saveAll</h4>
+                            <em><p>Saves all unsaved documents. Returns a Promise that will be resolved once ALL the save<br />operations have been completed. If ANY save operation fails, an error dialog is immediately<br />shown and the other files wait to save until it is dismissed; after all files have been<br />processed, the Promise is rejected if any ONE save operation failed.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function saveAll() {
+        return _saveFileList(DocumentManager.getWorkingSet());
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="hide">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

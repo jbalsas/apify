@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>QuickOpen</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>Displays an auto suggest pop-up list of files to allow the user to quickly navigate to a file and lines<br />within a file.<br />Uses FileIndexManger to supply the file list.</p>
+
+<p>TODO (issue 333) - currently jquery smart auto complete is used for the pop-up list. While it mostly works<br />it has several issues, so it should be replace with an alternative. Issues:<br />- the pop-up position logic has flaws that require CSS workarounds<br />- the pop-up properties cannot be modified once the object is constructed</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+                            <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+                            <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+                            <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+                            <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+                            <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>currentPlugin</h4>
+                            <dl>
+                            </dl>
+                            <p>@type {QuickOpenPlugin}</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var currentPlugin = null;</code></pre>
+                        </div>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>plugins</h4>
+                            <dl>
+                            </dl>
+                            <p>@type Array.<QuickOpenPlugin></p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var plugins = [];</code></pre>
+                        </div>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>QuickOpenPlugin</h4>
+                            <em><p>Defines API for new QuickOpen plug-ins</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function QuickOpenPlugin(name, languageIds, done, search, match, itemFocus, itemSelect, resultsFormatter, matcherOptions) {
+        this.name = name;
+        this.languageIds = languageIds;
+        this.done = done;
+        this.search = search;
+        this.match = match;
+        this.itemFocus = itemFocus;
+        this.itemSelect = itemSelect;
+        this.resultsFormatter = resultsFormatter;
+        this.matcherOptions = matcherOptions;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>addQuickOpenPlugin</h4>
+                            <em><p>Creates and registers a new QuickOpenPlugin</p></em>
+                            <dl>
+                                    <dt>pluginDef</dt>
+                                    <dd class="label label-info pull-left"> name: string,languageIds:Array.&lt;string&gt;,done: function(),search: function(string,!StringMatch.StringMatcher):Array.&lt;SearchResult,string&gt;,match: function(string):boolean,itemFocus: function(?SearchResult,string),itemSelect: funciton(?SearchResult,string),resultsFormatter: ?function(SearchResult,string,string):string matcherOptions: Object </dd>
+                                    <dd>Parameter Documentation: name - plug-in name, **must be unique** languageIds - language Ids array. Example: ["javascript", "css", "html"]. An empty array indicates all language IDs. done - called when quick open is complete. Plug-in should clear its internal state. search - takes a query string and a StringMatcher (the use of which is optional but can speed up your searches) and returns an array of strings that match the query. match - takes a query string and returns true if this plug-in wants to provide results for this query. itemFocus - performs an action when a result has been highlighted (via arrow keys, mouseover, etc.). The highlighted search result item (as returned by search()) is passed as an argument. itemSelect - performs an action when a result is chosen. The selected search result item (as returned by search()) is passed as an argument. resultFormatter - takes a query string and an item string and returns a <LI> item to insert into the displayed search results. If null, default is provided. matcherOptions - options to pass along to the StringMatcher (see StringMatch.StringMatcher for available options) If itemFocus() makes changes to the current document or cursor/scroll position and then the user cancels Quick Open (via Esc), those changes are automatically reverted.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function addQuickOpenPlugin(pluginDef) {
+        &#x2F;&#x2F; Backwards compatibility (for now) for old fileTypes field, if newer languageIds not specified
+        if (pluginDef.fileTypes &amp;&amp; !pluginDef.languageIds) {
+            console.warn(&quot;Using fileTypes for QuickOpen plugins is deprecated. Use languageIds instead.&quot;);
+            pluginDef.languageIds = pluginDef.fileTypes.map(function (extension) {
+                return LanguageManager.getLanguageForPath(&quot;file.&quot; + extension).getId();
+            });
+            delete pluginDef.fileTypes;
+        }
+        
+        plugins.push(new QuickOpenPlugin(
+            pluginDef.name,
+            pluginDef.languageIds,
+            pluginDef.done,
+            pluginDef.search,
+            pluginDef.match,
+            pluginDef.itemFocus,
+            pluginDef.itemSelect,
+            pluginDef.resultsFormatter,
+            pluginDef.matcherOptions
+        ));
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>beginSearch</h4>
+                            <em><p>Opens the Quick Open bar prepopulated with the given prefix (to select a mode) and optionally<br />with the given query text too. Updates text field contents if Quick Open already open.</p></em>
+                            <dl>
+                                    <dt>prefix</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                                    <dt>initialString</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function beginSearch(prefix, initialString) {
+        function createDialog() {
+            _curDialog = new QuickNavigateDialog();
+            _curDialog.showDialog(prefix, initialString);
+        }
+
+        if (_curDialog) {
+            if (_curDialog.isOpen) {
+                &#x2F;&#x2F; Just start a search using the existing dialog.
+                _curDialog.setSearchFieldValue(prefix, initialString);
+            } else {
+                &#x2F;&#x2F; The dialog is already closing. Wait till it&#39;s done closing,
+                &#x2F;&#x2F; then open a new dialog. (Calling close() again returns the
+                &#x2F;&#x2F; promise for the deferred that was already kicked off when it
+                &#x2F;&#x2F; started closing.)
+                _curDialog.close().done(createDialog);
+            }
+        } else {
+            createDialog();
+        }
+    }
+
+    function doFileSearch() {
+        beginSearch(&quot;&quot;, getCurrentEditorSelectedText());
+    }
+
+    function doGotoLine() {
+        &#x2F;&#x2F; TODO: Brackets doesn&#39;t support disabled menu items right now, when it does goto line and
+        &#x2F;&#x2F; goto definition should be disabled when there is not a current document
+        if (DocumentManager.getCurrentDocument()) {
+            beginSearch(&quot;:&quot;, &quot;&quot;);
+        }
+    }
+
+
+    &#x2F;&#x2F; TODO: should provide a way for QuickOpenJSSymbol to create this function as a plug-in
+    function doDefinitionSearch() {
+        if (DocumentManager.getCurrentDocument()) {
+            beginSearch(&quot;@&quot;, getCurrentEditorSelectedText());
+        }
+    }
+    
+    &#x2F;&#x2F; Listen for a change of project to invalidate our file list
+    $(ProjectManager).on(&quot;projectOpen&quot;, function () {
+        fileList = null;
+    });
+
+    &#x2F;&#x2F; TODO: allow QuickOpenJS to register it&#39;s own commands and key bindings
+    CommandManager.register(Strings.CMD_QUICK_OPEN,         Commands.NAVIGATE_QUICK_OPEN,       doFileSearch);
+    CommandManager.register(Strings.CMD_GOTO_DEFINITION,    Commands.NAVIGATE_GOTO_DEFINITION,  doDefinitionSearch);
+    CommandManager.register(Strings.CMD_GOTO_LINE,          Commands.NAVIGATE_GOTO_LINE,        doGotoLine);
+
+    exports.beginSearch             = beginSearch;
+    exports.addQuickOpenPlugin      = addQuickOpenPlugin;
+    exports.highlightMatch          = highlightMatch;
+    
+    &#x2F;&#x2F; accessing these from this module will ultimately be deprecated
+    exports.stringMatch             = StringMatch.stringMatch;
+    exports.SearchResult            = StringMatch.SearchResult;
+    exports.basicMatchSort          = StringMatch.basicMatchSort;
+    exports.multiFieldSort          = StringMatch.multiFieldSort;
+});</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>domItemToSearchResult</h4>
+                            <em><p>Converts from list item DOM node to search provider list object</p></em>
+                            <dl>
+                                    <dt>domItem</dt>
+                                    <dd class="label label-info pull-left">jQueryObject</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function domItemToSearchResult(domItem) {
+        if (!domItem) {
+            return null;
+        }
+        
+        &#x2F;&#x2F; Smart Autocomplete uses this assumption internally: index of DOM node in results list container
+        &#x2F;&#x2F; exactly matches index of search result in list returned by _filterCallback()
+        var index = $(domItem).index();
+        
+        var lastFilterResult = getLastFilterResult();
+        return lastFilterResult[index];
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>extractLineNumber</h4>
+                            <em><p>Attempts to extract a line number from the query where the line number<br />is followed by a colon. Callers should explicitly test result with isNaN()</p></em>
+                            <dl>
+                                    <dt>query</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>string to extract line number from</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function extractLineNumber(query) {
+        &#x2F;&#x2F; only match : at beginning of query for now
+        &#x2F;&#x2F; TODO: match any location of : when QuickOpen._handleItemFocus() is modified to
+        &#x2F;&#x2F; dynamic open files
+        if (query.indexOf(&quot;:&quot;) !== 0) {
+            return NaN;
+        }
+
+        var result = NaN;
+        var regInfo = query.match(&#x2F;(!?:)(\d+)&#x2F;); &#x2F;&#x2F; colon followed by a digit
+        if (regInfo) {
+            result = regInfo[2] - 1;
+        }
+
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>getLastFilterResult</h4>
+                            <em><p>Returns the last return value of _filterCallback(), which Smart Autocomplete helpfully caches</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getLastFilterResult() {
+        var cachedResult = $(&quot;input#quickOpenSearch&quot;).data(&quot;smart-autocomplete&quot;).rawResults;
+        return cachedResult || [];
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>highlightMatch</h4>
+                            <em><p>Formats item's label as properly escaped HTML text, highlighting sections that match 'query'.<br />If item is a SearchResult generated by stringMatch(), uses its metadata about which string ranges<br />matched; else formats the label with no highlighting.</p></em>
+                            <dl>
+                                    <dt>item</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string, SearchResult</dd>
+                                    <dd></dd>
+                                    <dt>matchClass</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>CSS class for highlighting matched text</dd>
+                                    <dt>rangeFilter</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">function(boolean, string):string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function highlightMatch(item, matchClass, rangeFilter) {
+        var label = item.label || item;
+        matchClass = matchClass || &quot;quicksearch-namematch&quot;;
+        
+        var stringRanges = item.stringRanges;
+        if (!stringRanges) {
+            &#x2F;&#x2F; If result didn&#39;t come from stringMatch(), highlight nothing
+            stringRanges = [{
+                text: label,
+                matched: false,
+                includesLastSegment: true
+            }];
+        }
+        
+        var displayName = &quot;&quot;;
+        if (item.scoreDebug) {
+            var sd = item.scoreDebug;
+            displayName += &#39;&lt;span title=&quot;sp:&#39; + sd.special + &#39;, m:&#39; + sd.match +
+                &#39;, ls:&#39; + sd.lastSegment + &#39;, b:&#39; + sd.beginning +
+                &#39;, ld:&#39; + sd.lengthDeduction + &#39;, c:&#39; + sd.consecutive + &#39;, nsos: &#39; +
+                sd.notStartingOnSpecial + &#39;&quot;&gt;(&#39; + item.matchGoodness + &#39;) &lt;&#x2F;span&gt;&#39;;
+        }
+        
+        &#x2F;&#x2F; Put the path pieces together, highlighting the matched parts
+        stringRanges.forEach(function (range) {
+            if (range.matched) {
+                displayName += &quot;&lt;span class=&#39;&quot; + matchClass + &quot;&#39;&gt;&quot;;
+            }
+            
+            var rangeText = rangeFilter ? rangeFilter(range.includesLastSegment, range.text) : range.text;
+            displayName += StringUtils.breakableUrl(rangeText);
+            
+            if (range.matched) {
+                displayName += &quot;&lt;&#x2F;span&gt;&quot;;
+            }
+        });
+        return displayName;
+    }
+    
+    function defaultResultsFormatter(item, query) {
+        query = query.slice(query.indexOf(&quot;@&quot;) + 1, query.length);
+
+        var displayName = highlightMatch(item);
+        return &quot;&lt;li&gt;&quot; + displayName + &quot;&lt;&#x2F;li&gt;&quot;;
+    }
+    
+    function _filenameResultsFormatter(item, query) {
+        &#x2F;&#x2F; For main label, we just want filename: drop most of the string
+        function fileNameFilter(includesLastSegment, rangeText) {
+            if (includesLastSegment) {
+                var rightmostSlash = rangeText.lastIndexOf(&#39;&#x2F;&#39;);
+                return rangeText.substring(rightmostSlash + 1);  &#x2F;&#x2F; safe even if rightmostSlash is -1
+            } else {
+                return &quot;&quot;;
+            }
+        }
+        var displayName = highlightMatch(item, null, fileNameFilter);
+        var displayPath = highlightMatch(item, &quot;quicksearch-pathmatch&quot;);
+        
+        return &quot;&lt;li&gt;&quot; + displayName + &quot;&lt;br &#x2F;&gt;&lt;span class=&#39;quick-open-path&#39;&gt;&quot; + displayPath + &quot;&lt;&#x2F;span&gt;&lt;&#x2F;li&gt;&quot;;
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>queryIsStale</h4>
+                            <em><p>Returns true if the query string doesn't match the query text field. This can happen when _handleFilter()<br />runs slow (either synchronously or async as in searchFileList()). Several key events queue up before filtering<br />is done, and each sets a timeout. After all the key events are handled, we wind up with a queue of timeouts<br />waiting to run, once per key event. All but the last one reflect a stale value of the text field.</p></em>
+                            <dl>
+                                    <dt>query</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function queryIsStale(query) {
+        var currentQuery = $(&quot;input#quickOpenSearch&quot;).val();
+        return currentQuery !== query;
+    }
+
+    function searchFileList(query, matcher) {
+        &#x2F;&#x2F; FileIndexManager may still be loading asynchronously - if so, can&#39;t return a result yet
+        if (!fileList) {
+            &#x2F;&#x2F; Smart Autocomplete allows us to return a Promise instead...
+            var asyncResult = new $.Deferred();
+            fileListPromise.done(function () {
+                &#x2F;&#x2F; ...but it&#39;s not very robust. If a previous Promise is obsoleted by the query string changing, it
+                &#x2F;&#x2F; keeps listening to it anyway. So the last Promise to resolve &quot;wins&quot; the UI update even if it&#39;s for
+                &#x2F;&#x2F; a stale query. Guard from that by checking that filter text hasn&#39;t changed while we were waiting:
+                if (!queryIsStale(query)) {
+                    &#x2F;&#x2F; We&#39;re still the current query. Synchronously re-run the search call and resolve with its results
+                    asyncResult.resolve(searchFileList(query, matcher));
+                } else {
+                    asyncResult.reject();
+                }
+            });
+            return asyncResult.promise();
+        }
+        
+        &#x2F;&#x2F; First pass: filter based on search string; convert to SearchResults containing extra info
+        &#x2F;&#x2F; for sorting &amp; display
+        var filteredList = $.map(fileList, function (fileInfo) {
+            &#x2F;&#x2F; Is it a match at all?
+            &#x2F;&#x2F; match query against the full path (with gaps between query characters allowed)
+            var searchResult;
+            
+            searchResult = matcher.match(ProjectManager.makeProjectRelativeIfPossible(fileInfo.fullPath), query);
+            
+            if (searchResult) {
+                searchResult.label = fileInfo.name;
+                searchResult.fullPath = fileInfo.fullPath;
+                searchResult.filenameWithoutExtension = _filenameFromPath(fileInfo.name, false);
+            }
+            return searchResult;
+        });
+        
+        &#x2F;&#x2F; Sort by &quot;match goodness&quot; tier first, then within each tier sort alphabetically - first by filename
+        &#x2F;&#x2F; sans extension, (so that &quot;abc.js&quot; comes before &quot;abc-d.js&quot;), then by filename, and finally (for
+        &#x2F;&#x2F; identically-named files) by full path
+        StringMatch.multiFieldSort(filteredList, { matchGoodness: 0, filenameWithoutExtension: 1, label: 2, fullPath: 3 });
+
+        return filteredList;
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="">
+                        <h2>Classes</h2>
+                            <div class="well">
+                                <div class="member public">
+                                    <span class="pull-right scope">
+                                        Constructor
+                                    </span>
+                                    <h4>QuickNavigateDialog</h4>
+                                    <em><p>QuickNavigateDialog class</p></em>
+                                    <dl>
+                                    </dl>
+                                    
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>function QuickNavigateDialog() {
+        this.$searchField = undefined; &#x2F;&#x2F; defined when showDialog() is called
+        
+        &#x2F;&#x2F; Bind event handlers
+        this._handleItemSelect         = this._handleItemSelect.bind(this);
+        this._handleItemFocus          = this._handleItemFocus.bind(this);
+        this._handleKeyUp              = this._handleKeyUp.bind(this);
+        this._handleResultsReady       = this._handleResultsReady.bind(this);
+        this._handleShowResults        = this._handleShowResults.bind(this);
+        this._handleBlur               = this._handleBlur.bind(this);
+        this._handleDocumentMouseDown  = this._handleDocumentMouseDown.bind(this);
+        
+        &#x2F;&#x2F; Bind callbacks from smart-autocomplete
+        this._filterCallback           = this._filterCallback.bind(this);
+        this._resultsFormatterCallback = this._resultsFormatterCallback.bind(this);
+        
+        &#x2F;&#x2F; StringMatchers that cache in-progress query data.
+        this._filenameMatcher           = new StringMatch.StringMatcher({
+            segmentedSearch: true
+        });
+        this._matchers                  = {};
+    }</code></pre>
+                                </div>
+            
+                                <section class="properties ">
+                                    <h3>Properties<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_closeDeferred</h4>
+                                        <dl>
+                                            <dt>Type</dt>
+                                            <dd>$.Deferred</dd>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>If the dialog is closing, this will contain a deferred that is resolved<br />when it's done closing.</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._closeDeferred = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_filenameMatcher</h4>
+                                        <dl>
+                                            <dt>Type</dt>
+                                            <dd>StringMatch.StringMatcher</dd>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>Handles caching of filename search information for the lifetime of a <br />QuickNavigateDialog (a single search until the dialog is dismissed)</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._filenameMatcher = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_matchers</h4>
+                                        <dl>
+                                            <dt>Type</dt>
+                                            <dd>Object.<string, StringMatch.StringMatcher></dd>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>StringMatcher caches for each QuickOpen plugin that keep track of search<br />information for the lifetime of a QuickNavigateDialog (a single search<br />until the dialog is dismissed)</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._matchers = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_origDocPath</h4>
+                                        <dl>
+                                            <dt>Type</dt>
+                                            <dd>?string</dd>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>Remembers the current document that was displayed when showDialog() was called.<br />TODO: in the future, if focusing an item can switch documents, need to restore this on Escape.</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._origDocPath = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_origScrollPos</h4>
+                                        <dl>
+                                            <dt>Type</dt>
+                                            <dd>?{x:number, y:number}</dd>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>Remembers the scroll position in origDocPath when showDialog() was called (see origSelection above).</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._origScrollPos = null;
+
+    function _filenameFromPath(path, includeExtension) {
+        var end;
+        if (includeExtension) {
+            end = path.length;
+        } else {
+            end = path.lastIndexOf(&quot;.&quot;);
+            if (end === -1) {
+                end = path.length;
+            }
+        }
+        return path.slice(path.lastIndexOf(&quot;&#x2F;&quot;) + 1, end);
+    }</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_origSelection</h4>
+                                        <dl>
+                                            <dt>Type</dt>
+                                            <dd>?{start:{line:number, ch:number}, end:{line:number, ch:number}}</dd>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>Remembers the selection in origDocPath that was present when showDialog() was called. Focusing on an<br />item can change the selection; we restore this original selection if the user presses Escape. Null if<br />no document was open when Quick Open was invoked.</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._origSelection = null;</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>isOpen</h4>
+                                        <dl>
+                                            <dt>Type</dt>
+                                            <dd>boolean</dd>
+                                        </dl>
+                                        <p>True if the dialog is currently open. Note that this is set to false immediately<br />when the dialog starts closing; it doesn't wait for the ModalBar animation to finish.</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype.isOpen = false;</code></pre>
+                                    </div>
+                                </section>
+            
+                                <section class="methods ">
+                                    <h3>Methods<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_filterCallback</h4>
+                                        <em><p>Handles changes to the current query in the search field.</p></em>
+                                        <dl>
+                                            <dt>query</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The new query.</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Array</dd>
+                                            <dd>The filtered list of results.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._filterCallback = function (query) {
+        &#x2F;&#x2F; If previous filter calls ran slow, we may have accumulated several query change events in the meantime.
+        &#x2F;&#x2F; Only respond to the one that&#39;s current. Note that this only works because we&#39;re called on a timeout after
+        &#x2F;&#x2F; the key event; checking DURING the key event itself would never yield a future value for the input field.
+        if (queryIsStale(query)) {
+            return getLastFilterResult();
+        }
+        
+        &#x2F;&#x2F; Reflect current search mode in UI
+        this._updateDialogLabel(query);
+        
+        &#x2F;&#x2F; &quot;Go to line&quot; mode is special-cased
+        var gotoLine = extractLineNumber(query);
+        if (!isNaN(gotoLine)) {
+            var from = {line: gotoLine, ch: 0};
+            var to = {line: gotoLine, ch: 99999};
+            
+            EditorManager.getCurrentFullEditor().setSelection(from, to, true);
+        }
+        
+        &#x2F;&#x2F; Try to invoke a search plugin
+        var curDoc = DocumentManager.getCurrentDocument();
+        if (curDoc) {
+            var languageId = curDoc.getLanguage().getId();
+
+            var i;
+            for (i = 0; i &lt; plugins.length; i++) {
+                var plugin = plugins[i];
+                var languageIdMatch = plugin.languageIds.indexOf(languageId) !== -1 || plugin.languageIds.length === 0;
+                if (languageIdMatch &amp;&amp; plugin.match &amp;&amp; plugin.match(query)) {
+                    currentPlugin = plugin;
+                    
+                    &#x2F;&#x2F; Look up the StringMatcher for this plugin.
+                    var matcher = this._matchers[currentPlugin.name];
+                    if (!matcher) {
+                        matcher = new StringMatch.StringMatcher(plugin.matcherOptions);
+                        this._matchers[currentPlugin.name] = matcher;
+                    }
+                    return plugin.search(query, matcher);
+                }
+            }
+        }
+        
+        &#x2F;&#x2F; No matching plugin: use default file search mode
+        currentPlugin = null;
+        return searchFileList(query, this._filenameMatcher);
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_handleBlur</h4>
+                                        <em><p>Close the dialog when it loses focus.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._handleBlur = function (e) {
+        this.close();
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_handleDocumentMouseDown</h4>
+                                        <em><p>Close the dialog when the user clicks outside of it. Smart-autocomplete listens for this and automatically closes its popup,<br />but we want to close the whole search "dialog." (And we can't just piggyback on the popup closing event, since there are cases<br />where the popup closes that we want the dialog to remain open (e.g. deleting search term via backspace).</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._handleDocumentMouseDown = function (e) {
+        if (this.modalBar.getRoot().find(e.target).length === 0 &amp;&amp; $(&quot;.smart_autocomplete_container&quot;).find(e.target).length === 0) {
+            this.close();
+        } else {
+            &#x2F;&#x2F; Allow clicks in the search field to propagate. Clicks in the menu should be 
+            &#x2F;&#x2F; blocked to prevent focus from leaving the search field.
+            if ($(&quot;input#quickOpenSearch&quot;).get(0) !== e.target) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_handleItemFocus</h4>
+                                        <em><p>Opens the file specified by selected item if there is no current plug-in, otherwise defers handling<br />to the currentPlugin</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._handleItemFocus = function (e, selectedDOMItem) {
+        var selectedItem = domItemToSearchResult(selectedDOMItem);
+        
+        if (currentPlugin) {
+            currentPlugin.itemFocus(selectedItem);
+        }
+        &#x2F;&#x2F; TODO: Disable opening files on focus for now since this causes focus related bugs between 
+        &#x2F;&#x2F; the editor and the search field. 
+        &#x2F;&#x2F; Also, see related code in _handleItemFocus</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_handleItemSelect</h4>
+                                        <em><p>Navigates to the appropriate file and file location given the selected item <br />and closes the dialog.</p>
+
+<p>Note, if selectedItem is null quick search should inspect $searchField for text<br />that may have not matched anything in in the list, but may have information<br />for carrying out an action (e.g. go to line).</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._handleItemSelect = function (e, selectedDOMItem) {
+
+        &#x2F;&#x2F; This is a work-around to select first item when a selection event occurs
+        &#x2F;&#x2F; (usually from pressing the enter key) and no item is selected in the list.
+        &#x2F;&#x2F; This is a work-around since  Smart auto complete doesn&#39;t select the first item
+        if (!selectedDOMItem) {
+            selectedDOMItem = $(&quot;.smart_autocomplete_container &gt; li:first-child&quot;).get(0);
+        }
+        
+        var selectedItem = domItemToSearchResult(selectedDOMItem),
+            doClose = true,
+            self = this;
+
+        &#x2F;&#x2F; Delegate to current plugin
+        if (currentPlugin) {
+            currentPlugin.itemSelect(selectedItem);
+        } else {
+
+            &#x2F;&#x2F; extract line number, if any
+            var query = this.$searchField.val(),
+                gotoLine = extractLineNumber(query);
+
+            &#x2F;&#x2F; Navigate to file and line number
+            var fullPath = selectedItem &amp;&amp; selectedItem.fullPath;
+            if (fullPath) {
+                &#x2F;&#x2F; This case is tricky. We want to switch editors, so we need to deal with
+                &#x2F;&#x2F; resizing&#x2F;rescrolling the current editor first. But we don&#39;t actually want
+                &#x2F;&#x2F; to start the animation of the ModalBar until afterward (otherwise it glitches
+                &#x2F;&#x2F; because it gets starved of cycles during the creation of the new editor). 
+                &#x2F;&#x2F; So we call `prepareClose()` first, and finish the close later.
+                doClose = false;
+                this.modalBar.prepareClose();
+                CommandManager.execute(Commands.FILE_ADD_TO_WORKING_SET, {fullPath: fullPath})
+                    .done(function () {
+                        if (!isNaN(gotoLine)) {
+                            var editor = EditorManager.getCurrentFullEditor();
+                            editor.setCursorPos(gotoLine, 0, true);
+                        }
+                    })
+                    .always(function () {
+                        self.close();
+                    });
+            } else if (!isNaN(gotoLine)) {
+                EditorManager.getCurrentFullEditor().setCursorPos(gotoLine, 0, true);
+            }
+        }
+
+        if (doClose) {
+            this.close();
+            EditorManager.focusEditor();
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_handleKeyUp</h4>
+                                        <em><p>Called before Smart Autocomplete processes the key, but after the DOM textfield ($searchField) updates its value.<br />After this, Smart Autocomplete doesn't call _handleFilter() &amp; re-render the list until a setTimeout(0) later.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._handleKeyUp = function (e) {
+        &#x2F;&#x2F; Cancel the search on Esc key, and finish the search on Enter key
+        if (e.keyCode === KeyEvent.DOM_VK_RETURN || e.keyCode === KeyEvent.DOM_VK_ESCAPE) {
+            &#x2F;&#x2F; Smart Autocomplete also handles Enter; but it does so without a timeout, which causes #1855.
+            &#x2F;&#x2F; Since our listener was added first (see showDialog()), we can steal the Enter event and block
+            &#x2F;&#x2F; Smart Autocomplete from buggily acting on it.
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            
+            &#x2F;&#x2F; Process on a timeout since letter keys are handled that way and we don&#39;t want to get ahead
+            &#x2F;&#x2F; of processing letters that were typed before the Enter key. The ideal order of events is:
+            &#x2F;&#x2F;   letter keydown&#x2F;keyup, letter key processed async, enter keydown&#x2F;keyup, enter key processed async
+            &#x2F;&#x2F; However, we might get &#39;enter keyup&#39; before &#39;letter key processed async&#39;. The letter key&#39;s
+            &#x2F;&#x2F; timeout will always run before ours since it was registered first.
+            var self = this;
+            setTimeout(function () {
+                if (e.keyCode === KeyEvent.DOM_VK_ESCAPE) {
+                    &#x2F;&#x2F; Restore original selection &#x2F; scroll pos
+                    self.close(self._origScrollPos, self._origSelection);
+                } else if (e.keyCode === KeyEvent.DOM_VK_RETURN) {
+                    self._handleItemSelect(null, $(&quot;.smart_autocomplete_highlight&quot;).get(0));  &#x2F;&#x2F; calls close() too
+                }
+            }, 0);
+            
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_handleResultsReady</h4>
+                                        <em><p>Called synchronously after _handleFilter(), but before the cached "last result" is updated and before the DOM<br />list items are re-rendered. Both happen synchronously just after we return. Called even when results is empty.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._handleResultsReady = function (e, results) {
+        &#x2F;&#x2F; Give visual clue when there are no results (unless we&#39;re in &quot;Go To Line&quot; mode, where there
+        &#x2F;&#x2F; are never results, or we&#39;re in file search mode and waiting for the index to get rebuilt)
+        var hasNoResults = (results.length === 0 &amp;&amp; (fileList || currentPlugin) &amp;&amp; !this._isValidLineNumberQuery(this.$searchField.val()));
+        
+        ViewUtils.toggleClass(this.$searchField, &quot;no-results&quot;, hasNoResults);
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_handleShowResults</h4>
+                                        <em><p>Called synchronously after all other processing is done (_handleFilter(), updating cached "last result" and<br />re-rendering DOM list items). NOT called if the last filter action had 0 results.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._handleShowResults = function (e, results) {
+        &#x2F;&#x2F; Scroll to top result (unless some other item has been highlighted by user)
+        if ($(&quot;.smart_autocomplete_highlight&quot;).length === 0) {
+            this._handleItemFocus(null, $(&quot;.smart_autocomplete_container &gt; li:first-child&quot;).get(0));
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_isValidLineNumberQuery</h4>
+                                        <em><p>Checks if the given query string is a line number query that is either empty (the number hasn't been typed yet)<br />or is a valid line number within the visible range of the current full editor.</p></em>
+                                        <dl>
+                                            <dt>query</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The query to check.</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>true if the given query is a valid line number query.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._isValidLineNumberQuery = function (query) {
+        &#x2F;&#x2F; Empty query returns NaN from extractLineNumber, but we want to treat it as valid for UI purposes.
+        if (query === &quot;:&quot;) {
+            return true;
+        }
+        
+        var lineNum = extractLineNumber(query),
+            editor = EditorManager.getCurrentFullEditor();
+        
+        &#x2F;&#x2F; We could just use 0 and lineCount() here, but in future we might want this logic to work for inline editors as well.
+        return (!isNaN(lineNum) &amp;&amp; editor &amp;&amp; lineNum &gt;= editor.getFirstVisibleLine() &amp;&amp; lineNum &lt;= editor.getLastVisibleLine());
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_resultsFormatterCallback</h4>
+                                        <em><p>Formats the entry for the given item to be displayed in the dropdown.</p></em>
+                                        <dl>
+                                            <dt>item</dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>The item to be displayed.</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The HTML to be displayed.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._resultsFormatterCallback = function (item) {
+        var query = this.$searchField.val();
+        
+        var formatter;
+
+        if (currentPlugin) {
+            &#x2F;&#x2F; Plugins use their own formatter or the default formatter
+            formatter = currentPlugin.resultsFormatter || defaultResultsFormatter;
+        } else {
+            &#x2F;&#x2F; No plugin: default file search mode uses a special formatter
+            formatter = _filenameResultsFormatter;
+        }
+        return formatter(item, query);
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_updateDialogLabel</h4>
+                                        <em><p>Sets the dialog label based on the type of the given query.</p></em>
+                                        <dl>
+                                            <dt>query</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The user's current query.</dd>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype._updateDialogLabel = function (query) {
+        var prefix = (query.length &gt; 0 ? query.charAt(0) : &quot;&quot;);
+        
+        &#x2F;&#x2F; Update the dialog label based on the current prefix.
+        var dialogLabel = &quot;&quot;;
+        switch (prefix) {
+        case &quot;:&quot;:
+            dialogLabel = Strings.CMD_GOTO_LINE;
+            break;
+        case &quot;@&quot;:
+            dialogLabel = Strings.CMD_GOTO_DEFINITION;
+            break;
+        default:
+            dialogLabel = Strings.CMD_QUICK_OPEN;
+            break;
+        }
+        $(&quot;.find-dialog-label&quot;, this.dialog).text(dialogLabel);
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>close</h4>
+                                        <em><p>Closes the search dialog and notifies all quick open plugins that<br />searching is done.</p></em>
+                                        <dl>
+                                            <dt>scrollPos</dt>
+                                            <dd class="label label-info pull-left">{x: number, y: number}</dd>
+                                            <dd>If specified, scroll to the given position when closing the ModalBar.</dd>
+                                            <dt>selection</dt>
+                                            <dd class="label label-info pull-left">{start: {line: number,ch: number},end: {line: number,ch: number}</dd>
+                                            <dd>If specified, restore the given selection when closing the ModalBar.</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">$.Promise</dd>
+                                            <dd>Resolved when the search bar is entirely closed.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype.close = function (scrollPos, selection) {
+        if (!this.isOpen) {
+            return this._closeDeferred.promise();
+        }
+        this.isOpen = false;
+        
+        &#x2F;&#x2F; We can&#39;t just return the ModalBar&#39;s `close()` promise because we need to do it on a
+        &#x2F;&#x2F; setTimeout, so we create our own Deferred and cache it so we can return it if multiple
+        &#x2F;&#x2F; callers happen to call `close()`.
+        this._closeDeferred = new $.Deferred();
+
+        var i;
+        for (i = 0; i &lt; plugins.length; i++) {
+            var plugin = plugins[i];
+            plugin.done();
+        }
+
+        &#x2F;&#x2F; Make sure Smart Autocomplete knows its popup is getting closed (in cases where there&#39;s no
+        &#x2F;&#x2F; editor to give focus to below, it won&#39;t notice otherwise).
+        this.$searchField.trigger(&quot;lostFocus&quot;);
+        
+        &#x2F;&#x2F; Closing the dialog is a little tricky (see #1384): some Smart Autocomplete code may run later (e.g.
+        &#x2F;&#x2F; (because it&#39;s a later handler of the event that just triggered close()), and that code expects to
+        &#x2F;&#x2F; find metadata that it stuffed onto the DOM node earlier. But $.remove() strips that metadata.
+        &#x2F;&#x2F; So we wait until after this call chain is complete before actually closing the dialog.
+        var self = this;
+        setTimeout(function () {
+            self.modalBar.close(!scrollPos).done(function () {
+                self._closeDeferred.resolve();
+            });
+
+            &#x2F;&#x2F; Note that we deliberately reset the scroll position synchronously on return from
+            &#x2F;&#x2F; `ModalBar.close()` (before the animation completes).
+            &#x2F;&#x2F; See description of `restoreScrollPos` in `ModalBar.close()`.
+            var editor = EditorManager.getCurrentFullEditor();
+            if (selection) {
+                editor.setSelection(selection.start, selection.end);
+            }
+            if (scrollPos) {
+                editor.setScrollPos(scrollPos.x, scrollPos.y);
+            }
+        }, 0);
+        
+        $(&quot;.smart_autocomplete_container&quot;).remove();
+
+        $(window.document).off(&quot;mousedown&quot;, this._handleDocumentMouseDown);
+        
+        return this._closeDeferred.promise();
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>setSearchFieldValue</h4>
+                                        <em><p>Sets the value in the search field, updating the current mode and label based on the<br />given prefix.</p></em>
+                                        <dl>
+                                            <dt>prefix</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The prefix that determines which mode we're in: must be empty (for file search), "@" for go to definition, or ":" for go to line.</dd>
+                                            <dt>initialString</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The query string to search for (without the prefix).</dd>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype.setSearchFieldValue = function (prefix, initialString) {
+        prefix = prefix || &quot;&quot;;
+        initialString = initialString || &quot;&quot;;
+        initialString = prefix + initialString;
+        
+        var $field = this.$searchField;
+        $field.val(initialString);
+        $field.get(0).setSelectionRange(prefix.length, initialString.length);
+        
+        &#x2F;&#x2F; Kick smart-autocomplete to update (it only listens for keyboard events)
+        &#x2F;&#x2F; (due to #1855, this will only pop up results list; it won&#39;t auto-&quot;focus&quot; the first result)
+        $field.trigger(&quot;keyIn&quot;, [initialString]);
+        
+        this._updateDialogLabel(initialString);
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>showDialog</h4>
+                                        <em><p>Shows the search dialog and initializes the auto suggestion list with filenames from the current project</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>QuickNavigateDialog.prototype.showDialog = function (prefix, initialString) {
+        if (this.isOpen) {
+            return;
+        }
+        this.isOpen = true;
+
+        &#x2F;&#x2F; Global listener to hide search bar &amp; popup
+        $(window.document).on(&quot;mousedown&quot;, this._handleDocumentMouseDown);
+
+        &#x2F;&#x2F; Record current document &amp; cursor pos so we can restore it if search is canceled
+        &#x2F;&#x2F; We record scroll pos *before* modal bar is opened since we&#39;re going to restore it *after* it&#39;s closed
+        var curDoc = DocumentManager.getCurrentDocument();
+        this._origDocPath = curDoc ? curDoc.file.fullPath : null;
+        if (curDoc) {
+            this._origSelection = EditorManager.getCurrentFullEditor().getSelection();
+            this._origScrollPos = EditorManager.getCurrentFullEditor().getScrollPos();
+        } else {
+            this._origSelection = null;
+            this._origScrollPos = null;
+        }
+
+        &#x2F;&#x2F; Show the search bar (&quot;dialog&quot;)
+        var dialogHTML = &quot;&lt;div align=&#39;right&#39;&gt;&lt;span class=&#39;find-dialog-label&#39;&gt;&lt;&#x2F;span&gt;: &lt;input type=&#39;text&#39; autocomplete=&#39;off&#39; id=&#39;quickOpenSearch&#39; style=&#39;width: 30em&#39;&gt;&lt;&#x2F;div&gt;&quot;;
+        this.modalBar = new ModalBar(dialogHTML, false);
+        this.$searchField = $(&quot;input#quickOpenSearch&quot;);
+
+        &#x2F;&#x2F; The various listeners registered below fire in this order:
+        &#x2F;&#x2F;   keydown, (async gap), keyup, (async gap), filter, resultsReady, showResults&#x2F;noResults
+        &#x2F;&#x2F; The later events *always* come after the keydown &amp; keyup (they&#39;re triggered on a timeout from keyup). But
+        &#x2F;&#x2F; because of the async gaps, a keydown for the *next* key typed might come *before* they run:
+        &#x2F;&#x2F;   keydown, (async gap), keyup, (async gap), keydown #2, (async gap), filter, resultsReady, showResults&#x2F;noResults
+        &#x2F;&#x2F; The staleness check in _filterCallback() and the forced async wait in _handleKeyUp() are due to this.
+        
+        this.$searchField.bind({
+            resultsReady: this._handleResultsReady,
+            showResults: this._handleShowResults,
+            itemSelect: this._handleItemSelect,
+            itemFocus: this._handleItemFocus,
+            keyup: this._handleKeyUp,   &#x2F;&#x2F; it&#39;s important we register this BEFORE calling smartAutoComplete(); see handler for details
+            blur: this._handleBlur   &#x2F;&#x2F; can&#39;t use lostFocus since smart autocomplete fires it immediately in response to the shortcut&#39;s keyup
+        });
+        
+        this.$searchField.smartAutoComplete({
+            source: [],
+            maxResults: 20,
+            minCharLimit: 0,
+            autocompleteFocused: true,
+            forceSelect: false,
+            typeAhead: false,   &#x2F;&#x2F; won&#39;t work right now because smart auto complete 
+                                &#x2F;&#x2F; using internal raw results instead of filtered results for matching
+            filter: this._filterCallback,
+            resultFormatter: this._resultsFormatterCallback
+        });
+
+        this.setSearchFieldValue(prefix, initialString);
+        
+        &#x2F;&#x2F; Start fetching the file list, which will be needed the first time the user enters an un-prefixed query. If FileIndexManager&#39;s
+        &#x2F;&#x2F; caches are out of date, this list might take some time to asynchronously build. See searchFileList() for how this is handled.
+        fileListPromise = FileIndexManager.getFileInfoList(&quot;all&quot;)
+            .done(function (files) {
+                fileList = files;
+                fileListPromise = null;
+                this._filenameMatcher.reset();
+            }.bind(this));
+    };
+
+    function getCurrentEditorSelectedText() {
+        var currentEditor = EditorManager.getActiveEditor();
+        return (currentEditor &amp;&amp; currentEditor.getSelectedText()) || &quot;&quot;;
+    }</code></pre>
+                                    </div>
+                                </section>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

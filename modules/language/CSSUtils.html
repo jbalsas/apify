@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>CSSUtils</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>Set of utilities for simple parsing of CSS text.</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+                            <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+                            <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+                            <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="hide">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_addSelectorsToResults</h4>
+                            <em><p>Converts the results of _findAllMatchingSelectorsInText() into a simpler bag of data and<br />appends those new objects to the given 'resultSelectors' Array.</p></em>
+                            <dl>
+                                    <dt>resultSelectors</dt>
+                                    <dd class="label label-info pull-left">Array.&lt;{document:Document,lineStart:number,lineEnd:number}&gt;</dd>
+                                    <dd></dd>
+                                    <dt>selectorsToAdd</dt>
+                                    <dd class="label label-info pull-left">Array.&lt;{selectorGroupStartLine:number,declListEndLine:number,selector:string}&gt;</dd>
+                                    <dd></dd>
+                                    <dt>sourceDoc</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                                    <dt>lineOffset</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>Amount to offset all line number info by. Used if the first line of the parsed CSS text is not the first line of the sourceDoc.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _addSelectorsToResults(resultSelectors, selectorsToAdd, sourceDoc, lineOffset) {
+        selectorsToAdd.forEach(function (selectorInfo) {
+            resultSelectors.push({
+                name: selectorInfo.selector,
+                document: sourceDoc,
+                lineStart: selectorInfo.ruleStartLine + lineOffset,
+                lineEnd: selectorInfo.declListEndLine + lineOffset,
+                selectorGroup: selectorInfo.selectorGroup
+            });
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_findAllMatchingSelectorsInText</h4>
+                            <em><p>Finds all instances of the specified selector in "text".<br />Returns an Array of Objects with start and end properties.</p>
+
+<p>For Sprint 4, we only support simple selectors. This function will need to change<br />dramatically to support full selectors.</p>
+
+<p>FUTURE: (JRB) It would be nice to eventually use the browser/jquery to do the selector evaluation.<br />One way to do this would be to take the user's HTML, add a special attribute to every tag with a UID,<br />and then construct a DOM (using the commented out code above). Then, give this DOM and the selector to <br />jquery and ask what matches. If the node that the user's cursor is in comes back from jquery, then <br />we know the selector applies.</p></em>
+                            <dl>
+                                    <dt>{!string}</dt>
+                                    <dd class="label label-info pull-left">text</dd>
+                                    <dd>CSS text to search</dd>
+                                    <dt>{!string}</dt>
+                                    <dd class="label label-info pull-left">selector</dd>
+                                    <dd>selector to search for</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _findAllMatchingSelectorsInText(text, selector) {
+        var allSelectors = extractAllSelectors(text);
+        var result = [];
+        var i;
+        
+        &#x2F;&#x2F; For sprint 4 we only match the rightmost simple selector, and ignore 
+        &#x2F;&#x2F; attribute selectors and pseudo selectors
+        var classOrIdSelector = selector[0] === &quot;.&quot; || selector[0] === &quot;#&quot;;
+        var prefix = &quot;&quot;;
+        
+        &#x2F;&#x2F; Escape initial &quot;.&quot; in selector, if present.
+        if (selector[0] === &quot;.&quot;) {
+            selector = &quot;\\&quot; + selector;
+        }
+        
+        if (!classOrIdSelector) {
+            &#x2F;&#x2F; Tag selectors must have nothing, whitespace, or a combinator before it.
+            selector = &quot;(^|[\\s&gt;+~])&quot; + selector;
+        }
+        
+        var re = new RegExp(selector + &quot;(\\[[^\\]]*\\]|:{1,2}[\\w-()]+|\\.[\\w-]+|#[\\w-]+)*\\s*$&quot;, classOrIdSelector ? &quot;&quot; : &quot;i&quot;);
+        allSelectors.forEach(function (entry) {
+            if (entry.selector.search(re) !== -1) {
+                result.push(entry);
+            } else if (!classOrIdSelector) {
+                &#x2F;&#x2F; Special case for tag selectors - match &quot;*&quot; as the rightmost character
+                if (entry.selector.trim().search(&#x2F;\*$&#x2F;) !== -1) {
+                    result.push(entry);
+                }
+            }
+        });
+        
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_findMatchingRulesInCSSFiles</h4>
+                            <em><p>Finds matching selectors in CSS files; adds them to 'resultSelectors'</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _findMatchingRulesInCSSFiles(selector, resultSelectors) {
+        var result          = new $.Deferred(),
+            cssFilesResult  = FileIndexManager.getFileInfoList(&quot;css&quot;);
+        
+        &#x2F;&#x2F; Load one CSS file and search its contents
+        function _loadFileAndScan(fullPath, selector) {
+            var oneFileResult = new $.Deferred();
+            
+            DocumentManager.getDocumentForPath(fullPath)
+                .done(function (doc) {
+                    &#x2F;&#x2F; Find all matching rules for the given CSS file&#39;s content, and add them to the
+                    &#x2F;&#x2F; overall search result
+                    var oneCSSFileMatches = _findAllMatchingSelectorsInText(doc.getText(), selector);
+                    _addSelectorsToResults(resultSelectors, oneCSSFileMatches, doc, 0);
+                    
+                    oneFileResult.resolve();
+                })
+                .fail(function (error) {
+                    oneFileResult.reject(error);
+                });
+        
+            return oneFileResult.promise();
+        }
+        
+        &#x2F;&#x2F; Load index of all CSS files; then process each CSS file in turn (see above)
+        cssFilesResult.done(function (fileInfos) {
+            Async.doInParallel(fileInfos, function (fileInfo, number) {
+                return _loadFileAndScan(fileInfo.fullPath, selector);
+            })
+                .then(result.resolve, result.reject);
+        });
+        
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_findMatchingRulesInStyleBlocks</h4>
+                            <em><p>Finds matching selectors in the <style> block of a single HTML file; adds them to 'resultSelectors'</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _findMatchingRulesInStyleBlocks(htmlDocument, selector, resultSelectors) {
+        &#x2F;&#x2F; HTMLUtils requires a real CodeMirror instance; make sure we can give it the right Editor
+        var htmlEditor = EditorManager.getCurrentFullEditor();
+        if (htmlEditor.document !== htmlDocument) {
+            console.error(&quot;Cannot search for &lt;style&gt; blocks in HTML file other than current editor&quot;);
+            return;
+        }
+        
+        &#x2F;&#x2F; Find all &lt;style&gt; blocks in the HTML file
+        var styleBlocks = HTMLUtils.findStyleBlocks(htmlEditor);
+        
+        styleBlocks.forEach(function (styleBlockInfo) {
+            &#x2F;&#x2F; Search this one &lt;style&gt; block&#39;s content, appending results to &#39;resultSelectors&#39;
+            var oneStyleBlockMatches = _findAllMatchingSelectorsInText(styleBlockInfo.text, selector);
+            _addSelectorsToResults(resultSelectors, oneStyleBlockMatches, htmlDocument, styleBlockInfo.start.line);
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getImportUrlInfo</h4>
+                            <em><p>Returns a context info object for the current CSS import rule</p></em>
+                            <dl>
+                                    <dt>context</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd></dd>
+                                    <dt>editor</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Editor</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getImportUrlInfo(ctx, editor) {
+        var propNamePos = $.extend({}, ctx.pos),
+            backwardPos = $.extend({}, ctx.pos),
+            forwardPos  = $.extend({}, ctx.pos),
+            backwardCtx,
+            forwardCtx,
+            index = 0,
+            propValues = [],
+            offset = TokenUtils.offsetInToken(ctx),
+            testPos = {ch: ctx.pos.ch + 1, line: ctx.pos.line},
+            testToken = editor._codeMirror.getTokenAt(testPos, true);
+
+        &#x2F;&#x2F; Currently only support url. May be null if starting to type
+        if (ctx.token.className &amp;&amp; ctx.token.className !== &quot;string&quot;) {
+            return createInfo();
+        }
+
+        &#x2F;&#x2F; Move backward to @import and collect data as we go. We return propValues
+        &#x2F;&#x2F; array, but we can only have 1 value, so put all data in first item
+        backwardCtx = TokenUtils.getInitialContext(editor._codeMirror, backwardPos);
+        propValues[0] = backwardCtx.token.string;
+
+        while (TokenUtils.movePrevToken(backwardCtx)) {
+            if (backwardCtx.token.className === &quot;def&quot; &amp;&amp; backwardCtx.token.string === &quot;@import&quot;) {
+                break;
+            }
+            
+            if (backwardCtx.token.className &amp;&amp; backwardCtx.token.className !== &quot;tag&quot; &amp;&amp; backwardCtx.token.string !== &quot;url&quot;) {
+                &#x2F;&#x2F; Previous token may be white-space
+                &#x2F;&#x2F; Otherwise, previous token may only be &quot;url(&quot;
+                break;
+            }
+            
+            propValues[0] = backwardCtx.token.string + propValues[0];
+            offset += backwardCtx.token.string.length;
+        }
+        
+        if (backwardCtx.token.className !== &quot;def&quot; || backwardCtx.token.string !== &quot;@import&quot;) {
+            &#x2F;&#x2F; Not in url
+            return createInfo();
+        }
+
+        &#x2F;&#x2F; Get value after cursor up until closing paren or newline
+        forwardCtx = TokenUtils.getInitialContext(editor._codeMirror, forwardPos);
+        do {
+            if (!TokenUtils.moveNextToken(forwardCtx)) {
+                if (forwardCtx.token.string === &quot;(&quot;) {
+                    break;
+                } else {
+                    return createInfo();
+                }
+            }
+            propValues[0] += forwardCtx.token.string;
+        } while (forwardCtx.token.string !== &quot;)&quot; &amp;&amp; forwardCtx.token.string !== &quot;&quot;);
+        
+        return createInfo(IMPORT_URL, offset, &quot;&quot;, index, propValues, false);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getPrecedingPropValues</h4>
+                            <em><p>Gets all of the space/comma seperated tokens before the the current cursor position.</p></em>
+                            <dl>
+                                    <dt>context</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getPrecedingPropValues(ctx) {
+        var lastValue = &quot;&quot;,
+            curValue,
+            propValues = [];
+        while (ctx.token.string !== &quot;:&quot; &amp;&amp; TokenUtils.movePrevToken(ctx)) {
+            if (ctx.token.type === &quot;property&quot; || ctx.token.type === &quot;property error&quot; || ctx.token.type === &quot;tag&quot; ||
+                    ctx.token.string === &quot;:&quot; || ctx.token.string === &quot;{&quot; ||
+                    ctx.token.string === &quot;;&quot;) {
+                break;
+            }
+
+            curValue = ctx.token.string;
+            if (lastValue !== &quot;&quot;) {
+                curValue += lastValue;
+            }
+
+            if ((ctx.token.string.length &gt; 0 &amp;&amp; !ctx.token.string.match(&#x2F;\S&#x2F;)) ||
+                    ctx.token.string === &quot;,&quot;) {
+                lastValue = curValue;
+            } else {
+                lastValue = &quot;&quot;;
+                if (propValues.length === 0 || curValue.match(&#x2F;,\s*$&#x2F;)) {
+                    &#x2F;&#x2F; stack is empty, or current value ends with a comma
+                    &#x2F;&#x2F; (and optional whitespace), so push it on the stack
+                    propValues.push(curValue);
+                } else {
+                    &#x2F;&#x2F; current value does not end with a comma (and optional ws) so prepend
+                    &#x2F;&#x2F; to last stack item (e.g. &quot;rgba(50&quot; get broken into 2 tokens)
+                    propValues[propValues.length - 1] = curValue + propValues[propValues.length - 1];
+                }
+            }
+        }
+        if (propValues.length &gt; 0) {
+            propValues.reverse();
+        }
+        
+        return propValues;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getPropNameStartingFromPropValue</h4>
+                            <em><p>Scans backwards from the current context and returns the name of the property if there is <br />a valid one. </p></em>
+                            <dl>
+                                    <dt>context</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getPropNameStartingFromPropValue(ctx) {
+        var ctxClone = $.extend({}, ctx);
+        do {
+            &#x2F;&#x2F; If we get a property name or &quot;{&quot; or &quot;;&quot; before getting a colon, then we don&#39;t 
+            &#x2F;&#x2F; have a valid property name. Just return an empty string.
+            if (ctxClone.token.type === &quot;property&quot; || ctxClone.token.type === &quot;property error&quot; ||
+                    ctxClone.token.string === &quot;{&quot; || ctxClone.token.string === &quot;;&quot;) {
+                return &quot;&quot;;
+            }
+        } while (ctxClone.token.string !== &quot;:&quot; &amp;&amp; TokenUtils.moveSkippingWhitespace(TokenUtils.movePrevToken, ctxClone));
+        
+        if (ctxClone.token.string === &quot;:&quot; &amp;&amp; TokenUtils.moveSkippingWhitespace(TokenUtils.movePrevToken, ctxClone) &amp;&amp;
+                (ctxClone.token.type === &quot;property&quot; || ctxClone.token.type === &quot;property error&quot;)) {
+            return ctxClone.token.string;
+        }
+        
+        return &quot;&quot;;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getRuleInfoStartingFromPropValue</h4>
+                            <em><p>Returns a context info object for the current CSS style rule</p></em>
+                            <dl>
+                                    <dt>context</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd></dd>
+                                    <dt>editor</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Editor</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getRuleInfoStartingFromPropValue(ctx, editor) {
+        var propNamePos = $.extend({}, ctx.pos),
+            backwardPos = $.extend({}, ctx.pos),
+            forwardPos  = $.extend({}, ctx.pos),
+            propNameCtx = TokenUtils.getInitialContext(editor._codeMirror, propNamePos),
+            backwardCtx,
+            forwardCtx,
+            lastValue = &quot;&quot;,
+            propValues = [],
+            index = -1,
+            offset = TokenUtils.offsetInToken(ctx),
+            canAddNewOne = false,
+            testPos = {ch: ctx.pos.ch + 1, line: ctx.pos.line},
+            testToken = editor._codeMirror.getTokenAt(testPos, true),
+            propName;
+        
+        &#x2F;&#x2F; Get property name first. If we don&#39;t have a valid property name, then 
+        &#x2F;&#x2F; return a default rule info.
+        propName = _getPropNameStartingFromPropValue(propNameCtx);
+        if (!propName) {
+            return createInfo();
+        }
+        
+        &#x2F;&#x2F; Scan backward to collect all preceding property values
+        backwardCtx = TokenUtils.getInitialContext(editor._codeMirror, backwardPos);
+        propValues = _getPrecedingPropValues(backwardCtx);
+
+        lastValue = &quot;&quot;;
+        if (ctx.token.string === &quot;:&quot;) {
+            index = 0;
+            canAddNewOne = true;
+        } else {
+            index = propValues.length - 1;
+            if (ctx.token.string === &quot;,&quot;) {
+                propValues[index] += ctx.token.string;
+                index++;
+                canAddNewOne = true;
+            } else {
+                index = (index &lt; 0) ? 0 : index + 1;
+                if (ctx.token.string.match(&#x2F;\S&#x2F;)) {
+                    lastValue = ctx.token.string;
+                } else {
+                    &#x2F;&#x2F; Last token is all whitespace
+                    canAddNewOne = true;
+                    if (index &gt; 0) {
+                        &#x2F;&#x2F; Append all spaces before the cursor to the previous value in values array
+                        propValues[index - 1] += ctx.token.string.substr(0, offset);
+                    }
+                }
+            }
+        }
+        
+        if (canAddNewOne) {
+            offset = 0;
+
+            &#x2F;&#x2F; If pos is at EOL, then there&#39;s implied whitespace (newline).
+            if (editor.document.getLine(ctx.pos.line).length &gt; ctx.pos.ch  &amp;&amp;
+                    (testToken.string.length === 0 || testToken.string.match(&#x2F;\S&#x2F;))) {
+                canAddNewOne = false;
+            }
+        }
+        
+        &#x2F;&#x2F; Scan forward to collect all succeeding property values and append to all propValues.
+        forwardCtx = TokenUtils.getInitialContext(editor._codeMirror, forwardPos);
+        propValues = propValues.concat(_getSucceedingPropValues(forwardCtx, lastValue));
+        
+        &#x2F;&#x2F; If current index is more than the propValues size, then the cursor is 
+        &#x2F;&#x2F; at the end of the existing property values and is ready for adding another one.
+        if (index === propValues.length) {
+            canAddNewOne = true;
+        }
+        
+        return createInfo(PROP_VALUE, offset, propName, index, propValues, canAddNewOne);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getSucceedingPropValues</h4>
+                            <em><p>Gets all of the space/comma seperated tokens after the the current cursor position.</p></em>
+                            <dl>
+                                    <dt>context</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd></dd>
+                                    <dt>currentValue</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The token string at the current cursor position</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getSucceedingPropValues(ctx, currentValue) {
+        var lastValue = currentValue,
+            curValue,
+            propValues = [];
+        
+        while (ctx.token.string !== &quot;;&quot; &amp;&amp; TokenUtils.moveNextToken(ctx)) {
+            if (ctx.token.string === &quot;;&quot; || ctx.token.string === &quot;}&quot;) {
+                break;
+            }
+            &#x2F;&#x2F; If we&#39;re already in the next rule, then we don&#39;t want to add the last value
+            &#x2F;&#x2F; since it is the property name of the next rule.
+            if (ctx.token.type === &quot;property&quot; || ctx.token.type === &quot;property error&quot; || ctx.token.type === &quot;tag&quot; ||
+                    ctx.token.string === &quot;:&quot;) {
+                lastValue = &quot;&quot;;
+                break;
+            }
+            
+            if (lastValue === &quot;&quot;) {
+                lastValue = ctx.token.string.trim();
+            } else if (lastValue.length &gt; 0) {
+                if (ctx.token.string.length &gt; 0 &amp;&amp; !ctx.token.string.match(&#x2F;\S&#x2F;)) {
+                    lastValue += ctx.token.string;
+                    propValues.push(lastValue);
+                    lastValue = &quot;&quot;;
+                } else if (ctx.token.string === &quot;,&quot;) {
+                    lastValue += ctx.token.string;
+                } else if (lastValue &amp;&amp; lastValue.match(&#x2F;,$&#x2F;)) {
+                    propValues.push(lastValue);
+                    lastValue = &quot;&quot;;
+                } else {
+                    &#x2F;&#x2F; e.g. &quot;rgba(50&quot; gets broken into 2 tokens
+                    lastValue += ctx.token.string;
+                }
+            }
+        }
+        if (lastValue.length &gt; 0) {
+            propValues.push(lastValue);
+        }
+
+        return propValues;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_isInImportRule</h4>
+                            <em><p>Checks if the current cursor position is inside an @import rule</p></em>
+                            <dl>
+                                    <dt>context</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _isInImportRule(ctx) {
+        var state;
+        if (!ctx || !ctx.token || !ctx.token.state) {
+            return false;
+        }
+
+        state = ctx.token.state.localState || ctx.token.state;
+        
+        if (!state.stack || state.stack.length &lt; 1) {
+            return false;
+        }
+        return (state.stack[0] === &quot;@import&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_isInPropName</h4>
+                            <em><p>Checks if the current cursor position is inside the property name context</p></em>
+                            <dl>
+                                    <dt>context</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _isInPropName(ctx) {
+        var state,
+            lastToken;
+        if (!ctx || !ctx.token || !ctx.token.state || ctx.token.type === &quot;comment&quot;) {
+            return false;
+        }
+
+        state = ctx.token.state.localState || ctx.token.state;
+        
+        if (!state.stack || state.stack.length &lt; 1) {
+            return false;
+        }
+        
+        lastToken = state.stack[state.stack.length - 1];
+        return (lastToken === &quot;{&quot; || lastToken === &quot;rule&quot; || lastToken === &quot;block&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_isInPropValue</h4>
+                            <em><p>Checks if the current cursor position is inside the property value context</p></em>
+                            <dl>
+                                    <dt>context</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _isInPropValue(ctx) {
+        var state;
+        if (!ctx || !ctx.token || !ctx.token.state || ctx.token.type === &quot;comment&quot; ||
+                ctx.token.type === &quot;property&quot; || ctx.token.type === &quot;property error&quot; || ctx.token.type === &quot;tag&quot;) {
+            return false;
+        }
+
+        state = ctx.token.state.localState || ctx.token.state;
+        
+        if (!state.stack || state.stack.length &lt; 2) {
+            return false;
+        }
+        return ((state.stack[state.stack.length - 1] === &quot;propertyValue&quot; &amp;&amp;
+                    (state.stack[state.stack.length - 2] === &quot;rule&quot; || state.stack[state.stack.length - 2] === &quot;block&quot;)) ||
+                    (state.stack[state.stack.length - 1] === &quot;(&quot; &amp;&amp; (state.stack[state.stack.length - 2] === &quot;propertyValue&quot;)));
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_removeComments</h4>
+                            <em><p>removes CSS comments from the content </p></em>
+                            <dl>
+                                    <dt>content</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>to reduce</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _removeComments(content) {
+        return content.replace(&#x2F;\&#x2F;\*(?:(?!\*\&#x2F;)[\s\S])*\*\&#x2F;&#x2F;g, &quot;&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_removeStrings</h4>
+                            <em><p>removes strings from the content </p></em>
+                            <dl>
+                                    <dt>content</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>to reduce</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _removeStrings(content) {
+        return content.replace(&#x2F;[^\\]\&quot;(.*)[^\\]\&quot;|[^\\]\&#39;(.*)[^\\]\&#39;+&#x2F;g, &quot;&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>addRuleToDocument</h4>
+                            <em><p>Adds a new rule to the end of the given document, and returns the range of the added rule<br />and the position of the cursor on the indented blank line within it. Note that the range will<br />not include all the inserted text (we insert extra newlines before and after the rule).</p></em>
+                            <dl>
+                                    <dt>doc</dt>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd>The document to insert the rule into.</dd>
+                                    <dt>selector</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The selector to use for the given rule.</dd>
+                                    <dt>useTabChar</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>Whether to indent with a tab.</dd>
+                                    <dt>indentUnit</dt>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>If useTabChar is false, how many spaces to indent with.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function addRuleToDocument(doc, selector, useTabChar, indentUnit) {
+        var newRule = &quot;\n&quot; + selector + &quot; {\n&quot;,
+            blankLineOffset;
+        if (useTabChar) {
+            newRule += &quot;\t&quot;;
+            blankLineOffset = 1;
+        } else {
+            var i;
+            for (i = 0; i &lt; indentUnit; i++) {
+                newRule += &quot; &quot;;
+            }
+            blankLineOffset = indentUnit;
+        }
+        newRule += &quot;\n}\n&quot;;
+        
+        var docLines = doc.getText().split(&quot;\n&quot;),
+            lastDocLine = docLines.length - 1,
+            lastDocChar = docLines[docLines.length - 1].length;
+        doc.replaceRange(newRule, {line: lastDocLine, ch: lastDocChar});
+        return {
+            range: {
+                from: {line: lastDocLine + 1, ch: 0},
+                to: {line: lastDocLine + 3, ch: 1}
+            },
+            pos: {line: lastDocLine + 2, ch: blankLineOffset}
+        };
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>consolidateRules</h4>
+                            <em><p>In the given rule array (as returned by <code>findMatchingRules()</code>), if multiple rules in a row <br />refer to the same rule (because there were multiple matching selectors), eliminate the redundant <br />rules. Also, always use the selector group if available instead of the original matching selector.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function consolidateRules(rules) {
+        var newRules = [], lastRule;
+        rules.forEach(function (rule) {
+            if (rule.selectorGroup) {
+                rule.name = rule.selectorGroup;
+            }
+            &#x2F;&#x2F; Push the entry unless it refers to the same rule as the previous entry.
+            if (!(lastRule &amp;&amp;
+                     rule.document === lastRule.document &amp;&amp;
+                     rule.lineStart === lastRule.lineStart &amp;&amp;
+                     rule.lineEnd === lastRule.lineEnd &amp;&amp;
+                     rule.selectorGroup === lastRule.selectorGroup)) {
+                newRules.push(rule);
+            }
+            lastRule = rule;
+        });
+        return newRules;
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>createInfo</h4>
+                            <em><p>Creates a context info object</p></em>
+                            <dl>
+                                    <dt>context</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>A constant string </dd>
+                                    <dt>offset</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>The offset of the token for a given cursor position</dd>
+                                    <dt>name</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Property name of the context </dd>
+                                    <dt>index</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>The index of the property value for a given cursor position</dd>
+                                    <dt>values</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
+                                    <dd>An array of property values </dd>
+                                    <dt>isNewItem</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>If this is true, then the value in index refers to the index at which a new item is going to be inserted and should not be used for accessing an existing value in values array. </dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function createInfo(context, offset, name, index, values, isNewItem) {
+        var ruleInfo = { context: context || &quot;&quot;,
+                         offset: offset || 0,
+                         name: name || &quot;&quot;,
+                         index: -1,
+                         values: [],
+                         isNewItem: (isNewItem) ? true : false };
+        
+        if (context === PROP_VALUE || context === SELECTOR || context === IMPORT_URL) {
+            ruleInfo.index = index;
+            ruleInfo.values = values;
+        }
+        
+        return ruleInfo;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>extractAllNamedFlows</h4>
+                            <em><p>Extracts all named flow instances</p></em>
+                            <dl>
+                                    <dt>text</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>to extract from</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function extractAllNamedFlows(text) {
+        var namedFlowRegEx = &#x2F;(?:flow\-(into|from)\:\s*)([\w\-]+)(?:\s*;)&#x2F;gi,
+            result = [],
+            names = {},
+            thisMatch;
+        
+        &#x2F;&#x2F; Reduce the content so that matches 
+        &#x2F;&#x2F; inside strings and comments are ignored 
+        text = reduceStyleSheetForRegExParsing(text);
+
+        &#x2F;&#x2F; Find the first match
+        thisMatch = namedFlowRegEx.exec(text);
+        
+        &#x2F;&#x2F; Iterate over the matches and add them to result
+        while (thisMatch) {
+            var thisName = thisMatch[2];
+            
+            if (IGNORED_FLOW_NAMES.indexOf(thisName) === -1 &amp;&amp; !names.hasOwnProperty(thisName)) {
+                names[thisName] = result.push(thisName);
+            }
+            thisMatch = namedFlowRegEx.exec(text);
+        }
+        
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>extractAllSelectors</h4>
+                            <em><p>Extracts all CSS selectors from the given text<br />Returns an array of selectors. Each selector is an object with the following properties:<br />         selector:                 the text of the selector (note: comma separated selector groups like <br />                                   "h1, h2" are broken into separate selectors)<br />         ruleStartLine:            line in the text where the rule (including preceding comment) appears<br />         ruleStartChar:            column in the line where the rule (including preceding comment) starts<br />         selectorStartLine:        line in the text where the selector appears<br />         selectorStartChar:        column in the line where the selector starts<br />         selectorEndLine:          line where the selector ends<br />         selectorEndChar:          column where the selector ends<br />         selectorGroupStartLine:   line where the comma-separated selector group (e.g. .foo, .bar, .baz)<br />                                   starts that this selector (e.g. .baz) is part of. Particularly relevant for<br />                                   groups that are on multiple lines.<br />         selectorGroupStartChar:   column in line where the selector group starts.<br />         selectorGroup:            the entire selector group containing this selector, or undefined if there <br />                                   is only one selector in the rule.<br />         declListStartLine:        line where the declaration list for the rule starts<br />         declListStartChar:        column in line where the declaration list for the rule starts<br />         declListEndLine:          line where the declaration list for the rule ends<br />         declListEndChar:          column in the line where the declaration list for the rule ends</p></em>
+                            <dl>
+                                    <dt>{!string}</dt>
+                                    <dd class="label label-info pull-left">text</dd>
+                                    <dd>CSS text to extract from</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function extractAllSelectors(text) {
+        var selectors = [];
+        var mode = CodeMirror.getMode({indentUnit: 2}, &quot;css&quot;);
+        var state, lines, lineCount;
+        var token, style, stream, line;
+        var currentSelector = &quot;&quot;;
+        var ruleStartChar = -1, ruleStartLine = -1;
+        var selectorStartChar = -1, selectorStartLine = -1;
+        var selectorGroupStartLine = -1, selectorGroupStartChar = -1;
+        var declListStartLine = -1, declListStartChar = -1;
+        var escapePattern = new RegExp(&quot;\\\\[^\\\\]+&quot;, &quot;g&quot;);
+        var validationPattern = new RegExp(&quot;\\\\([a-f0-9]{6}|[a-f0-9]{4}(\\s|\\\\|$)|[a-f0-9]{2}(\\s|\\\\|$)|.)&quot;, &quot;i&quot;);
+        
+        &#x2F;&#x2F; implement _firstToken()&#x2F;_nextToken() methods to
+        &#x2F;&#x2F; provide a single stream of tokens
+        
+        function _hasStream() {
+            while (stream.eol()) {
+                line++;
+                if (line &gt;= lineCount) {
+                    return false;
+                }
+                if (currentSelector.match(&#x2F;\S&#x2F;)) {
+                    &#x2F;&#x2F; If we are in a current selector and starting a newline,
+                    &#x2F;&#x2F; make sure there is whitespace in the selector
+                    currentSelector += &quot; &quot;;
+                }
+                stream = new CodeMirror.StringStream(lines[line]);
+            }
+            return true;
+        }
+        
+        function _firstToken() {
+            state = CodeMirror.startState(mode);
+            lines = CodeMirror.splitLines(text);
+            lineCount = lines.length;
+            if (lineCount === 0) {
+                return false;
+            }
+            line = 0;
+            stream = new CodeMirror.StringStream(lines[line]);
+            if (!_hasStream()) {
+                return false;
+            }
+            style = mode.token(stream, state);
+            token = stream.current();
+            return true;
+        }
+        
+        function _nextToken() {
+            &#x2F;&#x2F; advance the stream past this token
+            stream.start = stream.pos;
+            if (!_hasStream()) {
+                return false;
+            }
+            style = mode.token(stream, state);
+            token = stream.current();
+            return true;
+        }
+        
+        function _firstTokenSkippingWhitespace() {
+            if (!_firstToken()) {
+                return false;
+            }
+            while (!token.match(&#x2F;\S&#x2F;)) {
+                if (!_nextToken()) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+        function _nextTokenSkippingWhitespace() {
+            if (!_nextToken()) {
+                return false;
+            }
+            while (!token.match(&#x2F;\S&#x2F;)) {
+                if (!_nextToken()) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function _isStartComment() {
+            return (token.match(&#x2F;^\&#x2F;\*&#x2F;));
+        }
+        
+        function _parseComment() {
+            while (!token.match(&#x2F;\*\&#x2F;$&#x2F;)) {
+                if (!_nextToken()) {
+                    break;
+                }
+            }
+        }
+
+        function _nextTokenSkippingComments() {
+            if (!_nextToken()) {
+                return false;
+            }
+            while (_isStartComment()) {
+                _parseComment();
+                if (!_nextToken()) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function _parseSelector(start) {
+            
+            currentSelector = &quot;&quot;;
+            selectorStartChar = start;
+            selectorStartLine = line;
+            
+            &#x2F;&#x2F; Everything until the next &#39;,&#39; or &#39;{&#39; is part of the current selector
+            while (token !== &quot;,&quot; &amp;&amp; token !== &quot;{&quot;) {
+                currentSelector += token;
+                if (!_nextTokenSkippingComments()) {
+                    break;
+                }
+            }
+            
+            &#x2F;&#x2F; Unicode character replacement as defined in http:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;CSS21&#x2F;syndata.html#characters
+            if (&#x2F;\\&#x2F;.test(currentSelector)) {
+                &#x2F;&#x2F; Double replace in case of pattern overlapping (regex improvement?)
+                currentSelector = currentSelector.replace(escapePattern, function (escapedToken) {
+                    return escapedToken.replace(validationPattern, function (unicodeChar) {
+                        unicodeChar = unicodeChar.substr(1);
+                        if (unicodeChar.length === 1) {
+                            return unicodeChar;
+                        } else {
+                            if (parseInt(unicodeChar, 16) &lt; 0x10FFFF) {
+                                return String.fromCharCode(parseInt(unicodeChar, 16));
+                            } else { return String.fromCharCode(0xFFFD); }
+                        }
+                    });
+                });
+            }
+            
+            currentSelector = currentSelector.trim();
+            var startChar = (selectorGroupStartLine === -1) ? selectorStartChar : selectorStartChar + 1;
+            var selectorStart = (stream.string.indexOf(currentSelector, selectorStartChar) !== -1) ? stream.string.indexOf(currentSelector, selectorStartChar - currentSelector.length) : startChar;
+
+            if (currentSelector !== &quot;&quot;) {
+                selectors.push({selector: currentSelector,
+                                ruleStartLine: ruleStartLine,
+                                ruleStartChar: ruleStartChar,
+                                selectorStartLine: selectorStartLine,
+                                selectorStartChar: selectorStart,
+                                declListEndLine: -1,
+                                selectorEndLine: line,
+                                selectorEndChar: selectorStart + currentSelector.length,
+                                selectorGroupStartLine: selectorGroupStartLine,
+                                selectorGroupStartChar: selectorGroupStartChar
+                               });
+                currentSelector = &quot;&quot;;
+            }
+            selectorStartChar = -1;
+        }
+        
+        function _parseSelectorList() {
+            selectorGroupStartLine = (stream.string.indexOf(&quot;,&quot;) !== -1) ? line : -1;
+            selectorGroupStartChar = stream.start;
+
+            _parseSelector(stream.start);
+            while (token === &quot;,&quot;) {
+                if (!_nextTokenSkippingComments()) {
+                    break;
+                }
+                _parseSelector(stream.start);
+            }
+        }
+
+        function _parseDeclarationList() {
+
+            var j;
+            declListStartLine = line;
+            declListStartChar = stream.start;
+            
+            &#x2F;&#x2F; Extract the entire selector group we just saw.
+            var selectorGroup, sgLine;
+            if (selectorGroupStartLine !== -1) {
+                selectorGroup = &quot;&quot;;
+                for (sgLine = selectorGroupStartLine; sgLine &lt;= declListStartLine; sgLine++) {
+                    var startChar = 0, endChar = lines[sgLine].length;
+                    if (sgLine === selectorGroupStartLine) {
+                        startChar = selectorGroupStartChar;
+                    } else {
+                        selectorGroup += &quot; &quot;; &#x2F;&#x2F; replace the newline with a single space
+                    }
+                    if (sgLine === declListStartLine) {
+                        endChar = declListStartChar;
+                    }
+                    selectorGroup += lines[sgLine].substring(startChar, endChar);
+                }
+                selectorGroup = selectorGroup.trim();
+            }
+
+            &#x2F;&#x2F; Since we&#39;re now in a declaration list, that means we also finished
+            &#x2F;&#x2F; parsing the whole selector group. Therefore, reset selectorGroupStartLine
+            &#x2F;&#x2F; so that next time we parse a selector we know it&#39;s a new group
+            selectorGroupStartLine = -1;
+            selectorGroupStartChar = -1;
+            ruleStartLine = -1;
+            ruleStartChar = -1;
+
+            &#x2F;&#x2F; Skip everything until the next &#39;}&#39;
+            while (token !== &quot;}&quot;) {
+                if (!_nextTokenSkippingComments()) {
+                    break;
+                }
+            }
+            
+            &#x2F;&#x2F; assign this declaration list position and selector group to every selector on the stack
+            &#x2F;&#x2F; that doesn&#39;t have a declaration list start and end line
+            for (j = selectors.length - 1; j &gt;= 0; j--) {
+                if (selectors[j].declListEndLine !== -1) {
+                    break;
+                } else {
+                    selectors[j].declListStartLine = declListStartLine;
+                    selectors[j].declListStartChar = declListStartChar;
+                    selectors[j].declListEndLine = line;
+                    selectors[j].declListEndChar = stream.pos - 1; &#x2F;&#x2F; stream.pos actually points to the char after the }
+                    if (selectorGroup) {
+                        selectors[j].selectorGroup = selectorGroup;
+                    }
+                }
+            }
+        }
+        
+        function includeCommentInNextRule() {
+            if (ruleStartChar !== -1) {
+                return false;       &#x2F;&#x2F; already included
+            }
+            if (stream.start &gt; 0 &amp;&amp; lines[line].substr(0, stream.start).indexOf(&quot;}&quot;) !== -1) {
+                return false;       &#x2F;&#x2F; on same line as &#39;}&#39;, so it&#39;s for previous rule
+            }
+            return true;
+        }
+        
+        function _isStartAtRule() {
+            return (token.match(&#x2F;^@&#x2F;));
+        }
+        
+        function _parseAtRule() {
+
+            &#x2F;&#x2F; reset these fields to ignore comments preceding @rules
+            ruleStartLine = -1;
+            ruleStartChar = -1;
+            selectorStartLine = -1;
+            selectorStartChar = -1;
+            selectorGroupStartLine = -1;
+            selectorGroupStartChar = -1;
+            
+            if (token.match(&#x2F;@media&#x2F;i)) {
+                &#x2F;&#x2F; @media rule holds a rule list
+                
+                &#x2F;&#x2F; Skip everything until the opening &#39;{&#39;
+                while (token !== &quot;{&quot;) {
+                    if (!_nextTokenSkippingComments()) {
+                        break;
+                    }
+                }
+                _nextTokenSkippingWhitespace();    &#x2F;&#x2F; skip past &#39;{&#39;, to next non-ws token
+
+                &#x2F;&#x2F; Parse rules until we see &#39;}&#39;
+                _parseRuleList(&quot;}&quot;);
+
+            } else if (token.match(&#x2F;@(charset|import|namespace)&#x2F;i)) {
+                
+                &#x2F;&#x2F; This code handles @rules in this format:
+                &#x2F;&#x2F;   @rule ... ;
+                &#x2F;&#x2F; Skip everything until the next &#39;;&#39;
+                while (token !== &quot;;&quot;) {
+                    if (!_nextTokenSkippingComments()) {
+                        break;
+                    }
+                }
+                
+            } else {
+                &#x2F;&#x2F; This code handle @rules that use this format:
+                &#x2F;&#x2F;    @rule ... { ... }
+                &#x2F;&#x2F; such as @page, @keyframes (also -webkit-keyframes, etc.), and @font-face.
+                &#x2F;&#x2F; Skip everything until the next &#39;}&#39;
+                while (token !== &quot;}&quot;) {
+                    if (!_nextTokenSkippingComments()) {
+                        break;
+                    }
+                }
+            }
+        }
+
+        &#x2F;&#x2F; parse a style rule
+        function _parseRule() {
+            _parseSelectorList();
+            _parseDeclarationList();
+        }
+        
+        function _parseRuleList(escapeToken) {
+            
+            while ((!escapeToken) || token !== escapeToken) {
+                if (_isStartAtRule()) {
+                    &#x2F;&#x2F; @rule
+                    _parseAtRule();
+    
+                } else if (_isStartComment()) {
+                    &#x2F;&#x2F; comment - make this part of style rule
+                    if (includeCommentInNextRule()) {
+                        ruleStartChar = stream.start;
+                        ruleStartLine = line;
+                    }
+                    _parseComment();
+    
+                } else {
+                    &#x2F;&#x2F; Otherwise, it&#39;s style rule
+                    if (ruleStartChar === -1) {
+                        ruleStartChar = stream.start;
+                        ruleStartLine = line;
+                    }
+                    _parseRule();
+                }
+                
+                if (!_nextTokenSkippingWhitespace()) {
+                    break;
+                }
+            }
+        }
+        
+        &#x2F;&#x2F; Do parsing
+
+        if (_firstTokenSkippingWhitespace()) {
+
+            &#x2F;&#x2F; Style sheet is a rule list
+            _parseRuleList();
+        }
+
+        return selectors;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>findMatchingRules</h4>
+                            <em><p>Return all rules matching the specified selector.<br />For Sprint 4, we only look at the rightmost simple selector. For example, searching for ".foo" will <br />match these rules:<br /> .foo {}<br /> div .foo {}<br /> div.foo {}<br /> div .foo[bar="42"] {}<br /> div .foo:hovered {}<br /> div .foo::first-child<br />but will <em>not</em> match these rules:<br /> .foobar {}<br /> .foo .bar {}<br /> div .foo .bar {}<br /> .foo.bar {}</p></em>
+                            <dl>
+                                    <dt>selector</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The selector to match. This can be a tag selector, class selector or id selector</dd>
+                                    <dt>htmlDocument</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd>An HTML file for context (so we can search <style> blocks)</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function findMatchingRules(selector, htmlDocument) {
+        var result          = new $.Deferred(),
+            resultSelectors = [];
+        
+        &#x2F;&#x2F; Synchronously search for matches in &lt;style&gt; blocks
+        if (htmlDocument) {
+            _findMatchingRulesInStyleBlocks(htmlDocument, selector, resultSelectors);
+        }
+        
+        &#x2F;&#x2F; Asynchronously search for matches in all the project&#39;s CSS files
+        &#x2F;&#x2F; (results are appended together in same &#39;resultSelectors&#39; array)
+        _findMatchingRulesInCSSFiles(selector, resultSelectors)
+            .done(function () {
+                result.resolve(resultSelectors);
+            })
+            .fail(function (error) {
+                result.reject(error);
+            });
+        
+        return result.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>findSelectorAtDocumentPos</h4>
+                            <em><p>Returns the selector(s) of the rule at the specified document pos, or "" if the position is <br />is not within a style rule.</p></em>
+                            <dl>
+                                    <dt>editor</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Editor</dd>
+                                    <dd>Editor to search</dd>
+                                    <dt>pos</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">{line: number, ch: number}</dd>
+                                    <dd>Position to search</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function findSelectorAtDocumentPos(editor, pos) {
+        var cm = editor._codeMirror;
+        var ctx = TokenUtils.getInitialContext(cm, $.extend({}, pos));
+        var selector = &quot;&quot;, inSelector = false, foundChars = false;
+
+        function _stripAtRules(selector) {
+            selector = selector.trim();
+            if (selector.indexOf(&quot;@&quot;) === 0) {
+                return &quot;&quot;;
+            }
+            return selector;
+        }
+        
+        &#x2F;&#x2F; Parse a selector. Assumes ctx is pointing at the opening
+        &#x2F;&#x2F; { that is after the selector name.
+        function _parseSelector(ctx) {
+            var selector = &quot;&quot;;
+            
+            &#x2F;&#x2F; Skip over {
+            TokenUtils.movePrevToken(ctx);
+            
+            while (true) {
+                if (ctx.token.type !== &quot;comment&quot;) {
+                    &#x2F;&#x2F; Stop once we&#39;ve reached a {, }, or ;
+                    if (&#x2F;[\{\}\;]&#x2F;.test(ctx.token.string)) {
+                        break;
+                    }
+                    selector = ctx.token.string + selector;
+                }
+                if (!TokenUtils.movePrevToken(ctx)) {
+                    break;
+                }
+            }
+            
+            return selector;
+        }
+        
+        &#x2F;&#x2F; scan backwards to see if the cursor is in a rule
+        while (true) {
+            if (ctx.token.type !== &quot;comment&quot;) {
+                if (ctx.token.string === &quot;}&quot;) {
+                    break;
+                } else if (ctx.token.string === &quot;{&quot;) {
+                    selector = _parseSelector(ctx);
+                    break;
+                } else {
+                    if (ctx.token.string.trim() !== &quot;&quot;) {
+                        foundChars = true;
+                    }
+                }
+            }
+            
+            if (!TokenUtils.movePrevToken(ctx)) {
+                break;
+            }
+        }
+        
+        selector = _stripAtRules(selector);
+        
+        &#x2F;&#x2F; Reset the context to original scan position
+        ctx = TokenUtils.getInitialContext(cm, $.extend({}, pos));
+        
+        &#x2F;&#x2F; special case - we aren&#39;t in a selector and haven&#39;t found any chars,
+        &#x2F;&#x2F; look at the next immediate token to see if it is non-whitespace
+        if (!selector &amp;&amp; !foundChars) {
+            if (TokenUtils.moveNextToken(ctx) &amp;&amp; ctx.token.type !== &quot;comment&quot; &amp;&amp; ctx.token.string.trim() !== &quot;&quot;) {
+                foundChars = true;
+                ctx = TokenUtils.getInitialContext(cm, $.extend({}, pos));
+            }
+        }
+        
+        &#x2F;&#x2F; At this point if we haven&#39;t found a selector, but have seen chars when
+        &#x2F;&#x2F; scanning, assume we are in the middle of a selector.
+        if (!selector &amp;&amp; foundChars) {
+            &#x2F;&#x2F; scan forward to see if the cursor is in a selector
+            while (true) {
+                if (ctx.token.type !== &quot;comment&quot;) {
+                    if (ctx.token.string === &quot;{&quot;) {
+                        selector = _parseSelector(ctx);
+                        break;
+                    } else if (ctx.token.string === &quot;}&quot; || ctx.token.string === &quot;;&quot;) {
+                        break;
+                    }
+                }
+                if (!TokenUtils.moveNextToken(ctx)) {
+                    break;
+                }
+            }
+        }
+        
+        return _stripAtRules(selector);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getInfoAtPos</h4>
+                            <em><p>Returns a context info object for the given cursor position</p></em>
+                            <dl>
+                                    <dt>editor</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Editor</dd>
+                                    <dd></dd>
+                                    <dt>constPos</dt>
+                                    <dd class="label label-info pull-left">{ch: number,line: number}</dd>
+                                    <dd>A CM pos (likely from editor.getCursor())</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getInfoAtPos(editor, constPos) {
+        &#x2F;&#x2F; We&#39;re going to be changing pos a lot, but we don&#39;t want to mess up
+        &#x2F;&#x2F; the pos the caller passed in so we use extend to make a safe copy of it.	
+        var pos = $.extend({}, constPos),
+            ctx = TokenUtils.getInitialContext(editor._codeMirror, pos),
+            offset = TokenUtils.offsetInToken(ctx),
+            propName = &quot;&quot;,
+            mode = editor.getModeForSelection();
+        
+        &#x2F;&#x2F; Check if this is inside a style block or in a css&#x2F;less document.
+        if (mode !== &quot;css&quot; &amp;&amp; mode !== &quot;text&#x2F;x-scss&quot; &amp;&amp; mode !== &quot;less&quot;) {
+            return createInfo();
+        }
+
+        if (_isInPropName(ctx)) {
+            if (ctx.token.type === &quot;property&quot; || ctx.token.type === &quot;property error&quot; || ctx.token.type === &quot;tag&quot;) {
+                propName = ctx.token.string;
+            } else {
+                var testPos = {ch: ctx.pos.ch + 1, line: ctx.pos.line},
+                    testToken = editor._codeMirror.getTokenAt(testPos, true);
+                
+                if (testToken.type === &quot;property&quot; || testToken.type === &quot;property error&quot; || testToken.type === &quot;tag&quot;) {
+                    propName = testToken.string;
+                    offset = 0;
+                }
+            }
+            
+            &#x2F;&#x2F; If we&#39;re in property name context but not in an existing property name, 
+            &#x2F;&#x2F; then reset offset to zero.
+            if (propName === &quot;&quot;) {
+                offset = 0;
+            }
+            
+            return createInfo(PROP_NAME, offset, propName);
+        }
+        
+        if (_isInPropValue(ctx)) {
+            return _getRuleInfoStartingFromPropValue(ctx, editor);
+        }
+
+        if (_isInImportRule(ctx)) {
+            return _getImportUrlInfo(ctx, editor);
+        }
+        
+        return createInfo();
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getRangeSelectors</h4>
+                            <em><p>Given a TextRange, extracts the selector(s) for the rule in the range and returns it.<br />Assumes the range only contains one rule; if there's more than one, it will return the<br />selector(s) for the first rule.</p></em>
+                            <dl>
+                                    <dt>range</dt>
+                                    <dd class="label label-info pull-left">TextRange</dd>
+                                    <dd>The range to extract the selector(s) from.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getRangeSelectors(range) {
+        &#x2F;&#x2F; There&#39;s currently no immediate way to access a given line in a Document, because it&#39;s just
+        &#x2F;&#x2F; stored as a string. Eventually, we should have Documents cache the lines in the document
+        &#x2F;&#x2F; as well, or make them use CodeMirror documents which do the same thing.
+        var i, startIndex = 0, endIndex, text = range.document.getText();
+        for (i = 0; i &lt; range.startLine; i++) {
+            startIndex = text.indexOf(&quot;\n&quot;, startIndex) + 1;
+        }
+        endIndex = startIndex;
+        &#x2F;&#x2F; Go one line past the end line. We&#39;ll extract text up to but not including the last newline.
+        for (i = range.startLine + 1; i &lt;= range.endLine + 1; i++) {
+            endIndex = text.indexOf(&quot;\n&quot;, endIndex) + 1;
+        }
+        var allSelectors = extractAllSelectors(text.substring(startIndex, endIndex));
+        
+        &#x2F;&#x2F; There should only be one rule in the range, and if there are multiple selectors for
+        &#x2F;&#x2F; the first rule, they&#39;ll all be recorded in the &quot;selectorGroup&quot; for the first selector,
+        &#x2F;&#x2F; so we only need to look at the first one.
+        return (allSelectors.length ? allSelectors[0].selectorGroup || allSelectors[0].selector : &quot;&quot;);
+    }
+        
+    exports._findAllMatchingSelectorsInText = _findAllMatchingSelectorsInText; &#x2F;&#x2F; For testing only
+    exports.findMatchingRules = findMatchingRules;
+    exports.extractAllSelectors = extractAllSelectors;
+    exports.extractAllNamedFlows = extractAllNamedFlows;
+    exports.findSelectorAtDocumentPos = findSelectorAtDocumentPos;
+    exports.reduceStyleSheetForRegExParsing = reduceStyleSheetForRegExParsing;
+    exports.addRuleToDocument = addRuleToDocument;
+    exports.consolidateRules = consolidateRules;
+    exports.getRangeSelectors = getRangeSelectors;
+
+    exports.SELECTOR = SELECTOR;
+    exports.PROP_NAME = PROP_NAME;
+    exports.PROP_VALUE = PROP_VALUE;
+    exports.IMPORT_URL = IMPORT_URL;
+    
+    exports.getInfoAtPos = getInfoAtPos;
+
+    &#x2F;&#x2F; The createInfo is really only for the unit tests so they can make the same  
+    &#x2F;&#x2F; structure to compare results with.
+    exports.createInfo = createInfo;
+});</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>reduceStyleSheetForRegExParsing</h4>
+                            <em><p>Reduces the style sheet by removing comments and strings <br />so that the content can be parsed using a regular expression</p></em>
+                            <dl>
+                                    <dt>content</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>to reduce</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function reduceStyleSheetForRegExParsing(content) {
+        return _removeStrings(_removeComments(content));
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="hide">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

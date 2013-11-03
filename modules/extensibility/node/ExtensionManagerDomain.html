@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>ExtensionManagerDomain</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;..&#x2F;../modules/semver.html">semver</a></li>
+                            <li><a href="..&#x2F;..&#x2F;../modules/path.html">path</a></li>
+                            <li><a href="..&#x2F;..&#x2F;../modules/http.html">http</a></li>
+                            <li><a href="..&#x2F;..&#x2F;../modules/request.html">request</a></li>
+                            <li><a href="..&#x2F;..&#x2F;../modules/os.html">os</a></li>
+                            <li><a href="..&#x2F;..&#x2F;../modules/fs-extra.html">fs-extra</a></li>
+                            <li><a href="..&#x2F;..&#x2F;../modules/temp.html">temp</a></li>
+                            <li><a href="..&#x2F;..&#x2F;../modules/.&#x2F;package-validator.html">package-validator</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>pendingDownloads</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Object.<string, {request:!http.ClientRequest, callback:!function(string, string), localPath:string, outStream:?fs.WriteStream}></dd>
+                            </dl>
+                            <p>Maps unique download ID to info about the pending download. No entry if download no longer pending.<br />outStream is only present if we've started receiving the body.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var pendingDownloads = {};</code></pre>
+                        </div>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_cmdAbortDownload</h4>
+                            <em><p>Implements "abortDownload" command, synchronously.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _cmdAbortDownload(downloadId) {
+    if (!pendingDownloads[downloadId]) {
+        &#x2F;&#x2F; This may mean the download already completed
+        return false;
+    } else {
+        _endDownload(downloadId, Errors.CANCELED);
+        return true;
+    }
+}</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_cmdDownloadFile</h4>
+                            <em><p>Implements "downloadFile" command, asynchronously.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _cmdDownloadFile(downloadId, url, callback) {
+    if (pendingDownloads[downloadId]) {
+        callback(Errors.DOWNLOAD_ID_IN_USE, null);
+        return;
+    }
+    
+    var req = request.get({
+        url: url,
+        encoding: null
+    },
+        &#x2F;&#x2F; Note: we could use the traditional &quot;response&quot;&#x2F;&quot;data&quot;&#x2F;&quot;end&quot; events too if we wanted to stream data
+        &#x2F;&#x2F; incrementally, limit download size, etc. - but the simple callback is good enough for our needs.
+        function (error, response, body) {
+            if (error) {
+                &#x2F;&#x2F; Usually means we never got a response - server is down, no DNS entry, etc.
+                _endDownload(downloadId, Errors.NO_SERVER_RESPONSE);
+                return;
+            }
+            if (response.statusCode !== 200) {
+                _endDownload(downloadId, [Errors.BAD_HTTP_STATUS, response.statusCode]);
+                return;
+            }
+            
+            var stream = temp.createWriteStream(&quot;brackets&quot;);
+            if (!stream) {
+                _endDownload(downloadId, Errors.CANNOT_WRITE_TEMP);
+                return;
+            }
+            pendingDownloads[downloadId].localPath = stream.path;
+            pendingDownloads[downloadId].outStream = stream;
+            
+            stream.write(body);
+            _endDownload(downloadId);
+        });
+    
+    pendingDownloads[downloadId] = { request: req, callback: callback };
+}</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_cmdInstall</h4>
+                            <em><p>Implements the "install" command in the "extensions" domain.</p>
+
+<p>There is no need to call validate independently. Validation is the first<br />thing that is done here.</p>
+
+<p>After the extension is validated, it is installed in destinationDirectory<br />unless the extension is already present there. If it is already present,<br />a determination is made about whether the package being installed is<br />an update. If it does appear to be an update, then result.installationStatus<br />is set to NEEDS_UPDATE. If not, then it's set to ALREADY_INSTALLED.</p>
+
+<p>If the installation succeeds, then result.installationStatus is set to INSTALLED.</p>
+
+<p>The extension is unzipped into a directory in destinationDirectory with<br />the name of the extension (the name is derived either from package.json<br />or the name of the zip file).</p>
+
+<p>The destinationDirectory will be created if it does not exist.</p></em>
+                            <dl>
+                                    <dt>Absolute</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>path to the package zip file</dd>
+                                    <dt>the</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>destination directory</dd>
+                                    <dt>additional</dt>
+                                    <dd class="label label-info pull-left">{disabledDirectory: !string,apiVersion: !string,nameHint: ?string,systemExtensionDirectory: !string}</dd>
+                                    <dd>settings to control the installation</dd>
+                                    <dt>callback</dt>
+                                    <dd class="label label-info pull-left">function</dd>
+                                    <dd>(err, result)</dd>
+                                    <dt>_doUpdate</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>private argument to signal that an update should be performed</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _cmdInstall(packagePath, destinationDirectory, options, callback, _doUpdate) {
+    if (!options || !options.disabledDirectory || !options.apiVersion || !options.systemExtensionDirectory) {
+        callback(new Error(Errors.MISSING_REQUIRED_OPTIONS), null);
+        return;
+    }
+    
+    var validateCallback = function (err, validationResult) {
+        validationResult.localPath = packagePath;
+        
+        &#x2F;&#x2F; This is a wrapper for the callback that will delete the temporary
+        &#x2F;&#x2F; directory to which the package was unzipped.
+        function deleteTempAndCallback(err) {
+            if (validationResult.extractDir) {
+                fs.remove(validationResult.extractDir);
+                delete validationResult.extractDir;
+            }
+            callback(err, validationResult);
+        }
+        
+        &#x2F;&#x2F; If there was trouble at the validation stage, we stop right away.
+        if (err || validationResult.errors.length &gt; 0) {
+            validationResult.installationStatus = Statuses.FAILED;
+            deleteTempAndCallback(err, validationResult);
+            return;
+        }
+        
+        &#x2F;&#x2F; Prefers the package.json name field, but will take the zip
+        &#x2F;&#x2F; file&#39;s name if that&#39;s all that&#39;s available.
+        var extensionName, guessedName;
+        if (options.nameHint) {
+            guessedName = path.basename(options.nameHint, &quot;.zip&quot;);
+        } else {
+            guessedName = path.basename(packagePath, &quot;.zip&quot;);
+        }
+        if (validationResult.metadata) {
+            extensionName = validationResult.metadata.name;
+        } else {
+            extensionName = guessedName;
+        }
+        
+        validationResult.name = extensionName;
+        var installDirectory = path.join(destinationDirectory, extensionName),
+            legacyDirectory = path.join(destinationDirectory, guessedName),
+            systemInstallDirectory = path.join(options.systemExtensionDirectory, extensionName);
+        
+        if (validationResult.metadata &amp;&amp; validationResult.metadata.engines &amp;&amp;
+                validationResult.metadata.engines.brackets) {
+            var compatible = semver.satisfies(options.apiVersion,
+                                              validationResult.metadata.engines.brackets);
+            if (!compatible) {
+                installDirectory = path.join(options.disabledDirectory, extensionName);
+                validationResult.installationStatus = Statuses.DISABLED;
+                validationResult.disabledReason = Errors.API_NOT_COMPATIBLE;
+                _removeAndInstall(packagePath, installDirectory, validationResult, deleteTempAndCallback);
+                return;
+            }
+        }
+        
+        &#x2F;&#x2F; The &quot;legacy&quot; stuff should go away after all of the commonly used extensions
+        &#x2F;&#x2F; have been upgraded with package.json files.
+        var hasLegacyPackage = validationResult.metadata &amp;&amp; legacyPackageCheck(legacyDirectory);
+        
+        &#x2F;&#x2F; If the extension is already there, we signal to the front end that it&#39;s already installed
+        &#x2F;&#x2F; unless the front end has signaled an intent to update.
+        if (hasLegacyPackage || fs.existsSync(installDirectory) || fs.existsSync(systemInstallDirectory)) {
+            if (_doUpdate) {
+                if (hasLegacyPackage) {
+                    &#x2F;&#x2F; When there&#39;s a legacy installed extension, remove it first,
+                    &#x2F;&#x2F; then also remove any new-style directory the user may have.
+                    &#x2F;&#x2F; This helps clean up if the user is in a state where they have
+                    &#x2F;&#x2F; both legacy and new extensions installed.
+                    fs.remove(legacyDirectory, function (err) {
+                        if (err) {
+                            deleteTempAndCallback(err, validationResult);
+                            return;
+                        }
+                        _removeAndInstall(packagePath, installDirectory, validationResult, deleteTempAndCallback);
+                    });
+                } else {
+                    _removeAndInstall(packagePath, installDirectory, validationResult, deleteTempAndCallback);
+                }
+            } else if (hasLegacyPackage) {
+                validationResult.installationStatus = Statuses.NEEDS_UPDATE;
+                validationResult.name = guessedName;
+                deleteTempAndCallback(null, validationResult);
+            } else {
+                _checkExistingInstallation(validationResult, installDirectory, systemInstallDirectory, deleteTempAndCallback);
+            }
+        } else {
+            &#x2F;&#x2F; Regular installation with no conflicts.
+            validationResult.disabledReason = null;
+            _performInstall(packagePath, installDirectory, validationResult, deleteTempAndCallback);
+        }
+    };
+    
+    validate(packagePath, {}, validateCallback);
+}</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_cmdRemove</h4>
+                            <em><p>Implements the remove extension command.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _cmdRemove(extensionDir, callback) {
+    fs.remove(extensionDir, function (err) {
+        if (err) {
+            callback(err);
+        } else {
+            callback(null);
+        }
+    });
+}</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_cmdUpdate</h4>
+                            <em><p>Implements the "update" command in the "extensions" domain.</p>
+
+<p>Currently, this just wraps _cmdInstall, but will remove the existing directory<br />first.</p>
+
+<p>There is no need to call validate independently. Validation is the first<br />thing that is done here.</p>
+
+<p>After the extension is validated, it is installed in destinationDirectory<br />unless the extension is already present there. If it is already present,<br />a determination is made about whether the package being installed is<br />an update. If it does appear to be an update, then result.installationStatus<br />is set to NEEDS_UPDATE. If not, then it's set to ALREADY_INSTALLED.</p>
+
+<p>If the installation succeeds, then result.installationStatus is set to INSTALLED.</p>
+
+<p>The extension is unzipped into a directory in destinationDirectory with<br />the name of the extension (the name is derived either from package.json<br />or the name of the zip file).</p>
+
+<p>The destinationDirectory will be created if it does not exist.</p></em>
+                            <dl>
+                                    <dt>Absolute</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>path to the package zip file</dd>
+                                    <dt>the</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>destination directory</dd>
+                                    <dt>additional</dt>
+                                    <dd class="label label-info pull-left">{disabledDirectory: !string,apiVersion: !string,nameHint: ?string,systemExtensionDirectory: !string}</dd>
+                                    <dd>settings to control the installation</dd>
+                                    <dt>callback</dt>
+                                    <dd class="label label-info pull-left">function</dd>
+                                    <dd>(err, result)</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _cmdUpdate(packagePath, destinationDirectory, options, callback) {
+    _cmdInstall(packagePath, destinationDirectory, options, callback, true);
+}</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_endDownload</h4>
+                            <em><p>Wrap up after the given download has terminated (successfully or not). Closes connections, calls back the<br />client's callback, and IF there was an error, delete any partially-downloaded file.</p></em>
+                            <dl>
+                                    <dt>downloadId</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Unique id originally passed to _cmdDownloadFile()</dd>
+                                    <dt>error</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>If null, download was treated as successful</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _endDownload(downloadId, error) {
+    var downloadInfo = pendingDownloads[downloadId];
+    delete pendingDownloads[downloadId];
+    
+    if (error) {
+        &#x2F;&#x2F; Abort the download if still pending
+        &#x2F;&#x2F; Note that this will trigger response&#39;s &quot;end&quot; event
+        downloadInfo.request.abort();
+        
+        &#x2F;&#x2F; Clean up any partially-downloaded file
+        &#x2F;&#x2F; (if no outStream, then we never got a response back yet and never created any file)
+        if (downloadInfo.outStream) {
+            downloadInfo.outStream.end(function () {
+                fs.unlink(downloadInfo.localPath);
+            });
+        }
+        
+        downloadInfo.callback(error, null);
+        
+    } else {
+        &#x2F;&#x2F; Download completed successfully. Flush stream to disk and THEN signal completion
+        downloadInfo.outStream.end(function () {
+            downloadInfo.callback(null, downloadInfo.localPath);
+        });
+    }
+}</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_performInstall</h4>
+                            <em><p>Private function to unzip to the correct directory.</p></em>
+                            <dl>
+                                    <dt>Absolute</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>path to the package zip file</dd>
+                                    <dt>Absolute</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>path to the destination directory for unzipping</dd>
+                                    <dt>the</dt>
+                                    <dd class="label label-info pull-left">Object</dd>
+                                    <dd>return value with the useful information for the client</dd>
+                                    <dt>callback</dt>
+                                    <dd class="label label-info pull-left">Function</dd>
+                                    <dd>function that is called at the end of the unzipping</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _performInstall(packagePath, installDirectory, validationResult, callback) {
+    validationResult.installedTo = installDirectory;
+    
+    var callbackCalled = false;
+    
+    fs.mkdirs(installDirectory, function (err) {
+        if (err) {
+            callback(err);
+            return;
+        }
+        var sourceDir = path.join(validationResult.extractDir, validationResult.commonPrefix);
+        
+        fs.copy(sourceDir, installDirectory, function (err) {
+            if (err) {
+                _removeFailedInstallation(installDirectory);
+                callback(err, null);
+            } else {
+                &#x2F;&#x2F; The status may have already been set previously (as in the
+                &#x2F;&#x2F; DISABLED case.
+                if (!validationResult.installationStatus) {
+                    validationResult.installationStatus = Statuses.INSTALLED;
+                }
+                callback(null, validationResult);
+            }
+        });
+    });
+}</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_removeAndInstall</h4>
+                            <em><p>Private function to remove the target directory and then install.</p></em>
+                            <dl>
+                                    <dt>Absolute</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>path to the package zip file</dd>
+                                    <dt>Absolute</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>path to the destination directory for unzipping</dd>
+                                    <dt>the</dt>
+                                    <dd class="label label-info pull-left">Object</dd>
+                                    <dd>return value with the useful information for the client</dd>
+                                    <dt>callback</dt>
+                                    <dd class="label label-info pull-left">Function</dd>
+                                    <dd>function that is called at the end of the unzipping</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _removeAndInstall(packagePath, installDirectory, validationResult, callback) {
+    &#x2F;&#x2F; If this extension was previously installed but disabled, we will overwrite the
+    &#x2F;&#x2F; previous installation in that directory.
+    fs.remove(installDirectory, function (err) {
+        if (err) {
+            callback(err);
+            return;
+        }
+        _performInstall(packagePath, installDirectory, validationResult, callback);
+    });
+}
+
+function _checkExistingInstallation(validationResult, installDirectory, systemInstallDirectory, callback) {
+    &#x2F;&#x2F; If the extension being installed does not have a package.json, we can&#39;t
+    &#x2F;&#x2F; do any kind of version comparison, so we just signal to the UI that
+    &#x2F;&#x2F; it already appears to be installed.
+    if (!validationResult.metadata) {
+        validationResult.installationStatus = Statuses.ALREADY_INSTALLED;
+        callback(null, validationResult);
+        return;
+    }
+    
+    fs.readJson(path.join(installDirectory, &quot;package.json&quot;), function (err, packageObj) {
+        &#x2F;&#x2F; if the package.json is unreadable, we assume that the new package is an update
+        &#x2F;&#x2F; that is the first to include a package.json.
+        if (err) {
+            validationResult.installationStatus = Statuses.NEEDS_UPDATE;
+        } else {
+            &#x2F;&#x2F; Check to see if the version numbers signal an update.
+            if (semver.lt(packageObj.version, validationResult.metadata.version)) {
+                validationResult.installationStatus = Statuses.NEEDS_UPDATE;
+            } else if (semver.gt(packageObj.version, validationResult.metadata.version)) {
+                &#x2F;&#x2F; Pass a message back to the UI that the new package appears to be an older version
+                &#x2F;&#x2F; than what&#39;s installed.
+                validationResult.installationStatus = Statuses.OLDER_VERSION;
+                validationResult.installedVersion = packageObj.version;
+            } else {
+                &#x2F;&#x2F; Signal to the UI that it looks like the user is re-installing the
+                &#x2F;&#x2F; same version.
+                validationResult.installationStatus = Statuses.SAME_VERSION;
+            }
+        }
+        callback(null, validationResult);
+    });
+}</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_removeFailedInstallation</h4>
+                            <em><p>Private function to remove the installation directory if the installation fails.<br />This does not call any callbacks. It's assumed that the callback has already been called<br />and this cleanup routine will do its best to complete in the background. If there's<br />a problem here, it is simply logged with console.error.</p></em>
+                            <dl>
+                                    <dt>installDirectory</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Directory to remove</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _removeFailedInstallation(installDirectory) {
+    fs.remove(installDirectory, function (err) {
+        if (err) {
+            console.error(&quot;Error while removing directory after failed installation&quot;, installDirectory, err);
+        }
+    });
+}</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>init</h4>
+                            <em><p>Initialize the "extensions" domain.<br />The extensions domain handles downloading, unpacking/verifying, and installing extensions.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function init(domainManager) {
+    if (!domainManager.hasDomain(&quot;extensionManager&quot;)) {
+        domainManager.registerDomain(&quot;extensionManager&quot;, {major: 0, minor: 1});
+    }
+    domainManager.registerCommand(
+        &quot;extensionManager&quot;,
+        &quot;validate&quot;,
+        validate,
+        true,
+        &quot;Verifies that the contents of the given ZIP file are a valid Brackets extension package&quot;,
+        [{
+            name: &quot;path&quot;,
+            type: &quot;string&quot;,
+            description: &quot;absolute filesystem path of the extension package&quot;
+        }, {
+            name: &quot;options&quot;,
+            type: &quot;{requirePackageJSON: ?boolean}&quot;,
+            description: &quot;options to control the behavior of the validator&quot;
+        }],
+        [{
+            name: &quot;errors&quot;,
+            type: &quot;string|Array.&lt;string&gt;&quot;,
+            description: &quot;download error, if any; first string is error code (one of Errors.*); subsequent strings are additional info&quot;
+        }, {
+            name: &quot;metadata&quot;,
+            type: &quot;{name: string, version: string}&quot;,
+            description: &quot;all package.json metadata (null if there&#39;s no package.json)&quot;
+        }]
+    );
+    domainManager.registerCommand(
+        &quot;extensionManager&quot;,
+        &quot;install&quot;,
+        _cmdInstall,
+        true,
+        &quot;Installs the given Brackets extension if it is valid (runs validation command automatically)&quot;,
+        [{
+            name: &quot;path&quot;,
+            type: &quot;string&quot;,
+            description: &quot;absolute filesystem path of the extension package&quot;
+        }, {
+            name: &quot;destinationDirectory&quot;,
+            type: &quot;string&quot;,
+            description: &quot;absolute filesystem path where this extension should be installed&quot;
+        }, {
+            name: &quot;options&quot;,
+            type: &quot;{disabledDirectory: !string, apiVersion: !string, nameHint: ?string, systemExtensionDirectory: !string}&quot;,
+            description: &quot;installation options: disabledDirectory should be set so that extensions can be installed disabled.&quot;
+        }],
+        [{
+            name: &quot;errors&quot;,
+            type: &quot;string|Array.&lt;string&gt;&quot;,
+            description: &quot;download error, if any; first string is error code (one of Errors.*); subsequent strings are additional info&quot;
+        }, {
+            name: &quot;metadata&quot;,
+            type: &quot;{name: string, version: string}&quot;,
+            description: &quot;all package.json metadata (null if there&#39;s no package.json)&quot;
+        }, {
+            name: &quot;disabledReason&quot;,
+            type: &quot;string&quot;,
+            description: &quot;reason this extension was installed disabled (one of Errors.*), none if it was enabled&quot;
+        }, {
+            name: &quot;installationStatus&quot;,
+            type: &quot;string&quot;,
+            description: &quot;Current status of the installation (an extension can be valid but not installed because it&#39;s an update&quot;
+        }, {
+            name: &quot;installedTo&quot;,
+            type: &quot;string&quot;,
+            description: &quot;absolute path where the extension was installed to&quot;
+        }, {
+            name: &quot;commonPrefix&quot;,
+            type: &quot;string&quot;,
+            description: &quot;top level directory in the package zip which contains all of the files&quot;
+        }]
+    );
+    domainManager.registerCommand(
+        &quot;extensionManager&quot;,
+        &quot;update&quot;,
+        _cmdUpdate,
+        true,
+        &quot;Updates the given Brackets extension (for which install was generally previously attemped). Brackets must be quit after this.&quot;,
+        [{
+            name: &quot;path&quot;,
+            type: &quot;string&quot;,
+            description: &quot;absolute filesystem path of the extension package&quot;
+        }, {
+            name: &quot;destinationDirectory&quot;,
+            type: &quot;string&quot;,
+            description: &quot;absolute filesystem path where this extension should be installed&quot;
+        }, {
+            name: &quot;options&quot;,
+            type: &quot;{disabledDirectory: !string, apiVersion: !string, nameHint: ?string, systemExtensionDirectory: !string}&quot;,
+            description: &quot;installation options: disabledDirectory should be set so that extensions can be installed disabled.&quot;
+        }],
+        [{
+            name: &quot;errors&quot;,
+            type: &quot;string|Array.&lt;string&gt;&quot;,
+            description: &quot;download error, if any; first string is error code (one of Errors.*); subsequent strings are additional info&quot;
+        }, {
+            name: &quot;metadata&quot;,
+            type: &quot;{name: string, version: string}&quot;,
+            description: &quot;all package.json metadata (null if there&#39;s no package.json)&quot;
+        }, {
+            name: &quot;disabledReason&quot;,
+            type: &quot;string&quot;,
+            description: &quot;reason this extension was installed disabled (one of Errors.*), none if it was enabled&quot;
+        }, {
+            name: &quot;installationStatus&quot;,
+            type: &quot;string&quot;,
+            description: &quot;Current status of the installation (an extension can be valid but not installed because it&#39;s an update&quot;
+        }, {
+            name: &quot;installedTo&quot;,
+            type: &quot;string&quot;,
+            description: &quot;absolute path where the extension was installed to&quot;
+        }, {
+            name: &quot;commonPrefix&quot;,
+            type: &quot;string&quot;,
+            description: &quot;top level directory in the package zip which contains all of the files&quot;
+        }]
+    );
+    domainManager.registerCommand(
+        &quot;extensionManager&quot;,
+        &quot;remove&quot;,
+        _cmdRemove,
+        true,
+        &quot;Removes the Brackets extension at the given path.&quot;,
+        [{
+            name: &quot;path&quot;,
+            type: &quot;string&quot;,
+            description: &quot;absolute filesystem path of the installed extension folder&quot;
+        }],
+        {}
+    );
+    domainManager.registerCommand(
+        &quot;extensionManager&quot;,
+        &quot;downloadFile&quot;,
+        _cmdDownloadFile,
+        true,
+        &quot;Downloads the file at the given URL, saving it to a temp location. Callback receives path to the downloaded file.&quot;,
+        [{
+            name: &quot;downloadId&quot;,
+            type: &quot;string&quot;,
+            description: &quot;Unique identifier for this download &#39;session&#39;&quot;
+        }, {
+            name: &quot;url&quot;,
+            type: &quot;string&quot;,
+            description: &quot;URL to download from&quot;
+        }],
+        {
+            type: &quot;string&quot;,
+            description: &quot;Local path to the downloaded file&quot;
+        }
+    );
+    domainManager.registerCommand(
+        &quot;extensionManager&quot;,
+        &quot;abortDownload&quot;,
+        _cmdAbortDownload,
+        false,
+        &quot;Aborts any pending download with the given id. Ignored if no download pending (may be already complete).&quot;,
+        [{
+            name: &quot;downloadId&quot;,
+            type: &quot;string&quot;,
+            description: &quot;Unique identifier for this download &#39;session&#39;, previously pased to downloadFile&quot;
+        }],
+        {
+            type: &quot;boolean&quot;,
+            description: &quot;True if the download was pending and able to be canceled; false otherwise&quot;
+        }
+    );
+}
+
+&#x2F;&#x2F; used in unit tests
+exports._cmdValidate = validate;
+exports._cmdInstall = _cmdInstall;
+exports._cmdRemove = _cmdRemove;
+exports._cmdUpdate = _cmdUpdate;
+
+&#x2F;&#x2F; used to load the domain
+exports.init = init;</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>legacyPackageCheck</h4>
+                            <em><p>A "legacy package" is an extension that was installed based on the GitHub name without<br />a package.json file. Checking for the presence of these legacy extensions will help<br />users upgrade if the extension developer puts a different name in package.json than <br />the name of the GitHub project.</p></em>
+                            <dl>
+                                    <dt>legacyDirectory</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>directory to check for old-style extension.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function legacyPackageCheck(legacyDirectory) {
+    return fs.existsSync(legacyDirectory) &amp;&amp; !fs.existsSync(path.join(legacyDirectory, &quot;package.json&quot;));
+}</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="hide">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

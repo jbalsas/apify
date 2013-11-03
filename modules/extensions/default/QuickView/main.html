@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../../../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;..&#x2F;..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>main</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>lobal define, brackets, $, window, PathUtils, CodeMirror</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/text!QuickViewTemplate.html.html">text!QuickViewTemplate.html</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member">
+        
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>popoverState</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>{ visible: boolean, editor: !Editor, hoverTimer: number, - setTimeout() token start: !{line, ch}, - start of matched text range end: !{line, ch}, - end of matched text range content: !string, - HTML content to display in popover onShow: ?function():void, - called once popover content added to the DOM (may never be called) - if specified, must call positionPreview() xpos: number, - x of center of popover ytop: number, - y of top of matched text (when popover placed above text, normally) ybot: number, - y of bottom of matched text (when popover moved below text, avoiding window top) marker: ?CodeMirror.TextMarker - only set once visible==true }</dd>
+                            </dl>
+                            <p>There are three states for this var:<br />1. If null, there is no provider result for the given mouse position.<br />2. If non-null, and visible==true, there is a popover currently showing.<br />3. If non-null, but visible==false, we're waiting for HOVER_DELAY, which<br />   is tracked by hoverTimer. The state changes to visible==true as soon as<br />   there is a provider. If the mouse moves before then, timer is restarted.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var popoverState = null;
+    
+    
+    
+    &#x2F;&#x2F; Popover widget management ----------------------------------------------</code></pre>
+                        </div>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>hidePreview</h4>
+                            <em><p>Cancels whatever popoverState was currently pending and sets it back to null. If the popover was visible,<br />hides it; if the popover was invisible and still pending, cancels hoverTimer so it will never be shown.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function hidePreview() {
+        if (!popoverState) {
+            return;
+        }
+        
+        if (popoverState.visible) {
+            popoverState.marker.clear();
+            
+            $previewContent.empty();
+            $previewContainer.hide();
+            $previewContainer.removeClass(&quot;active&quot;);
+        } else {
+            window.clearTimeout(popoverState.hoverTimer);
+        }
+        popoverState = null;
+    }
+    
+    function positionPreview(xpos, ypos, ybot) {
+        var previewWidth  = $previewContainer.outerWidth(),
+            top           = ypos - $previewContainer.outerHeight() - POINTER_HEIGHT,
+            left          = xpos - previewWidth &#x2F; 2,
+            $editorHolder = $(&quot;#editor-holder&quot;),
+            editorLeft    = $editorHolder.offset().left;
+
+        left = Math.max(left, editorLeft + POPOVER_HORZ_MARGIN);
+        left = Math.min(left, editorLeft + $editorHolder.width() - previewWidth - POPOVER_HORZ_MARGIN);
+        
+        if (top &lt; 0) {
+            top = ybot + POINTER_HEIGHT;
+            $previewContainer
+                .removeClass(&quot;preview-bubble-above&quot;)
+                .addClass(&quot;preview-bubble-below&quot;);
+        } else {
+            $previewContainer
+                .removeClass(&quot;preview-bubble-below&quot;)
+                .addClass(&quot;preview-bubble-above&quot;);
+        }
+        $previewContainer
+            .css({
+                left: left,
+                top: top
+            })
+            .addClass(&quot;active&quot;);
+    }
+    
+    function divContainsMouse($div, event) {
+        var offset = $div.offset();
+        
+        return (event.clientX &gt;= offset.left &amp;&amp;
+                event.clientX &lt;= offset.left + $div.width() &amp;&amp;
+                event.clientY &gt;= offset.top &amp;&amp;
+                event.clientY &lt;= offset.top + $div.height());
+    }
+    
+    
+    &#x2F;&#x2F; Color &amp; gradient preview provider --------------------------------------
+
+    function colorAndGradientPreviewProvider(editor, pos, token, line) {
+
+        &#x2F;&#x2F; Check for gradient. -webkit-gradient() can have parens in parameters
+        &#x2F;&#x2F; nested 2 levels. Other gradients can only nest 1 level.
+        var gradientRegEx = &#x2F;-webkit-gradient\((?:[^\(]*?(?:\((?:[^\(]*?(?:\([^\)]*?\))*?)*?\))*?)*?\)|(?:(?:-moz-|-ms-|-o-|-webkit-|\s)((repeating-)?linear-gradient)|(?:-moz-|-ms-|-o-|-webkit-|\s)((repeating-)?radial-gradient))(\((?:[^\)]*?(?:\([^\)]*?\))*?)*?\))&#x2F;gi,
+            colorRegEx = new RegExp(ColorUtils.COLOR_REGEX);
+
+        function areParensBalanced(str) {
+            var i,
+                nestLevel = 0,
+                content,
+                len;
+
+            &#x2F;&#x2F; Remove comments &amp; strings
+            content = CSSUtils.reduceStyleSheetForRegExParsing(str);
+            len = content.length;
+            
+            for (i = 0; i &lt; len; i++) {
+                switch (content[i]) {
+                case &quot;(&quot;:
+                    nestLevel++;
+                    break;
+                case &quot;)&quot;:
+                    nestLevel--;
+                    break;
+                case &quot;\\&quot;:
+                    i++;    &#x2F;&#x2F; next char is escaped, so skip it
+                    break;
+                }
+            }
+
+            &#x2F;&#x2F; if parens are balanced, nest level will be 0
+            return (nestLevel === 0);
+        }
+        
+        function execGradientMatch(line) {
+            &#x2F;&#x2F; Unbalanced parens cause infinite loop (see issue #4650)
+            var gradientMatch = (areParensBalanced(line) ? gradientRegEx.exec(line) : null),
+                prefix = &quot;&quot;,
+                colorValue;
+            
+            if (gradientMatch) {
+                if (gradientMatch[0].indexOf(&quot;@&quot;) !== -1) {
+                    &#x2F;&#x2F; If the gradient match has &quot;@&quot; in it, it is most likely a less or
+                    &#x2F;&#x2F; sass variable. Ignore it since it won&#39;t be displayed correctly.
+                    gradientMatch = null;
+    
+                } else {
+                    &#x2F;&#x2F; If it was a linear-gradient or radial-gradient variant with a vendor prefix 
+                    &#x2F;&#x2F; add &quot;-webkit-&quot; so it shows up correctly in Brackets.
+                    if (gradientMatch[0].match(&#x2F;-o-|-moz-|-ms-|-webkit-&#x2F;i)) {
+                        prefix = &quot;-webkit-&quot;;
+                    }
+                    
+                    &#x2F;&#x2F; For prefixed gradients, use the non-prefixed value as the color value.
+                    &#x2F;&#x2F; &quot;-webkit-&quot; will be added before this value later
+                    if (gradientMatch[1]) {
+                        colorValue = gradientMatch[1] + gradientMatch[5];    &#x2F;&#x2F; linear gradiant
+                    } else if (gradientMatch[3]) {
+                        colorValue = gradientMatch[3] + gradientMatch[5];    &#x2F;&#x2F; radial gradiant
+                    } else if (gradientMatch[0]) {
+                        colorValue = gradientMatch[0];                       &#x2F;&#x2F; -webkit-gradient
+                        prefix = &quot;&quot;;                                         &#x2F;&#x2F; do not prefix
+                    }
+                }
+            }
+
+            return {
+                match:      gradientMatch,
+                prefix:     prefix,
+                colorValue: colorValue
+            };
+        }
+
+        function execColorMatch(line) {
+            var colorMatch;
+
+            function hyphenOnMatchBoundary(match, line) {
+                var beforeIndex, afterIndex;
+                if (match) {
+                    beforeIndex = match.index - 1;
+                    if (beforeIndex &gt;= 0 &amp;&amp; line[beforeIndex] === &quot;-&quot;) {
+                        return true;
+                    } else {
+                        afterIndex = match.index + match[0].length;
+                        if (afterIndex &lt; line.length &amp;&amp; line[afterIndex] === &quot;-&quot;) {
+                            return true;
+                        }
+                    }
+                }
+                
+                return false;
+            }
+
+            &#x2F;&#x2F; Hyphens do not count as a regex word boundary (\b), so check for those here
+            do {
+                colorMatch = colorRegEx.exec(line);
+            } while (colorMatch &amp;&amp; hyphenOnMatchBoundary(colorMatch, line));
+
+            return colorMatch;
+        }
+        
+        &#x2F;&#x2F; simple css property splitter (used to find color stop arguments in gradients)
+        function splitStyleProperty(property) {
+            var token = &#x2F;((?:[^&quot;&#39;]|&quot;.*?&quot;|&#39;.*?&#39;)*?)([(,)]|$)&#x2F;g;
+            var recurse = function () {
+                var array = [];
+                for (;;) {
+                    var result = token.exec(property);
+                    if (result[2] === &quot;(&quot;) {
+                        var str = result[1].trim() + &quot;(&quot; + recurse().join(&quot;,&quot;) + &quot;)&quot;;
+                        result = token.exec(property);
+                        str += result[1];
+                        array.push(str);
+                    } else {
+                        array.push(result[1].trim());
+                    }
+                    if (result[2] !== &quot;,&quot;) {
+                        return array;
+                    }
+                }
+            };
+            return (recurse());
+        }
+        
+        &#x2F;&#x2F; color stop helpers
+        function isGradientColorStop(args) {
+            return (args.length &gt; 0 &amp;&amp; args[0].match(colorRegEx) !== null);
+        }
+        
+        function hasLengthInPixels(args) {
+            return (args.length &gt; 1 &amp;&amp; args[1].indexOf(&quot;px&quot;) &gt; 0);
+        }
+        
+        &#x2F;&#x2F; Normalizes px color stops to % 
+        function normalizeGradientExpressionForQuickview(expression) {
+            if (expression.indexOf(&quot;px&quot;) &gt; 0) {
+                var paramStart = expression.indexOf(&quot;(&quot;) + 1,
+                    paramEnd = expression.lastIndexOf(&quot;)&quot;),
+                    parameters = expression.substring(paramStart, paramEnd),
+                    params = splitStyleProperty(parameters),
+                    lowerBound = 0,
+                    upperBound = $previewContainer.width(),
+                    args,
+                    thisSize,
+                    i;
+
+
+                &#x2F;&#x2F; find lower bound                
+                for (i = 0; i &lt; params.length; i++) {
+                    args = params[i].split(&quot; &quot;);
+                    
+                    if (hasLengthInPixels(args)) {
+                        thisSize = parseFloat(args[1]);
+
+                        upperBound = Math.max(upperBound, thisSize);
+                        &#x2F;&#x2F; we really only care about converting negative
+                        &#x2F;&#x2F;  pixel values -- so take the smallest negative pixel 
+                        &#x2F;&#x2F;  value and use that as baseline for display purposes
+                        if (thisSize &lt; 0) {
+                            lowerBound = Math.min(lowerBound, thisSize);
+                        }
+                    }
+                }
+                
+                &#x2F;&#x2F; convert negative lower bound to positive and adjust all pixel values
+                &#x2F;&#x2F;  so that -20px is now 0px and 100px is now 120px 
+                lowerBound = Math.abs(lowerBound);
+                
+                &#x2F;&#x2F; Offset the upperbound by the lowerBound to give us a corrected context
+                upperBound += lowerBound;
+                
+                &#x2F;&#x2F; convert to %
+                for (i = 0; i &lt; params.length; i++) {
+                    args = params[i].split(&quot; &quot;);
+                    if (isGradientColorStop(args) &amp;&amp; hasLengthInPixels(args)) {
+                        thisSize = ((parseFloat(args[1]) + lowerBound) &#x2F; upperBound) * 100;
+                        args[1] = thisSize + &quot;%&quot;;
+                    }
+                    params[i] = args.join(&quot; &quot;);
+                }
+
+                &#x2F;&#x2F; put it back together.                
+                expression = expression.substring(0, paramStart) + params.join(&quot;, &quot;) + expression.substring(paramEnd);
+            }
+            return expression;
+        }
+
+        var gradientMatch = execGradientMatch(line),
+            match = gradientMatch.match || execColorMatch(line),
+            cm = editor._codeMirror;
+
+        while (match) {
+            if (pos.ch &lt; match.index) {
+                &#x2F;&#x2F; Gradients are matched first, then colors, so...
+                if (gradientMatch.match) {
+                    &#x2F;&#x2F; ... gradient match is past cursor -- stop looking for gradients, start searching for colors
+                    gradientMatch = { match: null, prefix: &quot;&quot;, colorValue: null };
+                } else {
+                    &#x2F;&#x2F; ... color match is past cursor -- stop looping
+                    break;
+                }
+            } else if (pos.ch &lt;= match.index + match[0].length) {
+                &#x2F;&#x2F; build the css for previewing the gradient from the regex result
+                var previewCSS = gradientMatch.prefix + (gradientMatch.colorValue || match[0]);
+                
+                &#x2F;&#x2F; normalize the arguments to something that we can display to the user
+                &#x2F;&#x2F; NOTE: we need both the div and the popover&#39;s _previewCSS member 
+                &#x2F;&#x2F;          (used by unit tests) to match so normalize the css for both
+                previewCSS = normalizeGradientExpressionForQuickview(previewCSS);
+                    
+                var preview = &quot;&lt;div class=&#39;color-swatch&#39; style=&#39;background:&quot; + previewCSS + &quot;&#39;&gt;&quot; +
+                              &quot;&lt;&#x2F;div&gt;&quot;;
+                var startPos = {line: pos.line, ch: match.index},
+                    endPos = {line: pos.line, ch: match.index + match[0].length},
+                    startCoords = cm.charCoords(startPos),
+                    xPos;
+                
+                xPos = (cm.charCoords(endPos).left - startCoords.left) &#x2F; 2 + startCoords.left;
+                
+                return {
+                    start: startPos,
+                    end: endPos,
+                    content: preview,
+                    xpos: xPos,
+                    ytop: startCoords.top,
+                    ybot: startCoords.bottom,
+                    _previewCSS: previewCSS
+                };
+            }
+
+            &#x2F;&#x2F; Get next match
+            if (gradientMatch.match) {
+                gradientMatch = execGradientMatch(line);
+            }
+            match = gradientMatch.match || execColorMatch(line);
+        }
+        
+        return null;
+    }
+    
+    
+    &#x2F;&#x2F; Image preview provider -------------------------------------------------
+    
+    function imagePreviewProvider(editor, pos, token, line) {
+        var cm = editor._codeMirror;
+        
+        &#x2F;&#x2F; Check for image name
+        var urlRegEx = &#x2F;url\(([^\)]*)\)&#x2F;gi,
+            tokenString,
+            urlMatch;
+
+        if (token.type === &quot;string&quot;) {
+            tokenString = token.string;
+        } else {
+            urlMatch = urlRegEx.exec(line);
+            while (urlMatch) {
+                if (pos.ch &lt; urlMatch.index) {
+                    &#x2F;&#x2F; match is past cursor, so stop looping
+                    break;
+                } else if (pos.ch &lt;= urlMatch.index + urlMatch[0].length) {
+                    tokenString = urlMatch[1];
+                    break;
+                }
+                urlMatch = urlRegEx.exec(line);
+            }
+        }
+        
+        if (tokenString) {
+            &#x2F;&#x2F; Strip quotes, if present
+            var quotesRegEx = &#x2F;(\&#39;|\&quot;)?([^(\&#39;|\&quot;)]*)(\&#39;|\&quot;)?&#x2F;;
+            tokenString = tokenString.replace(quotesRegEx, &quot;$2&quot;);
+            
+            if (&#x2F;^(data\:image)|(\.gif|\.png|\.jpg|\.jpeg|\.svg)$&#x2F;i.test(tokenString)) {
+                var sPos, ePos;
+                var docPath = editor.document.file.fullPath;
+                var imgPath;
+                
+                if (PathUtils.isAbsoluteUrl(tokenString)) {
+                    imgPath = tokenString;
+                } else {
+                    imgPath = &quot;file:&#x2F;&#x2F;&#x2F;&quot; + FileUtils.getDirectoryPath(docPath) + tokenString;
+                }
+                
+                if (urlMatch) {
+                    sPos = {line: pos.line, ch: urlMatch.index};
+                    ePos = {line: pos.line, ch: urlMatch.index + urlMatch[0].length};
+                } else {
+                    sPos = {line: pos.line, ch: token.start};
+                    ePos = {line: pos.line, ch: token.end};
+                }
+                
+                if (imgPath) {
+                    var imgPreview = &quot;&lt;div class=&#39;image-preview&#39;&gt;&quot;          +
+                                     &quot;    &lt;img src=\&quot;&quot; + imgPath + &quot;\&quot;&gt;&quot;    +
+                                     &quot;&lt;&#x2F;div&gt;&quot;;
+                    var coord = cm.charCoords(sPos);
+                    var xpos = (cm.charCoords(ePos).left - coord.left) &#x2F; 2 + coord.left;
+                    
+                    var showHandler = function () {
+                        &#x2F;&#x2F; Hide the preview container until the image is loaded.
+                        $previewContainer.hide();
+                                                    
+                        
+                        $previewContainer.find(&quot;.image-preview &gt; img&quot;).on(&quot;load&quot;, function () {
+                            $previewContent
+                                .append(&quot;&lt;div class=&#39;img-size&#39;&gt;&quot; +
+                                            this.naturalWidth + &quot; x &quot; + this.naturalHeight + &quot; &quot; + Strings.UNIT_PIXELS +
+                                        &quot;&lt;&#x2F;div&gt;&quot;
+                                    );
+                            $previewContainer.show();
+                            positionPreview(popoverState.xpos, popoverState.ytop, popoverState.ybot);
+                        });
+                    };
+                    
+                    return {
+                        start: sPos,
+                        end: ePos,
+                        content: imgPreview,
+                        onShow: showHandler,
+                        xpos: xpos,
+                        ytop: coord.top,
+                        ybot: coord.bottom,
+                        _imgPath: imgPath
+                    };
+                }
+            }
+        }
+        
+        return null;
+    }
+    
+
+    &#x2F;&#x2F; Preview hide&#x2F;show logic ------------------------------------------------</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>queryPreviewProviders</h4>
+                            <em><p>Returns a 'ready for use' popover state object:<br />{ visible: false, editor, start, end, content, ?onShow, xpos, ytop, ybot }<br />Lacks only hoverTimer (supplied by handleMouseMove()) and marker (supplied by showPreview()).</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function queryPreviewProviders(editor, pos, token) {
+        
+        var line = editor.document.getLine(pos.line);
+        
+        &#x2F;&#x2F; FUTURE: Support plugin providers. For now we just hard-code...
+        var popover = colorAndGradientPreviewProvider(editor, pos, token, line) ||
+                      imagePreviewProvider(editor, pos, token, line);
+        
+        if (popover) {
+            &#x2F;&#x2F; Providers return just { start, end, content, ?onShow, xpos, ytop, ybot }
+            popover.visible = false;
+            popover.editor  = editor;
+            return popover;
+        }
+
+        return null;
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>showPreview</h4>
+                            <em><p>Changes the current hidden popoverState to visible, showing it in the UI and highlighting<br />its matching text in the editor.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function showPreview(editor, popover) {
+        var token,
+            cm = editor._codeMirror;
+
+        if (popover) {
+            popoverState = popover;
+        } else {
+            &#x2F;&#x2F; Query providers and append to popoverState
+            token = cm.getTokenAt(lastPos, true);
+            popoverState = $.extend({}, popoverState, queryPreviewProviders(editor, lastPos, token));
+        }
+        
+        if (popoverState &amp;&amp; popoverState.start &amp;&amp; popoverState.end) {
+            popoverState.marker = cm.markText(
+                popoverState.start,
+                popoverState.end,
+                {className: &quot;quick-view-highlight&quot;}
+            );
+            
+            $previewContent.append(popoverState.content);
+            $previewContainer.show();
+            
+            popoverState.visible = true;
+            
+            if (popoverState.onShow) {
+                popoverState.onShow();
+            } else {
+                positionPreview(popoverState.xpos, popoverState.ytop, popoverState.ybot);
+            }
+        }
+    }
+    
+    function handleMouseMove(event) {
+        if (!enabled) {
+            return;
+        }
+        
+        if (event.which) {
+            &#x2F;&#x2F; Button is down - don&#39;t show popovers while dragging
+            hidePreview();
+            return;
+        }
+        
+        &#x2F;&#x2F; Figure out which editor we are over
+        var fullEditor = EditorManager.getCurrentFullEditor();
+        
+        if (!fullEditor) {
+            hidePreview();
+            return;
+        }
+        
+        &#x2F;&#x2F; Check for inline Editor instances first
+        var inlines = fullEditor.getInlineWidgets(),
+            i,
+            editor;
+        
+        for (i = 0; i &lt; inlines.length; i++) {
+            var $inlineEditorRoot = inlines[i].editor &amp;&amp; $(inlines[i].editor.getRootElement()),  &#x2F;&#x2F; see MultiRangeInlineEditor
+                $otherDiv = inlines[i].$htmlContent;
+            
+            if ($inlineEditorRoot &amp;&amp; divContainsMouse($inlineEditorRoot, event)) {
+                editor = inlines[i].editor;
+                break;
+            } else if ($otherDiv &amp;&amp; divContainsMouse($otherDiv, event)) {
+                &#x2F;&#x2F; Mouse inside unsupported inline editor like Quick Docs or Color Editor
+                hidePreview();
+                return;
+            }
+        }
+        
+        &#x2F;&#x2F; Check main editor
+        if (!editor) {
+            if (divContainsMouse($(fullEditor.getRootElement()), event)) {
+                editor = fullEditor;
+            }
+        }
+        
+        if (editor &amp;&amp; editor._codeMirror) {
+            &#x2F;&#x2F; Find char mouse is over
+            var cm = editor._codeMirror,
+                pos = cm.coordsChar({left: event.clientX, top: event.clientY}),
+                showImmediately = false;
+            
+            &#x2F;&#x2F; Bail if mouse is on same char as last event
+            if (lastPos &amp;&amp; lastPos.line === pos.line &amp;&amp; lastPos.ch === pos.ch) {
+                return;
+            }
+            lastPos = pos;
+            
+            &#x2F;&#x2F; No preview if mouse is past last char on line
+            if (pos.ch &gt;= editor.document.getLine(pos.line).length) {
+                hidePreview();
+                return;
+            }
+            
+            &#x2F;&#x2F; Is there already a popover provider and range?
+            if (popoverState) {
+                if (popoverState.start &amp;&amp; popoverState.end &amp;&amp;
+                        editor.posWithinRange(pos, popoverState.start, popoverState.end, 1)) {
+                    &#x2F;&#x2F; That one&#39;s still relevant - nothing more to do
+                    return;
+                } else {
+                    &#x2F;&#x2F; That one doesn&#39;t cover this pos - hide it and start anew
+                    showImmediately = popoverState.visible;
+                    hidePreview();
+                }
+            }
+            
+            &#x2F;&#x2F; Initialize popoverState
+            popoverState = {};
+            
+            &#x2F;&#x2F; Set timer to scan and show. This will get cancelled (in hidePreview())
+            &#x2F;&#x2F; if mouse movement rendered this popover inapplicable before timer fires.
+            &#x2F;&#x2F; When showing &quot;immediately&quot;, still use setTimeout() to make this async
+            &#x2F;&#x2F; so we return from this mousemove event handler ASAP.
+            popoverState.hoverTimer = window.setTimeout(function () {
+                showPreview(editor, null);
+            }, showImmediately ? 0 : HOVER_DELAY);
+                
+        } else {
+            &#x2F;&#x2F; Mouse not over any Editor - immediately hide popover
+            hidePreview();
+        }
+    }
+    
+    function onActiveEditorChange(event, current, previous) {
+        &#x2F;&#x2F; Hide preview when editor changes
+        hidePreview();
+
+        if (previous &amp;&amp; previous.document) {
+            $(previous.document).off(&quot;change&quot;, hidePreview);
+        }
+
+        if (current &amp;&amp; current.document) {
+            $(current.document).on(&quot;change&quot;, hidePreview);
+        }
+    }
+
+    &#x2F;&#x2F; Menu command handlers
+    function updateMenuItemCheckmark() {
+        CommandManager.get(CMD_ENABLE_QUICK_VIEW).setChecked(enabled);
+    }
+
+    function setEnabled(_enabled) {
+        if (enabled !== _enabled) {
+            enabled = _enabled;
+            var editorHolder = $(&quot;#editor-holder&quot;)[0];
+            if (enabled) {
+                &#x2F;&#x2F; Note: listening to &quot;scroll&quot; also catches text edits, which bubble a scroll event up from the hidden text area. This means
+                &#x2F;&#x2F; we auto-hide on text edit, which is probably actually a good thing.
+                editorHolder.addEventListener(&quot;mousemove&quot;, handleMouseMove, true);
+                editorHolder.addEventListener(&quot;scroll&quot;, hidePreview, true);
+                editorHolder.addEventListener(&quot;mouseout&quot;, hidePreview, true);
+
+                &#x2F;&#x2F; Setup doc &quot;change&quot; listener
+                onActiveEditorChange(null, EditorManager.getActiveEditor(), null);
+                $(EditorManager).on(&quot;activeEditorChange&quot;, onActiveEditorChange);
+
+            } else {
+                editorHolder.removeEventListener(&quot;mousemove&quot;, handleMouseMove, true);
+                editorHolder.removeEventListener(&quot;scroll&quot;, hidePreview, true);
+                editorHolder.removeEventListener(&quot;mouseout&quot;, hidePreview, true);
+
+                &#x2F;&#x2F; Cleanup doc &quot;change&quot; listener
+                onActiveEditorChange(null, null, EditorManager.getActiveEditor());
+                $(EditorManager).off(&quot;activeEditorChange&quot;, onActiveEditorChange);
+
+                hidePreview();
+            }
+            prefs.setValue(&quot;enabled&quot;, enabled);
+        }
+        &#x2F;&#x2F; Always update the checkmark, even if the enabled flag hasn&#39;t changed.
+        updateMenuItemCheckmark();
+    }
+    
+    function toggleEnableQuickView() {
+        setEnabled(!enabled);
+    }
+        
+    &#x2F;&#x2F; Create the preview container
+    $previewContainer = $(previewContainerHTML).appendTo($(&quot;body&quot;));
+    $previewContent = $previewContainer.find(&quot;.preview-content&quot;);
+    
+    &#x2F;&#x2F; Load our stylesheet
+    ExtensionUtils.loadStyleSheet(module, &quot;QuickView.css&quot;);
+    
+    &#x2F;&#x2F; Register command
+    CommandManager.register(Strings.CMD_ENABLE_QUICK_VIEW, CMD_ENABLE_QUICK_VIEW, toggleEnableQuickView);
+    Menus.getMenu(Menus.AppMenuBar.VIEW_MENU).addMenuItem(CMD_ENABLE_QUICK_VIEW);
+    
+    &#x2F;&#x2F; Init PreferenceStorage
+    prefs = PreferencesManager.getPreferenceStorage(module, defaultPrefs);
+
+    &#x2F;&#x2F; Setup initial UI state
+    setEnabled(prefs.getValue(&quot;enabled&quot;));
+    
+    &#x2F;&#x2F; For unit testing
+    exports._queryPreviewProviders  = queryPreviewProviders;
+    exports._forceShow              = function (popover) {
+        hidePreview();
+        showPreview(popover.editor, popover);
+    };
+});</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="hide">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

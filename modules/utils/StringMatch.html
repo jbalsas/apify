@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>StringMatch</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>nittests: StringMatch</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/thirdparty&#x2F;lodash.html">lodash</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="hide">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>SearchResult</h4>
+                            <em><p>Object representing a search result with associated metadata (added as extra ad hoc fields)</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function SearchResult(label) {
+        this.label = label;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>StringMatcher</h4>
+                            <em><p>A StringMatcher provides an interface to the stringMatch function with built-in<br />caching. You should use a StringMatcher for the lifetime of queries over a<br />single data set.</p>
+
+<p>You are free to store other data on this object to assist in higher-level caching.<br />(This object's caches are all stored in "_" prefixed properties.)</p></em>
+                            <dl>
+                                    <dt>options</dt>
+                                    <dd class="label label-info pull-left">{preferPrefixMatches:?boolean,segmentedSearch:?boolean}</dd>
+                                    <dd>to control search behavior. preferPrefixMatches puts an exact case-insensitive prefix match ahead of all other matches, even short-circuiting the match logic. This option implies segmentedSearch=false. segmentedSearch treats segments of the string specially.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function StringMatcher(options) {
+        this.options = options;
+        this.reset();
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_computeRangesAndScore</h4>
+                            <em><p>Converts a list of matches into a form suitable for returning from stringMatch.</p></em>
+                            <dl>
+                                    <dt>matchList</dt>
+                                    <dd class="label label-info pull-left">Array.&lt;SpecialMatch,NormalMatch&gt;</dd>
+                                    <dd>to convert</dd>
+                                    <dt>original</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>string</dd>
+                                    <dt>character</dt>
+                                    <dd class="label label-info pull-left">int</dd>
+                                    <dd>index where last segment begins</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _computeRangesAndScore(matchList, str, lastSegmentStart) {
+        var matchCounter;
+        var ranges = [];
+        var lastMatchIndex = -1;
+        var lastSegmentScore = 0;
+        var currentRangeStartedOnSpecial = false;
+        
+        var score = 0;
+        var scoreDebug;
+        if (DEBUG_SCORES) {
+            scoreDebug = {
+                special: 0,
+                match: 0,
+                lastSegment: 0,
+                beginning: 0,
+                lengthDeduction: 0,
+                consecutive: 0,
+                notStartingOnSpecial: 0
+            };
+        }
+        
+        var currentRange = null;
+        
+        &#x2F;&#x2F; Records the current range and adds any additional ranges required to
+        &#x2F;&#x2F; get to character index c. This function is called before starting a new range
+        &#x2F;&#x2F; or returning from the function.
+        function closeRangeGap(c) {
+            &#x2F;&#x2F; Close the current range
+            if (currentRange) {
+                currentRange.includesLastSegment = lastMatchIndex &gt;= lastSegmentStart;
+                if (currentRange.matched &amp;&amp; currentRange.includesLastSegment) {
+                    if (DEBUG_SCORES) {
+                        scoreDebug.lastSegment += lastSegmentScore * LAST_SEGMENT_BOOST;
+                    }
+                    score += lastSegmentScore * LAST_SEGMENT_BOOST;
+                }
+                
+                if (currentRange.matched &amp;&amp; !currentRangeStartedOnSpecial) {
+                    if (DEBUG_SCORES) {
+                        scoreDebug.notStartingOnSpecial -= NOT_STARTING_ON_SPECIAL_PENALTY;
+                    }
+                    score -= NOT_STARTING_ON_SPECIAL_PENALTY;
+                }
+                ranges.push(currentRange);
+            }
+            
+            &#x2F;&#x2F; If there was space between the new range and the last,
+            &#x2F;&#x2F; add a new unmatched range before the new range can be added.
+            if (lastMatchIndex + 1 &lt; c) {
+                ranges.push({
+                    text: str.substring(lastMatchIndex + 1, c),
+                    matched: false,
+                    includesLastSegment: c &gt; lastSegmentStart
+                });
+            }
+            currentRange = null;
+            lastSegmentScore = 0;
+        }
+        
+        &#x2F;&#x2F; In some cases (see the use of this variable below), we accelerate the
+        &#x2F;&#x2F; bonus the more consecutive matches there are.
+        var numConsecutive = 0;
+        
+        &#x2F;&#x2F; Adds a matched character to the appropriate range
+        function addMatch(match) {
+            &#x2F;&#x2F; Pull off the character index
+            var c = match.index;
+            var newPoints = 0;
+            
+            &#x2F;&#x2F; A match means that we need to do some scoring bookkeeping.
+            &#x2F;&#x2F; Start with points added for any match
+            if (DEBUG_SCORES) {
+                scoreDebug.match += MATCH_POINTS;
+            }
+            newPoints += MATCH_POINTS;
+            
+            &#x2F;&#x2F; A bonus is given for characters that match at the beginning
+            &#x2F;&#x2F; of the filename
+            if (c === lastSegmentStart) {
+                if (DEBUG_SCORES) {
+                    scoreDebug.beginning += BEGINNING_OF_NAME_POINTS;
+                }
+                newPoints += BEGINNING_OF_NAME_POINTS;
+            }
+            
+            &#x2F;&#x2F; If the new character immediately follows the last matched character,
+            &#x2F;&#x2F; we award the consecutive matches bonus. The check for score &gt; 0
+            &#x2F;&#x2F; handles the initial value of lastMatchIndex which is used for
+            &#x2F;&#x2F; constructing ranges but we don&#39;t yet have a true match.
+            if (score &gt; 0 &amp;&amp; lastMatchIndex + 1 === c) {
+                &#x2F;&#x2F; Continue boosting for each additional match at the beginning
+                &#x2F;&#x2F; of the name
+                if (c - numConsecutive === lastSegmentStart) {
+                    if (DEBUG_SCORES) {
+                        scoreDebug.beginning += BEGINNING_OF_NAME_POINTS;
+                    }
+                    newPoints += BEGINNING_OF_NAME_POINTS;
+                }
+                
+                numConsecutive++;
+                
+                var boost = CONSECUTIVE_MATCHES_POINTS * numConsecutive;
+                
+                &#x2F;&#x2F; Consecutive matches that started on a special are a
+                &#x2F;&#x2F; good indicator of intent, so we award an added bonus there.
+                if (currentRangeStartedOnSpecial) {
+                    boost = boost * 2;
+                }
+                
+                if (DEBUG_SCORES) {
+                    scoreDebug.consecutive += boost;
+                }
+                newPoints += boost;
+            } else {
+                numConsecutive = 1;
+            }
+            
+            &#x2F;&#x2F; add points for &quot;special&quot; character matches
+            if (match instanceof SpecialMatch) {
+                if (DEBUG_SCORES) {
+                    scoreDebug.special += SPECIAL_POINTS;
+                }
+                newPoints += SPECIAL_POINTS;
+            }
+            
+            score += newPoints;
+            
+            &#x2F;&#x2F; points accumulated in the last segment get an extra bonus
+            if (c &gt;= lastSegmentStart) {
+                lastSegmentScore += newPoints;
+            }
+            
+            &#x2F;&#x2F; if the last range wasn&#39;t a match or there&#39;s a gap, we need to close off
+            &#x2F;&#x2F; the range to start a new one.
+            if ((currentRange &amp;&amp; !currentRange.matched) || c &gt; lastMatchIndex + 1) {
+                closeRangeGap(c);
+            }
+            lastMatchIndex = c;
+            
+            &#x2F;&#x2F; set up a new match range or add to the current one
+            if (!currentRange) {
+                currentRange = {
+                    text: str[c],
+                    matched: true
+                };
+                
+                &#x2F;&#x2F; Check to see if this new matched range is starting on a special
+                &#x2F;&#x2F; character. We penalize those ranges that don&#39;t, because most
+                &#x2F;&#x2F; people will search on the logical boundaries of the name
+                currentRangeStartedOnSpecial = match instanceof SpecialMatch;
+            } else {
+                currentRange.text += str[c];
+            }
+        }
+        
+        &#x2F;&#x2F; scan through the matches, adding each one in turn
+        for (matchCounter = 0; matchCounter &lt; matchList.length; matchCounter++) {
+            var match = matchList[matchCounter];
+            addMatch(match);
+        }
+        
+        &#x2F;&#x2F; add a range for the last part of the string
+        closeRangeGap(str.length);
+        
+        &#x2F;&#x2F; shorter strings that match are often better than longer ones
+        var lengthPenalty = -1 * Math.round(str.length * DEDUCTION_FOR_LENGTH);
+        if (DEBUG_SCORES) {
+            scoreDebug.lengthDeduction = lengthPenalty;
+        }
+        score = score + lengthPenalty;
+
+        var result = {
+            ranges: ranges,
+            matchGoodness: score
+        };
+        
+        if (DEBUG_SCORES) {
+            result.scoreDebug = scoreDebug;
+        }
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_generateMatchList</h4>
+                            <em><p>Finds the best matches between the query and the string. The query is<br />compared with str (usually a lower case string with a lower case<br />query).</p>
+
+<p>Generally speaking, this function tries to find "special" characters<br />(see findSpecialCharacters above) first. Failing that, it starts scanning<br />the "normal" characters. Sometimes, it will find a special character that matches<br />but then not be able to match the rest of the query. In cases like that, the<br />search will backtrack and try to find matches for the whole query earlier in the<br />string.</p>
+
+<p>A contrived example will help illustrate how the searching and backtracking works. It's a bit long,<br />but it illustrates different pieces of the algorithm which can be tricky. Let's say that we're<br />searching the string "AzzBzzCzdzezzDgxgEF" for "abcdex".</p>
+
+<p>To start with, it will match "abcde" from the query to "A B C D E" in the string (the spaces <br />represent gaps in the matched part of the string), because those are all "special characters".<br />However, the "x" in the query doesn't match the "F" which is the only character left in the<br />string.</p>
+
+<p>Backtracking kicks in. The "E" is pulled off of the match list.<br />deadBranches[4] is set to the "g" before the "E". This means that for the 5th<br />query character (the "e") we know that we don't have a match beyond that point in the string.</p>
+
+<p>To resume searching, the backtrack function looks at the previous match (the "D") and starts<br />searching in character-by-character (ANY_MATCH) mode right after that. It fails to find an<br />"e" before it gets to deadBranches[4], so it has to backtrack again.</p>
+
+<p>This time, the "D" is pulled off the match list.<br />deadBranches[3] is set to the "z" before the "D", because we know that for the "dex" part of the<br />query, we can't make it work past the "D". We'll resume searching with the "z" after the "C".</p>
+
+<p>Doing an ANY_MATCH search, we find the "d". We then start searching specials for "e", but we<br />stop before we get to "E" because deadBranches[4] tells us that's a dead end. So, we switch<br />to ANY_MATCH and find the "e".</p>
+
+<p>Finally, we search for the "x". We don't find a special that matches, so we start an ANY_MATCH<br />search. Then we find the "x", and we have a successful match.</p>
+
+<p>Here are some notes on how the algorithm works:</p>
+
+<ul>
+<li><p>We only backtrack() when we're exhausted both special AND normal forward searches past that point, <br />for the query remainder we currently have.  For a different query remainder, we may well get further <br />along - hence deadBranches[] being dependent on queryCounter; but in order to get a different query <br />remainder, we must give up one or more current matches by backtracking.</p></li>
+<li><p>Normal "any char" forward search is a superset of special matching mode -- anything that would have <br />been matched in special mode <em>could</em> also be matched by normal mode. In practice, however,<br />any special characters that could have matched would be picked up first by the specials matching<br />code.</p></li>
+<li><p>backtrack() always goes at least as far back as str[deadBranches[queryCounter]-1] before allowing <br />forward searching to resume</p></li>
+<li><p>When <code>deadBranches[queryCounter] = strCounter</code> it means if we're still trying to match <br /><code>queryStr[queryCounter]</code> and we get to <code>str[strCounter]</code>, there's no way we can match the <br />remainer of <code>queryStr</code> with the remainder of <code>str</code> -- either using specials-only or <br />full any-char matching.</p></li>
+<li><p>We know this because deadBranches[] is set in backtrack(), and we don't get to backtrack() unless <br />either:</p>
+
+<ol><li>We've already exhausted both special AND normal forward searches past that point
+(i.e. backtrack() due to <code>strCounter &gt;= str.length</code>, yet <code>queryCounter &lt; query.length</code>)</li>
+<li>We stopped searching further forward due to a previously set deadBranches[] value
+(i.e. backtrack() due to <code>strCounter &gt; deadBranches[queryCounter]</code>, yet 
+<code>queryCounter &lt; query.length</code>)</li></ol></li>
+</ul></em>
+                            <dl>
+                                    <dt>query</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>the search string (generally lower cased)</dd>
+                                    <dt>str</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>the string to compare with (generally lower cased)</dd>
+                                    <dt>specials</dt>
+                                    <dd class="label label-info pull-left">Array</dd>
+                                    <dd>list of special indexes in str (from findSpecialCharacters)</dd>
+                                    <dt>startingSpecial</dt>
+                                    <dd class="label label-info pull-left">int</dd>
+                                    <dd>index into specials array to start scanning with</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _generateMatchList(query, str, specials, startingSpecial) {
+        var result = [];
+        
+        &#x2F;&#x2F; used to keep track of which special character we&#39;re testing now
+        var specialsCounter = startingSpecial;
+        
+        &#x2F;&#x2F; strCounter and queryCounter are the indexes used for pulling characters
+        &#x2F;&#x2F; off of the str&#x2F;compareStr and query.
+        var strCounter = specials[startingSpecial];
+        var queryCounter;
+        
+        &#x2F;&#x2F; the search branches out between special characters and normal characters
+        &#x2F;&#x2F; that are found via consecutive character scanning. In the process of
+        &#x2F;&#x2F; performing these scans, we discover that parts of the query will not match
+        &#x2F;&#x2F; beyond a given point in the string. We keep track of that information
+        &#x2F;&#x2F; in deadBranches, which has a slot for each character in the query.
+        &#x2F;&#x2F; The value stored in the slot is the index into the string after which we
+        &#x2F;&#x2F; are certain there is no match.
+        var deadBranches = [];
+        
+        for (queryCounter = 0; queryCounter &lt; query.length; queryCounter++) {
+            deadBranches[queryCounter] = Infinity;
+        }
+        
+        queryCounter = 0;
+        
+        var state = SPECIALS_MATCH;
+        
+        &#x2F;&#x2F; Compares the current character from the query string against the
+        &#x2F;&#x2F; special characters in str. Returns true if a match was found,
+        &#x2F;&#x2F; false otherwise.
+        function findMatchingSpecial() {
+            &#x2F;&#x2F; used to loop through the specials
+            var i;
+            
+            for (i = specialsCounter; i &lt; specials.length; i++) {
+                &#x2F;&#x2F; short circuit this search when we know there are no matches following
+                if (specials[i] &gt;= deadBranches[queryCounter]) {
+                    break;
+                }
+                
+                &#x2F;&#x2F; First, ensure that we&#39;re not comparing specials that
+                &#x2F;&#x2F; come earlier in the string than our current search position.
+                &#x2F;&#x2F; This can happen when the string position changes elsewhere.
+                if (specials[i] &lt; strCounter) {
+                    specialsCounter = i;
+                } else if (query[queryCounter] === str[specials[i]]) {
+                    &#x2F;&#x2F; we have a match! do the required tracking
+                    specialsCounter = i;
+                    queryCounter++;
+                    strCounter = specials[i];
+                    result.push(new SpecialMatch(strCounter++));
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+        
+        &#x2F;&#x2F; This function implements the backtracking that is done when we fail to find
+        &#x2F;&#x2F; a match with the query using the &quot;search for specials first&quot; approach.
+        &#x2F;&#x2F;
+        &#x2F;&#x2F; returns false when it is not able to backtrack successfully
+        function backtrack() {
+            
+            &#x2F;&#x2F; The idea is to pull matches off of our match list, rolling back
+            &#x2F;&#x2F; characters from the query. We pay special attention to the special
+            &#x2F;&#x2F; characters since they are searched first.
+            while (result.length &gt; 0) {
+                var item = result.pop();
+                
+                &#x2F;&#x2F; nothing in the list? there&#39;s no possible match then.
+                if (!item) {
+                    return false;
+                }
+                
+                &#x2F;&#x2F; we pulled off a match, which means that we need to put a character
+                &#x2F;&#x2F; back into our query. strCounter is going to be set once we&#39;ve pulled
+                &#x2F;&#x2F; off the right special character and know where we&#39;re going to restart
+                &#x2F;&#x2F; searching from.
+                queryCounter--;
+                
+                if (item instanceof SpecialMatch) {
+                    &#x2F;&#x2F; pulled off a special, which means we need to make that special available
+                    &#x2F;&#x2F; for matching again
+                    specialsCounter--;
+                    
+                    &#x2F;&#x2F; check to see if we&#39;ve gone back as far as we need to
+                    if (item.index &lt; deadBranches[queryCounter]) {
+                        &#x2F;&#x2F; we now know that this part of the query does not match beyond this
+                        &#x2F;&#x2F; point
+                        deadBranches[queryCounter] = item.index - 1;
+                        
+                        &#x2F;&#x2F; since we failed with the specials along this track, we&#39;re
+                        &#x2F;&#x2F; going to reset to looking for matches consecutively.
+                        state = ANY_MATCH;
+                        
+                        &#x2F;&#x2F; we figure out where to start looking based on the new
+                        &#x2F;&#x2F; last item in the list. If there isn&#39;t anything else
+                        &#x2F;&#x2F; in the match list, we&#39;ll start over at the starting special
+                        &#x2F;&#x2F; (which is generally the beginning of the string, or the
+                        &#x2F;&#x2F; beginning of the last segment of the string)
+                        item = result[result.length - 1];
+                        if (!item) {
+                            strCounter = specials[startingSpecial] + 1;
+                            return true;
+                        }
+                        strCounter = item.index + 1;
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        
+        while (true) {
+            
+            &#x2F;&#x2F; keep looping until we&#39;ve either exhausted the query or the string
+            while (queryCounter &lt; query.length &amp;&amp; strCounter &lt; str.length &amp;&amp; strCounter &lt;= deadBranches[queryCounter]) {
+                if (state === SPECIALS_MATCH) {
+                    if (!findMatchingSpecial()) {
+                        state = ANY_MATCH;
+                    }
+                }
+                
+                if (state === ANY_MATCH) {
+                    &#x2F;&#x2F; we look character by character for matches
+                    if (query[queryCounter] === str[strCounter]) {
+                        &#x2F;&#x2F; got a match! record it, and switch back to searching specials
+                        queryCounter++;
+                        result.push(new NormalMatch(strCounter++));
+                        state = SPECIALS_MATCH;
+                    } else {
+                        &#x2F;&#x2F; no match, keep looking
+                        strCounter++;
+                    }
+                }
+            }
+            
+            &#x2F;&#x2F; if we&#39;ve finished the query, or we haven&#39;t finished the query but we have no
+            &#x2F;&#x2F; more backtracking we can do, then we&#39;re all done searching.
+            if (queryCounter &gt;= query.length || (queryCounter &lt; query.length &amp;&amp; !backtrack())) {
+                break;
+            }
+        }
+        
+        &#x2F;&#x2F; return null when we don&#39;t find anything
+        if (queryCounter &lt; query.length || result.length === 0) {
+            return null;
+        }
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_lastSegmentSearch</h4>
+                            <em><p>Seek out the best match in the last segment (generally the filename). <br />Matches in the filename are preferred, but the query entered could match<br />any part of the path. So, we find the best match we can get in the filename<br />and then allow for searching the rest of the string with any characters that<br />are left from the beginning of the query.</p>
+
+<p>The parameters and return value are the same as for getMatchRanges,<br />except this function is always working on the last segment and the<br />result can optionally include a remainder, which is the characters<br />at the beginning of the query which did not match in the last segment.</p></em>
+                            <dl>
+                                    <dt>query</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>the search string (generally lower cased)</dd>
+                                    <dt>str</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>the string to compare with (generally lower cased)</dd>
+                                    <dt>specials</dt>
+                                    <dd class="label label-info pull-left">Array</dd>
+                                    <dd>list of special indexes in str (from findSpecialCharacters)</dd>
+                                    <dt>startingSpecial</dt>
+                                    <dd class="label label-info pull-left">int</dd>
+                                    <dd>index into specials array to start scanning with</dd>
+                                    <dt>lastSegmentStart</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>which character does the last segment start at</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _lastSegmentSearch(query, str, specials, startingSpecial, lastSegmentStart) {
+        var queryCounter, matchList;
+        
+        &#x2F;&#x2F; It&#39;s possible that the query is longer than the last segment.
+        &#x2F;&#x2F; If so, we can chop off the bit that we know couldn&#39;t possibly be there.
+        var remainder = &quot;&quot;;
+        var extraCharacters = specials[startingSpecial] + query.length - str.length;
+
+        if (extraCharacters &gt; 0) {
+            remainder = query.substring(0, extraCharacters);
+            query = query.substring(extraCharacters);
+        }
+        
+        for (queryCounter = 0; queryCounter &lt; query.length; queryCounter++) {
+            matchList = _generateMatchList(query.substring(queryCounter),
+                                     str, specials, startingSpecial);
+            
+            &#x2F;&#x2F; if we&#39;ve got a match *or* there are no segments in this string, we&#39;re done
+            if (matchList || startingSpecial === 0) {
+                break;
+            }
+        }
+        
+        if (queryCounter === query.length || !matchList) {
+            return null;
+        } else {
+            return {
+                remainder: remainder + query.substring(0, queryCounter),
+                matchList: matchList
+            };
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_prefixMatchResult</h4>
+                            <em><p>If we short circuit normal matching to produce a prefix match,<br />this function will generate the appropriate SearchResult.<br />This function assumes that the prefix match check has already<br />been performed.</p></em>
+                            <dl>
+                                    <dt>str</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The string with the prefix match for the query</dd>
+                                    <dt>query</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The query that matched the beginning of str</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _prefixMatchResult(str, query) {
+        var result = new SearchResult(str);
+        result.matchGoodness = -Number.MAX_VALUE;
+        if (DEBUG_SCORES) {
+            result.scoreDebug = {
+                beginning: Number.MAX_VALUE
+            };
+        }
+        result.stringRanges = [{
+            text: str.substr(0, query.length),
+            matched: true,
+            includesLastSegment: true
+        }];
+        if (str.length &gt; query.length) {
+            result.stringRanges.push({
+                text: str.substring(query.length),
+                matched: false,
+                includesLastSegment: true
+            });
+        }
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_wholeStringSearch</h4>
+                            <em><p>Implements the top-level search algorithm. Search the last segment first,<br />then search the rest of the string with the remainder.</p>
+
+<p>The parameters and return value are the same as for getMatchRanges.</p></em>
+                            <dl>
+                                    <dt>query</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>the search string (will be searched lower case)</dd>
+                                    <dt>compareStr</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>the lower-cased string to search</dd>
+                                    <dt>specials</dt>
+                                    <dd class="label label-info pull-left">Array</dd>
+                                    <dd>list of special indexes in str (from findSpecialCharacters)</dd>
+                                    <dt>lastSegmentSpecialsIndex</dt>
+                                    <dd class="label label-info pull-left">int</dd>
+                                    <dd>index into specials array to start scanning with</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _wholeStringSearch(query, compareStr, specials, lastSegmentSpecialsIndex) {
+        var lastSegmentStart = specials[lastSegmentSpecialsIndex];
+        var result;
+        var matchList;
+        
+        result = _lastSegmentSearch(query, compareStr, specials, lastSegmentSpecialsIndex, lastSegmentStart);
+        
+        if (result) {
+            matchList = result.matchList;
+            
+            &#x2F;&#x2F; Do we have more query characters that did not fit?
+            if (result.remainder) {
+                &#x2F;&#x2F; Scan with the remainder only through the beginning of the last segment
+                var remainderMatchList = _generateMatchList(result.remainder,
+                                              compareStr.substring(0, lastSegmentStart),
+                                              specials.slice(0, lastSegmentSpecialsIndex), 0);
+                
+                if (remainderMatchList) {
+                    &#x2F;&#x2F; add the new matched ranges to the beginning of the set of ranges we had
+                    matchList.unshift.apply(matchList, remainderMatchList);
+                } else {
+                    &#x2F;&#x2F; no match
+                    return null;
+                }
+            }
+        } else {
+            &#x2F;&#x2F; No match in the last segment, so we start over searching the whole
+            &#x2F;&#x2F; string
+            matchList = _generateMatchList(query, compareStr, specials, 0);
+        }
+        
+        return matchList;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>basicMatchSort</h4>
+                            <em><p>Sorts search results generated by stringMatch(): results are sorted into several<br />tiers based on how well they matched the search query, then sorted alphabetically<br />within each tier.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function basicMatchSort(searchResults) {
+        multiFieldSort(searchResults, { matchGoodness: 0, label: 1 });
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>findSpecialCharacters</h4>
+                            <em><p>Identifies the "special" characters in the given string.<br />Special characters for matching purposes are:</p>
+
+<ul>
+<li>the first character</li>
+<li>"/" and the character following the "/"</li>
+<li>"_", "." and "-" and the character following it</li>
+<li>an uppercase character that follows a lowercase one (think camelCase)</li>
+</ul>
+
+<p>The returned object contains an array called "specials". This array is<br />a list of indexes into the original string where all of the special<br />characters are. It also has a property "lastSegmentSpecialsIndex" which<br />is an index into the specials array that denotes which location is the<br />beginning of the last path segment. (This is used to allow scanning of<br />the last segment's specials separately.)</p></em>
+                            <dl>
+                                    <dt>input</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>string to break apart (e.g. filename that is being searched)</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function findSpecialCharacters(str) {
+        var i, c;
+        
+        &#x2F;&#x2F; the beginning of the string is always special
+        var specials = [0];
+        
+        &#x2F;&#x2F; lastSegmentSpecialsIndex starts off with the assumption that
+        &#x2F;&#x2F; there are no segments
+        var lastSegmentSpecialsIndex = 0;
+        
+        &#x2F;&#x2F; used to track down the camelCase changeovers
+        var lastWasLowerCase = false;
+        
+        for (i = 0; i &lt; str.length; i++) {
+            c = str[i];
+            if (c === &quot;&#x2F;&quot;) {
+                &#x2F;&#x2F; new segment means this character and the next are special
+                specials.push(i++);
+                specials.push(i);
+                lastSegmentSpecialsIndex = specials.length - 1;
+                lastWasLowerCase = false;
+            } else if (c === &quot;.&quot; || c === &quot;-&quot; || c === &quot;_&quot;) {
+                &#x2F;&#x2F; _, . and - are separators so they are
+                &#x2F;&#x2F; special and so is the next character
+                specials.push(i++);
+                specials.push(i);
+                lastWasLowerCase = false;
+            } else if (c.toUpperCase() === c) {
+                &#x2F;&#x2F; this is the check for camelCase changeovers
+                if (lastWasLowerCase) {
+                    specials.push(i);
+                }
+                lastWasLowerCase = false;
+            } else {
+                lastWasLowerCase = true;
+            }
+        }
+        return {
+            specials: specials,
+            lastSegmentSpecialsIndex: lastSegmentSpecialsIndex
+        };
+    }
+    
+    &#x2F;&#x2F; states used during the scanning of the string
+    var SPECIALS_MATCH = 0;
+    var ANY_MATCH = 1;
+    
+    &#x2F;&#x2F; Scores can be hard to make sense of. The DEBUG_SCORES flag
+    &#x2F;&#x2F; provides a way to peek into the parts that made up a score.
+    &#x2F;&#x2F; This flag is used for manual debugging and in the unit tests only.
+    var DEBUG_SCORES = false;
+    function _setDebugScores(ds) {
+        DEBUG_SCORES = ds;
+    }
+    
+    &#x2F;&#x2F; Constants for scoring
+    var SPECIAL_POINTS = 35;
+    var MATCH_POINTS = 10;
+    var LAST_SEGMENT_BOOST = 1;
+    var BEGINNING_OF_NAME_POINTS = 10;
+    var DEDUCTION_FOR_LENGTH = 0.2;
+    var CONSECUTIVE_MATCHES_POINTS = 7;
+    var NOT_STARTING_ON_SPECIAL_PENALTY = 25;
+    
+    &#x2F;&#x2F; Used in match lists to designate matches of &quot;special&quot; characters (see
+    &#x2F;&#x2F; findSpecialCharacters above
+    function SpecialMatch(index) {
+        this.index = index;
+    }
+    
+    &#x2F;&#x2F; Used in match lists to designate any matched characters that are not special
+    function NormalMatch(index) {
+        this.index = index;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>multiFieldSort</h4>
+                            <em><p>Sorts an array of SearchResult objects on a primary field, followed by secondary fields<br />in case of ties. 'fieldSpec' provides the priority order for fields, where the first entry is the primary field, for example:<br />     multiFieldSort(bugList, [ "milestone", "severity" ]);<br />Would sort a bug list by milestone, and within each milestone sort bugs by severity.</p>
+
+<p>fieldSpec can also include comparator functions of the form normally used by the sort()<br />function.</p>
+
+<p>Any fields that have a string value are compared case-insensitively. Fields used should be<br />present on all SearchResult objects (no optional/undefined fields).</p></em>
+                            <dl>
+                                    <dt>searchResults</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Array.&lt;SearchResult&gt;</dd>
+                                    <dd></dd>
+                                    <dt>fieldSpec</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Array.&lt;string, function&gt;</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function multiFieldSort(searchResults, fieldSpec) {
+        &#x2F;&#x2F; Move field names into an array, with primary field first
+        var comparisons;
+        if (Array.isArray(fieldSpec)) {
+            comparisons = fieldSpec;
+        } else {
+            &#x2F;&#x2F; TODO Deprecate this form of calling this function
+            comparisons = [];
+            _.forEach(fieldSpec, function (priority, key) {
+                comparisons[priority] = key;
+            });
+        }
+        
+        searchResults.sort(function (a, b) {
+            var priority;
+            for (priority = 0; priority &lt; comparisons.length; priority++) {
+                var comparison = comparisons[priority];
+                if (typeof comparison === &quot;function&quot;) {
+                    var result = comparison(a, b);
+                    if (result) {
+                        return result;
+                    }
+                } else {
+                    var valueA = a[comparison];
+                    var valueB = b[comparison];
+                    if (typeof valueA === &quot;string&quot;) {
+                        valueA = valueA.toLowerCase();
+                        valueB = valueB.toLowerCase();
+                    }
+                    
+                    if (valueA &lt; valueB) {
+                        return -1;
+                    } else if (valueA &gt; valueB) {
+                        return 1;
+                    }
+                }
+                &#x2F;&#x2F; otherwise, move on to next sort priority
+            }
+            return 0; &#x2F;&#x2F; all sort fields are equal
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>stringMatch</h4>
+                            <em><p>Match str against the query using the QuickOpen algorithm provided by<br />the functions above. The general idea is to prefer matches of "special" characters and,<br />optionally, matches that occur in the "last segment" (generally, the filename). stringMatch<br />will try to provide the best match and produces a "matchGoodness" score<br />to allow for relative ranking.</p>
+
+<p>The result object returned includes "stringRanges" which can be used to highlight<br />the matched portions of the string, in addition to the "matchGoodness"<br />mentioned above. If DEBUG_SCORES is true, scoreDebug is set on the result<br />to provide insight into the score.</p>
+
+<p>The matching is done in a case-insensitive manner.</p></em>
+                            <dl>
+                                    <dt>str</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The string to search</dd>
+                                    <dt>query</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The query string to find in string</dd>
+                                    <dt>options</dt>
+                                    <dd class="label label-info pull-left">{preferPrefixMatches:?boolean,segmentedSearch:?boolean}</dd>
+                                    <dd>to control search behavior. preferPrefixMatches puts an exact case-insensitive prefix match ahead of all other matches, even short-circuiting the match logic. This option implies segmentedSearch=false. When segmentedSearch is true, the string is broken into segments by "/" characters and the last segment is searched first and matches there are scored higher.</dd>
+                                    <dt>special</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">Object</dd>
+                                    <dd>(optional) the specials data from findSpecialCharacters, if already known This is generally just used by StringMatcher for optimization.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function stringMatch(str, query, options, special) {
+        var result;
+        
+        options = options || {};
+        
+        &#x2F;&#x2F; No query? Short circuit the normal work done and just
+        &#x2F;&#x2F; return a single range that covers the whole string.
+        if (!query) {
+            result = new SearchResult(str);
+            result.matchGoodness = 0;
+            if (DEBUG_SCORES) {
+                result.scoreDebug = {};
+            }
+            result.stringRanges = [{
+                text: str,
+                matched: false,
+                includesLastSegment: true
+            }];
+            return result;
+        }
+        
+        &#x2F;&#x2F; comparisons are case insensitive, so switch to lower case here
+        query = query.toLowerCase();
+        var compareStr = str.toLowerCase();
+        
+        if (options.preferPrefixMatches) {
+            options.segmentedSearch = false;
+        }
+        
+        if (options.preferPrefixMatches &amp;&amp; compareStr.substr(0, query.length) === query) {
+            return _prefixMatchResult(str, query);
+        }
+        
+        &#x2F;&#x2F; Locate the special characters and then use orderedCompare to do the real
+        &#x2F;&#x2F; work.
+        if (!special) {
+            special = findSpecialCharacters(str);
+        }
+        var lastSegmentStart, matchList;
+        
+        &#x2F;&#x2F; For strings that are not broken into multiple segments, we can potentially
+        &#x2F;&#x2F; avoid some extra work
+        if (options.segmentedSearch) {
+            lastSegmentStart = special.specials[special.lastSegmentSpecialsIndex];
+            matchList = _wholeStringSearch(query, compareStr, special.specials,
+                              special.lastSegmentSpecialsIndex);
+        } else {
+            lastSegmentStart = 0;
+            matchList = _generateMatchList(query, compareStr, special.specials,
+                                           0);
+        }
+        
+        &#x2F;&#x2F; If we get a match, turn this into a SearchResult as expected by the consumers
+        &#x2F;&#x2F; of this API.
+        if (matchList) {
+            var compareData = _computeRangesAndScore(matchList, str, lastSegmentStart);
+            result = new SearchResult(str);
+            result.stringRanges = compareData.ranges;
+            result.matchGoodness = -1 * compareData.matchGoodness;
+            if (DEBUG_SCORES) {
+                result.scoreDebug = compareData.scoreDebug;
+            }
+        }
+        return result;
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="hide">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

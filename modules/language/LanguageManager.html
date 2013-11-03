@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>LanguageManager</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>LanguageManager provides access to the languages supported by Brackets</p>
+
+<p>To find out which languages we support by default, have a look at languages.json.</p>
+
+<p>To get access to an existing language, call getLanguage():<br />    var language = LanguageManager.getLanguage("<id>");</p>
+
+<p>To define your own languages, call defineLanguage():<br />    LanguageManager.defineLanguage("haskell", {<br />        name: "Haskell",<br />        mode: "haskell",<br />        fileExtensions: ["hs"],<br />        blockComment: ["{-", "-}"],<br />        lineComment: ["--"]<br />    });</p>
+
+<p>To use that language and its related mode, wait for the returned promise to be resolved:<br />    LanguageManager.defineLanguage("haskell", definition).done(function (language) {<br />        console.log("Language " + language.getName() + " is now available!");<br />    });</p>
+
+<p>The extension can also contain dots:<br />    LanguageManager.defineLanguage("literatecoffeescript", {<br />        name: "Literate CoffeeScript",<br />        mode: "coffeescript",<br />        fileExtensions: ["litcoffee", "coffee.md"]<br />    }); </p>
+
+<p>You can also specify file names:<br />    LanguageManager.defineLanguage("makefile", {<br />        name: "Make",<br />        mode: ["null", "text/plain"],<br />        fileNames: ["Makefile"]<br />    });<br />You can combine file names and extensions, or not define them at all.</p>
+
+<p>You can also refine an existing language:<br />    var language = LanguageManager.getLanguage("haskell");<br />    language.setLineCommentSyntax(["--"]);<br />    language.setBlockCommentSyntax("{-", "-}");<br />    language.addFileExtension("lhs");</p>
+
+<p>Some CodeMirror modes define variations of themselves. They are called MIME modes.<br />To find existing MIME modes, search for "CodeMirror.defineMIME" in thirdparty/CodeMirror2/mode<br />For instance, C++, C# and Java all use the clike (C-like) mode with different settings and a different MIME name.<br />You can refine the mode definition by specifying the MIME mode as well:<br />    LanguageManager.defineLanguage("csharp", {<br />        name: "C#",<br />        mode: ["clike", "text/x-csharp"],<br />        ...<br />    });<br />Defining the base mode is still necessary to know which file to load.<br />However, language.getMode() will return just the MIME mode if one was<br />specified.</p>
+
+<p>If you need to configure a mode, you can just create a new MIME mode and use that:<br />    CodeMirror.defineMIME("text/x-brackets-html", {<br />        "name": "htmlmixed",<br />        "scriptTypes": [{"matches": /\/x-handlebars-template|\/x-mustache/i,<br />                       "mode": null}]<br />    });</p>
+
+<pre><code>LanguageManager.defineLanguage("html", {
+    name: "HTML",
+    mode: ["htmlmixed", "text/x-brackets-html"],
+    ...
+});
+</code></pre>
+
+<p>If a mode is not shipped with our CodeMirror distribution, you need to first load it yourself.<br />If the mode is part of our CodeMirror distribution, it gets loaded automatically.</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+                            <li><a href="..&#x2F;../modules/text!language&#x2F;languages.json.html">languages.json</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="hide">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getLanguageForMode</h4>
+                            <em><p>Resolves a CodeMirror mode to a Language object.</p></em>
+                            <dl>
+                                    <dt>mode</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>CodeMirror mode</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getLanguageForMode(mode) {
+        var language = _modeToLanguageMap[mode];
+        if (language) {
+            return language;
+        }
+        
+        &#x2F;&#x2F; In case of unsupported languages
+        console.log(&quot;Called LanguageManager._getLanguageForMode with a mode for which no language has been registered:&quot;, mode);
+        return _fallbackLanguage;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_patchCodeMirror</h4>
+                            <em><p>Monkey-patch CodeMirror to prevent modes from being overwritten by extensions.<br />We may rely on the tokens provided by some of these modes.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _patchCodeMirror() {
+        var _original_CodeMirror_defineMode = CodeMirror.defineMode;
+        function _wrapped_CodeMirror_defineMode(name) {
+            if (CodeMirror.modes[name]) {
+                console.error(&quot;There already is a CodeMirror mode with the name \&quot;&quot; + name + &quot;\&quot;&quot;);
+                return;
+            }
+            _original_CodeMirror_defineMode.apply(CodeMirror, arguments);
+        }
+        CodeMirror.defineMode = _wrapped_CodeMirror_defineMode;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_setLanguageForMode</h4>
+                            <em><p>Adds a global mode-to-language association.</p></em>
+                            <dl>
+                                    <dt>mode</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The mode to associate the language with</dd>
+                                    <dt>language</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Language</dd>
+                                    <dd>The language to associate with the mode</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _setLanguageForMode(mode, language) {
+        if (_modeToLanguageMap[mode]) {
+            console.warn(&quot;CodeMirror mode \&quot;&quot; + mode + &quot;\&quot; is already used by language &quot; + _modeToLanguageMap[mode]._name + &quot;, won&#39;t register for &quot; + language._name);
+            return;
+        }
+
+        _modeToLanguageMap[mode] = language;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_triggerLanguageAdded</h4>
+                            <em><p>Notify listeners when a language is added</p></em>
+                            <dl>
+                                    <dt>language</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Language</dd>
+                                    <dd>The new language</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _triggerLanguageAdded(language) {
+        &#x2F;&#x2F; finally, store language to _language map
+        _languages[language.getId()] = language;
+        $(exports).triggerHandler(&quot;languageAdded&quot;, [language]);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_triggerLanguageModified</h4>
+                            <em><p>Notify listeners when a language is modified</p></em>
+                            <dl>
+                                    <dt>language</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Language</dd>
+                                    <dd>The modified language</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _triggerLanguageModified(language) {
+        $(exports).triggerHandler(&quot;languageModified&quot;, [language]);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_validateNonEmptyString</h4>
+                            <em><p>Checks whether value is a non-empty string. Reports an error otherwise.<br />If no deferred is passed, console.error is called.<br />Otherwise the deferred is rejected with the error message.</p></em>
+                            <dl>
+                                    <dt>value</dt>
+                                    <dd class="label label-info pull-left">*</dd>
+                                    <dd>The value to validate</dd>
+                                    <dt>description</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>A helpful identifier for value</dd>
+                                    <dt>deferred</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">jQuery.Deferred</dd>
+                                    <dd>A deferred to reject with the error message in case of an error</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _validateNonEmptyString(value, description, deferred) {
+        var reportError = deferred ? deferred.reject : console.error;
+        
+        &#x2F;&#x2F; http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;1303646&#x2F;check-whether-variable-is-number-or-string-in-javascript
+        if (Object.prototype.toString.call(value) !== &quot;[object String]&quot;) {
+            reportError(description + &quot; must be a string&quot;);
+            return false;
+        }
+        if (value === &quot;&quot;) {
+            reportError(description + &quot; must not be empty&quot;);
+            return false;
+        }
+        return true;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>defineLanguage</h4>
+                            <em><p>Defines a language.</p></em>
+                            <dl>
+                                    <dt>id</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Unique identifier for this language: lowercase letters, digits, and _ separators (e.g. "cpp", "foo_bar", "c99")</dd>
+                                    <dt>definition</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Object</dd>
+                                    <dd>An object describing the language</dd>
+                                    <dt>definition.name</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Human-readable name of the language, as it's commonly referred to (e.g. "C++")</dd>
+                                    <dt>definition.fileExtensions</dt>
+                                    <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
+                                    <dd>List of file extensions used by this language (e.g. ["php", "php3"] or ["coffee.md"] - may contain dots)</dd>
+                                    <dt>definition.fileNames</dt>
+                                    <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
+                                    <dd>List of exact file names (e.g. ["Makefile"] or ["package.json]). Higher precedence than file extension.</dd>
+                                    <dt>definition.blockComment</dt>
+                                    <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
+                                    <dd>Array with two entries defining the block comment prefix and suffix (e.g. ["<!--", "-->"])</dd>
+                                    <dt>definition.lineComment</dt>
+                                    <dd class="label label-info pull-left">(string,Array.&lt;string&gt;)</dd>
+                                    <dd>Line comment prefixes (e.g. "//" or ["//", "#"])</dd>
+                                    <dt>definition.mode</dt>
+                                    <dd class="label label-info pull-left">(string,Array.&lt;string&gt;)</dd>
+                                    <dd>CodeMirror mode (e.g. "htmlmixed"), optionally with a MIME mode defined by that mode ["clike", "text/x-c++src"] Unless the mode is located in thirdparty/CodeMirror2/mode/<name>/<name>.js, you need to first load it yourself. </dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function defineLanguage(id, definition) {
+        var result = new $.Deferred();
+        
+        if (_pendingLanguages[id]) {
+            result.reject(&quot;Language \&quot;&quot; + id + &quot;\&quot; is waiting to be resolved.&quot;);
+            return result.promise();
+        }
+        if (_languages[id]) {
+            result.reject(&quot;Language \&quot;&quot; + id + &quot;\&quot; is already defined&quot;);
+            return result.promise();
+        }
+
+        var language       = new Language(),
+            name           = definition.name,
+            fileExtensions = definition.fileExtensions,
+            fileNames      = definition.fileNames,
+            blockComment   = definition.blockComment,
+            lineComment    = definition.lineComment,
+            i,
+            l;
+        
+        if (!language._setId(id) || !language._setName(name) ||
+                (blockComment &amp;&amp; !language.setBlockCommentSyntax(blockComment[0], blockComment[1])) ||
+                (lineComment &amp;&amp; !language.setLineCommentSyntax(lineComment))) {
+            result.reject();
+            return result.promise();
+        }
+        
+        &#x2F;&#x2F; track languages that are currently loading
+        _pendingLanguages[id] = language;
+        
+        language._loadAndSetMode(definition.mode).done(function () {
+            &#x2F;&#x2F; register language file extensions after mode has loaded
+            if (fileExtensions) {
+                for (i = 0, l = fileExtensions.length; i &lt; l; i++) {
+                    language.addFileExtension(fileExtensions[i]);
+                }
+            }
+            
+            &#x2F;&#x2F; register language file names after mode has loaded
+            if (fileNames) {
+                for (i = 0, l = fileNames.length; i &lt; l; i++) {
+                    language.addFileName(fileNames[i]);
+                }
+            }
+                
+            &#x2F;&#x2F; globally associate mode to language
+            _setLanguageForMode(language.getMode(), language);
+            
+            &#x2F;&#x2F; finally, store language to _language map
+            _languages[language.getId()] = language;
+            
+            &#x2F;&#x2F; fire an event to notify DocumentManager of the new language
+            _triggerLanguageAdded(language);
+            
+            result.resolve(language);
+        }).fail(function (error) {
+            console.error(error);
+            result.reject(error);
+        }).always(function () {
+            &#x2F;&#x2F; delete from pending languages after success and failure
+            delete _pendingLanguages[id];
+        });
+        
+        return result.promise();
+    }
+    
+   
+    &#x2F;&#x2F; Prevent modes from being overwritten by extensions
+    _patchCodeMirror();
+    
+    &#x2F;&#x2F; Define a custom MIME mode here instead of putting it directly into languages.json
+    &#x2F;&#x2F; because JSON files must not contain regular expressions. Also, all other modes so
+    &#x2F;&#x2F; far were strings, so we spare us the trouble of allowing more complex mode values.
+    CodeMirror.defineMIME(&quot;text&#x2F;x-brackets-html&quot;, {
+        &quot;name&quot;: &quot;htmlmixed&quot;,
+        &quot;scriptTypes&quot;: [{&quot;matches&quot;: &#x2F;\&#x2F;x-handlebars-template|\&#x2F;x-mustache&#x2F;i,
+                       &quot;mode&quot;: null}]
+    });
+ 
+    &#x2F;&#x2F; Load the default languages
+    _defaultLanguagesJSON = JSON.parse(_defaultLanguagesJSON);
+    _ready = Async.doInParallel(Object.keys(_defaultLanguagesJSON), function (key) {
+        return defineLanguage(key, _defaultLanguagesJSON[key]);
+    }, false);
+    
+    &#x2F;&#x2F; Get the object for HTML
+    _ready.always(function () {
+        var html = getLanguage(&quot;html&quot;);
+        
+        &#x2F;&#x2F; The htmlmixed mode uses the xml mode internally for the HTML parts, so we map it to HTML
+        html._setLanguageForMode(&quot;xml&quot;, html);
+        
+        &#x2F;&#x2F; Currently we override the above mentioned &quot;xml&quot; in TokenUtils.getModeAt, instead returning &quot;html&quot;.
+        &#x2F;&#x2F; When the CSSInlineEditor and the hint providers are no longer based on modes, this can be changed.
+        &#x2F;&#x2F; But for now, we need to associate this madeup &quot;html&quot; mode with our HTML language object.
+        _setLanguageForMode(&quot;html&quot;, html);
+        
+        &#x2F;&#x2F; The fallback language for unknown modes and file extensions
+        _fallbackLanguage = getLanguage(&quot;unknown&quot;);
+    });
+    
+    &#x2F;&#x2F; Public methods
+    exports.ready                   = _ready;
+    exports.defineLanguage          = defineLanguage;
+    exports.getLanguage             = getLanguage;
+    exports.getLanguageForPath      = getLanguageForPath;
+});</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getLanguage</h4>
+                            <em><p>Resolves a language ID to a Language object.<br />File names have a higher priority than file extensions. </p></em>
+                            <dl>
+                                    <dt>id</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Identifier for this language: lowercase letters, digits, and _ separators (e.g. "cpp", "foo_bar", "c99")</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getLanguage(id) {
+        return _languages[id];
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getLanguageForPath</h4>
+                            <em><p>Resolves a file path to a Language object.</p></em>
+                            <dl>
+                                    <dt>path</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Path to the file to find a language for</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getLanguageForPath(path) {
+        var fileName = FileUtils.getBaseName(path).toLowerCase(),
+            language = _fileNameToLanguageMap[fileName],
+            extension,
+            parts;
+
+        &#x2F;&#x2F; If no language was found for the file name, use the file extension instead
+        if (!language) {
+            &#x2F;&#x2F; Split the file name into parts:
+            &#x2F;&#x2F;   &quot;foo.coffee.md&quot;   =&gt; [&quot;foo&quot;, &quot;coffee&quot;, &quot;md&quot;]
+            &#x2F;&#x2F;   &quot;.profile.bak&quot;    =&gt; [&quot;&quot;, &quot;profile&quot;, &quot;bak&quot;]
+            &#x2F;&#x2F;   &quot;1. Vacation.txt&quot; =&gt; [&quot;1&quot;, &quot; Vacation&quot;, &quot;txt&quot;]
+            parts = fileName.split(&quot;.&quot;);
+            
+            &#x2F;&#x2F; A leading dot does not indicate a file extension, but marks the file as hidden =&gt; remove it
+            if (parts[0] === &quot;&quot;) {
+                &#x2F;&#x2F; [&quot;&quot;, &quot;profile&quot;, &quot;bak&quot;] =&gt; [&quot;profile&quot;, &quot;bak&quot;]
+                parts.shift();
+            }
+            
+            &#x2F;&#x2F; The first part is assumed to be the title, not the extension =&gt; remove it
+            &#x2F;&#x2F;   [&quot;foo&quot;, &quot;coffee&quot;, &quot;md&quot;]   =&gt; [&quot;coffee&quot;, &quot;md&quot;]
+            &#x2F;&#x2F;   [&quot;profile&quot;, &quot;bak&quot;]        =&gt; [&quot;bak&quot;]
+            &#x2F;&#x2F;   [&quot;1&quot;, &quot; Vacation&quot;, &quot;txt&quot;] =&gt; [&quot; Vacation&quot;, &quot;txt&quot;]
+            parts.shift();
+            
+            &#x2F;&#x2F; Join the remaining parts into a file extension until none are left or a language was found
+            while (!language &amp;&amp; parts.length) {
+                &#x2F;&#x2F; First iteration:
+                &#x2F;&#x2F;   [&quot;coffee&quot;, &quot;md&quot;]     =&gt; &quot;coffee.md&quot;
+                &#x2F;&#x2F;   [&quot;bak&quot;]              =&gt; &quot;bak&quot;
+                &#x2F;&#x2F;   [&quot; Vacation&quot;, &quot;txt&quot;] =&gt; &quot; Vacation.txt&quot;
+                &#x2F;&#x2F; Second iteration (assuming no language was found for &quot;coffee.md&quot;):
+                &#x2F;&#x2F;   [&quot;md&quot;]  =&gt; &quot;md&quot;
+                &#x2F;&#x2F;   [&quot;txt&quot;] =&gt; &quot;txt&quot;
+                extension = parts.join(&quot;.&quot;);
+                language  = _fileExtensionToLanguageMap[extension];
+                &#x2F;&#x2F; Remove the first part
+                &#x2F;&#x2F; First iteration:
+                &#x2F;&#x2F;   [&quot;coffee&quot;, &quot;md&quot;]     =&gt; [&quot;md&quot;]
+                &#x2F;&#x2F;   [&quot;bak&quot;]              =&gt; []
+                &#x2F;&#x2F;   [&quot; Vacation&quot;, &quot;txt&quot;] =&gt; [&quot;txt&quot;]
+                &#x2F;&#x2F; Second iteration:
+                &#x2F;&#x2F;   [&quot;md&quot;]  =&gt; []
+                &#x2F;&#x2F;   [&quot;txt&quot;] =&gt; []
+                parts.shift();
+            }
+        }
+        
+        return language || _fallbackLanguage;
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="">
+                        <h2>Classes</h2>
+                            <div class="well">
+                                <div class="member public">
+                                    <span class="pull-right scope">
+                                        Constructor
+                                    </span>
+                                    <h4>Language</h4>
+                                    <em><p>Model for a language.</p></em>
+                                    <dl>
+                                    </dl>
+                                    
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>function Language() {
+        this._fileExtensions    = [];
+        this._fileNames         = [];
+        this._modeToLanguageMap = {};
+        this._lineCommentSyntax = [];
+    }</code></pre>
+                                </div>
+            
+                                <section class="properties ">
+                                    <h3>Properties<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_blockCommentSyntax</h4>
+                                        <dl>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>@type {{ prefix: string, suffix: string }} Block comment syntax</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._blockCommentSyntax = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_fileExtensions</h4>
+                                        <dl>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>@type {Array.<string>} File extensions that use this language</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._fileExtensions = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_fileNames</h4>
+                                        <dl>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>@type {Array.<string>} File names for extensionless files that use this language</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._fileNames = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_id</h4>
+                                        <dl>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>@type {string} Identifier for this language</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._id = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_lineCommentSyntax</h4>
+                                        <dl>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>@type {Array.<string>} Line comment syntax</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._lineCommentSyntax = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_mode</h4>
+                                        <dl>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>@type {string} CodeMirror mode for this language</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._mode = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_modeToLanguageMap</h4>
+                                        <dl>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>@type {Object.<string,Language>} Which language to use for what CodeMirror mode</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._modeToLanguageMap = null;</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_name</h4>
+                                        <dl>
+                                            <dt>Private</dt>
+                                        </dl>
+                                        <p>@type {string} Human-readable name of this language</p>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._name = null;</code></pre>
+                                    </div>
+                                </section>
+            
+                                <section class="methods ">
+                                    <h3>Methods<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_loadAndSetMode</h4>
+                                        <em><p>Loads a mode and sets it for this language.</p></em>
+                                        <dl>
+                                            <dt>mode</dt>
+                                            <dd class="label label-info pull-left">(string,Array.&lt;string&gt;)</dd>
+                                            <dd>CodeMirror mode (e.g. "htmlmixed"), optionally paired with a MIME mode defined by that mode (e.g. ["clike", "text/x-c++src"]). Unless the mode is located in thirdparty/CodeMirror2/mode/<name>/<name>.js, you need to first load it yourself.</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">$.Promise</dd>
+                                            <dd>A promise object that will be resolved when the mode is loaded and set</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._loadAndSetMode = function (mode) {
+        var result      = new $.Deferred(),
+            self        = this,
+            mimeMode; &#x2F;&#x2F; Mode can be an array specifying a mode plus a MIME mode defined by that mode [&quot;clike&quot;, &quot;text&#x2F;x-c++src&quot;]
+        
+        if (Array.isArray(mode)) {
+            if (mode.length !== 2) {
+                result.reject(&quot;Mode must either be a string or an array containing two strings&quot;);
+                return result.promise();
+            }
+            mimeMode = mode[1];
+            mode = mode[0];
+        }
+        
+        &#x2F;&#x2F; mode must not be empty. Use &quot;null&quot; (the string &quot;null&quot;) mode for plain text
+        if (!_validateNonEmptyString(mode, &quot;mode&quot;, result)) {
+            result.reject();
+            return result.promise();
+        }
+        
+        var finish = function () {
+            if (!CodeMirror.modes[mode]) {
+                result.reject(&quot;CodeMirror mode \&quot;&quot; + mode + &quot;\&quot; is not loaded&quot;);
+                return;
+            }
+            
+            if (mimeMode) {
+                var modeConfig = CodeMirror.mimeModes[mimeMode];
+                
+                if (!modeConfig) {
+                    result.reject(&quot;CodeMirror MIME mode \&quot;&quot; + mimeMode + &quot;\&quot; not found&quot;);
+                    return;
+                }
+            }
+            
+            &#x2F;&#x2F; This mode is now only about what to tell CodeMirror
+            &#x2F;&#x2F; The base mode was only necessary to load the proper mode file
+            self._mode = mimeMode || mode;
+            self._wasModified();
+            
+            result.resolve(self);
+        };
+        
+        if (CodeMirror.modes[mode]) {
+            finish();
+        } else {
+            require([&quot;thirdparty&#x2F;CodeMirror2&#x2F;mode&#x2F;&quot; + mode + &quot;&#x2F;&quot; + mode], finish);
+        }
+        
+        return result.promise();
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_setId</h4>
+                                        <em><p>Sets the identifier for this language or prints an error to the console.</p></em>
+                                        <dl>
+                                            <dt>id</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>Identifier for this language: lowercase letters, digits, and _ separators (e.g. "cpp", "foo_bar", "c99")</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>Whether the ID was valid and set or not</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._setId = function (id) {
+        if (!_validateNonEmptyString(id, &quot;Language ID&quot;)) {
+            return false;
+        }
+        &#x2F;&#x2F; Make sure the ID is a string that can safely be used universally by the computer - as a file name, as an object key, as part of a URL, etc.
+        &#x2F;&#x2F; Hence we use &quot;_&quot; instead of &quot;.&quot; since the latter often has special meaning
+        if (!id.match(&#x2F;^[a-z0-9]+(_[a-z0-9]+)*$&#x2F;)) {
+            console.error(&quot;Invalid language ID \&quot;&quot; + id + &quot;\&quot;: Only groups of lower case letters and numbers are allowed, separated by underscores.&quot;);
+            return false;
+        }
+        
+        this._id = id;
+        return true;
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_setLanguageForMode</h4>
+                                        <em><p>Overrides a mode-to-language association for this particular language only or prints an error to the console.<br />Used to disambiguate modes used by multiple languages.</p></em>
+                                        <dl>
+                                            <dt>mode</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The mode to associate the language with</dd>
+                                            <dt>language</dt>
+                                            <dd class="label label-info pull-left">Language</dd>
+                                            <dd>The language to associate with the mode</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>Whether the mode-to-language association was valid and set or not</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._setLanguageForMode = function (mode, language) {
+        if (mode === this._mode &amp;&amp; language !== this) {
+            console.error(&quot;A language must always map its mode to itself&quot;);
+            return false;
+        }
+        
+        this._modeToLanguageMap[mode] = language;
+        this._wasModified();
+        
+        return true;
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_setName</h4>
+                                        <em><p>Sets the human-readable name of this language or prints an error to the console.</p></em>
+                                        <dl>
+                                            <dt>name</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>Human-readable name of the language, as it's commonly referred to (e.g. "C++")</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>Whether the name was valid and set or not</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._setName = function (name) {
+        if (!_validateNonEmptyString(name, &quot;name&quot;)) {
+            return false;
+        }
+        
+        this._name = name;
+        return true;
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_wasModified</h4>
+                                        <em><p>Trigger the "languageModified" event if this language is registered already</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype._wasModified = function () {
+        if (_languages[this._id]) {
+            _triggerLanguageModified(this);
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>addFileExtension</h4>
+                                        <em><p>Adds a file extension to this language.</p></em>
+                                        <dl>
+                                            <dt>extension</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>A file extension used by this language</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>Whether adding the file extension was successful or not</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.addFileExtension = function (extension) {
+        &#x2F;&#x2F; Remove a leading dot if present
+        if (extension.charAt(0) === &quot;.&quot;) {
+            extension = extension.substr(1);
+        }
+        
+        &#x2F;&#x2F; Make checks below case-INsensitive
+        extension = extension.toLowerCase();
+        
+        if (this._fileExtensions.indexOf(extension) === -1) {
+            this._fileExtensions.push(extension);
+            
+            var language = _fileExtensionToLanguageMap[extension];
+            if (language) {
+                console.warn(&quot;Cannot register file extension \&quot;&quot; + extension + &quot;\&quot; for &quot; + this._name + &quot;, it already belongs to &quot; + language._name);
+            } else {
+                _fileExtensionToLanguageMap[extension] = this;
+            }
+            
+            this._wasModified();
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>addFileName</h4>
+                                        <em><p>Adds a file name to the language which is used to match files that don't have extensions like "Makefile" for example.</p></em>
+                                        <dl>
+                                            <dt>extension</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>An extensionless file name used by this language</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>Whether adding the file name was successful or not</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.addFileName = function (name) {
+        &#x2F;&#x2F; Make checks below case-INsensitive
+        name = name.toLowerCase();
+        
+        if (this._fileNames.indexOf(name) === -1) {
+            this._fileNames.push(name);
+            
+            var language = _fileNameToLanguageMap[name];
+            if (language) {
+                console.warn(&quot;Cannot register file name \&quot;&quot; + name + &quot;\&quot; for &quot; + this._name + &quot;, it already belongs to &quot; + language._name);
+            } else {
+                _fileNameToLanguageMap[name] = this;
+            }
+            
+            this._wasModified();
+        }
+        return true;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getBlockCommentPrefix</h4>
+                                        <em><p>Returns the prefix to use for block comments.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The prefix</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.getBlockCommentPrefix = function () {
+        return this._blockCommentSyntax &amp;&amp; this._blockCommentSyntax.prefix;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getBlockCommentSuffix</h4>
+                                        <em><p>Returns the suffix to use for block comments.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The suffix</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.getBlockCommentSuffix = function () {
+        return this._blockCommentSyntax &amp;&amp; this._blockCommentSyntax.suffix;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getFileExtensions</h4>
+                                        <em><p>Returns an array of file extensions for this language.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
+                                            <dd>File extensions used by this language</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.getFileExtensions = function () {
+        &#x2F;&#x2F; Use concat to create a copy of this array, preventing external modification
+        return this._fileExtensions.concat();
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getFileNames</h4>
+                                        <em><p>Returns an array of file names for extensionless files that use this language.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
+                                            <dd>Extensionless file names used by this language</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.getFileNames = function () {
+        &#x2F;&#x2F; Use concat to create a copy of this array, preventing external modification
+        return this._fileNames.concat();
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getId</h4>
+                                        <em><p>Returns the identifier for this language.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The identifier</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.getId = function () {
+        return this._id;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getLanguageForMode</h4>
+                                        <em><p>Returns either a language associated with the mode or the fallback language.<br />Used to disambiguate modes used by multiple languages.</p></em>
+                                        <dl>
+                                            <dt>mode</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The mode to associate the language with</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Language</dd>
+                                            <dd>This language if it uses the mode, or whatever {@link LanguageManager#_getLanguageForMode} returns</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.getLanguageForMode = function (mode) {
+        if (mode === this._mode) {
+            return this;
+        }
+        return this._modeToLanguageMap[mode] || _getLanguageForMode(mode);
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getLineCommentPrefixes</h4>
+                                        <em><p>Returns an array of prefixes to use for line comments.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
+                                            <dd>The prefixes</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.getLineCommentPrefixes = function () {
+        return this._lineCommentSyntax;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getMode</h4>
+                                        <em><p>Returns the CodeMirror mode for this language.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The mode</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.getMode = function () {
+        return this._mode;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getName</h4>
+                                        <em><p>Returns the human-readable name of this language.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>The name</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.getName = function () {
+        return this._name;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>hasBlockCommentSyntax</h4>
+                                        <em><p>Returns whether the block comment syntax is defined for this language.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>Whether block comments are supported</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.hasBlockCommentSyntax = function () {
+        return Boolean(this._blockCommentSyntax);
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>hasLineCommentSyntax</h4>
+                                        <em><p>Returns whether the line comment syntax is defined for this language.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>Whether line comments are supported</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.hasLineCommentSyntax = function () {
+        return this._lineCommentSyntax.length &gt; 0;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>isFallbackLanguage</h4>
+                                        <em><p>Determines whether this is the fallback language or not</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>True if this is the fallback language, false otherwise</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.isFallbackLanguage = function () {
+        return this === _fallbackLanguage;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>setBlockCommentSyntax</h4>
+                                        <em><p>Sets the prefix and suffix to use for blocks comments in this language or prints an error to the console.</p></em>
+                                        <dl>
+                                            <dt>prefix</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>Prefix string to use for block comments (e.g. "<!--")</dd>
+                                            <dt>suffix</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>Suffix string to use for block comments (e.g. "-->")</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>Whether the syntax was valid and set or not</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.setBlockCommentSyntax = function (prefix, suffix) {
+        if (!_validateNonEmptyString(prefix, &quot;prefix&quot;) || !_validateNonEmptyString(suffix, &quot;suffix&quot;)) {
+            return false;
+        }
+        
+        this._blockCommentSyntax = { prefix: prefix, suffix: suffix };
+        this._wasModified();
+        
+        return true;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>setLineCommentSyntax</h4>
+                                        <em><p>Sets the prefixes to use for line comments in this language or prints an error to the console.</p></em>
+                                        <dl>
+                                            <dt>prefix</dt>
+                                            <dd class="label label-info pull-left">(string, Array.&lt;string&gt;)</dd>
+                                            <dd>Prefix string or an array of prefix strings to use for line comments (e.g. "//" or ["//", "#"])</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>Whether the syntax was valid and set or not</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Language.prototype.setLineCommentSyntax = function (prefix) {
+        var prefixes = Array.isArray(prefix) ? prefix : [prefix];
+        var i;
+        
+        if (prefixes.length) {
+            this._lineCommentSyntax = [];
+            for (i = 0; i &lt; prefixes.length; i++) {
+                _validateNonEmptyString(String(prefixes[i]), Array.isArray(prefix) ? &quot;prefix[&quot; + i + &quot;]&quot; : &quot;prefix&quot;);
+                
+                this._lineCommentSyntax.push(prefixes[i]);
+            }
+            this._wasModified();
+        } else {
+            console.error(&quot;The prefix array should not be empty&quot;);
+        }
+        
+        return true;
+    };</code></pre>
+                                    </div>
+                                </section>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

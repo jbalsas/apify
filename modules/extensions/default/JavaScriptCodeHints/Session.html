@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;..&#x2F;..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;..&#x2F;..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../../../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;..&#x2F;..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>Session</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>lobal define, brackets, $</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/HintUtils.html">HintUtils</a></li>
+                            <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/ScopeManager.html">ScopeManager</a></li>
+                            <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/thirdparty&#x2F;acorn&#x2F;acorn.html">acorn</a></li>
+                            <li><a href="..&#x2F;..&#x2F;..&#x2F;../modules/thirdparty&#x2F;acorn&#x2F;acorn_loose.html">acorn_loose</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="hide">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>filterWithQueryAndMatcher</h4>
+                            <em><p>Filter an array hints using a given query and matcher.<br /> The hints are returned in the format of the matcher.<br /> The matcher returns the value in the "label" property,<br /> the match score in "matchGoodness" property.</p></em>
+                            <dl>
+                                    <dt>hints</dt>
+                                    <dd class="label label-info pull-left">Array</dd>
+                                    <dd>- array of hints</dd>
+                                    <dt>matcher</dt>
+                                    <dd class="label label-info pull-left">StringMatcher</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function filterWithQueryAndMatcher(hints, matcher) {
+            var matchResults = $.map(hints, function (hint) {
+                var searchResult = matcher.match(hint.value, query);
+                if (searchResult) {
+                    searchResult.value = hint.value;
+                    searchResult.guess = hint.guess;
+                    searchResult.type = hint.type;
+
+                    if (hint.keyword !== undefined) {
+                        searchResult.keyword = hint.keyword;
+                    }
+
+                    if (hint.literal !== undefined) {
+                        searchResult.literal = hint.literal;
+                    }
+
+                    if (hint.depth !== undefined) {
+                        searchResult.depth = hint.depth;
+                    }
+
+                    if (!type.property &amp;&amp; !type.showFunctionType &amp;&amp; hint.origin &amp;&amp;
+                            isBuiltin(hint.origin)) {
+                        searchResult.builtin = 1;
+                    } else {
+                        searchResult.builtin = 0;
+                    }
+                }
+
+                return searchResult;
+            });
+
+            return matchResults;
+        }
+
+        if (type.property) {
+            hints = this.ternHints || [];
+            hints = filterWithQueryAndMatcher(hints, matcher);
+
+            &#x2F;&#x2F; If there are no hints then switch over to guesses.
+            if (hints.length === 0) {
+                if (this.ternGuesses) {
+                    hints = filterWithQueryAndMatcher(this.ternGuesses, matcher);
+                } else {
+                    needGuesses = true;
+                }
+            }
+
+            StringMatch.multiFieldSort(hints, [ &quot;matchGoodness&quot;, penalizeUnderscoreValueCompare ]);
+        } else {     &#x2F;&#x2F; identifiers, literals, and keywords
+            hints = this.ternHints || [];
+            hints = hints.concat(HintUtils.LITERALS);
+            hints = hints.concat(HintUtils.KEYWORDS);
+            hints = filterWithQueryAndMatcher(hints, matcher);
+            StringMatch.multiFieldSort(hints, [ &quot;matchGoodness&quot;, &quot;depth&quot;, &quot;builtin&quot;, penalizeUnderscoreValueCompare ]);
+        }
+
+        if (hints.length &gt; MAX_DISPLAYED_HINTS) {
+            hints = hints.slice(0, MAX_DISPLAYED_HINTS);
+        }
+
+        return {hints: hints, needGuesses: needGuesses};
+    };
+    
+    Session.prototype.setTernHints = function (newHints) {
+        this.ternHints = newHints;
+    };
+
+    Session.prototype.setGuesses = function (newGuesses) {
+        this.ternGuesses = newGuesses;
+    };</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>getLexicalState</h4>
+                            <em><p>@param {Object} token - a CodeMirror token</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getLexicalState(token) {
+        if (token.state.lexical) {
+            &#x2F;&#x2F; in a javascript file this is just in the state field
+            return token.state.lexical;
+        } else if (token.state.localState &amp;&amp; token.state.localState.lexical) {
+            &#x2F;&#x2F; inline javascript in an html file will have this in
+            &#x2F;&#x2F; the localState field
+            return token.state.localState.lexical;
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>isBuiltin</h4>
+                            <em><p>Is the origin one of the builtin files.</p></em>
+                            <dl>
+                                    <dt>origin</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function isBuiltin(origin) {
+            return builtins.indexOf(origin) !== -1;
+        }</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>isInFunctionalCall</h4>
+                            <em><p>Test is a lexical state is in a function call.</p></em>
+                            <dl>
+                                    <dt>lex</dt>
+                                    <dd class="label label-info pull-left">Object</dd>
+                                    <dd>- lexical state.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function isInFunctionalCall(lex) {
+            &#x2F;&#x2F; in a call, or inside array or object brackets that are inside a function.
+            return (lex &amp;&amp; (lex.info === &quot;call&quot; ||
+                (lex.info === undefined &amp;&amp; (lex.type === &quot;]&quot; || lex.type === &quot;}&quot;) &amp;&amp;
+                    lex.prev.info === &quot;call&quot;)));
+        }
+
+        if (token) {
+            &#x2F;&#x2F; if this token is part of a function call, then the tokens lexical info
+            &#x2F;&#x2F; will be annotated with &quot;call&quot;.
+            &#x2F;&#x2F; If the cursor is inside an array, &quot;[]&quot;, or object, &quot;{}&quot;, the lexical state
+            &#x2F;&#x2F; will be undefined, not &quot;call&quot;. lexical.prev will be the function state.
+            &#x2F;&#x2F; Handle this case and then set &quot;lexical&quot; to lexical.prev.
+            &#x2F;&#x2F; Also test if the cursor is on a function identifier of a function call.
+            lexical = getLexicalState(token);
+            foundCall = isInFunctionalCall(lexical);
+
+            if (!foundCall) {
+                lexical = isOnFunctionIdentifier();
+                foundCall = isInFunctionalCall(lexical);
+            }
+
+            if (foundCall) {
+                &#x2F;&#x2F; we need to find the location of the called function so that we can request the functions type.
+                &#x2F;&#x2F; the token&#39;s lexical info will contain the column where the open &quot;(&quot; for the
+                &#x2F;&#x2F; function call occurs, but for whatever reason it does not have the line, so
+                &#x2F;&#x2F; we have to walk back and try to find the correct location.  We do this by walking
+                &#x2F;&#x2F; up the lines starting with the line the token is on, and seeing if any of the lines
+                &#x2F;&#x2F; have &quot;(&quot; at the column indicated by the tokens lexical state.
+                &#x2F;&#x2F; We walk back 9 lines, as that should be far enough to find most function calls,
+                &#x2F;&#x2F; and it will prevent us from walking back thousands of lines if something went wrong.
+                &#x2F;&#x2F; there is nothing magical about 9 lines, and it can be adjusted if it doesn&#39;t seem to be
+                &#x2F;&#x2F; working well
+                if (lexical.info === undefined) {
+                    lexical = lexical.prev;
+                }
+
+                var col = lexical.info === &quot;call&quot; ? lexical.column : lexical.prev.column,
+                    line,
+                    e,
+                    found;
+                for (line = this.getCursor().line, e = Math.max(0, line - 9), found = false; line &gt;= e; --line) {
+                    if (this.getLine(line).charAt(col) === &quot;(&quot;) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (found) {
+                    inFunctionCall = true;
+                    functionCallPos = {line: line, ch: col};
+                }
+            }
+        }
+
+        return {
+            inFunctionCall: inFunctionCall,
+            functionCallPos: functionCallPos
+        };
+    };</code></pre>
+                        </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>isOnFunctionIdentifier</h4>
+                            <em><p>Test if the cursor is on a function identifier</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function isOnFunctionIdentifier() {
+
+            &#x2F;&#x2F; Check if we might be on function identifier of the function call.
+            var type = token.type,
+                nextToken,
+                localLexical,
+                localCursor = {line: cursor.line, ch: token.end};
+
+            if (type === &quot;variable-2&quot; || type === &quot;variable&quot; || type === &quot;property&quot;) {
+                nextToken = self.getNextToken(localCursor, true);
+                if (nextToken &amp;&amp; nextToken.string === &quot;(&quot;) {
+                    localLexical = getLexicalState(nextToken);
+                    return localLexical;
+                }
+            }
+
+            return null;
+        }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="">
+                        <h2>Classes</h2>
+                            <div class="well">
+                                <div class="member public">
+                                    <span class="pull-right scope">
+                                        Constructor
+                                    </span>
+                                    <h4>Session</h4>
+                                    <em><p>Session objects encapsulate state associated with a hinting session<br />and provide methods for updating and querying the session.</p></em>
+                                    <dl>
+                                        <dt>editor</dt>
+                                        <dd class="label label-info pull-left">Editor</dd>
+                                        <dd>- the editor context for the session</dd>
+                                    </dl>
+                                    
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>function Session(editor) {
+        this.editor = editor;
+        this.path = editor.document.file.fullPath;
+        this.ternHints = [];
+        this.ternGuesses = null;
+        this.fnType = null;
+        this.builtins = null;
+    }</code></pre>
+                                </div>
+            
+                                <section class="properties hide">
+                                    <h3>Properties<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                </section>
+            
+                                <section class="methods ">
+                                    <h3>Methods<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_getBuiltins</h4>
+                                        <em><p>Get the builtin libraries tern is using.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
+                                            <dd>- array of library names.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype._getBuiltins = function () {
+        if (!this.builtins) {
+            this.builtins = ScopeManager.getBuiltins();
+            this.builtins.push(&quot;requirejs.js&quot;);     &#x2F;&#x2F; consider these globals as well.
+        }
+
+        return this.builtins;
+    };</code></pre>
+                                    </div>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_getPreviousToken</h4>
+                                        <em><p>Get the token before the one at the given cursor position</p></em>
+                                        <dl>
+                                            <dt>cursor</dt>
+                                            <dd class="label label-info pull-left">{line: number,ch: number}</dd>
+                                            <dd>- cursor position after which a token should be retrieved</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>- the CodeMirror token before the one at the given cursor position</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype._getPreviousToken = function (cursor) {
+        var token   = this.getToken(cursor),
+            prev    = token,
+            doc     = this.editor.document;
+
+        do {
+            if (prev.start &lt; cursor.ch) {
+                cursor.ch = prev.start;
+            } else if (prev.start &gt; 0) {
+                cursor.ch = prev.start - 1;
+            } else if (cursor.line &gt; 0) {
+                cursor.ch = doc.getLine(cursor.line - 1).length;
+                cursor.line--;
+            } else {
+                break;
+            }
+            prev = this.getToken(cursor);
+        } while (prev.string.trim() === &quot;&quot;);
+        
+        return prev;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>findPreviousDot</h4>
+                                        <em><p>@return {{line:number, ch:number}} - the line, col info for where the previous "."<br />     in a property lookup occurred, or undefined if no previous "." was found.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.findPreviousDot = function () {
+        var cursor = this.getCursor(),
+            token = this.getToken(cursor);
+        
+        &#x2F;&#x2F; If the cursor is right after the dot, then the current token will be &quot;.&quot;
+        if (token &amp;&amp; token.string === &quot;.&quot;) {
+            return cursor;
+        } else {
+            &#x2F;&#x2F; If something has been typed like &#39;foo.b&#39; then we have to look back 2 tokens
+            &#x2F;&#x2F; to get past the &#39;b&#39; token
+            token = this._getPreviousToken(cursor);
+            if (token &amp;&amp; token.string === &quot;.&quot;) {
+                return cursor;
+            }
+        }
+        return undefined;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getContext</h4>
+                                        <em><p>Find the context of a property lookup. For example, for a lookup <br />foo(bar, baz(quux)).prop, foo is the context.</p></em>
+                                        <dl>
+                                            <dt>cursor</dt>
+                                            <dd class="label label-info pull-left">{line: number,ch: number}</dd>
+                                            <dd>- the cursor position at which context information is to be retrieved</dd>
+                                            <dt>depth</dt>
+                                            <dd class="label label-info pull-left">number</dd>
+                                            <dd>- the current depth of the parenthesis stack, or undefined if the depth is 0.</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>- the context for the property that was looked up</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getContext = function (cursor, depth) {
+        var token = this.getToken(cursor);
+
+        if (depth === undefined) {
+            depth = 0;
+        }
+
+        if (token.string === &quot;)&quot;) {
+            this._getPreviousToken(cursor);
+            return this.getContext(cursor, ++depth);
+        } else if (token.string === &quot;(&quot;) {
+            this._getPreviousToken(cursor);
+            return this.getContext(cursor, --depth);
+        } else {
+            if (depth &gt; 0 || token.string === &quot;.&quot;) {
+                this._getPreviousToken(cursor);
+                return this.getContext(cursor, depth);
+            } else {
+                return token.string;
+            }
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getCursor</h4>
+                                        <em><p>Get the current cursor position.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">{line: number,ch: number}</dd>
+                                            <dd>- the current cursor position</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getCursor = function () {
+        return this.editor.getCursorPos();
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getFunctionInfo</h4>
+                                        <em><p>Determine if the caret is either within a function call or on the function call itself.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">{inFunctionCall: boolean,functionCallPos: {line: number,ch: number}}</dd>
+                                            <dd>inFunctionCall - true if the caret if either within a function call or on the function call itself. functionCallPos - the offset of the '(' character of the function call if inFunctionCall is true, otherwise undefined.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getFunctionInfo = function () {
+        var inFunctionCall   = false,
+            cursor           = this.getCursor(),
+            functionCallPos,
+            token            = this.getToken(cursor),
+            lexical,
+            self = this,
+            foundCall = false;</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getHints</h4>
+                                        <em><p>Get a list of hints for the current session using the current scope<br />information. </p></em>
+                                        <dl>
+                                            <dt>query</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>- the query prefix</dd>
+                                            <dt>matcher</dt>
+                                            <dd class="label label-info pull-left">StringMatcher</dd>
+                                            <dd>- the class to find query matches and sort the results</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">hints: Array.&lt;string&gt;,needGuesses: boolean</dd>
+                                            <dd>- array of matching hints. If needGuesses is true, then the caller needs to request guesses and call getHints again.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getHints = function (query, matcher) {
+
+        if (query === undefined) {
+            query = &quot;&quot;;
+        }
+
+        var MAX_DISPLAYED_HINTS = 500,
+            type                = this.getType(),
+            builtins            = this._getBuiltins(),
+            needGuesses         = false,
+            hints;</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getJavascriptText</h4>
+                                        <em><p>Get the javascript text of the file open in the editor for this Session.<br />For a javascript file, this is just the text of the file.  For an HTML file,<br />this will be only the text in the <script> tags.  This is so that we can pass<br />just the javascript text to tern, and avoid confusing it with HTML tags, since it<br />only knows how to parse javascript.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>- the "javascript" text that can be sent to Tern.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getJavascriptText = function () {
+        if (LanguageManager.getLanguageForPath(this.editor.document.file.fullPath).getId() === &quot;html&quot;) {
+            &#x2F;&#x2F; HTML file - need to send back only the bodies of the
+            &#x2F;&#x2F; &lt;script&gt; tags
+            var text = &quot;&quot;,
+                offset = this.getOffset(),
+                cursor = this.getCursor(),
+                editor = this.editor,
+                scriptBlocks = HTMLUtils.findBlocks(editor, &quot;javascript&quot;);
+            
+            &#x2F;&#x2F; Add all the javascript text
+            &#x2F;&#x2F; For non-javascript blocks we replace everything except for newlines
+            &#x2F;&#x2F; with whitespace.  This is so that the offset and cursor positions
+            &#x2F;&#x2F; we get from the document still work.  
+            &#x2F;&#x2F; Alternatively we could strip the non-javascript text, and modify the offset,
+            &#x2F;&#x2F; and&#x2F;or cursor, but then we have to remember how to reverse the translation
+            &#x2F;&#x2F; to support jump-to-definition
+            var htmlStart = {line: 0, ch: 0};
+            scriptBlocks.forEach(function (scriptBlock) {
+                var start = scriptBlock.start,
+                    end = scriptBlock.end;
+                
+                &#x2F;&#x2F; get the preceding html text, and replace it with whitespace
+                var htmlText = editor.document.getRange(htmlStart, start);
+                htmlText = htmlText.replace(&#x2F;.&#x2F;g, &quot; &quot;);
+
+                htmlStart = end;
+                text += htmlText + scriptBlock.text;
+            });
+            
+            return text;
+        } else {
+            &#x2F;&#x2F; Javascript file, just return the text
+            return this.editor.document.getText();
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getLine</h4>
+                                        <em><p>Get the text of a line.</p></em>
+                                        <dl>
+                                            <dt>line</dt>
+                                            <dd class="label label-info pull-left">number</dd>
+                                            <dd>- the line number </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>- the text of the line</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getLine = function (line) {
+        var doc = this.editor.document;
+        return doc.getLine(line);
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getNextCursorOnLine</h4>
+                                        <em><p>Get the next cursor position on the line, or null if there isn't one.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">?{line: number,ch: number}</dd>
+                                            <dd>- the cursor position immediately following the current cursor position, or null if none exists.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getNextCursorOnLine = function (cursor) {
+        var doc     = this.editor.document,
+            line    = doc.getLine(cursor.line);
+
+        if (cursor.ch &lt; line.length) {
+            return {
+                ch  : cursor.ch + 1,
+                line: cursor.line
+            };
+        } else {
+            return null;
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getNextToken</h4>
+                                        <em><p>Get the token after the one at the given cursor position</p></em>
+                                        <dl>
+                                            <dt>cursor</dt>
+                                            <dd class="label label-info pull-left">{line: number,ch: number}</dd>
+                                            <dd>- cursor position after which a token should be retrieved</dd>
+                                            <dt>skipWhitespace</dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>- true if this should skip over whitespace tokens </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>- the CodeMirror token after the one at the given cursor position</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getNextToken = function (cursor, skipWhitespace) {
+        var token   = this.getToken(cursor),
+            next    = token,
+            doc     = this.editor.document;
+
+        do {
+            if (next.end &gt; cursor.ch) {
+                cursor.ch = next.end;
+            } else if (next.end &lt; doc.getLine(cursor.line).length) {
+                cursor.ch = next.end + 1;
+            } else if (doc.getLine(cursor.line + 1)) {
+                cursor.ch = 0;
+                cursor.line++;
+            } else {
+                next = null;
+                break;
+            }
+            next = this.getToken(cursor);
+        } while (skipWhitespace &amp;&amp; next.string.trim() === &quot;&quot;);
+        
+        return next;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getNextTokenOnLine</h4>
+                                        <em><p>Get the token after the one at the given cursor position</p></em>
+                                        <dl>
+                                            <dt>cursor</dt>
+                                            <dd class="label label-info pull-left">{line: number,ch: number}</dd>
+                                            <dd>- cursor position before which a token should be retrieved</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>- the CodeMirror token after the one at the given cursor position</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getNextTokenOnLine = function (cursor) {
+        cursor = this.getNextCursorOnLine(cursor);
+        if (cursor) {
+            return this.getToken(cursor);
+        }
+
+        return null;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getOffset</h4>
+                                        <em><p>Get the offset of the current cursor position</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">number</dd>
+                                            <dd>- the offset into the current document of the current cursor</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getOffset = function () {
+        var cursor = this.getCursor();
+        
+        return this.getOffsetFromCursor(cursor);
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getOffsetFromCursor</h4>
+                                        <em><p>Get the offset of a cursor position</p></em>
+                                        <dl>
+                                            <dt>the</dt>
+                                            <dd class="label label-info pull-left">{line: number,ch: number}</dd>
+                                            <dd>line/col info</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">number</dd>
+                                            <dd>- the offset into the current document of the cursor</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getOffsetFromCursor = function (cursor) {
+        return this.editor.indexFromPos(cursor);
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getParameterHint</h4>
+                                        <em><p>Get the function type hint.  This will format the hint, showing the<br />parameter at the cursor in bold.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">{parameters: Array&lt;{name: string,type: string,isOptional: boolean}&gt;,currentIndex: number}</dd>
+                                            <dd>An Object where the "parameters" property is an array of parameter objects; the "currentIndex" property index of the hint the cursor is on, may be -1 if the cursor is on the function identifier.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getParameterHint = function () {
+        var fnHint = this.fnType,
+            cursor = this.getCursor(),
+            token = this.getToken(this.functionCallPos),
+            start = {line: this.functionCallPos.line, ch: token.start},
+            fragment = this.editor.document.getRange(start,
+                {line: this.functionCallPos.line + 10, ch: 0});
+
+        var ast;
+        try {
+            ast = Acorn.parse(fragment);
+        } catch (e) { ast = Acorn_Loose.parse_dammit(fragment); }
+
+        &#x2F;&#x2F; find argument as cursor location and bold it.
+        var startOffset = this.getOffsetFromCursor(start),
+            cursorOffset = this.getOffsetFromCursor(cursor),
+            offset = cursorOffset - startOffset,
+            node = ast.body[0],
+            currentArg = -1;
+
+        if (node.type === &quot;ExpressionStatement&quot;) {
+            node = node.expression;
+            if (node.type === &quot;SequenceExpression&quot;) {
+                node = node.expressions[0];
+            }
+            if (node.type === &quot;BinaryExpression&quot;) {
+                if (node.left.type === &quot;CallExpression&quot;) {
+                    node = node.left;
+                } else if (node.right.type === &quot;CallExpression&quot;) {
+                    node = node.right;
+                }
+            }
+            if (node.type === &quot;CallExpression&quot;) {
+                var args = node[&quot;arguments&quot;],
+                    i,
+                    n = args.length,
+                    lastEnd = offset,
+                    text;
+                for (i = 0; i &lt; n; i++) {
+                    node = args[i];
+                    if (offset &gt;= node.start &amp;&amp; offset &lt;= node.end) {
+                        currentArg = i;
+                        break;
+                    } else if (offset &lt; node.start) {
+                        &#x2F;&#x2F; The range of nodes can be disjoint so see i f we
+                        &#x2F;&#x2F; passed the node. If we passed the node look at the
+                        &#x2F;&#x2F; text between the nodes to figure out which
+                        &#x2F;&#x2F; arg we are on.
+                        text = fragment.substring(lastEnd, node.start);
+
+                        &#x2F;&#x2F; test if comma is before or after the offset
+                        if (text.indexOf(&quot;,&quot;) &gt;= (offset - lastEnd)) {
+                            &#x2F;&#x2F; comma is after the offset so the current arg is the
+                            &#x2F;&#x2F; previous arg node.
+                            i--;
+                        } else if (i === 0 &amp;&amp; text.indexOf(&quot;(&quot;) !== -1) {
+                            &#x2F;&#x2F; the cursor is on the function identifier
+                            currentArg = -1;
+                            break;
+                        }
+
+                        currentArg = Math.max(0, i);
+                        break;
+                    } else if (i + 1 === n) {
+                        &#x2F;&#x2F; look for a comma after the node.end. This will tell us we
+                        &#x2F;&#x2F; are on the next argument, even there is no text, and therefore no node,
+                        &#x2F;&#x2F; for the next argument.
+                        text = fragment.substring(node.end, offset);
+                        if (text.indexOf(&quot;,&quot;) !== -1) {
+                            currentArg = i + 1; &#x2F;&#x2F; we know we are after the current arg, but keep looking
+                        }
+                    }
+
+                    lastEnd = node.end;
+                }
+
+                &#x2F;&#x2F; if there are no args, then figure out if we are on the function identifier
+                if (n === 0 &amp;&amp; cursorOffset &gt; this.getOffsetFromCursor(this.functionCallPos)) {
+                    currentArg = 0;
+                }
+            }
+        }
+
+        return {parameters: fnHint, currentIndex: currentArg};
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getPath</h4>
+                                        <em><p>Get the name of the file associated with the current session</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>- the full pathname of the file associated with the current session</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getPath = function () {
+        return this.path;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getQuery</h4>
+                                        <em><p>Calculate a query string relative to the current cursor position<br />and token. E.g., from a state "identi<cursor>er", the query string is<br />"identi".</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>- the query string for the current cursor position</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getQuery = function () {
+        var cursor  = this.getCursor(),
+            token   = this.getToken(cursor),
+            query   = &quot;&quot;,
+            start   = cursor.ch,
+            end     = start;
+
+        if (token) {
+            var line = this.getLine(cursor.line);
+            while (start &gt; 0) {
+                if (HintUtils.maybeIdentifier(line[start - 1])) {
+                    start--;
+                } else {
+                    break;
+                }
+            }
+
+            query = line.substring(start, end);
+        }
+
+        return query;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getToken</h4>
+                                        <em><p>Get the token at the given cursor position, or at the current cursor<br />if none is given.</p></em>
+                                        <dl>
+                                            <dt>cursor</dt>
+                                            <dd class="label label-info pull-left">{line: number, ch: number}</dd>
+                                            <dd>- the cursor position at which to retrieve a token</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>- the CodeMirror token at the given cursor position</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getToken = function (cursor) {
+        var cm = this.editor._codeMirror;
+
+        if (cursor) {
+            return cm.getTokenAt(cursor);
+        } else {
+            return cm.getTokenAt(this.getCursor());
+        }
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>getType</h4>
+                                        <em><p>Get the type of the current session, i.e., whether it is a property<br />lookup and, if so, what the context of the lookup is.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">{property: boolean,context: string</dd>
+                                            <dd>- an Object consisting of a {boolean} "property" that indicates whether or not the type of the session is a property lookup, and a {string} "context" that indicates the object context (as described in getContext above) of the property lookup, or null if there is none. The context is always null for non-property lookups.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.getType = function () {
+        var propertyLookup   = false,
+            context          = null,
+            cursor           = this.getCursor(),
+            token            = this.getToken(cursor),
+            lexical;
+
+        if (token) {
+            &#x2F;&#x2F; if this token is part of a function call, then the tokens lexical info
+            &#x2F;&#x2F; will be annotated with &quot;call&quot;
+            lexical = getLexicalState(token);
+            if (token.type === &quot;property&quot;) {
+                propertyLookup = true;
+            }
+
+            cursor = this.findPreviousDot();
+            if (cursor) {
+                propertyLookup = true;
+                context = this.getContext(cursor);
+            }
+        }
+        
+        return {
+            property: propertyLookup,
+            context: context
+        };
+    };
+    
+    &#x2F;&#x2F; Comparison function used for sorting that does a case-insensitive string
+    &#x2F;&#x2F; comparison on the &quot;value&quot; field of both objects. Unlike a normal string
+    &#x2F;&#x2F; comparison, however, this sorts leading &quot;_&quot; to the bottom, given that a
+    &#x2F;&#x2F; leading &quot;_&quot; usually denotes a private value.
+    function penalizeUnderscoreValueCompare(a, b) {
+        var aName = a.value.toLowerCase(), bName = b.value.toLowerCase();
+        &#x2F;&#x2F; this sort function will cause _ to sort lower than lower case
+        &#x2F;&#x2F; alphabetical letters
+        if (aName[0] === &quot;_&quot; &amp;&amp; bName[0] !== &quot;_&quot;) {
+            return 1;
+        } else if (bName[0] === &quot;_&quot; &amp;&amp; aName[0] !== &quot;_&quot;) {
+            return -1;
+        }
+        if (aName &lt; bName) {
+            return -1;
+        } else if (aName &gt; bName) {
+            return 1;
+        }
+        return 0;
+    }</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>isFunctionName</h4>
+                                        <em><p>Determine if the cursor is located in the name of a function declaration.<br />This is so we can suppress hints when in a function name, as we do for variable and<br />parameter declarations, but we can tell those from the token itself rather than having<br />to look at previous tokens.</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">boolean</dd>
+                                            <dd>- true if the current cursor position is in the name of a function declaration.</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.isFunctionName = function () {
+        var cursor = this.getCursor(),
+            token  = this.getToken(cursor),
+            prevToken = this._getPreviousToken(cursor);
+        
+        return prevToken.string === &quot;function&quot;;
+    };
+    
+    module.exports = Session;
+});</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>setFnType</h4>
+                                        <em><p>Set a new function type hint.</p></em>
+                                        <dl>
+                                            <dt>newFnType</dt>
+                                            <dd class="label label-info pull-left">Array&lt;{name: string,type: string,isOptional: boolean}&gt;</dd>
+                                            <dd>- Array of function hints.</dd>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.setFnType = function (newFnType) {
+        this.fnType = newFnType;
+    };</code></pre>
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>setFunctionCallPos</h4>
+                                        <em><p>The position of the function call for the current fnType.</p></em>
+                                        <dl>
+                                            <dt>functionCallPos</dt>
+                                            <dd class="label label-info pull-left">{line:number,ch:number}</dd>
+                                            <dd>- the offset of the function call.</dd>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>Session.prototype.setFunctionCallPos = function (functionCallPos) {
+        this.functionCallPos = functionCallPos;
+    };</code></pre>
+                                    </div>
+                                </section>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

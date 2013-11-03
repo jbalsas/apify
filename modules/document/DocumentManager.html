@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="..&#x2F;../assets/css/bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/typeahead.js-bootstrap.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/font-awesome.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/highlight.css">
+        <link rel="stylesheet" href="..&#x2F;../assets/css/main.css">
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+        <![endif]-->
+        <script type="text/javascript" src="..&#x2F;../assets/js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/typeahead.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/highlight.pack.js"></script>
+        <script type="text/javascript" src="..&#x2F;../assets/js/main.js"></script>
+        
+        <script>
+            window.moduleLevel = "../..";
+        </script>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="#dependencies">Dependencies</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                    <li><a href="#functions">Functions</a></li>
+                    <li><a href="#classes">Classes</a></li>
+                </ul>
+            </div>
+            <input class="typeahead" placeholder="Search..." type="text" >
+        </div>
+    </div>
+</div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="page-header">
+                        <h1>DocumentManager</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <div class="left-section">
+                        <ul class="nav nav-list">
+    <li class="nav-header">
+        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (170)</a>
+    </li>
+</ul>
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+    </li>
+</ul>
+<ul id="package_" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/brackets.html">brackets</a></li>
+    <li><a href="..&#x2F;../modules/dependencies.html">dependencies</a></li>
+    <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+    <li><a href="..&#x2F;../modules/xorigin.html">xorigin</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_command"><i class="icon-folder-open"></i>command</a>
+    </li>
+</ul>
+<ul id="package_command" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;DefaultMenus.html">DefaultMenus</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;KeyBindingManager.html">KeyBindingManager</a></li>
+    <li><a href="..&#x2F;../modules/command&#x2F;Menus.html">Menus</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_document"><i class="icon-folder-open"></i>document</a>
+    </li>
+</ul>
+<ul id="package_document" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/document&#x2F;ChangedDocumentTracker.html">ChangedDocumentTracker</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentCommandHandlers.html">DocumentCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;DocumentManager.html">DocumentManager</a></li>
+    <li><a href="..&#x2F;../modules/document&#x2F;TextRange.html">TextRange</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_editor"><i class="icon-folder-open"></i>editor</a>
+    </li>
+</ul>
+<ul id="package_editor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintList.html">CodeHintList</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CodeHintManager.html">CodeHintManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;CSSInlineEditor.html">CSSInlineEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;Editor.html">Editor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorCommandHandlers.html">EditorCommandHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorOptionHandlers.html">EditorOptionHandlers</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;EditorStatusBar.html">EditorStatusBar</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;ImageViewer.html">ImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineTextEditor.html">InlineTextEditor</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;InlineWidget.html">InlineWidget</a></li>
+    <li><a href="..&#x2F;../modules/editor&#x2F;MultiRangeInlineEditor.html">MultiRangeInlineEditor</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility"><i class="icon-folder-open"></i>extensibility</a>
+    </li>
+</ul>
+<ul id="package_extensibility" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManager.html">ExtensionManager</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerDialog.html">ExtensionManagerDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerView.html">ExtensionManagerView</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;ExtensionManagerViewModel.html">ExtensionManagerViewModel</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;InstallExtensionDialog.html">InstallExtensionDialog</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;Package.html">Package</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;registry_utils.html">registry_utils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node"><i class="icon-folder-open"></i>extensibility.node</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;ExtensionManagerDomain.html">ExtensionManagerDomain</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;package-validator.html">package-validator</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensibility_node_spec"><i class="icon-folder-open"></i>extensibility.node.spec</a>
+    </li>
+</ul>
+<ul id="package_extensibility_node_spec" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Installation.spec.html">Installation.spec</a></li>
+    <li><a href="..&#x2F;../modules/extensibility&#x2F;node&#x2F;spec&#x2F;Validation.spec.html">Validation.spec</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CloseOthers"><i class="icon-folder-open"></i>extensions.default.CloseOthers</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CloseOthers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CloseOthers&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_CSSCodeHints"><i class="icon-folder-open"></i>extensions.default.CSSCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_CSSCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;CSSCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_DebugCommands"><i class="icon-folder-open"></i>extensions.default.DebugCommands</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_DebugCommands" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;DebugCommands&#x2F;NodeDebugUtils.html">NodeDebugUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HTMLCodeHints"><i class="icon-folder-open"></i>extensions.default.HTMLCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HTMLCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HTMLCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_HtmlEntityCodeHints"><i class="icon-folder-open"></i>extensions.default.HtmlEntityCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_HtmlEntityCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;HtmlEntityCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineColorEditor"><i class="icon-folder-open"></i>extensions.default.InlineColorEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineColorEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;ColorEditor.html">ColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;InlineColorEditor.html">InlineColorEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineColorEditor&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_InlineTimingFunctionEditor"><i class="icon-folder-open"></i>extensions.default.InlineTimingFunctionEditor</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_InlineTimingFunctionEditor" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;InlineTimingFunctionEditor.html">InlineTimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionEditor.html">TimingFunctionEditor</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;InlineTimingFunctionEditor&#x2F;TimingFunctionUtils.html">TimingFunctionUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptCodeHints"><i class="icon-folder-open"></i>extensions.default.JavaScriptCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils.html">HintUtils</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;HintUtils2.html">HintUtils2</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;MessageIds.html">MessageIds</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ParameterHintManager.html">ParameterHintManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Preferences.html">Preferences</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;ScopeManager.html">ScopeManager</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;Session.html">Session</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptCodeHints&#x2F;tern-worker.html">tern-worker</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JavaScriptQuickEdit"><i class="icon-folder-open"></i>extensions.default.JavaScriptQuickEdit</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JavaScriptQuickEdit" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JavaScriptQuickEdit&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_JSLint"><i class="icon-folder-open"></i>extensions.default.JSLint</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_JSLint" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;JSLint&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_LESSSupport"><i class="icon-folder-open"></i>extensions.default.LESSSupport</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_LESSSupport" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;LESSSupport&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenCSS"><i class="icon-folder-open"></i>extensions.default.QuickOpenCSS</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenCSS" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenCSS&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenHTML"><i class="icon-folder-open"></i>extensions.default.QuickOpenHTML</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenHTML" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenHTML&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickOpenJavaScript"><i class="icon-folder-open"></i>extensions.default.QuickOpenJavaScript</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickOpenJavaScript" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickOpenJavaScript&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_QuickView"><i class="icon-folder-open"></i>extensions.default.QuickView</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_QuickView" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;QuickView&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_RecentProjects"><i class="icon-folder-open"></i>extensions.default.RecentProjects</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_RecentProjects" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;RecentProjects&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer"><i class="icon-folder-open"></i>extensions.default.StaticServer</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;StaticServer.html">StaticServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_StaticServer_node"><i class="icon-folder-open"></i>extensions.default.StaticServer.node</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_StaticServer_node" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;StaticServer&#x2F;node&#x2F;StaticServerDomain.html">StaticServerDomain</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_UrlCodeHints_testfiles_subfolder"><i class="icon-folder-open"></i>extensions.default.UrlCodeHints.testfiles.subfolder</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_UrlCodeHints_testfiles_subfolder" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;UrlCodeHints&#x2F;testfiles&#x2F;subfolder&#x2F;test.html">test</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_default_WebPlatformDocs"><i class="icon-folder-open"></i>extensions.default.WebPlatformDocs</a>
+    </li>
+</ul>
+<ul id="package_extensions_default_WebPlatformDocs" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;InlineDocsViewer.html">InlineDocsViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;default&#x2F;WebPlatformDocs&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_circular_dependency_test"><i class="icon-folder-open"></i>extensions.samples.circular_dependency_test</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_circular_dependency_test" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;circular_dependency_test&#x2F;secondary.html">secondary</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_ContextMenuTest"><i class="icon-folder-open"></i>extensions.samples.ContextMenuTest</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_ContextMenuTest" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;ContextMenuTest&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_InlineImageViewer"><i class="icon-folder-open"></i>extensions.samples.InlineImageViewer</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_InlineImageViewer" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;InlineImageViewer.html">InlineImageViewer</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;InlineImageViewer&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_LocalizationExample"><i class="icon-folder-open"></i>extensions.samples.LocalizationExample</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_LocalizationExample" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;main.html">main</a></li>
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;LocalizationExample&#x2F;strings.html">strings</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_extensions_samples_TypingSpeedLogger"><i class="icon-folder-open"></i>extensions.samples.TypingSpeedLogger</a>
+    </li>
+</ul>
+<ul id="package_extensions_samples_TypingSpeedLogger" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/extensions&#x2F;samples&#x2F;TypingSpeedLogger&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_file"><i class="icon-folder-open"></i>file</a>
+    </li>
+</ul>
+<ul id="package_file" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileError.html">NativeFileError</a></li>
+    <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_help"><i class="icon-folder-open"></i>help</a>
+    </li>
+</ul>
+<ul id="package_help" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/help&#x2F;HelpCommandHandlers.html">HelpCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_language"><i class="icon-folder-open"></i>language</a>
+    </li>
+</ul>
+<ul id="package_language" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/language&#x2F;CodeInspection.html">CodeInspection</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;CSSUtils.html">CSSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLDOMDiff.html">HTMLDOMDiff</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLInstrumentation.html">HTMLInstrumentation</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLSimpleDOM.html">HTMLSimpleDOM</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLTokenizer.html">HTMLTokenizer</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;JSUtils.html">JSUtils</a></li>
+    <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Agents"><i class="icon-folder-open"></i>LiveDevelopment.Agents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Agents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ConsoleAgent.html">ConsoleAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;CSSAgent.html">CSSAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMAgent.html">DOMAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMHelpers.html">DOMHelpers</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;DOMNode.html">DOMNode</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;EditAgent.html">EditAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;GotoAgent.html">GotoAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;HighlightAgent.html">HighlightAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;NetworkAgent.html">NetworkAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteAgent.html">RemoteAgent</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;RemoteFunctions.html">RemoteFunctions</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Agents&#x2F;ScriptAgent.html">ScriptAgent</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Documents"><i class="icon-folder-open"></i>LiveDevelopment.Documents</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Documents" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;CSSDocument.html">CSSDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;HTMLDocument.html">HTMLDocument</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Documents&#x2F;JSDocument.html">JSDocument</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Inspector"><i class="icon-folder-open"></i>LiveDevelopment.Inspector</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Inspector" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Inspector&#x2F;Inspector.html">Inspector</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment"><i class="icon-folder-open"></i>LiveDevelopment</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevelopment.html">LiveDevelopment</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;LiveDevServerManager.html">LiveDevServerManager</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;main.html">main</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_LiveDevelopment_Servers"><i class="icon-folder-open"></i>LiveDevelopment.Servers</a>
+    </li>
+</ul>
+<ul id="package_LiveDevelopment_Servers" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;BaseServer.html">BaseServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;FileServer.html">FileServer</a></li>
+    <li><a href="..&#x2F;../modules/LiveDevelopment&#x2F;Servers&#x2F;UserServer.html">UserServer</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_preferences"><i class="icon-folder-open"></i>preferences</a>
+    </li>
+</ul>
+<ul id="package_preferences" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesDialogs.html">PreferencesDialogs</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+    <li><a href="..&#x2F;../modules/preferences&#x2F;PreferenceStorage.html">PreferenceStorage</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_project"><i class="icon-folder-open"></i>project</a>
+    </li>
+</ul>
+<ul id="package_project" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/project&#x2F;FileIndexManager.html">FileIndexManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;FileViewController.html">FileViewController</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;SidebarView.html">SidebarView</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetSort.html">WorkingSetSort</a></li>
+    <li><a href="..&#x2F;../modules/project&#x2F;WorkingSetView.html">WorkingSetView</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_search"><i class="icon-folder-open"></i>search</a>
+    </li>
+</ul>
+<ul id="package_search" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/search&#x2F;FindInFiles.html">FindInFiles</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;FindReplace.html">FindReplace</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;QuickOpen.html">QuickOpen</a></li>
+    <li><a href="..&#x2F;../modules/search&#x2F;ScrollTrackMarkers.html">ScrollTrackMarkers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+    </li>
+</ul>
+<ul id="package_utils" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/utils&#x2F;AnimationUtils.html">AnimationUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;AppInit.html">AppInit</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;BuildInfoUtils.html">BuildInfoUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;CollectionUtils.html">CollectionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ColorUtils.html">ColorUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DragAndDrop.html">DragAndDrop</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;DropdownEventHandler.html">DropdownEventHandler</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionLoader.html">ExtensionLoader</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ExtensionUtils.html">ExtensionUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Global.html">Global</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;KeyEvent.html">KeyEvent</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NativeApp.html">NativeApp</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;NodeConnection.html">NodeConnection</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;Resizer.html">Resizer</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ShellAPI.html">ShellAPI</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringMatch.html">StringMatch</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;StringUtils.html">StringUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UpdateNotification.html">UpdateNotification</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;UrlParams.html">UrlParams</a></li>
+    <li><a href="..&#x2F;../modules/utils&#x2F;ViewUtils.html">ViewUtils</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_view"><i class="icon-folder-open"></i>view</a>
+    </li>
+</ul>
+<ul id="package_view" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/view&#x2F;PanelManager.html">PanelManager</a></li>
+    <li><a href="..&#x2F;../modules/view&#x2F;ViewCommandHandlers.html">ViewCommandHandlers</a></li>
+</ul>                
+<ul class="nav nav-list package-list">
+    <li class="nav-header">
+        <a href="javascript:;" class="toggle-package" data-package="package_widgets"><i class="icon-folder-open"></i>widgets</a>
+    </li>
+</ul>
+<ul id="package_widgets" class="nav nav-list">
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-alerts.html">bootstrap-alerts</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-button.html">bootstrap-button</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-dropdown.html">bootstrap-dropdown</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-modal.html">bootstrap-modal</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-popover.html">bootstrap-popover</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-scrollspy.html">bootstrap-scrollspy</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tab.html">bootstrap-tab</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-tooltip.html">bootstrap-tooltip</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;bootstrap-twipsy-mod.html">bootstrap-twipsy-mod</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;ModalBar.html">ModalBar</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;PopUpManager.html">PopUpManager</a></li>
+    <li><a href="..&#x2F;../modules/widgets&#x2F;StatusBar.html">StatusBar</a></li>
+</ul>                
+
+                    </div>
+                </div>
+                <div class="span8">
+                    <section>
+                        <div id="description">
+                            <p>DocumentManager maintains a list of currently 'open' Documents. It also owns the list of files in<br />the working set, and the notion of which Document is currently shown in the main editor UI area.</p>
+
+<p>Document is the model for a file's contents; it dispatches events whenever those contents change.<br />To transiently inspect a file's content, simply get a Document and call getText() on it. However,<br />to be notified of Document changes or to modify a Document, you MUST call addRef() to ensure the<br />Document instance 'stays alive' and is shared by all other who read/modify that file. ('Open'<br />Documents are all Documents that are 'kept alive', i.e. have ref count > 0).</p>
+
+<p>To get a Document, call getDocumentForPath(); never new up a Document yourself.</p>
+
+<p>Secretly, a Document may use an Editor instance to act as the model for its internal state. (This<br />is unavoidable because CodeMirror does not separate its model from its UI). Documents are not<br />modifiable until they have a backing 'master Editor'. Creation of the backing Editor is owned by<br />EditorManager. A Document only gets a backing Editor if it becomes the currentDocument, or if edits<br />occur in any Editor (inline or full-sized) bound to the Document; there is currently no other way<br />to ensure a Document is modifiable.</p>
+
+<p>A non-modifiable Document may still dispatch change notifications, if the Document was changed<br />externally on disk.</p>
+
+<p>Aside from the text content, Document tracks a few pieces of metadata - notably, whether there are<br />any unsaved changes.</p>
+
+<p>This module dispatches several events:</p>
+
+<ul>
+<li>dirtyFlagChange -- When any Document's isDirty flag changes. The 2nd arg to the listener is the
+ Document whose flag changed.</li>
+<li>documentSaved -- When a Document's changes have been saved. The 2nd arg to the listener is the
+ Document that has been saved.</li>
+<li><p>documentRefreshed -- When a Document's contents have been reloaded from disk. The 2nd arg to the<br /> listener is the Document that has been refreshed.</p></li>
+<li><p>currentDocumentChange -- When the value of getCurrentDocument() changes.</p>
+
+<p>To listen for working set changes, you must listen to <em>all</em> of these events:</p></li>
+<li>workingSetAdd -- When a file is added to the working set (see getWorkingSet()). The 2nd arg
+ to the listener is the added FileEntry, and the 3rd arg is the index it was inserted at.</li>
+<li>workingSetAddList -- When multiple files are added to the working set (e.g. project open, multiple file open).
+ The 2nd arg to the listener is the array of added FileEntry objects.</li>
+<li>workingSetRemove -- When a file is removed from the working set (see getWorkingSet()). The
+ 2nd arg to the listener is the removed FileEntry.</li>
+<li>workingSetRemoveList -- When multiple files are removed from the working set (e.g. project close).
+ The 2nd arg to the listener is the array of removed FileEntry objects.</li>
+<li><p>workingSetSort -- When the workingSet array is reordered without additions or removals.<br /> Listener receives no arguments.</p></li>
+<li><p>workingSetDisableAutoSorting -- Dispatched in addition to workingSetSort when the reorder was caused<br /> by manual dragging and dropping. Listener receives no arguments.</p></li>
+<li><p>fileNameChange -- When the name of a file or folder has changed. The 2nd arg is the old name.<br /> The 3rd arg is the new name.</p></li>
+<li>pathDeleted -- When a file or folder has been deleted. The 2nd arg is the path that was deleted.</li>
+</ul>
+
+<p>These are jQuery events, so to listen for them you do something like this:<br />   $(DocumentManager).on("eventname", handler);</p>
+
+<p>Document objects themselves also dispatch some events - see Document docs for details.</p>
+                        </div>
+                    </section>
+        
+                    <section id="dependencies">
+                        <h3>Dependencies</h3>
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/thirdparty&#x2F;lodash.html">lodash</a></li>
+                            <li><a href="..&#x2F;../modules/document&#x2F;Document.html">Document</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;NativeFileSystem.html">NativeFileSystem</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
+                            <li><a href="..&#x2F;../modules/editor&#x2F;EditorManager.html">EditorManager</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;FileSyncManager.html">FileSyncManager</a></li>
+                            <li><a href="..&#x2F;../modules/preferences&#x2F;PreferencesManager.html">PreferencesManager</a></li>
+                            <li><a href="..&#x2F;../modules/file&#x2F;FileUtils.html">FileUtils</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;CommandManager.html">CommandManager</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
+                            <li><a href="..&#x2F;../modules/utils&#x2F;PerfUtils.html">PerfUtils</a></li>
+                            <li><a href="..&#x2F;../modules/command&#x2F;Commands.html">Commands</a></li>
+                            <li><a href="..&#x2F;../modules/language&#x2F;LanguageManager.html">LanguageManager</a></li>
+                            <li><a href="..&#x2F;../modules/strings.html">strings</a></li>
+                        </ul>
+                    </section>
+        
+                    <section id="variables" class="">
+                        <h3>Variables <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_currentDocument</h4>
+                            <dl>
+                                    <dt>See</dt>
+                                        <dd><a href='#'>DocumentManager.getCurrentDocument()</a></dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p></p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _currentDocument = null;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_documentNavPending</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>boolean</dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>While true, the MRU order is frozen</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _documentNavPending = false;</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_openDocuments</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Object.<string, Document></dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>All documents with refCount > 0. Maps Document.file.fullPath -> Document.</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _openDocuments = {};</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_prefs</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>PreferenceStorage</dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p></p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _prefs = {};</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_untitledDocumentPath</h4>
+                            <dl>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Random path prefix for untitled documents</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _untitledDocumentPath = &quot;&#x2F;_brackets_&quot; + _.random(10000000, 99999999);</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_workingSet</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Array.<FileEntry></dd>
+                                    <dt>See</dt>
+                                        <dd><a href='#'>DocumentManager.getWorkingSet()</a></dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p></p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _workingSet = [];</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_workingSetAddedOrder</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Array.<FileEntry></dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Contains the same set of items as _workingSet, but ordered in the way they where added to _workingSet (0 = last added).</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _workingSetAddedOrder = [];</code></pre>
+                        </div>
+                        <div class="member private">
+        
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_workingSetMRUOrder</h4>
+                            <dl>
+                                    <dt>Type</dt>
+                                        <dd>Array.<FileEntry></dd>
+                                    <dt>Private</dt>
+                            </dl>
+                            <p>Contains the same set of items as _workingSet, but ordered by how recently they were _currentDocument (0 = most recent).</p>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>var _workingSetMRUOrder = [];</code></pre>
+                        </div>
+                        <!--</ul>-->
+                    </section>
+        
+                    <section id="functions" class="">
+                        <h3>Functions <label class="checkbox">
+                            <input class="toggle-public" type="checkbox"> Show Private Members
+                        </label></h3>
+                        <div class="member private public">
+                            <span class="pull-right scope">
+                                Private
+                                Public API
+                            </span>
+                            <h4>_clearCurrentDocument</h4>
+                            <em><p>Changes currentDocument to null, causing no full Editor to be shown in the UI</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _clearCurrentDocument() {
+        &#x2F;&#x2F; If editor already blank, do nothing
+        if (!_currentDocument) {
+            return;
+        } else {
+            &#x2F;&#x2F; Change model &amp; dispatch event
+            _currentDocument = null;
+            &#x2F;&#x2F; (this event triggers EditorManager to actually clear the editor UI)
+            $(exports).triggerHandler(&quot;currentDocumentChange&quot;);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_gcDocuments</h4>
+                            <em><p>Cleans up any loose Documents whose only ref is its own master Editor, and that Editor is not<br />rooted in the UI anywhere. This can happen if the Editor is auto-created via Document APIs that<br />trigger _ensureMasterEditor() without making it dirty. E.g. a command invoked on the focused<br />inline editor makes no-op edits or does a read-only operation.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _gcDocuments() {
+        getAllOpenDocuments().forEach(function (doc) {
+            &#x2F;&#x2F; Is the only ref to this document its own master Editor?
+            if (doc._refCount === 1 &amp;&amp; doc._masterEditor) {
+                &#x2F;&#x2F; Destroy the Editor if it&#39;s not being kept alive by the UI
+                EditorManager._destroyEditorIfUnneeded(doc);
+            }
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_handleLanguageAdded</h4>
+                            <em><p>Update document</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _handleLanguageAdded(event, language) {
+        _.forEach(_openDocuments, function (doc, key) {
+            &#x2F;&#x2F; No need to look at the new language if this document has one already
+            if (doc.getLanguage().isFallbackLanguage()) {
+                doc._updateLanguage();
+            }
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_handleLanguageModified</h4>
+                            <em><p>Update document</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _handleLanguageModified(event, language) {
+        _.forEach(_openDocuments, function (doc, key) {
+            var docLanguage = doc.getLanguage();
+            &#x2F;&#x2F; A modified language can affect a document
+            &#x2F;&#x2F; - if its language was modified
+            &#x2F;&#x2F; - if the document doesn&#39;t have a language yet and its file extension was added to the modified language
+            if (docLanguage === language || docLanguage.isFallbackLanguage()) {
+                doc._updateLanguage();
+            }
+        });
+    }
+    
+    &#x2F;&#x2F; For compatibility
+    $(DocumentModule)
+        .on(&quot;_afterDocumentCreate&quot;, function (event, doc) {
+            if (_openDocuments[doc.file.fullPath]) {
+                console.error(&quot;Document for this path already in _openDocuments!&quot;);
+                return true;
+            }
+
+            _openDocuments[doc.file.fullPath] = doc;
+            $(exports).triggerHandler(&quot;afterDocumentCreate&quot;, doc);
+        })
+        .on(&quot;_beforeDocumentDelete&quot;, function (event, doc) {
+            if (!_openDocuments[doc.file.fullPath]) {
+                console.error(&quot;Document with references was not in _openDocuments!&quot;);
+                return true;
+            }
+
+            $(exports).triggerHandler(&quot;beforeDocumentDelete&quot;, doc);
+            delete _openDocuments[doc.file.fullPath];
+        })
+        .on(&quot;_documentRefreshed&quot;, function (event, doc) {
+            $(exports).triggerHandler(&quot;documentRefreshed&quot;, doc);
+        })
+        .on(&quot;_dirtyFlagChange&quot;, function (event, doc) {
+            $(exports).triggerHandler(&quot;dirtyFlagChange&quot;, doc);
+            if (doc.isDirty) {
+                addToWorkingSet(doc.file);
+            }
+        })
+        .on(&quot;_documentSaved&quot;, function (event, doc) {
+            $(exports).triggerHandler(&quot;documentSaved&quot;, doc);
+        });
+    
+    &#x2F;&#x2F; For unit tests and internal use only
+    exports._clearCurrentDocument       = _clearCurrentDocument;
+    
+    &#x2F;&#x2F; Define public API
+    exports.Document                    = DocumentModule.Document;
+    exports.getCurrentDocument          = getCurrentDocument;
+    exports._clearCurrentDocument        = _clearCurrentDocument;
+    exports.getDocumentForPath          = getDocumentForPath;
+    exports.getOpenDocumentForPath      = getOpenDocumentForPath;
+    exports.createUntitledDocument      = createUntitledDocument;
+    exports.getWorkingSet               = getWorkingSet;
+    exports.findInWorkingSet            = findInWorkingSet;
+    exports.findInWorkingSetAddedOrder  = findInWorkingSetAddedOrder;
+    exports.getAllOpenDocuments         = getAllOpenDocuments;
+    exports.setCurrentDocument          = setCurrentDocument;
+    exports.addToWorkingSet             = addToWorkingSet;
+    exports.addListToWorkingSet         = addListToWorkingSet;
+    exports.removeFromWorkingSet        = removeFromWorkingSet;
+    exports.removeListFromWorkingSet    = removeListFromWorkingSet;
+    exports.getNextPrevFile             = getNextPrevFile;
+    exports.swapWorkingSetIndexes       = swapWorkingSetIndexes;
+    exports.sortWorkingSet              = sortWorkingSet;
+    exports.beginDocumentNavigation     = beginDocumentNavigation;
+    exports.finalizeDocumentNavigation  = finalizeDocumentNavigation;
+    exports.closeFullEditor             = closeFullEditor;
+    exports.closeAll                    = closeAll;
+    exports.notifyFileDeleted           = notifyFileDeleted;
+    exports.notifyPathNameChanged       = notifyPathNameChanged;
+    exports.notifyPathDeleted           = notifyPathDeleted;
+
+    &#x2F;&#x2F; Setup preferences
+    _prefs = PreferencesManager.getPreferenceStorage(module);
+    
+    &#x2F;&#x2F; Performance measurements
+    PerfUtils.createPerfMeasurement(&quot;DOCUMENT_MANAGER_GET_DOCUMENT_FOR_PATH&quot;, &quot;DocumentManager.getDocumentForPath()&quot;);
+
+    &#x2F;&#x2F; Handle project change events
+    var $ProjectManager = $(ProjectManager);
+    $ProjectManager.on(&quot;projectOpen&quot;, _projectOpen);
+    $ProjectManager.on(&quot;beforeProjectClose beforeAppClose&quot;, _savePreferences);
+    
+    &#x2F;&#x2F; Handle Language change events
+    $(LanguageManager).on(&quot;languageAdded&quot;, _handleLanguageAdded);
+    $(LanguageManager).on(&quot;languageModified&quot;, _handleLanguageModified);
+});</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_markMostRecent</h4>
+                            <em><p>Moves document to the front of the MRU list, IF it's in the working set; no-op otherwise.</p></em>
+                            <dl>
+                                    <dt></dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _markMostRecent(doc) {
+        var mruI = findInWorkingSet(doc.file.fullPath, _workingSetMRUOrder);
+        if (mruI !== -1) {
+            _workingSetMRUOrder.splice(mruI, 1);
+            _workingSetMRUOrder.unshift(doc.file);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_projectOpen</h4>
+                            <em><p>Initializes the working set.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _projectOpen(e) {
+        &#x2F;&#x2F; file root is appended for each project
+        var projectRoot = ProjectManager.getProjectRoot(),
+            files = _prefs.getValue(&quot;files_&quot; + projectRoot.fullPath);
+        
+        console.assert(Object.keys(_openDocuments).length === 0);  &#x2F;&#x2F; no files leftover from prev proj
+
+        if (!files) {
+            return;
+        }
+
+        var filesToOpen = [],
+            viewStates = {},
+            activeFile;
+
+        &#x2F;&#x2F; Add all files to the working set without verifying that
+        &#x2F;&#x2F; they still exist on disk (for faster project switching)
+        files.forEach(function (value, index) {
+            filesToOpen.push(new NativeFileSystem.FileEntry(value.file));
+            if (value.active) {
+                activeFile = value.file;
+            }
+            if (value.viewState) {
+                viewStates[value.file] = value.viewState;
+            }
+        });
+        addListToWorkingSet(filesToOpen);
+        
+        &#x2F;&#x2F; Allow for restoring saved editor UI state
+        EditorManager._resetViewStates(viewStates);
+
+        &#x2F;&#x2F; Initialize the active editor
+        if (!activeFile &amp;&amp; _workingSet.length &gt; 0) {
+            activeFile = _workingSet[0].fullPath;
+        }
+
+        if (activeFile) {
+            var promise = CommandManager.execute(Commands.FILE_OPEN, { fullPath: activeFile });
+            &#x2F;&#x2F; Add this promise to the event&#39;s promises to signal that this handler isn&#39;t done yet
+            e.promises.push(promise);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_removeAllFromWorkingSet</h4>
+                            <em><p>Removes all files from the working set list.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _removeAllFromWorkingSet() {
+        var fileList = _workingSet;
+
+        &#x2F;&#x2F; Remove all
+        _workingSet = [];
+        _workingSetMRUOrder = [];
+        _workingSetAddedOrder = [];
+
+        &#x2F;&#x2F; Dispatch event
+        $(exports).triggerHandler(&quot;workingSetRemoveList&quot;, [fileList]);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_savePreferences</h4>
+                            <em><p>Preferences callback. Saves the state of the working set.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _savePreferences() {
+        &#x2F;&#x2F; save the working set file paths
+        var files       = [],
+            isActive    = false,
+            workingSet  = getWorkingSet(),
+            currentDoc  = getCurrentDocument(),
+            projectRoot = ProjectManager.getProjectRoot();
+
+        if (!projectRoot) {
+            return;
+        }
+
+        workingSet.forEach(function (file, index) {
+            &#x2F;&#x2F; Do not persist untitled document paths
+            if (!(file instanceof NativeFileSystem.InaccessibleFileEntry)) {
+                &#x2F;&#x2F; flag the currently active editor
+                isActive = currentDoc &amp;&amp; (file.fullPath === currentDoc.file.fullPath);
+                
+                &#x2F;&#x2F; save editor UI state for just the working set
+                var viewState = EditorManager._getViewState(file.fullPath);
+                
+                files.push({
+                    file: file.fullPath,
+                    active: isActive,
+                    viewState: viewState
+                });
+            }
+        });
+
+        &#x2F;&#x2F; append file root to make file list unique for each project
+        _prefs.setValue(&quot;files_&quot; + projectRoot.fullPath, files);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>addListToWorkingSet</h4>
+                            <em><p>Adds the given file list to the end of the working set list.<br />If a file in the list has its own custom viewer, then it <br />is not added into the working set.<br />Does not change which document is currently open in the editor.<br />More efficient than calling addToWorkingSet() (in a loop) for<br />a list of files because there's only 1 redraw at the end</p></em>
+                            <dl>
+                                    <dt>fileList</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">FileEntryArray</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function addListToWorkingSet(fileList) {
+        var uniqueFileList = [];
+
+        &#x2F;&#x2F; Process only files not already in working set
+        fileList.forEach(function (file, index) {
+            &#x2F;&#x2F; If doc has a custom viewer, then don&#39;t add it to the working set.
+            &#x2F;&#x2F; Or if doc is already in working set, don&#39;t add it again.
+            if (!EditorManager.getCustomViewerForPath(file.fullPath) &amp;&amp;
+                    findInWorkingSet(file.fullPath) === -1) {
+                uniqueFileList.push(file);
+
+                &#x2F;&#x2F; Add
+                _workingSet.push(file);
+
+                &#x2F;&#x2F; Add to MRU order: either first or last, depending on whether it&#39;s already the current doc or not
+                if (_currentDocument &amp;&amp; _currentDocument.file.fullPath === file.fullPath) {
+                    _workingSetMRUOrder.unshift(file);
+                } else {
+                    _workingSetMRUOrder.push(file);
+                }
+                
+                &#x2F;&#x2F; Add first to Added order
+                _workingSetAddedOrder.splice(index, 1, file);
+            }
+        });
+        
+
+        &#x2F;&#x2F; Dispatch event
+        $(exports).triggerHandler(&quot;workingSetAddList&quot;, [uniqueFileList]);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>addToWorkingSet</h4>
+                            <em><p>Adds the given file to the end of the working set list, if it is not already in the list<br />and it does not have a custom viewer.<br />Does not change which document is currently open in the editor. Completes synchronously.</p></em>
+                            <dl>
+                                    <dt>file</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">FileEntry</dd>
+                                    <dd></dd>
+                                    <dt>index</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>Position to add to list (defaults to last); -1 is ignored</dd>
+                                    <dt>forceRedraw</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>If true, a working set change notification is always sent (useful if suppressRedraw was used with removeFromWorkingSet() earlier)</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function addToWorkingSet(file, index, forceRedraw) {
+        var indexRequested = (index !== undefined &amp;&amp; index !== null &amp;&amp; index !== -1);
+        
+        &#x2F;&#x2F; If the file has a custom viewer, then don&#39;t add it to the working set.
+        if (EditorManager.getCustomViewerForPath(file.fullPath)) {
+            return;
+        }
+            
+        &#x2F;&#x2F; If doc is already in working set, don&#39;t add it again
+        var curIndex = findInWorkingSet(file.fullPath);
+        if (curIndex !== -1) {
+            &#x2F;&#x2F; File is in working set, but not at the specifically requested index - only need to reorder
+            if (forceRedraw || (indexRequested &amp;&amp; curIndex !== index)) {
+                var entry = _workingSet.splice(curIndex, 1)[0];
+                _workingSet.splice(index, 0, entry);
+                $(exports).triggerHandler(&quot;workingSetSort&quot;);
+            }
+            return;
+        }
+        
+        &#x2F;&#x2F; Add to _workingSet making sure we store a different instance from the
+        &#x2F;&#x2F; one in the Document. See issue #1971 for more details.
+        if (file instanceof NativeFileSystem.InaccessibleFileEntry) {
+            file = new NativeFileSystem.InaccessibleFileEntry(file.fullPath, file.mtime);
+        } else {
+            file = new NativeFileSystem.FileEntry(file.fullPath);
+        }
+        if (!indexRequested) {
+            &#x2F;&#x2F; If no index is specified, just add the file to the end of the working set.
+            _workingSet.push(file);
+        } else {
+            &#x2F;&#x2F; If specified, insert into the working set list at this 0-based index
+            _workingSet.splice(index, 0, file);
+        }
+        
+        &#x2F;&#x2F; Add to MRU order: either first or last, depending on whether it&#39;s already the current doc or not
+        if (_currentDocument &amp;&amp; _currentDocument.file.fullPath === file.fullPath) {
+            _workingSetMRUOrder.unshift(file);
+        } else {
+            _workingSetMRUOrder.push(file);
+        }
+        
+        &#x2F;&#x2F; Add first to Added order
+        _workingSetAddedOrder.unshift(file);
+        
+        &#x2F;&#x2F; Dispatch event
+        if (!indexRequested) {
+            index = _workingSet.length - 1;
+        }
+        $(exports).triggerHandler(&quot;workingSetAdd&quot;, [file, index]);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>beginDocumentNavigation</h4>
+                            <em><p>Indicate that changes to currentDocument are temporary for now, and should not update the MRU<br />ordering of the working set. Useful for next/previous keyboard navigation (until Ctrl is released)<br />or for incremental-search style document preview like Quick Open will eventually have.<br />Can be called any number of times, and ended by a single finalizeDocumentNavigation() call.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function beginDocumentNavigation() {
+        _documentNavPending = true;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>closeAll</h4>
+                            <em><p>Equivalent to calling closeFullEditor() for all Documents. Same caveat: this discards any<br />unsaved changes, so the UI should confirm with the user before calling this.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function closeAll() {
+        _clearCurrentDocument();
+        _removeAllFromWorkingSet();
+    }
+        
+    function removeListFromWorkingSet(list, clearCurrentDocument) {
+        var fileList = [], index;
+        
+        if (!list) {
+            return;
+        }
+        
+        if (clearCurrentDocument) {
+            _clearCurrentDocument();
+        }
+        
+        list.forEach(function (file) {
+            index = findInWorkingSet(file.fullPath);
+            
+            if (index !== -1) {
+                fileList.push(_workingSet[index]);
+                
+                _workingSet.splice(index, 1);
+                _workingSetMRUOrder.splice(findInWorkingSet(file.fullPath, _workingSetMRUOrder), 1);
+                _workingSetAddedOrder.splice(findInWorkingSet(file.fullPath, _workingSetAddedOrder), 1);
+            }
+        });
+        
+        $(exports).triggerHandler(&quot;workingSetRemoveList&quot;, [fileList]);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>closeFullEditor</h4>
+                            <em><p>Warning: low level API - use FILE_CLOSE command in most cases.<br />Closes the full editor for the given file (if there is one), and removes it from the working<br />set. Any other editors for this Document remain open. Discards any unsaved changes without prompting.</p>
+
+<p>Changes currentDocument if this file was the current document (may change to null).</p>
+
+<p>This is a subset of notifyFileDeleted(). Use this for the user-facing Close command.</p></em>
+                            <dl>
+                                    <dt>file</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">FileEntry</dd>
+                                    <dd></dd>
+                                    <dt>skipAutoSelect</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>- if true, don't automatically open and select the next document</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function closeFullEditor(file, skipAutoSelect) {
+        &#x2F;&#x2F; If this was the current document shown in the editor UI, we&#39;re going to switch to a
+        &#x2F;&#x2F; different document (or none if working set has no other options)
+        if (_currentDocument &amp;&amp; _currentDocument.file.fullPath === file.fullPath) {
+            &#x2F;&#x2F; Get next most recent doc in the MRU order
+            var nextFile = getNextPrevFile(1);
+            if (nextFile &amp;&amp; nextFile.fullPath === _currentDocument.file.fullPath) {
+                &#x2F;&#x2F; getNextPrevFile() might return the file we&#39;re about to close if it&#39;s the only one open (due to wraparound)
+                nextFile = null;
+            }
+            
+            &#x2F;&#x2F; Switch editor to next document (or blank it out)
+            if (nextFile &amp;&amp; !skipAutoSelect) {
+                CommandManager.execute(Commands.FILE_OPEN, { fullPath: nextFile.fullPath })
+                    .done(function () {
+                        &#x2F;&#x2F; (Now we&#39;re guaranteed that the current document is not the one we&#39;re closing)
+                        console.assert(!(_currentDocument &amp;&amp; _currentDocument.file.fullPath === file.fullPath));
+                    })
+                    .fail(function () {
+                        &#x2F;&#x2F; File chosen to be switched to could not be opened, and the original file
+                        &#x2F;&#x2F; is still in editor. Close it again so code will try to open the next file,
+                        &#x2F;&#x2F; or empty the editor if there are no other files.
+                        closeFullEditor(file);
+                    });
+            } else {
+                _clearCurrentDocument();
+            }
+        }
+        
+        &#x2F;&#x2F; Remove closed doc from working set, if it was in there
+        &#x2F;&#x2F; This happens regardless of whether the document being closed was the current one or not
+        removeFromWorkingSet(file);
+        
+        &#x2F;&#x2F; Note: EditorManager will dispose the closed document&#39;s now-unneeded editor either in
+        &#x2F;&#x2F; response to the editor-swap call above, or the removeFromWorkingSet() call, depending on
+        &#x2F;&#x2F; circumstances. See notes in EditorManager for more.
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>createUntitledDocument</h4>
+                            <em><p>Creates an untitled document. The associated FileEntry has a fullPath<br />looks like /some-random-string/Untitled-counter.fileExt.</p></em>
+                            <dl>
+                                    <dt>counter</dt>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>- used in the name of the new Document's FileEntry</dd>
+                                    <dt>fileExt</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>- file extension of the new Document's FileEntry</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function createUntitledDocument(counter, fileExt) {
+        var filename = Strings.UNTITLED + &quot;-&quot; + counter + fileExt,
+            fullPath = _untitledDocumentPath + &quot;&#x2F;&quot; + filename,
+            now = new Date(),
+            fileEntry = new NativeFileSystem.InaccessibleFileEntry(fullPath, now);
+        
+        return new DocumentModule.Document(fileEntry, now, &quot;&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>finalizeDocumentNavigation</h4>
+                            <em><p>Un-freezes the MRU list after one or more beginDocumentNavigation() calls. Whatever document is<br />current is bumped to the front of the MRU list.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function finalizeDocumentNavigation() {
+        if (_documentNavPending) {
+            _documentNavPending = false;
+            
+            _markMostRecent(_currentDocument);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>findInWorkingSet</h4>
+                            <em><p>Returns the index of the file matching fullPath in the working set.<br />Returns -1 if not found.</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                                    <dt>list</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">Array.&lt;FileEntry&gt;</dd>
+                                    <dd>Pass this arg to search a different array of files. Internal use only.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function findInWorkingSet(fullPath, list) {
+        list = list || _workingSet;
+        
+        return _.findIndex(list, function (file, i) {
+            return file.fullPath === fullPath;
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>findInWorkingSetAddedOrder</h4>
+                            <em><p>Returns the index of the file matching fullPath in _workingSetAddedOrder.<br />Returns -1 if not found.</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function findInWorkingSetAddedOrder(fullPath) {
+        return findInWorkingSet(fullPath, _workingSetAddedOrder);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getAllOpenDocuments</h4>
+                            <em><p>Returns all Documents that are 'open' in the UI somewhere (for now, this means open in an<br />inline editor and/or a full-size editor). Only these Documents can be modified, and only<br />these Documents are synced with external changes on disk.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getAllOpenDocuments() {
+        var result = [];
+        var path;
+        for (path in _openDocuments) {
+            if (_openDocuments.hasOwnProperty(path)) {
+                result.push(_openDocuments[path]);
+            }
+        }
+        return result;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getCurrentDocument</h4>
+                            <em><p>Returns the Document that is currently open in the editor UI. May be null.<br />When this changes, DocumentManager dispatches a "currentDocumentChange" event. The current<br />document always has a backing Editor (Document._masterEditor != null) and is thus modifiable.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getCurrentDocument() {
+        return _currentDocument;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getDocumentForPath</h4>
+                            <em><p>Gets an existing open Document for the given file, or creates a new one if the Document is<br />not currently open ('open' means referenced by the UI somewhere). Always use this method to<br />get Documents; do not call the Document constructor directly. This method is safe to call<br />in parallel.</p>
+
+<p>If you are going to hang onto the Document for more than just the duration of a command - e.g.<br />if you are going to display its contents in a piece of UI - then you must addRef() the Document<br />and listen for changes on it. (Note: opening the Document in an Editor automatically manages<br />refs and listeners for that Editor UI).</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getDocumentForPath(fullPath) {
+        var doc             = _openDocuments[fullPath],
+            pendingPromise  = getDocumentForPath._pendingDocumentPromises[fullPath];
+
+        if (doc) {
+            &#x2F;&#x2F; use existing document
+            return new $.Deferred().resolve(doc).promise();
+        } else if (pendingPromise) {
+            &#x2F;&#x2F; wait for the result of a previous request
+            return pendingPromise;
+        } else {
+            var result = new $.Deferred(),
+                promise = result.promise();
+
+            &#x2F;&#x2F; create a new document
+            var perfTimerName = PerfUtils.markStart(&quot;getDocumentForPath:\t&quot; + fullPath);
+
+            result.done(function () {
+                PerfUtils.addMeasurement(perfTimerName);
+            }).fail(function () {
+                PerfUtils.finalizeMeasurement(perfTimerName);
+            });
+            
+            var fileEntry;
+            if (fullPath.indexOf(_untitledDocumentPath) === 0) {
+                console.error(&quot;getDocumentForPath called for non-open untitled document: &quot; + fullPath);
+                result.reject();
+            } else {
+                &#x2F;&#x2F; log this document&#39;s Promise as pending
+                getDocumentForPath._pendingDocumentPromises[fullPath] = promise;
+
+                fileEntry = new NativeFileSystem.FileEntry(fullPath);
+                
+                FileUtils.readAsText(fileEntry)
+                    .always(function () {
+                        &#x2F;&#x2F; document is no longer pending
+                        delete getDocumentForPath._pendingDocumentPromises[fullPath];
+                    })
+                    .done(function (rawText, readTimestamp) {
+                        doc = new DocumentModule.Document(fileEntry, readTimestamp, rawText);
+                        result.resolve(doc);
+                    })
+                    .fail(function (fileError) {
+                        result.reject(fileError);
+                    });
+            }
+            &#x2F;&#x2F; This is a good point to clean up any old dangling Documents
+            result.done(_gcDocuments);
+            return promise;
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getNextPrevFile</h4>
+                            <em><p>Get the next or previous file in the working set, in MRU order (relative to currentDocument). May<br />return currentDocument itself if working set is length 1.</p></em>
+                            <dl>
+                                    <dt>inc</dt>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>-1 for previous, +1 for next; no other values allowed</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getNextPrevFile(inc) {
+        if (inc !== -1 &amp;&amp; inc !== +1) {
+            console.error(&quot;Illegal argument: inc = &quot; + inc);
+            return null;
+        }
+        
+        if (EditorManager.getCurrentlyViewedPath()) {
+            var mruI = findInWorkingSet(EditorManager.getCurrentlyViewedPath(), _workingSetMRUOrder);
+            if (mruI === -1) {
+                &#x2F;&#x2F; If doc not in working set, return most recent working set item
+                if (_workingSetMRUOrder.length &gt; 0) {
+                    return _workingSetMRUOrder[0];
+                }
+            } else {
+                &#x2F;&#x2F; If doc is in working set, return next&#x2F;prev item with wrap-around
+                var newI = mruI + inc;
+                if (newI &gt;= _workingSetMRUOrder.length) {
+                    newI = 0;
+                } else if (newI &lt; 0) {
+                    newI = _workingSetMRUOrder.length - 1;
+                }
+                
+                return _workingSetMRUOrder[newI];
+            }
+        }
+        
+        &#x2F;&#x2F; If no doc open or working set empty, there is no &quot;next&quot; file
+        return null;
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getOpenDocumentForPath</h4>
+                            <em><p>Returns the existing open Document for the given file, or null if the file is not open ('open'<br />means referenced by the UI somewhere). If you will hang onto the Document, you must addRef()<br />it; see {@link getDocumentForPath()} for details.</p></em>
+                            <dl>
+                                    <dt>fullPath</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getOpenDocumentForPath(fullPath) {
+        return _openDocuments[fullPath];
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>getWorkingSet</h4>
+                            <em><p>Returns a list of items in the working set in UI list order. May be 0-length, but never null.</p>
+
+<p>When a file is added this list, DocumentManager dispatches a "workingSetAdd" event.<br />When a file is removed from list, DocumentManager dispatches a "workingSetRemove" event.<br />To listen for ALL changes to this list, you must listen for both events.</p>
+
+<p>Which items belong in the working set is managed entirely by DocumentManager. Callers cannot<br />(yet) change this collection on their own.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function getWorkingSet() {
+        return _.clone(_workingSet);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>notifyFileDeleted</h4>
+                            <em><p>Reacts to a file being deleted: if there is a Document for this file, causes it to dispatch a<br />"deleted" event; ensures it's not the currentDocument; and removes this file from the working<br />set. These actions in turn cause all open editors for this file to close. Discards any unsaved<br />changes - it is expected that the UI has already confirmed with the user before calling.</p>
+
+<p>To simply close a main editor when the file hasn't been deleted, use closeFullEditor() or FILE_CLOSE.</p>
+
+<p>FUTURE: Instead of an explicit notify, we should eventually listen for deletion events on some<br />sort of "project file model," making this just a private event handler.</p></em>
+                            <dl>
+                                    <dt>file</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">FileEntry</dd>
+                                    <dd></dd>
+                                    <dt>skipAutoSelect</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>- if true, don't automatically open/select the next document</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function notifyFileDeleted(file, skipAutoSelect) {
+        &#x2F;&#x2F; First ensure it&#39;s not currentDocument, and remove from working set
+        closeFullEditor(file, skipAutoSelect);
+        
+        &#x2F;&#x2F; Notify all other editors to close as well
+        var doc = getOpenDocumentForPath(file.fullPath);
+        if (doc) {
+            $(doc).triggerHandler(&quot;deleted&quot;);
+        }
+        
+        &#x2F;&#x2F; At this point, all those other views SHOULD have released the Doc
+        if (doc &amp;&amp; doc._refCount &gt; 0) {
+            console.log(&quot;WARNING: deleted Document still has &quot; + doc._refCount + &quot; references. Did someone addRef() without listening for &#39;deleted&#39;?&quot;);
+        }
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>notifyPathDeleted</h4>
+                            <em><p>Called after a file or folder has been deleted. This function is responsible<br />for updating underlying model data and notifying all views of the change.</p></em>
+                            <dl>
+                                    <dt>path</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The path of the file/folder that has been deleted</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function notifyPathDeleted(path) {</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>notifyPathNameChanged</h4>
+                            <em><p>Called after a file or folder name has changed. This function is responsible<br />for updating underlying model data and notifying all views of the change.</p></em>
+                            <dl>
+                                    <dt>oldName</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The old name of the file/folder</dd>
+                                    <dt>newName</dt>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The new name of the file/folder</dd>
+                                    <dt>isFolder</dt>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>True if path is a folder; False if it is a file.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function notifyPathNameChanged(oldName, newName, isFolder) {
+        &#x2F;&#x2F; Update open documents. This will update _currentDocument too, since
+        &#x2F;&#x2F; the current document is always open.
+        var keysToDelete = [];
+        _.forEach(_openDocuments, function (doc, path) {
+            if (FileUtils.isAffectedWhenRenaming(path, oldName, newName, isFolder)) {
+                &#x2F;&#x2F; Copy value to new key
+                var newKey = path.replace(oldName, newName);
+                _openDocuments[newKey] = doc;
+                
+                keysToDelete.push(path);
+                
+                &#x2F;&#x2F; Update document file
+                FileUtils.updateFileEntryPath(doc.file, oldName, newName, isFolder);
+                doc._notifyFilePathChanged();
+            }
+        });
+        
+        &#x2F;&#x2F; Delete the old keys
+        keysToDelete.forEach(function (fullPath) {
+            delete _openDocuments[fullPath];
+        });
+        
+        &#x2F;&#x2F; Update working set
+        _workingSet.forEach(function (fileEntry) {
+            FileUtils.updateFileEntryPath(fileEntry, oldName, newName, isFolder);
+        });
+        
+        &#x2F;&#x2F; Send a &quot;fileNameChanged&quot; event. This will trigger the views to update.
+        $(exports).triggerHandler(&quot;fileNameChange&quot;, [oldName, newName]);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>removeFromWorkingSet</h4>
+                            <em><p>Warning: low level API - use FILE_CLOSE command in most cases.<br />Removes the given file from the working set list, if it was in the list. Does not change<br />the current editor even if it's for this file. Does not prompt for unsaved changes.</p></em>
+                            <dl>
+                                    <dt>file</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">FileEntry</dd>
+                                    <dd></dd>
+                                    <dt>true</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">boolean</dd>
+                                    <dd>to suppress redraw after removal</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function removeFromWorkingSet(file, suppressRedraw) {
+        &#x2F;&#x2F; If doc isn&#39;t in working set, do nothing
+        var index = findInWorkingSet(file.fullPath);
+        if (index === -1) {
+            return;
+        }
+        
+        &#x2F;&#x2F; Remove
+        _workingSet.splice(index, 1);
+        _workingSetMRUOrder.splice(findInWorkingSet(file.fullPath, _workingSetMRUOrder), 1);
+        _workingSetAddedOrder.splice(findInWorkingSet(file.fullPath, _workingSetAddedOrder), 1);
+        
+        &#x2F;&#x2F; Dispatch event
+        $(exports).triggerHandler(&quot;workingSetRemove&quot;, [file, suppressRedraw]);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>setCurrentDocument</h4>
+                            <em><p>Changes currentDocument to the given Document, firing currentDocumentChange, which in turn<br />causes this Document's main editor UI to be shown in the editor pane, updates the selection<br />in the file tree / working set UI, etc. This call may also add the item to the working set.</p></em>
+                            <dl>
+                                    <dt>document</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Document</dd>
+                                    <dd>The Document to make current. May or may not already be in the working set.</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function setCurrentDocument(doc) {
+        
+        &#x2F;&#x2F; If this doc is already current, do nothing
+        if (_currentDocument === doc) {
+            return;
+        }
+
+        var perfTimerName = PerfUtils.markStart(&quot;setCurrentDocument:\t&quot; + doc.file.fullPath);
+        
+        &#x2F;&#x2F; If file is untitled or otherwise not within project tree, add it to
+        &#x2F;&#x2F; working set right now (don&#39;t wait for it to become dirty)
+        if (doc.isUntitled() || !ProjectManager.isWithinProject(doc.file.fullPath)) {
+            addToWorkingSet(doc.file);
+        }
+        
+        &#x2F;&#x2F; Adjust MRU working set ordering (except while in the middle of a Ctrl+Tab sequence)
+        if (!_documentNavPending) {
+            _markMostRecent(doc);
+        }
+        
+        &#x2F;&#x2F; Make it the current document
+        _currentDocument = doc;
+        $(exports).triggerHandler(&quot;currentDocumentChange&quot;);
+        &#x2F;&#x2F; (this event triggers EditorManager to actually switch editors in the UI)
+
+        PerfUtils.addMeasurement(perfTimerName);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>sortWorkingSet</h4>
+                            <em><p>Sorts _workingSet using the compare function</p></em>
+                            <dl>
+                                    <dt>compareFn</dt>
+                                    <dd class="label label-info pull-left">function(FileEntry,FileEntry): number</dd>
+                                    <dd>The function that will be used inside JavaScript's sort function. The return a value should be >0 (sort a to a lower index than b), =0 (leaves a and b unchanged with respect to each other) or <0 (sort b to a lower index than a) and must always returns the same value when given a specific pair of elements a and b as its two arguments. Documentation: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/sort</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function sortWorkingSet(compareFn) {
+        _workingSet.sort(compareFn);
+        $(exports).triggerHandler(&quot;workingSetSort&quot;);
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>swapWorkingSetIndexes</h4>
+                            <em><p>Mutually exchanges the files at the indexes passed by parameters.</p></em>
+                            <dl>
+                                    <dt>index</dt>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>Old file index</dd>
+                                    <dt>index</dt>
+                                    <dd class="label label-info pull-left">number</dd>
+                                    <dd>New file index</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function swapWorkingSetIndexes(index1, index2) {
+        var length = _workingSet.length - 1;
+        var temp;
+        
+        if (index1 &gt;= 0 &amp;&amp; index2 &lt;= length &amp;&amp; index1 &gt;= 0 &amp;&amp; index2 &lt;= length) {
+            temp = _workingSet[index1];
+            _workingSet[index1] = _workingSet[index2];
+            _workingSet[index2] = temp;
+            
+            $(exports).triggerHandler(&quot;workingSetSort&quot;);
+            $(exports).triggerHandler(&quot;workingSetDisableAutoSorting&quot;);
+        }
+    }</code></pre>
+                        </div>
+                    </section>
+        
+        
+                    <section id="classes" class="hide">
+                        <h2>Classes</h2>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>
