@@ -47,12 +47,12 @@
                         <h3>Dependencies</h3>
                         <ul class="nav nav-list">
                             {{#module.dependencies}}
-                            <li><a href="{{level}}/modules/{{.}}.html">{{.}}</a></li>
+                            <li><a href="{{level}}/modules/{{url}}.html">{{name}}</a></li>
                             {{/module.dependencies}}
                         </ul>
                     </section>
         
-                    <section id="variables">
+                    <section id="variables" class="{{module.hasVariables}}">
                         <h3>Variables <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
@@ -82,7 +82,7 @@
                         <!--</ul>-->
                     </section>
         
-                    <section id="functions">
+                    <section id="functions" class="{{module.hasFunctions}}">
                         <h3>Functions <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
@@ -93,14 +93,14 @@
                                 {{#isPublicAPI}}Public API{{/isPublicAPI}}
                             </span>
                             <h4>{{ctx.name}}</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em>{{{description.full}}}</em>
                             <dl>
                                 {{#params}}
                                     <dt>{{name}}</dt>
-                                    <dd>{{{types}}} - {{{description}}}</dd>
+                                    <dd class="label label-info pull-left">{{types}}</dd>
+                                    <dd>{{{description}}}</dd>
                                 {{/params}}
                             </dl>
-                            {{{description.full}}}
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>{{code}}</code></pre>
                         </div>
@@ -108,78 +108,88 @@
                     </section>
         
         
-                    <section id="classes">
+                    <section id="classes" class="{{module.hasClasses}}">
                         <h2>Classes</h2>
                         {{#module.classes}}
-                            <div class="member public">
-                                <span class="pull-right scope">
-                                    Constructor
-                                </span>
-                                <h4>{{constructor.ctx.name}}</h4>
-                                <!--<strong>Params:</strong>-->
-                                <dl>
-                                    {{#constructor.params}}
-                                    <dt>{{name}}</dt>
-                                    <dd>{{{types}}} - {{{description}}}</dd>
-                                    {{/constructor.params}}
-                                </dl>
-                                {{{constructor.description.full}}}
-                                <button class="btn btn-small show-code">Show code</button>
-                                <pre class="code"><code>{{constructor.code}}</code></pre>
-                            </div>
-        
-                            <section class="properties">
-                                <h3>Properties<label class="checkbox">
-                                    <input class="toggle-public" type="checkbox"> Show Private Members
-                                </label></h3>
-                                {{#properties}}
-                                <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+                            <div class="well">
+                                <div class="member public">
                                     <span class="pull-right scope">
-                                        {{#isPrivate}}Private{{/isPrivate}}
-                                        {{#isPublicAPI}}Public API{{/isPublicAPI}}
+                                        Constructor
                                     </span>
-                                    <h4>{{ctx.name}}</h4>
+                                    <h4>{{constructor.ctx.name}}</h4>
+                                    <em>{{{constructor.description.full}}}</em>
                                     <dl>
-                                        {{#tags}}
-                                        {{#.}}
-                                        <dt>{{key}}</dt>
-                                        {{#value}}
-                                        <dd>{{{value}}}</dd>
-                                        {{/value}}
-                                        {{/.}}
-                                        {{/tags}}
-                                    </dl>
-                                    {{{description.full}}}
-                                    <button class="btn btn-small show-code">Show code</button>
-                                    <pre class="code"><code>{{code}}</code></pre>
-                                </div>
-                                {{/properties}}
-                            </section>
-        
-                            <section class="methods">
-                                <h3>Methods<label class="checkbox">
-                                    <input class="toggle-public" type="checkbox"> Show Private Members
-                                </label></h3>
-                                {{#methods}}
-                                <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
-                                    <span class="pull-right scope">
-                                        {{#isPrivate}}Private{{/isPrivate}}
-                                        {{#isPublicAPI}}Public API{{/isPublicAPI}}
-                                    </span>
-                                    <h4>{{ctx.name}}</h4>
-                                    <!--<strong>Params:</strong>-->
-                                    <dl>
-                                        {{#params}}
+                                        {{#constructor.params}}
                                         <dt>{{name}}</dt>
-                                        <dd>{{{types}}} - {{{description}}}</dd>
-                                        {{/params}}
+                                        <dd class="label label-info pull-left">{{types}}</dd>
+                                        <dd>{{{description}}}</dd>
+                                        {{/constructor.params}}
                                     </dl>
-                                    {{{description.full}}}
+                                    
                                     <button class="btn btn-small show-code">Show code</button>
-                                    <pre class="code"><code>{{code}}</code></pre>
+                                    <pre class="code"><code>{{constructor.code}}</code></pre>
                                 </div>
-                                {{/methods}}
-                            </section>
+            
+                                <section class="properties {{hasProperties}}">
+                                    <h3>Properties<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    {{#properties}}
+                                    <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+                                        <span class="pull-right scope">
+                                            {{#isPrivate}}Private{{/isPrivate}}
+                                            {{#isPublicAPI}}Public API{{/isPublicAPI}}
+                                        </span>
+                                        <h4>{{ctx.name}}</h4>
+                                        <dl>
+                                            {{#tags}}
+                                            {{#.}}
+                                            <dt>{{key}}</dt>
+                                            {{#value}}
+                                            <dd>{{{value}}}</dd>
+                                            {{/value}}
+                                            {{/.}}
+                                            {{/tags}}
+                                        </dl>
+                                        {{{description.full}}}
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>{{code}}</code></pre>
+                                    </div>
+                                    {{/properties}}
+                                </section>
+            
+                                <section class="methods {{hasMethods}}">
+                                    <h3>Methods<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    {{#methods}}
+                                    <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+                                        <span class="pull-right scope">
+                                            {{#isPrivate}}Private{{/isPrivate}}
+                                            {{#isPublicAPI}}Public API{{/isPublicAPI}}
+                                        </span>
+                                        <h4>{{ctx.name}}</h4>
+                                        <em>{{{description.full}}}</em>
+                                        <dl>
+                                            {{#params}}
+                                            <dt>{{name}}</dt>
+                                            <dd class="label label-info pull-left">{{types}}</dd>
+                                            <dd>{{{description}}}</dd>
+                                            {{/params}}
+                                        </dl>
+                                        <dl>
+                                            {{#returns}}
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">{{types}}</dd>
+                                            <dd>{{{description}}}</dd>
+                                            {{/returns}}
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>{{code}}</code></pre>
+                                    </div>
+                                    {{/methods}}
+                                </section>
+                            </div>
                         {{/module.classes}}
                     </section>
                 </div>
