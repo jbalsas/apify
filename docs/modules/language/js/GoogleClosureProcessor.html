@@ -160,44 +160,35 @@
                                         <dl>
                                         </dl>
                                         <button class="btn btn-small show-code">Show code</button>
-                                        <pre class="code"><code>GoogleClosureProcessor.prototype._parseTypeExpression = function (types) {
+                                        <pre class="code"><code>GoogleClosureProcessor.prototype._parseTypeExpression = function (tag) {
         var PARAM_OBJECT_REGEXP         = new RegExp(&quot;^{(.*)}$&quot;),
             PARAM_FUNCTION_REGEXP       = new RegExp(&quot;^function\\((.*)\\)$&quot;),
             PARAM_NULLABLE_REGEXP       = new RegExp(&quot;^\\?(.*)$&quot;),
-            PARAM_NON_NULLABLE_REGEXP   = new RegExp(&quot;^!(.*)$&quot;);
+            PARAM_NON_NULLABLE_REGEXP   = new RegExp(&quot;^!(.*)$&quot;),
+            PARAM_OPTIONAL_REGEXP   = new RegExp(&quot;^(.*)=$&quot;);
 
-        var param_function_open     = &quot;&lt;span class=&#39;param_function&#39;&gt;function(&lt;&#x2F;span&gt;&quot;,
-            param_function_close    = &quot;&lt;span class=&#39;param_function&#39;&gt;)&lt;&#x2F;span&gt;&quot;,
-            param_object_open       = &quot;&lt;span class=&#39;param_object&#39;&gt;{&lt;&#x2F;span&gt;&quot;,
-            param_object_close      = &quot;&lt;span class=&#39;param_object&#39;&gt;}&lt;&#x2F;span&gt;&quot;,
-            param_nullable          = &quot;&lt;span class=&#39;param_nullable&#39;&#x2F;&gt;&quot;,
-            param_non_nullable      = &quot;&lt;span class=&#39;param_non_nullable&#39;&#x2F;&gt;&quot;,
-            param_tag_close         = &quot;&lt;&#x2F;span&gt;&quot;;
-
-        var expr = types,
+        var types = tag.types.join(&#39;, &#39;),
             match;
-
-        match = PARAM_OBJECT_REGEXP.exec(types);
-        if (match) {
-            return (param_object_open + this._parseTypeExpression(match[1]) + param_object_close);
-        }
-
-        match = PARAM_FUNCTION_REGEXP.exec(types);
-        if (match) {
-            return (param_function_open + this._parseTypeExpression(match[1]) + param_function_close);
-        }
 
         match = PARAM_NULLABLE_REGEXP.exec(types);
         if (match) {
-            return (param_nullable + this._parseTypeExpression(match[1]));
+            tag.modifiers.push(&#39;nullable&#39;);
+            tag.types = match[1];
         }
 
         match = PARAM_NON_NULLABLE_REGEXP.exec(types);
         if (match) {
-            return (param_non_nullable + this._parseTypeExpression(match[1]));
+            tag.modifiers.push(&#39;non-nullable&#39;);
+            tag.types = match[1];
+        }
+        
+        match = PARAM_OPTIONAL_REGEXP.exec(types);
+        if (match) {
+            tag.modifiers.push(&#39;optional&#39;);
+            tag.types = match[1];
         }
 
-        return expr;
+        return tag;
     };</code></pre>
                                     </div>
                                     <div class="member">
@@ -247,7 +238,8 @@
                         value: &quot;&lt;a href=&#39;#&#39;&gt;&quot; + tag.local + &quot;&lt;&#x2F;a&gt;&quot;
                     };
                 } else if (tag.type === &quot;param&quot;) {
-                    tag.types = instance._parseTypeExpression(tag.types.join(&#39;, &#39;));
+                    tag.modifiers = [];
+                    tag = instance._parseTypeExpression(tag);
                     params.push(tag);
                     return false;
                 } else if (tag.type === &quot;return&quot;) {
