@@ -95,24 +95,24 @@
                     <section id="dependencies">
                         <h3>Dependencies</h3>
                         <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/underscore.html">underscore</a></li>
                             <li><a href="..&#x2F;../modules/deferred.html">deferred</a></li>
                             <li><a href="..&#x2F;../modules/find.html">find</a></li>
                             <li><a href="..&#x2F;../modules/fs.html">fs</a></li>
                             <li><a href="..&#x2F;../modules/fs2.html">fs2</a></li>
                             <li><a href="..&#x2F;../modules/ncp.html">ncp</a></li>
                             <li><a href="..&#x2F;../modules/path.html">path</a></li>
-                            <li><a href="..&#x2F;../modules/underscore.html">underscore</a></li>
                         </ul>
                     </section>
         
-                    <section id="variables">
+                    <section id="variables" class="hide">
                         <h3>Variables <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
                         <!--</ul>-->
                     </section>
         
-                    <section id="functions">
+                    <section id="functions" class="">
                         <h3>Functions <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
@@ -122,12 +122,12 @@
                                 
                             </span>
                             <h4>_clearOutputFolder</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Recursively clean a directory</p></em>
                             <dl>
                                     <dt>dir</dt>
-                                    <dd>string - Path of a directory to be cleaned</dd>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Path of a directory to be cleaned</dd>
                             </dl>
-                            <p>Recursively clean a directory</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function _clearOutputFolder(folder) {
         return fs2.rmdir(folder, { recursive: true, force: true }).then(null, function (e) {
@@ -145,14 +145,15 @@
                                 
                             </span>
                             <h4>_createModulesSkeleton</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Creates the folder skeleton for all the files in a given fileset</p></em>
                             <dl>
                                     <dt>fileset</dt>
-                                    <dd>object - The fileset to be documented</dd>
+                                    <dd class="label label-info pull-left">object</dd>
+                                    <dd>The fileset to be documented</dd>
                                     <dt>folder</dt>
-                                    <dd>string - The output folder in to which create the skeleton for the docs return {Promise} A deferred promise to be resolved when the final skeleton is ready</dd>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>The output folder in to which create the skeleton for the docs return {Promise} A deferred promise to be resolved when the final skeleton is ready</dd>
                             </dl>
-                            <p>Creates the folder skeleton for all the files in a given fileset</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function _createModulesSkeleton(fileset, folder) {
         var def = deferred();
@@ -174,16 +175,15 @@
                                 Public API
                             </span>
                             <h4>createOutputSkeleton</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Creates the output skeleton folders for a given fileset</p></em>
                             <dl>
                                     <dt>output</dt>
-                                    <dd>string - Output folder for the docs</dd>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Output folder for the docs</dd>
                                     <dt>fileset</dt>
-                                    <dd>object - Fileset to be documented</dd>
-                                    <dt>Returns</dt>
-                                    <dd>Promise - A promise to be fulfilled when the skeleton is created</dd>
+                                    <dd class="label label-info pull-left">object</dd>
+                                    <dd>Fileset to be documented</dd>
                             </dl>
-                            <p>Creates the output skeleton folders for a given fileset</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>var createOutputSkeleton = function (output, fileset, assets) {
         var def = deferred(),
@@ -216,18 +216,18 @@
                                 Public API
                             </span>
                             <h4>load</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Analyzes a source tree executing different sets of inclussion and exclussion<br />rules to generate a working space with the matching files</p></em>
                             <dl>
                                     <dt>src</dt>
-                                    <dd>string - Source tree to be analyzed</dd>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Source tree to be analyzed</dd>
                                     <dt>includes</dt>
-                                    <dd>array.<RegExp> - Rule set for including files</dd>
+                                    <dd class="label label-info pull-left">array.&lt;RegExp&gt;</dd>
+                                    <dd>Rule set for including files</dd>
                                     <dt>excludes</dt>
-                                    <dd>array.<RegExp> - Rule set for excluding files</dd>
-                                    <dt>Returns</dt>
-                                    <dd>fileset - The set of files to be documented</dd>
+                                    <dd class="label label-info pull-left">array.&lt;RegExp&gt;</dd>
+                                    <dd>Rule set for excluding files</dd>
                             </dl>
-                            <p>Analyzes a source tree executing different sets of inclussion and exclussion<br />rules to generate a working space with the matching files</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>var load = function (src, includes, excludes) {
         var groups, files,
@@ -287,7 +287,7 @@
                     </section>
         
         
-                    <section id="classes">
+                    <section id="classes" class="hide">
                         <h2>Classes</h2>
                     </section>
                 </div>

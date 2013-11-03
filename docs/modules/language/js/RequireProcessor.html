@@ -99,14 +99,14 @@
                         </ul>
                     </section>
         
-                    <section id="variables">
+                    <section id="variables" class="hide">
                         <h3>Variables <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
                         <!--</ul>-->
                     </section>
         
-                    <section id="functions">
+                    <section id="functions" class="">
                         <h3>Functions <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
@@ -116,16 +116,15 @@
                                 
                             </span>
                             <h4>_findAllMatches</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Finds all matches for a given rule in a block of data</p></em>
                             <dl>
                                     <dt>reg</dt>
-                                    <dd>Regexp - Regular expression for the serach</dd>
+                                    <dd class="label label-info pull-left">Regexp</dd>
+                                    <dd>Regular expression for the serach</dd>
                                     <dt>data</dt>
-                                    <dd>string - Block of data</dd>
-                                    <dt>Returns</dt>
-                                    <dd>Array.<string> - An array containing all matches for the regexp</dd>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Block of data</dd>
                             </dl>
-                            <p>Finds all matches for a given rule in a block of data</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function _findAllMatches(reg, data) {
         var result = [];
@@ -147,17 +146,22 @@
                                 
                             </span>
                             <h4>_findDependencies</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Finds all dependencies in a module</p></em>
                             <dl>
                                     <dt>Contents</dt>
-                                    <dd>data - of the module</dd>
-                                    <dt>Returns</dt>
-                                    <dd>Array.<string> - Array with all the dependencies of the module</dd>
+                                    <dd class="label label-info pull-left">data</dd>
+                                    <dd>of the module</dd>
                             </dl>
-                            <p>Finds all dependencies in a module</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function _findDependencies(data) {
-        return _findAllMatches(REQUIRE_REGEXP, data);
+        var deps = _findAllMatches(REQUIRE_REGEXP, data).map(function (dep) {
+            return {
+                name: dep.substr(dep.lastIndexOf(&#39;&#x2F;&#39;) + 1),
+                url: dep
+            };
+        });
+        
+        return deps;
     }</code></pre>
                         </div>
                         <div class="member private">
@@ -166,12 +170,12 @@
                                 
                             </span>
                             <h4>_findExports</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Finds all exported variables in a module</p></em>
                             <dl>
                                     <dt>Contents</dt>
-                                    <dd>data - of the module</dd>
+                                    <dd class="label label-info pull-left">data</dd>
+                                    <dd>of the module</dd>
                             </dl>
-                            <p>Finds all exported variables in a module</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function _findExports(data) {
         return _findAllMatches(EXPORTS_REGEXP, data);
@@ -180,51 +184,56 @@
                     </section>
         
         
-                    <section id="classes">
+                    <section id="classes" class="">
                         <h2>Classes</h2>
-                            <div class="member public">
-                                <span class="pull-right scope">
-                                    Constructor
-                                </span>
-                                <h4>RequireProcessor</h4>
-                                <!--<strong>Params:</strong>-->
-                                <dl>
-                                    <dt>data</dt>
-                                    <dd>Object - Raw data of the module being processed</dd>
-                                </dl>
-                                <p>A custom comment post-processor for requirejs patterns</p>
-                                <button class="btn btn-small show-code">Show code</button>
-                                <pre class="code"><code>var RequireProcessor = function (data) {
+                            <div class="well">
+                                <div class="member public">
+                                    <span class="pull-right scope">
+                                        Constructor
+                                    </span>
+                                    <h4>RequireProcessor</h4>
+                                    <em><p>A custom comment post-processor for requirejs patterns</p></em>
+                                    <dl>
+                                        <dt>data</dt>
+                                        <dd class="label label-info pull-left">Object</dd>
+                                        <dd>Raw data of the module being processed</dd>
+                                    </dl>
+                                    
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>var RequireProcessor = function (data) {
         this.rawData = data;
     };</code></pre>
-                            </div>
-        
-                            <section class="properties">
-                                <h3>Properties<label class="checkbox">
-                                    <input class="toggle-public" type="checkbox"> Show Private Members
-                                </label></h3>
-                            </section>
-        
-                            <section class="methods">
-                                <h3>Methods<label class="checkbox">
-                                    <input class="toggle-public" type="checkbox"> Show Private Members
-                                </label></h3>
-                                <div class="member">
-                                    <span class="pull-right scope">
-                                        
-                                        
-                                    </span>
-                                    <h4>processComment</h4>
-                                    <!--<strong>Params:</strong>-->
-                                    <dl>
-                                        <dt>comment</dt>
-                                        <dd>Object - Dox parsed data for a comment in the module</dd>
-                                        <dt>Returns</dt>
-                                        <dd>Object - Augmented comment with Require support</dd>
-                                    </dl>
-                                    <p>Parses special comment conventions defined by Requirejs AMD support</p>
-                                    <button class="btn btn-small show-code">Show code</button>
-                                    <pre class="code"><code>RequireProcessor.prototype.processComment = function (comment) {
+                                </div>
+            
+                                <section class="properties hide">
+                                    <h3>Properties<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                </section>
+            
+                                <section class="methods ">
+                                    <h3>Methods<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>processComment</h4>
+                                        <em><p>Parses special comment conventions defined by Requirejs AMD support</p></em>
+                                        <dl>
+                                            <dt>comment</dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>Dox parsed data for a comment in the module</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>Augmented comment with Require support</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>RequireProcessor.prototype.processComment = function (comment) {
         var data    = this.rawData,
             exports = _findExports(data);
         
@@ -248,29 +257,34 @@
     module.exports = RequireProcessor;
     
 }());</code></pre>
-                                </div>
-                                <div class="member">
-                                    <span class="pull-right scope">
-                                        
-                                        
-                                    </span>
-                                    <h4>processModule</h4>
-                                    <!--<strong>Params:</strong>-->
-                                    <dl>
-                                        <dt>module</dt>
-                                        <dd>Object - The current module being processed</dd>
-                                        <dt>Returns</dt>
-                                        <dd>Object - Agumented module with Require support</dd>
-                                    </dl>
-                                    <p>Parses special module conventions defined by Requirejs AMD support</p>
-                                    <button class="btn btn-small show-code">Show code</button>
-                                    <pre class="code"><code>RequireProcessor.prototype.processModule = function (module) {
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>processModule</h4>
+                                        <em><p>Parses special module conventions defined by Requirejs AMD support</p></em>
+                                        <dl>
+                                            <dt>module</dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>The current module being processed</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>Agumented module with Require support</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>RequireProcessor.prototype.processModule = function (module) {
         module.dependencies = _findDependencies(this.rawData);
+        module.exports = _findExports(this.rawData);
         
         return module;
     };</code></pre>
-                                </div>
-                            </section>
+                                    </div>
+                                </section>
+                            </div>
                     </section>
                 </div>
             </div>

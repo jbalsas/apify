@@ -95,21 +95,21 @@
                     <section id="dependencies">
                         <h3>Dependencies</h3>
                         <ul class="nav nav-list">
+                            <li><a href="..&#x2F;..&#x2F;../modules/underscore.html">underscore</a></li>
                             <li><a href="..&#x2F;..&#x2F;../modules/deferred.html">deferred</a></li>
                             <li><a href="..&#x2F;..&#x2F;../modules/dox.html">dox</a></li>
                             <li><a href="..&#x2F;..&#x2F;../modules/filequeue.html">filequeue</a></li>
-                            <li><a href="..&#x2F;..&#x2F;../modules/underscore.html">underscore</a></li>
                         </ul>
                     </section>
         
-                    <section id="variables">
+                    <section id="variables" class="hide">
                         <h3>Variables <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
                         <!--</ul>-->
                     </section>
         
-                    <section id="functions">
+                    <section id="functions" class="">
                         <h3>Functions <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
@@ -119,14 +119,12 @@
                                 
                             </span>
                             <h4>_sortMembers</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Sorts an array of module members by their names</p></em>
                             <dl>
                                     <dt>The</dt>
-                                    <dd>Array.<Object> - array of module members</dd>
-                                    <dt>Returns</dt>
-                                    <dd>Array.<Object> - The sorted array</dd>
+                                    <dd class="label label-info pull-left">Array.&lt;Object&gt;</dd>
+                                    <dd>array of module members</dd>
                             </dl>
-                            <p>Sorts an array of module members by their names</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function _sortMembers(members, sortFunc) {
         sortFunc = sortFunc || function (el) {
@@ -139,49 +137,53 @@
                     </section>
         
         
-                    <section id="classes">
+                    <section id="classes" class="">
                         <h2>Classes</h2>
-                            <div class="member public">
-                                <span class="pull-right scope">
-                                    Constructor
-                                </span>
-                                <h4>ModuleParser</h4>
-                                <!--<strong>Params:</strong>-->
-                                <dl>
-                                </dl>
-                                <p></p>
-                                <button class="btn btn-small show-code">Show code</button>
-                                <pre class="code"><code>var ModuleParser = function (processors) {
+                            <div class="well">
+                                <div class="member public">
+                                    <span class="pull-right scope">
+                                        Constructor
+                                    </span>
+                                    <h4>ModuleParser</h4>
+                                    <em><p></p></em>
+                                    <dl>
+                                    </dl>
+                                    
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>var ModuleParser = function (processors) {
         this.processors = processors || [];
     };</code></pre>
-                            </div>
-        
-                            <section class="properties">
-                                <h3>Properties<label class="checkbox">
-                                    <input class="toggle-public" type="checkbox"> Show Private Members
-                                </label></h3>
-                            </section>
-        
-                            <section class="methods">
-                                <h3>Methods<label class="checkbox">
-                                    <input class="toggle-public" type="checkbox"> Show Private Members
-                                </label></h3>
-                                <div class="member">
-                                    <span class="pull-right scope">
-                                        
-                                        
-                                    </span>
-                                    <h4>parse</h4>
-                                    <!--<strong>Params:</strong>-->
-                                    <dl>
-                                        <dt>url</dt>
-                                        <dd>string - Path of the module to analyze</dd>
-                                        <dt>Returns</dt>
-                                        <dd>Promise - A promise to be resolved with the parsed module</dd>
-                                    </dl>
-                                    <p>Analyzes and parses a module</p>
-                                    <button class="btn btn-small show-code">Show code</button>
-                                    <pre class="code"><code>ModuleParser.prototype.parse = function (url) {
+                                </div>
+            
+                                <section class="properties hide">
+                                    <h3>Properties<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                </section>
+            
+                                <section class="methods ">
+                                    <h3>Methods<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>parse</h4>
+                                        <em><p>Analyzes and parses a module</p></em>
+                                        <dl>
+                                            <dt>url</dt>
+                                            <dd class="label label-info pull-left">string</dd>
+                                            <dd>Path of the module to analyze</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Promise</dd>
+                                            <dd>A promise to be resolved with the parsed module</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>ModuleParser.prototype.parse = function (url) {
         var instance = this,
             def = deferred();
         
@@ -272,14 +274,25 @@
             });
             
             module.dependencies = _sortMembers(module.dependencies, function (el) { return el; });
+            module.hasDependencies = module.dependencies.length ? &#39;&#39; : &#39;hide&#39;;
+            
             module.variables = _sortMembers(module.variables);
+            module.hasVariables = module.variables.length ? &#39;&#39; : &#39;hide&#39;;
+            
             module.functions = _sortMembers(module.functions);
+            module.hasFunctions = module.functions.length ? &#39;&#39; : &#39;hide&#39;;
             
             module.classes = _.toArray(module.classes).map(function (clazz) {
                 clazz.properties = _sortMembers(clazz.properties);
+                clazz.hasProperties = clazz.properties.length ? &#39;&#39; : &#39;hide&#39;;
+                
                 clazz.methods = _sortMembers(clazz.methods);
+                clazz.hasMethods = clazz.methods.length ? &#39;&#39; : &#39;hide&#39;;
+                
                 return clazz;
             });
+            
+            module.hasClasses = module.classes.length ? &#39;&#39; : &#39;hide&#39;;
             
             def.resolve(module);
         });
@@ -290,8 +303,9 @@
     module.exports = ModuleParser;
     
 }());</code></pre>
-                                </div>
-                            </section>
+                                    </div>
+                                </section>
+                            </div>
                     </section>
                 </div>
             </div>

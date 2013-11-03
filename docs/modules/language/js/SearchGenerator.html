@@ -95,21 +95,21 @@
                     <section id="dependencies">
                         <h3>Dependencies</h3>
                         <ul class="nav nav-list">
+                            <li><a href="..&#x2F;..&#x2F;../modules/underscore.html">underscore</a></li>
                             <li><a href="..&#x2F;..&#x2F;../modules/fs.html">fs</a></li>
                             <li><a href="..&#x2F;..&#x2F;../modules/mustache.html">mustache</a></li>
                             <li><a href="..&#x2F;..&#x2F;../modules/path.html">path</a></li>
-                            <li><a href="..&#x2F;..&#x2F;../modules/underscore.html">underscore</a></li>
                         </ul>
                     </section>
         
-                    <section id="variables">
+                    <section id="variables" class="hide">
                         <h3>Variables <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
                         <!--</ul>-->
                     </section>
         
-                    <section id="functions">
+                    <section id="functions" class="">
                         <h3>Functions <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
@@ -119,14 +119,15 @@
                                 Public API
                             </span>
                             <h4>generate</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Generates the search logic</p></em>
                             <dl>
                                     <dt>module</dt>
-                                    <dd>Object - A module object</dd>
+                                    <dd class="label label-info pull-left">Object</dd>
+                                    <dd>A module object</dd>
                                     <dt>output</dt>
-                                    <dd>string - Base output folder</dd>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Base output folder</dd>
                             </dl>
-                            <p>Generates the search logic</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function generate(modules, output) {
         var modulesIndex = _.map(modules, function (module) {
@@ -149,7 +150,7 @@
                     </section>
         
         
-                    <section id="classes">
+                    <section id="classes" class="hide">
                         <h2>Classes</h2>
                     </section>
                 </div>

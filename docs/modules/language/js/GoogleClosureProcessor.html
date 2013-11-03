@@ -103,61 +103,64 @@
                         </ul>
                     </section>
         
-                    <section id="variables">
+                    <section id="variables" class="hide">
                         <h3>Variables <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
                         <!--</ul>-->
                     </section>
         
-                    <section id="functions">
+                    <section id="functions" class="hide">
                         <h3>Functions <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
                     </section>
         
         
-                    <section id="classes">
+                    <section id="classes" class="">
                         <h2>Classes</h2>
-                            <div class="member public">
-                                <span class="pull-right scope">
-                                    Constructor
-                                </span>
-                                <h4>GoogleClosureProcessor</h4>
-                                <!--<strong>Params:</strong>-->
-                                <dl>
-                                    <dt>data</dt>
-                                    <dd>Object - Raw data of the module being processed</dd>
-                                </dl>
-                                <p>A custom comment post-processor for Closure Compiler support</p>
-                                <button class="btn btn-small show-code">Show code</button>
-                                <pre class="code"><code>var GoogleClosureProcessor = function (data) {
+                            <div class="well">
+                                <div class="member public">
+                                    <span class="pull-right scope">
+                                        Constructor
+                                    </span>
+                                    <h4>GoogleClosureProcessor</h4>
+                                    <em><p>A custom comment post-processor for Closure Compiler support</p></em>
+                                    <dl>
+                                        <dt>data</dt>
+                                        <dd class="label label-info pull-left">Object</dd>
+                                        <dd>Raw data of the module being processed</dd>
+                                    </dl>
+                                    
+                                    <button class="btn btn-small show-code">Show code</button>
+                                    <pre class="code"><code>var GoogleClosureProcessor = function (data) {
         this.rawData = data;
     };</code></pre>
-                            </div>
-        
-                            <section class="properties">
-                                <h3>Properties<label class="checkbox">
-                                    <input class="toggle-public" type="checkbox"> Show Private Members
-                                </label></h3>
-                            </section>
-        
-                            <section class="methods">
-                                <h3>Methods<label class="checkbox">
-                                    <input class="toggle-public" type="checkbox"> Show Private Members
-                                </label></h3>
-                                <div class="member private">
-                                    <span class="pull-right scope">
-                                        Private
-                                        
-                                    </span>
-                                    <h4>_parseTypeExpression</h4>
-                                    <!--<strong>Params:</strong>-->
-                                    <dl>
-                                    </dl>
-                                    <p>Parses a type expression</p>
-                                    <button class="btn btn-small show-code">Show code</button>
-                                    <pre class="code"><code>GoogleClosureProcessor.prototype._parseTypeExpression = function (types) {
+                                </div>
+            
+                                <section class="properties hide">
+                                    <h3>Properties<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                </section>
+            
+                                <section class="methods ">
+                                    <h3>Methods<label class="checkbox">
+                                        <input class="toggle-public" type="checkbox"> Show Private Members
+                                    </label></h3>
+                                    <div class="member private">
+                                        <span class="pull-right scope">
+                                            Private
+                                            
+                                        </span>
+                                        <h4>_parseTypeExpression</h4>
+                                        <em><p>Parses a type expression</p></em>
+                                        <dl>
+                                        </dl>
+                                        <dl>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>GoogleClosureProcessor.prototype._parseTypeExpression = function (types) {
         var PARAM_OBJECT_REGEXP         = new RegExp(&quot;^{(.*)}$&quot;),
             PARAM_FUNCTION_REGEXP       = new RegExp(&quot;^function\\((.*)\\)$&quot;),
             PARAM_NULLABLE_REGEXP       = new RegExp(&quot;^\\?(.*)$&quot;),
@@ -196,26 +199,30 @@
 
         return expr;
     };</code></pre>
-                                </div>
-                                <div class="member">
-                                    <span class="pull-right scope">
-                                        
-                                        
-                                    </span>
-                                    <h4>processComment</h4>
-                                    <!--<strong>Params:</strong>-->
-                                    <dl>
-                                        <dt>comment</dt>
-                                        <dd>Object - Dox parsed data for a comment in the module</dd>
-                                        <dt>Returns</dt>
-                                        <dd>Object - Augmented comment with Closure Compiler support</dd>
-                                    </dl>
-                                    <p>Parses special comment tags defined by the Closure Compiler</p>
-                                    <button class="btn btn-small show-code">Show code</button>
-                                    <pre class="code"><code>GoogleClosureProcessor.prototype.processComment = function (comment) {
+                                    </div>
+                                    <div class="member">
+                                        <span class="pull-right scope">
+                                            
+                                            
+                                        </span>
+                                        <h4>processComment</h4>
+                                        <em><p>Parses special comment tags defined by the Closure Compiler</p></em>
+                                        <dl>
+                                            <dt>comment</dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>Dox parsed data for a comment in the module</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>Returns: </dt>
+                                            <dd class="label label-info pull-left">Object</dd>
+                                            <dd>Augmented comment with Closure Compiler support</dd>
+                                        </dl>
+                                        <button class="btn btn-small show-code">Show code</button>
+                                        <pre class="code"><code>GoogleClosureProcessor.prototype.processComment = function (comment) {
         var instance    = this,
             data        = instance.rawData,
-            params  = [];
+            params      = [],
+            returns     = null;
         
         if (comment.ctx) {
             
@@ -239,12 +246,12 @@
                         key: &#39;See&#39;,
                         value: &quot;&lt;a href=&#39;#&#39;&gt;&quot; + tag.local + &quot;&lt;&#x2F;a&gt;&quot;
                     };
-                } else if (tag.type === &quot;param&quot; || tag.type === &quot;return&quot;) {
+                } else if (tag.type === &quot;param&quot;) {
                     tag.types = instance._parseTypeExpression(tag.types.join(&#39;, &#39;));
-                    if (tag.type === &quot;return&quot;) {
-                        tag.name = &quot;Returns&quot;;
-                    }
                     params.push(tag);
+                    return false;
+                } else if (tag.type === &quot;return&quot;) {
+                    returns = tag;
                     return false;
                 } else if (tag.type === &quot;private&quot;) {
                     comment.isPrivate = true;
@@ -257,7 +264,8 @@
                 return false;
             });
         
-            comment.params = params;
+            comment.params  = params;
+            comment.returns = returns;
         
             if (comment.isPrivate) {
                 comment.tags.push({key: &#39;Private&#39;});
@@ -271,8 +279,9 @@
     module.exports = GoogleClosureProcessor;
     
 }());</code></pre>
-                                </div>
-                            </section>
+                                    </div>
+                                </section>
+                            </div>
                     </section>
                 </div>
             </div>

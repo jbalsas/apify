@@ -101,14 +101,14 @@
                         </ul>
                     </section>
         
-                    <section id="variables">
+                    <section id="variables" class="hide">
                         <h3>Variables <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
                         <!--</ul>-->
                     </section>
         
-                    <section id="functions">
+                    <section id="functions" class="">
                         <h3>Functions <label class="checkbox">
                             <input class="toggle-public" type="checkbox"> Show Private Members
                         </label></h3>
@@ -118,16 +118,18 @@
                                 Public API
                             </span>
                             <h4>generate</h4>
-                            <!--<strong>Params:</strong>-->
+                            <em><p>Generates the documentation index page</p></em>
                             <dl>
                                     <dt>templates</dt>
-                                    <dd>Object.<string, string> - Map of registered templates for the current process</dd>
+                                    <dd class="label label-info pull-left">Object.&lt;string, string&gt;</dd>
+                                    <dd>Map of registered templates for the current process</dd>
                                     <dt>fileset</dt>
-                                    <dd>Fileset - File set being documented</dd>
+                                    <dd class="label label-info pull-left">Fileset</dd>
+                                    <dd>File set being documented</dd>
                                     <dt>output</dt>
-                                    <dd>string - Base output folder</dd>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>Base output folder</dd>
                             </dl>
-                            <p>Generates the documentation index page</p>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function generate(templates, fileset, output) {
         var template    = fs.readFileSync(templates.index, &#39;UTF-8&#39;),
@@ -171,7 +173,7 @@
                     </section>
         
         
-                    <section id="classes">
+                    <section id="classes" class="hide">
                         <h2>Classes</h2>
                     </section>
                 </div>
