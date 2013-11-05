@@ -465,7 +465,7 @@ input[type="color"]:focus,
 
 .page-header {
   padding-bottom: 0;
-  margin: 10px 0 30px;
+  margin: 10px 0 40px;
   border-bottom: 1px solid #d7d7d7;
 }
 
@@ -488,6 +488,7 @@ input[type="color"]:focus,
     background: none;
 }
 body{
+    padding-bottom: 40px;
     padding-top: 40px;
 }
 #other-module{
@@ -496,9 +497,6 @@ body{
 }
 #toggle-other-modules i{
     font-size: 28px;
-}
-.left-section{
-    margin-top: 40px;
 }
 .nav-header{
 }
@@ -645,6 +643,10 @@ h3 .checkbox{
   margin: 0;
 }
 
+.navbar-fixed-top .container {
+    margin: 5px;
+    width: auto;
+}
 
 span.twitter-typeahead {
     float: right;

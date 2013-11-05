@@ -21,7 +21,8 @@
         </script>
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="row-fluid">
+            <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
@@ -37,16 +38,17 @@
         </div>
     </div>
 </div>
-        <div class="container">
-            <div class="row">
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
                 <div class="span12">
                     <div class="page-header">
                         <h1>FindInFiles</h1>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="span4">
+            <div class="row-fluid">
+                <div class="span3">
                     <div class="left-section">
                         <ul class="nav nav-list">
     <li class="nav-header">
@@ -555,7 +557,7 @@
 
                     </div>
                 </div>
-                <div class="span8">
+                <div class="span9">
                     <section>
                         <div id="description">
                             <p>Adds a "find in files" command to allow the user to find all occurrences of a string in all files in<br />the project.</p>
@@ -809,6 +811,13 @@
         &#x2F;&#x2F; Default to searching for the current selection
         var currentEditor = EditorManager.getActiveEditor(),
             initialString = currentEditor &amp;&amp; currentEditor.getSelectedText();
+
+        if (dialog &amp;&amp; !dialog.closed &amp;&amp; dialog.hasOwnProperty(&quot;modalBar&quot;) &amp;&amp; dialog.modalBar) {
+            &#x2F;&#x2F; The modalBar was already up. When creating the new modalBar, copy the
+            &#x2F;&#x2F; current query instead of using the passed-in selected text.
+            initialString = dialog.getDialogTextField().val();
+            dialog.modalBar.close(true, false);
+        }
 
         dialog             = new FindInFilesDialog();
         searchResults      = {};

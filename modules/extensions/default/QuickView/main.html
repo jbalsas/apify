@@ -21,7 +21,8 @@
         </script>
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="row-fluid">
+            <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <a class="brand" href="..&#x2F;..&#x2F;..&#x2F;../index.html">Brackets API</a>
@@ -37,16 +38,17 @@
         </div>
     </div>
 </div>
-        <div class="container">
-            <div class="row">
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
                 <div class="span12">
                     <div class="page-header">
                         <h1>main</h1>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="span4">
+            <div class="row-fluid">
+                <div class="span3">
                     <div class="left-section">
                         <ul class="nav nav-list">
     <li class="nav-header">
@@ -555,7 +557,7 @@
 
                     </div>
                 </div>
-                <div class="span8">
+                <div class="span9">
                     <section>
                         <div id="description">
                             <p>lobal define, brackets, $, window, PathUtils, CodeMirror</p>
@@ -973,7 +975,7 @@
                         $previewContainer.find(&quot;.image-preview &gt; img&quot;).on(&quot;load&quot;, function () {
                             $previewContent
                                 .append(&quot;&lt;div class=&#39;img-size&#39;&gt;&quot; +
-                                            this.naturalWidth + &quot; x &quot; + this.naturalHeight + &quot; &quot; + Strings.UNIT_PIXELS +
+                                            this.naturalWidth + &quot; &amp;times; &quot; + this.naturalHeight + &quot; &quot; + Strings.UNIT_PIXELS +
                                         &quot;&lt;&#x2F;div&gt;&quot;
                                     );
                             $previewContainer.show();

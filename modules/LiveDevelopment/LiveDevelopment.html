@@ -21,7 +21,8 @@
         </script>
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="row-fluid">
+            <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
@@ -37,16 +38,17 @@
         </div>
     </div>
 </div>
-        <div class="container">
-            <div class="row">
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
                 <div class="span12">
                     <div class="page-header">
                         <h1>LiveDevelopment</h1>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="span4">
+            <div class="row-fluid">
+                <div class="span3">
                     <div class="left-section">
                         <ul class="nav nav-list">
     <li class="nav-header">
@@ -555,7 +557,7 @@
 
                     </div>
                 </div>
-                <div class="span8">
+                <div class="span9">
                     <section>
                         <div id="description">
                             <p>LiveDevelopment manages the Inspector, all Agents, and the active LiveDocument</p>
@@ -1878,7 +1880,7 @@
             &#x2F;&#x2F; After (1) the interstitial page loads, (2) then browser navigation
             &#x2F;&#x2F; to the base URL is completed, and (3) the agents finish loading
             &#x2F;&#x2F; gather related documents and finally set status to STATUS_ACTIVE.
-            var doc = _getCurrentDocument();  &#x2F;&#x2F; TODO: probably wrong...
+            var doc = _liveDocument.doc;
 
             if (doc) {
                 var status = STATUS_ACTIVE,

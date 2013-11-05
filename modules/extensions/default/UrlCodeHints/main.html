@@ -21,7 +21,8 @@
         </script>
     </head>
     <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="row-fluid">
+            <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <a class="brand" href="..&#x2F;..&#x2F;..&#x2F;../index.html">Brackets API</a>
@@ -37,16 +38,17 @@
         </div>
     </div>
 </div>
-        <div class="container">
-            <div class="row">
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
                 <div class="span12">
                     <div class="page-header">
                         <h1>main</h1>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="span4">
+            <div class="row-fluid">
+                <div class="span3">
                     <div class="left-section">
                         <ul class="nav nav-list">
     <li class="nav-header">
@@ -555,7 +557,7 @@
 
                     </div>
                 </div>
-                <div class="span8">
+                <div class="span9">
                     <section>
                         <div id="description">
                             <p>lobal define, brackets, $, window</p>
@@ -745,9 +747,10 @@
                             &#x2F;&#x2F; convert to doc relative path
                             var entryStr = entry.fullPath.replace(docDir, &quot;&quot;);
 
-                            &#x2F;&#x2F; code hints show the same strings that are inserted into text,
-                            &#x2F;&#x2F; so strings in list will be encoded. wysiwyg, baby!
-                            unfiltered.push(encodeURI(entryStr));
+                            &#x2F;&#x2F; code hints show the unencoded string so the
+                            &#x2F;&#x2F; choices are easier to read.  The encoded string
+                            &#x2F;&#x2F; will still be inserted into the editor.
+                            unfiltered.push(entryStr);
                         }
                     });
 
@@ -903,7 +906,7 @@
                                             
                                         </span>
                                         <h4>getHints</h4>
-                                        <em><p>Returns a list of availble font hints, if possible, for the current<br />editor context.</p></em>
+                                        <em><p>Returns a list of available url hints, if possible, for the current<br />editor context.</p></em>
                                         <dl>
                                         </dl>
                                         <dl>
@@ -1082,7 +1085,7 @@
                                             
                                         </span>
                                         <h4>hasHints</h4>
-                                        <em><p>Determines whether font hints are available in the current editor<br />context.</p></em>
+                                        <em><p>Determines whether url hints are available in the current editor<br />context.</p></em>
                                         <dl>
                                             <dt>editor</dt>
                                             <dd class="label label-info pull-left">Editor</dd>
@@ -1297,6 +1300,10 @@
                                         <button class="btn btn-small show-code">Show code</button>
                                         <pre class="code"><code>UrlCodeHints.prototype.insertHint = function (completion) {
         var mode = this.editor.getModeForSelection();
+        
+        &#x2F;&#x2F; Encode the string just prior to inserting the hint into the editor
+        completion = encodeURI(completion);
+        
         if (mode === &quot;html&quot;) {
             return this.insertHtmlHint(completion);
         } else if (mode === &quot;css&quot;) {
@@ -1394,6 +1401,13 @@
 
         &#x2F;&#x2F; For unit testing
         exports.hintProvider = urlHints;
+    });
+
+    $(ProjectManager).on(&quot;projectFilesChange&quot;, function (event, projectRoot) {
+        &#x2F;&#x2F; Cache may or may not be stale. Main benefit of cache is to limit async lookups
+        &#x2F;&#x2F; during typing. File tree updates cannot happen during typing, so it&#39;s probably
+        &#x2F;&#x2F; not worth determining whether cache may still be valid. Just delete it.
+        exports.hintProvider.cachedHints = null;
     });
 });</code></pre>
                                     </div>
