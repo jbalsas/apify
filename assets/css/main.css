@@ -645,6 +645,10 @@ h3 .checkbox{
   margin: 0;
 }
 
+.navbar-fixed-top .container {
+    margin: 5px;
+    width: auto;
+}
 
 span.twitter-typeahead {
     float: right;
