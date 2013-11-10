@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html">apify API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -90,12 +90,13 @@
                 <div class="span9">
                     <section>
                         <div id="description">
-                            
+                            <p>Manages the project workspace and creates the fileset of modules to be documented</p>
                         </div>
                     </section>
         
                     <section id="dependencies">
                         <h3>Dependencies</h3>
+                        
                         <ul class="nav nav-list">
                             <li><a href="..&#x2F;../modules/underscore.html">underscore</a></li>
                             <li><a href="..&#x2F;../modules/deferred.html">deferred</a></li>
@@ -105,19 +106,18 @@
                             <li><a href="..&#x2F;../modules/ncp.html">ncp</a></li>
                             <li><a href="..&#x2F;../modules/path.html">path</a></li>
                         </ul>
+                        
+                        
                     </section>
         
-                    <section id="variables" class="hide">
-                        <h3>Variables <label class="checkbox">
-                            <input class="toggle-public" type="checkbox"> Show Private Members
-                        </label></h3>
-                        <!--</ul>-->
-                    </section>
         
-                    <section id="functions" class="">
-                        <h3>Functions <label class="checkbox">
-                            <input class="toggle-public" type="checkbox"> Show Private Members
-                        </label></h3>
+                    <section id="functions">
+                        <h3>Functions 
+                            <label class="checkbox">
+                                <input class="toggle-public" type="checkbox"> Show Private Members
+                            </label>
+                        </h3>
+                        
                         <div class="member private">
                             <span class="pull-right scope">
                                 Private
@@ -218,7 +218,7 @@
                                 Public API
                             </span>
                             <h4>load</h4>
-                            <em><p>Analyzes a source tree executing different sets of inclussion and exclussion<br />rules to generate a working space with the matching files</p></em>
+                            <em><p>Analyzes a source tree executing different sets of inclussion and exclussion rules to generate a working space with the matching files.</p></em>
                             <dl>
                                     <dt>src</dt>
                                     <dd class="label label-info pull-left">string</dd>
@@ -286,12 +286,10 @@
         return def.promise;
     };</code></pre>
                         </div>
+                        
                     </section>
-        
-        
-                    <section id="classes" class="hide">
-                        <h2>Classes</h2>
-                    </section>
+                    
+                    
                 </div>
             </div>
         </div>

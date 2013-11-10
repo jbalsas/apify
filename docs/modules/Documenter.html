@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="../index.html">Brackets API</a>
+            <a class="brand" href="../index.html">apify API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -90,7 +90,7 @@
                 <div class="span9">
                     <section>
                         <div id="description">
-                            <p>Main package that manages the documentation process by gathering the initial configuration<br />settings and controlling the documentation workflow through the different agents and steps:</p>
+                            <p>Main package that manages the documentation process by gathering the initial configuration settings and controlling the documentation workflow through the different agents and steps:</p>
 
 <ul>
 <li><b>Workspace:</b> Generates the fileset to be documented and creates the output skeleton for the docs.</li>
@@ -104,6 +104,7 @@
         
                     <section id="dependencies">
                         <h3>Dependencies</h3>
+                        
                         <ul class="nav nav-list">
                             <li><a href="../modules/.&#x2F;utils&#x2F;Workspace.html">Workspace</a></li>
                             <li><a href="../modules/.&#x2F;language&#x2F;js&#x2F;IndexGenerator.html">IndexGenerator</a></li>
@@ -113,19 +114,18 @@
                             <li><a href="../modules/.&#x2F;language&#x2F;js&#x2F;GoogleClosureProcessor.html">GoogleClosureProcessor</a></li>
                             <li><a href="../modules/.&#x2F;language&#x2F;js&#x2F;RequireProcessor.html">RequireProcessor</a></li>
                         </ul>
+                        
+                        
                     </section>
         
-                    <section id="variables" class="hide">
-                        <h3>Variables <label class="checkbox">
-                            <input class="toggle-public" type="checkbox"> Show Private Members
-                        </label></h3>
-                        <!--</ul>-->
-                    </section>
         
-                    <section id="functions" class="">
-                        <h3>Functions <label class="checkbox">
-                            <input class="toggle-public" type="checkbox"> Show Private Members
-                        </label></h3>
+                    <section id="functions">
+                        <h3>Functions 
+                            <label class="checkbox">
+                                <input class="toggle-public" type="checkbox"> Show Private Members
+                            </label>
+                        </h3>
+                        
                         <div class="member public">
                             <span class="pull-right scope">
                                 
@@ -145,6 +145,7 @@
             includes    = config.includes || [],
             excludes    = config.excludes || [],
             assets      = config.assets,
+            title       = config.title || &quot;&quot;,
             templates   = config.templates;
         
         if (!source || !output) {
@@ -169,13 +170,13 @@
                         
                         module.name = file.name;
                         module.path = file.docPath;
-                        moduleGenerator.generate(templates, module, fileset, output);
+                        moduleGenerator.generate(templates, module, fileset, output, title);
                         
                     });
                 
                 });
                 
-                indexGenerator.generate(templates, fileset, output);
+                indexGenerator.generate(templates, fileset, output, title);
                 searchGenerator.generate(fileset.files, output);
             });
         });
@@ -186,12 +187,10 @@
     
 }());</code></pre>
                         </div>
+                        
                     </section>
-        
-        
-                    <section id="classes" class="hide">
-                        <h2>Classes</h2>
-                    </section>
+                    
+                    
                 </div>
             </div>
         </div>

@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;..&#x2F;../index.html">apify API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -90,31 +90,31 @@
                 <div class="span9">
                     <section>
                         <div id="description">
-                            <p>Default JS parser for the modules on the documented fileset.<br />Parses the file data using dox, and then runs the output through the different<br />registered processors.</p>
+                            <p>Default JS parser for the modules on the documented fileset.<br />Parses the file data using dox, and then runs the output through the different registered processors.</p>
                         </div>
                     </section>
         
                     <section id="dependencies">
                         <h3>Dependencies</h3>
+                        
                         <ul class="nav nav-list">
                             <li><a href="..&#x2F;..&#x2F;../modules/underscore.html">underscore</a></li>
                             <li><a href="..&#x2F;..&#x2F;../modules/deferred.html">deferred</a></li>
                             <li><a href="..&#x2F;..&#x2F;../modules/dox.html">dox</a></li>
                             <li><a href="..&#x2F;..&#x2F;../modules/filequeue.html">filequeue</a></li>
                         </ul>
+                        
+                        
                     </section>
         
-                    <section id="variables" class="hide">
-                        <h3>Variables <label class="checkbox">
-                            <input class="toggle-public" type="checkbox"> Show Private Members
-                        </label></h3>
-                        <!--</ul>-->
-                    </section>
         
-                    <section id="functions" class="">
-                        <h3>Functions <label class="checkbox">
-                            <input class="toggle-public" type="checkbox"> Show Private Members
-                        </label></h3>
+                    <section id="functions">
+                        <h3>Functions 
+                            <label class="checkbox">
+                                <input class="toggle-public" type="checkbox"> Show Private Members
+                            </label>
+                        </h3>
+                        
                         <div class="member private">
                             <span class="pull-right scope">
                                 Private
@@ -136,11 +136,12 @@
         return _.sortBy(members, sortFunc);
     }</code></pre>
                         </div>
+                        
                     </section>
-        
-        
-                    <section id="classes" class="">
+                    
+                    <section id="classes">
                         <h2>Classes</h2>
+                        
                             <div class="well">
                                 <div class="member public">
                                     <span class="pull-right scope">
@@ -157,16 +158,14 @@
     };</code></pre>
                                 </div>
             
-                                <section class="properties hide">
-                                    <h3>Properties<label class="checkbox">
-                                        <input class="toggle-public" type="checkbox"> Show Private Members
-                                    </label></h3>
-                                </section>
             
-                                <section class="methods ">
-                                    <h3>Methods<label class="checkbox">
-                                        <input class="toggle-public" type="checkbox"> Show Private Members
-                                    </label></h3>
+                                <section class="methods">
+                                    <h3>Methods 
+                                        <label class="checkbox">
+                                            <input class="toggle-public" type="checkbox"> Show Private Members
+                                        </label>
+                                    </h3>
+                                    
                                     <div class="member">
                                         <span class="pull-right scope">
                                             
@@ -276,25 +275,13 @@
             });
             
             module.dependencies = _sortMembers(module.dependencies, function (el) { return el; });
-            module.hasDependencies = module.dependencies.length ? &#39;&#39; : &#39;hide&#39;;
-            
             module.variables = _sortMembers(module.variables);
-            module.hasVariables = module.variables.length ? &#39;&#39; : &#39;hide&#39;;
-            
             module.functions = _sortMembers(module.functions);
-            module.hasFunctions = module.functions.length ? &#39;&#39; : &#39;hide&#39;;
-            
             module.classes = _.toArray(module.classes).map(function (clazz) {
                 clazz.properties = _sortMembers(clazz.properties);
-                clazz.hasProperties = clazz.properties.length ? &#39;&#39; : &#39;hide&#39;;
-                
                 clazz.methods = _sortMembers(clazz.methods);
-                clazz.hasMethods = clazz.methods.length ? &#39;&#39; : &#39;hide&#39;;
-                
                 return clazz;
             });
-            
-            module.hasClasses = module.classes.length ? &#39;&#39; : &#39;hide&#39;;
             
             def.resolve(module);
         });
@@ -307,8 +294,11 @@
 }());</code></pre>
                                     </div>
                                 </section>
+                                
                             </div>
+                        
                     </section>
+                    
                 </div>
             </div>
         </div>
