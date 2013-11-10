@@ -1,6 +1,6 @@
 {
     "name": "apify",
-    "version": "0.1.1",
+    "version": "0.2.1",
     "author": "Chema Balsas <jbalsas@gmail.com> (https://github.com/jbalsas)",
     "collaborators": ["Aleksandr Motsjonov <soswow@gmail.com>"],
     "description": "An API documentation generator",
@@ -31,7 +31,7 @@
       "generator"
     ],
     "bin": {
-      "apify": "main.js"
+      "apify": "bin/apify.js"
     },
     "engines": {
         "node": ">=0.8"
