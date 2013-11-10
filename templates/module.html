@@ -47,47 +47,64 @@
         
                     <section id="dependencies">
                         <h3>Dependencies</h3>
+                        
+                        {{#module.dependencies.length}}
                         <ul class="nav nav-list">
                             {{#module.dependencies}}
                             <li><a href="{{level}}/modules/{{url}}.html">{{name}}</a></li>
                             {{/module.dependencies}}
                         </ul>
+                        {{/module.dependencies.length}}
+                        
+                        {{^module.dependencies.length}}
+                        <span class="alert alert-info">This module has no dependencies</span>
+                        {{/module.dependencies.length}}
+                        
                     </section>
         
-                    <section id="variables" class="{{module.hasVariables}}">
-                        <h3>Variables <label class="checkbox">
-                            <input class="toggle-public" type="checkbox"> Show Private Members
-                        </label></h3>
-                        {{#module.variables}}
-                        <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+                    {{#module.variables.length}}
+                        <section id="variables">
+                            <h3>Variables 
+                                <label class="checkbox">
+                                    <input class="toggle-public" type="checkbox"> Show Private Members
+                                </label>
+                            </h3>
+                            
+                            {{#module.variables}}
+                            <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+            
+                                <span class="pull-right scope">
+                                    {{#isPrivate}}Private{{/isPrivate}}
+                                    {{#isPublicAPI}}Public API{{/isPublicAPI}}
+                                </span>
+                                <h4>{{ctx.name}}</h4>
+                                <dl>
+                                {{#tags}}
+                                    {{#.}}
+                                        <dt>{{key}}</dt>
+                                        {{#value}}
+                                            <dd>{{{value}}}</dd>
+                                        {{/value}}
+                                    {{/.}}
+                                {{/tags}}
+                                </dl>
+                                {{{description.full}}}
+                                <button class="btn btn-small show-code">Show code</button>
+                                <pre class="code"><code>{{code}}</code></pre>
+                            </div>
+                            {{/module.variables}}
+                            
+                        </section>
+                    {{/module.variables.length}}
         
-                            <span class="pull-right scope">
-                                {{#isPrivate}}Private{{/isPrivate}}
-                                {{#isPublicAPI}}Public API{{/isPublicAPI}}
-                            </span>
-                            <h4>{{ctx.name}}</h4>
-                            <dl>
-                            {{#tags}}
-                                {{#.}}
-                                    <dt>{{key}}</dt>
-                                    {{#value}}
-                                        <dd>{{{value}}}</dd>
-                                    {{/value}}
-                                {{/.}}
-                            {{/tags}}
-                            </dl>
-                            {{{description.full}}}
-                            <button class="btn btn-small show-code">Show code</button>
-                            <pre class="code"><code>{{code}}</code></pre>
-                        </div>
-                        {{/module.variables}}
-                        <!--</ul>-->
-                    </section>
-        
-                    <section id="functions" class="{{module.hasFunctions}}">
-                        <h3>Functions <label class="checkbox">
-                            <input class="toggle-public" type="checkbox"> Show Private Members
-                        </label></h3>
+                    {{#module.functions.length}}
+                    <section id="functions">
+                        <h3>Functions 
+                            <label class="checkbox">
+                                <input class="toggle-public" type="checkbox"> Show Private Members
+                            </label>
+                        </h3>
+                        
                         {{#module.functions}}
                         <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
                             <span class="pull-right scope">
@@ -110,11 +127,14 @@
                             <pre class="code"><code>{{code}}</code></pre>
                         </div>
                         {{/module.functions}}
+                        
                     </section>
-        
-        
-                    <section id="classes" class="{{module.hasClasses}}">
+                    {{/module.functions.length}}
+                    
+                    {{#module.classes.length}}
+                    <section id="classes">
                         <h2>Classes</h2>
+                        
                         {{#module.classes}}
                             <div class="well">
                                 <div class="member public">
@@ -135,10 +155,14 @@
                                     <pre class="code"><code>{{constructor.code}}</code></pre>
                                 </div>
             
+                                {{#properties.length}}
                                 <section class="properties {{hasProperties}}">
-                                    <h3>Properties<label class="checkbox">
-                                        <input class="toggle-public" type="checkbox"> Show Private Members
-                                    </label></h3>
+                                    <h3>Properties 
+                                        <label class="checkbox">
+                                            <input class="toggle-public" type="checkbox"> Show Private Members
+                                        </label>
+                                    </h3>
+                                    
                                     {{#properties}}
                                     <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
                                         <span class="pull-right scope">
@@ -161,12 +185,18 @@
                                         <pre class="code"><code>{{code}}</code></pre>
                                     </div>
                                     {{/properties}}
+                                    
                                 </section>
+                                {{/properties.length}}
             
-                                <section class="methods {{hasMethods}}">
-                                    <h3>Methods<label class="checkbox">
-                                        <input class="toggle-public" type="checkbox"> Show Private Members
-                                    </label></h3>
+                                {{#methods.length}}
+                                <section class="methods">
+                                    <h3>Methods 
+                                        <label class="checkbox">
+                                            <input class="toggle-public" type="checkbox"> Show Private Members
+                                        </label>
+                                    </h3>
+                                    
                                     {{#methods}}
                                     <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
                                         <span class="pull-right scope">
@@ -194,9 +224,14 @@
                                     </div>
                                     {{/methods}}
                                 </section>
+                                {{/methods.length}}
+                                
                             </div>
                         {{/module.classes}}
+                        
                     </section>
+                    {{/module.classes.length}}
+                    
                 </div>
             </div>
         </div>
