@@ -1,0 +1,292 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish', '.' ]
+2 info using npm@1.2.14
+3 info using node@v0.10.0
+4 verbose publish [ '.' ]
+5 verbose read json /Users/jbalsas/dev/jbalsas/apify/package.json
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /Users/jbalsas/.npm/3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ '/var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz
+14 verbose folder .
+15 info prepublish apify@0.1.0
+16 silly lockFile 3a52ce78- .
+17 verbose lock . /Users/jbalsas/.npm/3a52ce78-.lock
+18 silly lockFile 533592dc-1676-0-22357094776816666-tmp-tgz /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz
+19 verbose lock /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz /Users/jbalsas/.npm/533592dc-1676-0-22357094776816666-tmp-tgz.lock
+20 silly lockFile 3a52ce78- .
+21 silly lockFile 3a52ce78- .
+22 silly lockFile 533592dc-1676-0-22357094776816666-tmp-tgz /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz
+23 silly lockFile 533592dc-1676-0-22357094776816666-tmp-tgz /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz
+24 verbose tar unpack /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz
+25 silly lockFile 4f54fa78-1676-0-22357094776816666-package /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package
+26 verbose lock /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package /Users/jbalsas/.npm/4f54fa78-1676-0-22357094776816666-package.lock
+27 silly lockFile 533592dc-1676-0-22357094776816666-tmp-tgz /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz
+28 verbose lock /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz /Users/jbalsas/.npm/533592dc-1676-0-22357094776816666-tmp-tgz.lock
+29 silly gunzTarPerm modes [ '755', '644' ]
+30 silly gunzTarPerm extractEntry package.json
+31 silly gunzTarPerm extractEntry .npmignore
+32 silly gunzTarPerm extractEntry README.md
+33 silly gunzTarPerm extractEntry main.js
+34 silly gunzTarPerm extractEntry assets/css/bootstrap.css
+35 silly gunzTarPerm extractEntry assets/css/bootstrap.min.css
+36 silly gunzTarPerm extractEntry assets/css/font-awesome-ie7.css
+37 silly gunzTarPerm extractEntry assets/css/font-awesome.css
+38 silly gunzTarPerm extractEntry assets/css/highlight.css
+39 silly gunzTarPerm extractEntry assets/css/main.css
+40 silly gunzTarPerm extractEntry assets/css/typeahead.js-bootstrap.css
+41 silly gunzTarPerm extractEntry assets/font/fontawesome-webfont.eot
+42 silly gunzTarPerm extractEntry assets/font/fontawesome-webfont.svg
+43 silly gunzTarPerm extractEntry assets/font/fontawesome-webfont.ttf
+44 silly gunzTarPerm extractEntry assets/font/fontawesome-webfont.woff
+45 silly gunzTarPerm extractEntry assets/img/glyphicons-halflings-white.png
+46 silly gunzTarPerm extractEntry assets/img/glyphicons-halflings.png
+47 silly gunzTarPerm extractEntry assets/js/bootstrap.js
+48 silly gunzTarPerm extractEntry assets/js/bootstrap.min.js
+49 silly gunzTarPerm extractEntry assets/js/highlight.pack.js
+50 silly gunzTarPerm modified mode [ 'assets/js/highlight.pack.js', 384, 420 ]
+51 silly gunzTarPerm extractEntry assets/js/jquery-1.9.1.js
+52 silly gunzTarPerm extractEntry assets/js/jquery-1.9.1.min.js
+53 silly gunzTarPerm extractEntry assets/js/main.js
+54 silly gunzTarPerm extractEntry assets/js/typeahead.js
+55 silly gunzTarPerm extractEntry assets/js/typeahead.min.js
+56 silly gunzTarPerm extractEntry demos/minimalist/config.json
+57 silly gunzTarPerm extractEntry demos/minimalist/templates/module.html
+58 silly gunzTarPerm extractEntry docs/assets/css/bootstrap.css
+59 silly gunzTarPerm extractEntry docs/assets/css/bootstrap.min.css
+60 silly gunzTarPerm extractEntry docs/assets/css/font-awesome-ie7.css
+61 silly gunzTarPerm extractEntry docs/assets/css/font-awesome.css
+62 silly gunzTarPerm extractEntry docs/assets/css/highlight.css
+63 silly gunzTarPerm extractEntry docs/assets/css/main.css
+64 silly gunzTarPerm extractEntry docs/assets/css/typeahead.js-bootstrap.css
+65 silly gunzTarPerm extractEntry docs/assets/font/fontawesome-webfont.eot
+66 silly gunzTarPerm extractEntry docs/assets/font/fontawesome-webfont.svg
+67 silly gunzTarPerm extractEntry docs/assets/font/fontawesome-webfont.ttf
+68 silly gunzTarPerm extractEntry docs/assets/font/fontawesome-webfont.woff
+69 silly gunzTarPerm extractEntry docs/assets/img/glyphicons-halflings-white.png
+70 silly gunzTarPerm extractEntry docs/assets/img/glyphicons-halflings.png
+71 silly gunzTarPerm extractEntry docs/assets/js/bootstrap.js
+72 silly gunzTarPerm extractEntry docs/assets/js/bootstrap.min.js
+73 silly gunzTarPerm extractEntry docs/assets/js/highlight.pack.js
+74 silly gunzTarPerm modified mode [ 'docs/assets/js/highlight.pack.js', 384, 420 ]
+75 silly gunzTarPerm extractEntry docs/assets/js/jquery-1.9.1.js
+76 silly gunzTarPerm extractEntry docs/assets/js/jquery-1.9.1.min.js
+77 silly gunzTarPerm extractEntry docs/assets/js/main.js
+78 silly gunzTarPerm extractEntry docs/assets/js/typeahead.js
+79 silly gunzTarPerm extractEntry docs/assets/js/typeahead.min.js
+80 silly gunzTarPerm extractEntry docs/index.html
+81 silly gunzTarPerm extractEntry docs/modules/Documenter.html
+82 silly gunzTarPerm extractEntry docs/modules/language/js/GoogleClosureProcessor.html
+83 silly gunzTarPerm extractEntry docs/modules/language/js/IndexGenerator.html
+84 silly gunzTarPerm extractEntry docs/modules/language/js/ModuleGenerator.html
+85 silly gunzTarPerm extractEntry docs/modules/language/js/ModuleParser.html
+86 silly gunzTarPerm extractEntry docs/modules/language/js/RequireProcessor.html
+87 silly gunzTarPerm extractEntry docs/modules/language/js/SearchGenerator.html
+88 silly gunzTarPerm extractEntry docs/modules/utils/Workspace.html
+89 silly gunzTarPerm extractEntry lib/Documenter.js
+90 silly gunzTarPerm extractEntry lib/defaults.json
+91 silly gunzTarPerm extractEntry lib/language/js/GoogleClosureProcessor.js
+92 silly gunzTarPerm extractEntry lib/language/js/IndexGenerator.js
+93 silly gunzTarPerm extractEntry lib/language/js/ModuleGenerator.js
+94 silly gunzTarPerm extractEntry lib/language/js/ModuleParser.js
+95 silly gunzTarPerm extractEntry lib/language/js/RequireProcessor.js
+96 silly gunzTarPerm extractEntry lib/language/js/SearchGenerator.js
+97 silly gunzTarPerm extractEntry lib/utils/Workspace.js
+98 silly gunzTarPerm extractEntry templates/filelist.html
+99 silly gunzTarPerm extractEntry templates/index.html
+100 silly gunzTarPerm extractEntry templates/module.html
+101 silly gunzTarPerm extractEntry templates/navbar.html
+102 verbose read json /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package/package.json
+103 silly lockFile 4f54fa78-1676-0-22357094776816666-package /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package
+104 silly lockFile 4f54fa78-1676-0-22357094776816666-package /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package
+105 silly lockFile 533592dc-1676-0-22357094776816666-tmp-tgz /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz
+106 silly lockFile 533592dc-1676-0-22357094776816666-tmp-tgz /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/tmp.tgz
+107 verbose from cache /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package/package.json
+108 verbose tar pack [ '/Users/jbalsas/.npm/apify/0.1.0/package.tgz',
+108 verbose tar pack   '/var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package' ]
+109 verbose tarball /Users/jbalsas/.npm/apify/0.1.0/package.tgz
+110 verbose folder /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package
+111 silly lockFile 4f54fa78-1676-0-22357094776816666-package /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package
+112 verbose lock /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package /Users/jbalsas/.npm/4f54fa78-1676-0-22357094776816666-package.lock
+113 silly lockFile 36e75d2d-lsas-npm-apify-0-1-0-package-tgz /Users/jbalsas/.npm/apify/0.1.0/package.tgz
+114 verbose lock /Users/jbalsas/.npm/apify/0.1.0/package.tgz /Users/jbalsas/.npm/36e75d2d-lsas-npm-apify-0-1-0-package-tgz.lock
+115 silly lockFile 4f54fa78-1676-0-22357094776816666-package /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package
+116 silly lockFile 4f54fa78-1676-0-22357094776816666-package /var/folders/bk/m11tyvxd3h3cv3tcpm0nz3fm0000gn/T/npm-2018/1384096721676-0.22357094776816666/package
+117 silly lockFile 36e75d2d-lsas-npm-apify-0-1-0-package-tgz /Users/jbalsas/.npm/apify/0.1.0/package.tgz
+118 silly lockFile 36e75d2d-lsas-npm-apify-0-1-0-package-tgz /Users/jbalsas/.npm/apify/0.1.0/package.tgz
+119 silly lockFile 770d72d2--jbalsas-npm-apify-0-1-0-package /Users/jbalsas/.npm/apify/0.1.0/package
+120 verbose lock /Users/jbalsas/.npm/apify/0.1.0/package /Users/jbalsas/.npm/770d72d2--jbalsas-npm-apify-0-1-0-package.lock
+121 silly lockFile 770d72d2--jbalsas-npm-apify-0-1-0-package /Users/jbalsas/.npm/apify/0.1.0/package
+122 silly lockFile 770d72d2--jbalsas-npm-apify-0-1-0-package /Users/jbalsas/.npm/apify/0.1.0/package
+123 verbose tar unpack /Users/jbalsas/.npm/apify/0.1.0/package.tgz
+124 silly lockFile 770d72d2--jbalsas-npm-apify-0-1-0-package /Users/jbalsas/.npm/apify/0.1.0/package
+125 verbose lock /Users/jbalsas/.npm/apify/0.1.0/package /Users/jbalsas/.npm/770d72d2--jbalsas-npm-apify-0-1-0-package.lock
+126 silly lockFile 36e75d2d-lsas-npm-apify-0-1-0-package-tgz /Users/jbalsas/.npm/apify/0.1.0/package.tgz
+127 verbose lock /Users/jbalsas/.npm/apify/0.1.0/package.tgz /Users/jbalsas/.npm/36e75d2d-lsas-npm-apify-0-1-0-package-tgz.lock
+128 silly gunzTarPerm modes [ '755', '644' ]
+129 silly gunzTarPerm extractEntry package.json
+130 silly gunzTarPerm extractEntry .npmignore
+131 silly gunzTarPerm extractEntry README.md
+132 silly gunzTarPerm extractEntry main.js
+133 silly gunzTarPerm extractEntry assets/css/bootstrap.css
+134 silly gunzTarPerm extractEntry assets/css/bootstrap.min.css
+135 silly gunzTarPerm extractEntry assets/css/font-awesome-ie7.css
+136 silly gunzTarPerm extractEntry assets/css/font-awesome.css
+137 silly gunzTarPerm extractEntry assets/css/highlight.css
+138 silly gunzTarPerm extractEntry assets/css/main.css
+139 silly gunzTarPerm extractEntry assets/css/typeahead.js-bootstrap.css
+140 silly gunzTarPerm extractEntry assets/font/fontawesome-webfont.eot
+141 silly gunzTarPerm extractEntry assets/font/fontawesome-webfont.svg
+142 silly gunzTarPerm extractEntry assets/font/fontawesome-webfont.ttf
+143 silly gunzTarPerm extractEntry assets/font/fontawesome-webfont.woff
+144 silly gunzTarPerm extractEntry assets/img/glyphicons-halflings-white.png
+145 silly gunzTarPerm extractEntry assets/img/glyphicons-halflings.png
+146 silly gunzTarPerm extractEntry assets/js/bootstrap.js
+147 silly gunzTarPerm extractEntry assets/js/bootstrap.min.js
+148 silly gunzTarPerm extractEntry assets/js/highlight.pack.js
+149 silly gunzTarPerm extractEntry assets/js/jquery-1.9.1.js
+150 silly gunzTarPerm extractEntry assets/js/jquery-1.9.1.min.js
+151 silly gunzTarPerm extractEntry assets/js/main.js
+152 silly gunzTarPerm extractEntry assets/js/typeahead.js
+153 silly gunzTarPerm extractEntry assets/js/typeahead.min.js
+154 silly gunzTarPerm extractEntry demos/minimalist/config.json
+155 silly gunzTarPerm extractEntry demos/minimalist/templates/module.html
+156 silly gunzTarPerm extractEntry docs/assets/css/bootstrap.css
+157 silly gunzTarPerm extractEntry docs/assets/css/bootstrap.min.css
+158 silly gunzTarPerm extractEntry docs/assets/css/font-awesome-ie7.css
+159 silly gunzTarPerm extractEntry docs/assets/css/font-awesome.css
+160 silly gunzTarPerm extractEntry docs/assets/css/highlight.css
+161 silly gunzTarPerm extractEntry docs/assets/css/main.css
+162 silly gunzTarPerm extractEntry docs/assets/css/typeahead.js-bootstrap.css
+163 silly gunzTarPerm extractEntry docs/assets/font/fontawesome-webfont.eot
+164 silly gunzTarPerm extractEntry docs/assets/font/fontawesome-webfont.svg
+165 silly gunzTarPerm extractEntry docs/assets/font/fontawesome-webfont.ttf
+166 silly gunzTarPerm extractEntry docs/assets/font/fontawesome-webfont.woff
+167 silly gunzTarPerm extractEntry docs/assets/img/glyphicons-halflings-white.png
+168 silly gunzTarPerm extractEntry docs/assets/img/glyphicons-halflings.png
+169 silly gunzTarPerm extractEntry docs/assets/js/bootstrap.js
+170 silly gunzTarPerm extractEntry docs/assets/js/bootstrap.min.js
+171 silly gunzTarPerm extractEntry docs/assets/js/highlight.pack.js
+172 silly gunzTarPerm extractEntry docs/assets/js/jquery-1.9.1.js
+173 silly gunzTarPerm extractEntry docs/assets/js/jquery-1.9.1.min.js
+174 silly gunzTarPerm extractEntry docs/assets/js/main.js
+175 silly gunzTarPerm extractEntry docs/assets/js/typeahead.js
+176 silly gunzTarPerm extractEntry docs/assets/js/typeahead.min.js
+177 silly gunzTarPerm extractEntry docs/index.html
+178 silly gunzTarPerm extractEntry docs/modules/Documenter.html
+179 silly gunzTarPerm extractEntry docs/modules/language/js/GoogleClosureProcessor.html
+180 silly gunzTarPerm extractEntry docs/modules/language/js/IndexGenerator.html
+181 silly gunzTarPerm extractEntry docs/modules/language/js/ModuleGenerator.html
+182 silly gunzTarPerm extractEntry docs/modules/language/js/ModuleParser.html
+183 silly gunzTarPerm extractEntry docs/modules/language/js/RequireProcessor.html
+184 silly gunzTarPerm extractEntry docs/modules/language/js/SearchGenerator.html
+185 silly gunzTarPerm extractEntry docs/modules/utils/Workspace.html
+186 silly gunzTarPerm extractEntry lib/Documenter.js
+187 silly gunzTarPerm extractEntry lib/defaults.json
+188 silly gunzTarPerm extractEntry lib/language/js/GoogleClosureProcessor.js
+189 silly gunzTarPerm extractEntry lib/language/js/IndexGenerator.js
+190 silly gunzTarPerm extractEntry lib/language/js/ModuleGenerator.js
+191 silly gunzTarPerm extractEntry lib/language/js/ModuleParser.js
+192 silly gunzTarPerm extractEntry lib/language/js/RequireProcessor.js
+193 silly gunzTarPerm extractEntry lib/language/js/SearchGenerator.js
+194 silly gunzTarPerm extractEntry lib/utils/Workspace.js
+195 silly gunzTarPerm extractEntry templates/filelist.html
+196 silly gunzTarPerm extractEntry templates/index.html
+197 silly gunzTarPerm extractEntry templates/module.html
+198 silly gunzTarPerm extractEntry templates/navbar.html
+199 verbose read json /Users/jbalsas/.npm/apify/0.1.0/package/package.json
+200 silly lockFile 770d72d2--jbalsas-npm-apify-0-1-0-package /Users/jbalsas/.npm/apify/0.1.0/package
+201 silly lockFile 770d72d2--jbalsas-npm-apify-0-1-0-package /Users/jbalsas/.npm/apify/0.1.0/package
+202 silly lockFile 36e75d2d-lsas-npm-apify-0-1-0-package-tgz /Users/jbalsas/.npm/apify/0.1.0/package.tgz
+203 silly lockFile 36e75d2d-lsas-npm-apify-0-1-0-package-tgz /Users/jbalsas/.npm/apify/0.1.0/package.tgz
+204 silly shasum updated bytes 65536
+205 silly shasum updated bytes 65536
+206 silly shasum updated bytes 65536
+207 silly shasum updated bytes 65536
+208 silly shasum updated bytes 65536
+209 silly shasum updated bytes 65536
+210 silly shasum updated bytes 65536
+211 silly shasum updated bytes 65536
+212 silly shasum updated bytes 65536
+213 silly shasum updated bytes 65536
+214 silly shasum updated bytes 65536
+215 silly shasum updated bytes 62780
+216 info shasum fabceb633e210db9338454aa8c56fedeb542580e
+216 info shasum /Users/jbalsas/.npm/apify/0.1.0/package.tgz
+217 verbose from cache /Users/jbalsas/.npm/apify/0.1.0/package/package.json
+218 verbose chmod /Users/jbalsas/.npm/apify/0.1.0/package.tgz 644
+219 verbose chown /Users/jbalsas/.npm/apify/0.1.0/package.tgz [ 501, 20 ]
+220 silly lockFile 3a52ce78- .
+221 silly publish { name: 'apify',
+221 silly publish   version: '0.1.0',
+221 silly publish   author:
+221 silly publish    { name: 'Chema Balsas',
+221 silly publish      email: 'jbalsas@gmail.com',
+221 silly publish      url: 'https://github.com/jbalsas' },
+221 silly publish   collaborators: [ 'Aleksandr Motsjonov <soswow@gmail.com>' ],
+221 silly publish   description: 'An API documentation generator',
+221 silly publish   dependencies:
+221 silly publish    { commander: '1.1.x',
+221 silly publish      deferred: '0.6.x',
+221 silly publish      dox: 'https://github.com/soswow/dox/tarball/master',
+221 silly publish      find: '0.1.x',
+221 silly publish      filequeue: '0.1.x',
+221 silly publish      fmerge: '1.0.x',
+221 silly publish      mustache: '0.7.x',
+221 silly publish      ncp: '0.4.x',
+221 silly publish      underscore: '1.4.x',
+221 silly publish      fs2: '0.1.x' },
+221 silly publish   license: 'MIT',
+221 silly publish   repository: { type: 'git', url: 'git@github.com:jbalsas/apify.git' },
+221 silly publish   bugs: { url: 'https://github.com/jbalsas/apify/issues' },
+221 silly publish   keywords: [ 'api', 'jsdoc', 'documentation', 'generator' ],
+221 silly publish   bin: { apify: 'main.js' },
+221 silly publish   engines: { node: '>=0.8' },
+221 silly publish   readme: 'apify\n============\n\nAPI documentation generator\n\nInstallation\n-----------\n`[sudo] npm install -g apify`\n\nUsage\n-----------\n`apify --source <source-tree-root> --output <output-folder> [--title <title>] [--config <source-to-config-file]`\n`apify --config <source-to-config-file>`',
+221 silly publish   readmeFilename: 'README.md',
+221 silly publish   _id: 'apify@0.1.0',
+221 silly publish   dist: { shasum: 'fabceb633e210db9338454aa8c56fedeb542580e' },
+221 silly publish   _from: '.' }
+222 verbose url raw apify
+223 verbose url resolving [ 'https://registry.npmjs.org/', './apify' ]
+224 verbose url resolved https://registry.npmjs.org/apify
+225 info trying registry request attempt 1 at 16:18:53
+226 http PUT https://registry.npmjs.org/apify
+227 http 409 https://registry.npmjs.org/apify
+228 verbose url raw apify
+229 verbose url resolving [ 'https://registry.npmjs.org/', './apify' ]
+230 verbose url resolved https://registry.npmjs.org/apify
+231 info trying registry request attempt 1 at 16:18:55
+232 http GET https://registry.npmjs.org/apify
+233 http 200 https://registry.npmjs.org/apify
+234 error publish fail Cannot publish over existing version.
+234 error publish fail Update the 'version' field in package.json and try again.
+234 error publish fail
+234 error publish fail If the previous version was published in error, see:
+234 error publish fail     npm help unpublish
+234 error publish fail
+234 error publish fail To automatically increment version numbers, see:
+234 error publish fail     npm help version
+235 error System Darwin 12.4.0
+236 error command "node" "/usr/local/bin/npm" "publish" "."
+237 error cwd /Users/jbalsas/dev/jbalsas/apify
+238 error node -v v0.10.0
+239 error npm -v 1.2.14
+240 error code EPUBLISHCONFLICT
+241 verbose exit [ 1, true ]

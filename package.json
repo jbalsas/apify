@@ -1,6 +1,6 @@
 {
     "name": "apify",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Chema Balsas <jbalsas@gmail.com> (https://github.com/jbalsas)",
     "collaborators": ["Aleksandr Motsjonov <soswow@gmail.com>"],
     "description": "An API documentation generator",
@@ -17,6 +17,22 @@
         "fs2"       : "0.1.x"
     },
     "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:jbalsas/apify.git"
+    },
+    "bugs": {
+      "url": "https://github.com/jbalsas/apify/issues"
+    },
+    "keywords": [
+      "api",
+      "jsdoc",
+      "documentation",
+      "generator"
+    ],
+    "bin": {
+      "apify": "main.js"
+    },
     "engines": {
         "node": ">=0.8"
     }
