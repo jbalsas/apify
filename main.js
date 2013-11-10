@@ -29,6 +29,7 @@
         .version("0.0.1")
         .option("-s, --source <s> [value]", "Source folder")
         .option("-o, --output <s> [value]", "Output folder")
+        .option("-t, --title <s> [value]", "Title")
         .option("-c, --config <s> [value]", "Config file")
         .option("--excludes <excludes>", "Excludes", parseExcludes)
         .parse(process.argv);
