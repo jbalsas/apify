@@ -1,20 +1,13 @@
-brackets-api
+apify
 ============
 
-API documentation generator for brackets project
+API documentation generator
 
 Installation
 -----------
-* Clone this repository with `git clone https://github.com/jbalsas/brackets-api.git`
-* Install all dependencies with `npm install`
-* To easily access the program, edit your `.profile` or `.bashrc` and add the following lines:
-
-```
-export DOCUMENTER_HOME=PATH_TO_DOCUMENTER
-alias documenter="node $DOCUMENTER_HOME/main.js"
-```
+`[sudo] npm install -g apify`
 
 Usage
 -----------
-`documenter --source <source-tree-root> --output <out-folder> [--config <source-to-config-file]`
-`documenter --config <source-to-config-file>`
+`apify --source <source-tree-root> --output <output-folder> [--title <title>] [--config <source-to-config-file]`
+`apify --config <source-to-config-file>`
