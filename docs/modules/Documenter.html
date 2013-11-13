@@ -106,6 +106,7 @@
                         <h3>Dependencies</h3>
                         
                         <ul class="nav nav-list">
+                            <li><a href="../modules/deferred.html">deferred</a></li>
                             <li><a href="../modules/.&#x2F;utils&#x2F;Workspace.html">Workspace</a></li>
                             <li><a href="../modules/.&#x2F;language&#x2F;js&#x2F;IndexGenerator.html">IndexGenerator</a></li>
                             <li><a href="../modules/.&#x2F;language&#x2F;js&#x2F;ModuleParser.html">ModuleParser</a></li>
@@ -146,7 +147,8 @@
             excludes    = config.excludes || [],
             assets      = config.assets,
             title       = config.title || &quot;&quot;,
-            templates   = config.templates;
+            templates   = config.templates,
+            def         = deferred();
         
         if (!source || !output) {
             console.error(&quot;Not enough arguments\n&quot; + HELP_MSG);
@@ -165,6 +167,9 @@
                 
                 var parser = new ModuleParser([closureProcessor, requireProcessor]);
                 
+                indexGenerator.generate(templates, fileset, output, title);
+                searchGenerator.generate(fileset.files, output);
+                
                 fileset.files.forEach(function (file) {
                     parser.parse(file.fullPath).then(function (module) {
                         
@@ -172,14 +177,15 @@
                         module.path = file.docPath;
                         moduleGenerator.generate(templates, module, fileset, output, title);
                         
+                        if (file === fileset.files[fileset.files.length - 1]) {
+                            def.resolve();
+                        }
                     });
-                
                 });
-                
-                indexGenerator.generate(templates, fileset, output, title);
-                searchGenerator.generate(fileset.files, output);
             });
         });
+        
+        return def.promise;
     }
     
     &#x2F;&#x2F; Exports
