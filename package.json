@@ -1,6 +1,6 @@
 {
     "name": "apify",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "author": "Chema Balsas <jbalsas@gmail.com> (https://github.com/jbalsas)",
     "collaborators": ["Aleksandr Motsjonov <soswow@gmail.com>"],
     "description": "An API documentation generator",
@@ -8,7 +8,7 @@
         "commander" : "1.1.x",
         "deferred"  : "0.6.x",
         "dox"       : "https://github.com/soswow/dox/tarball/master",
-        "find"      : "0.1.x",
+        "find"      : "0.1.4",
         "filequeue" : "0.1.x",
         "fmerge"    : "1.0.x",
         "mustache"  : "0.7.x",
