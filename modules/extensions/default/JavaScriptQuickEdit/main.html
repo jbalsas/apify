@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;..&#x2F;..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;..&#x2F;..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -601,7 +601,7 @@
                 <div class="span9">
                     <section>
                         <div id="description">
-                            <p>lobal define, brackets, $</p>
+                            <p>global define, brackets, $</p>
                         </div>
                     </section>
         
@@ -759,7 +759,7 @@
                                     <dd>editor</dd>
                                     <dt>pos</dt>
                                         <span class="label label-non-nullable pull-left">non-nullable</span>
-                                    <dd class="label label-info pull-left">{line:Number, ch:Number}</dd>
+                                    <dd class="label label-info pull-left">{line:number, ch:number}</dd>
                                     <dd></dd>
                             </dl>
                             <button class="btn btn-small show-code">Show code</button>
@@ -768,7 +768,7 @@
         
         &#x2F;&#x2F; If the pos is at the beginning of a name, token will be the 
         &#x2F;&#x2F; preceding whitespace or dot. In that case, try the next pos.
-        if (token.string.trim().length === 0 || token.string === &quot;.&quot;) {
+        if (!&#x2F;\S&#x2F;.test(token.string) || token.string === &quot;.&quot;) {
             token = hostEditor._codeMirror.getTokenAt({line: pos.line, ch: pos.ch + 1}, true);
         }
         
@@ -802,7 +802,7 @@
                                     <dd></dd>
                                     <dt>pos</dt>
                                         <span class="label label-non-nullable pull-left">non-nullable</span>
-                                    <dd class="label label-info pull-left">{line:Number, ch:Number}</dd>
+                                    <dd class="label label-info pull-left">{line:number, ch:number}</dd>
                                     <dd></dd>
                             </dl>
                             <button class="btn btn-small show-code">Show code</button>

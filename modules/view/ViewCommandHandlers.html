@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -760,7 +760,6 @@
         _setSizeAndRestoreScroll(fsStr);
         PreferencesManager.setViewState(&quot;fontSizeStyle&quot;, fsStr);
         
-        $(exports).triggerHandler(&quot;fontSizeChange&quot;, [adjustment, fsStr]);
         return true;
     }</code></pre>
                         </div>
@@ -997,16 +996,28 @@
                             </dl>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function _setSizeAndRestoreScroll(fontSizeStyle) {
-        var editor    = EditorManager.getCurrentFullEditor(),
-            oldWidth  = editor._codeMirror.defaultCharWidth(),
-            scrollPos = editor.getScrollPos(),
-            line      = editor._codeMirror.lineAtHeight(scrollPos.y, &quot;local&quot;);
+        var editor      = EditorManager.getCurrentFullEditor(),
+            oldWidth    = editor._codeMirror.defaultCharWidth(),
+            oldFontSize = $(&quot;.CodeMirror&quot;).css(&quot;font-size&quot;),
+            newFontSize = &quot;&quot;,
+            delta       = 0,
+            adjustment  = 0,
+            scrollPos   = editor.getScrollPos(),
+            line        = editor._codeMirror.lineAtHeight(scrollPos.y, &quot;local&quot;);
         
         _removeDynamicFontSize();
         if (fontSizeStyle) {
             _addDynamicFontSize(fontSizeStyle);
         }
         editor.refreshAll();
+        
+        delta = &#x2F;em$&#x2F;.test(oldFontSize) ? 10 : 1;
+        newFontSize = $(&quot;.CodeMirror&quot;).css(&quot;font-size&quot;);
+        adjustment = parseInt((parseFloat(newFontSize) - parseFloat(oldFontSize)) * delta, 10);
+        
+        if (adjustment) {
+            $(exports).triggerHandler(&quot;fontSizeChange&quot;, [adjustment, newFontSize]);
+        }
         
         &#x2F;&#x2F; Calculate the new scroll based on the old font sizes and scroll position
         var newWidth   = editor._codeMirror.defaultCharWidth(),

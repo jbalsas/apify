@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -616,6 +616,7 @@
                             <li><a href="..&#x2F;../modules/language&#x2F;HTMLUtils.html">HTMLUtils</a></li>
                             <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
                             <li><a href="..&#x2F;../modules/utils&#x2F;TokenUtils.html">TokenUtils</a></li>
+                            <li><a href="..&#x2F;../modules/thirdparty&#x2F;lodash.html">lodash</a></li>
                         </ul>
                         
                         
@@ -711,7 +712,7 @@
                 result.push(entry);
             } else if (!classOrIdSelector) {
                 &#x2F;&#x2F; Special case for tag selectors - match &quot;*&quot; as the rightmost character
-                if (entry.selector.trim().search(&#x2F;\*$&#x2F;) !== -1) {
+                if (&#x2F;\*\s*$&#x2F;.test(entry.selector)) {
                     result.push(entry);
                 }
             }
@@ -923,6 +924,63 @@
                                 Private
                                 
                             </span>
+                            <h4>_getPropNameInfo</h4>
+                            <em><p>Scan backwards to check for any prefix if the current context is property name.<br />If the current context is in a prefix (either 'meta' or '-'), then scan forwards <br />to collect the entire property name. Return the name of the property in the CSS <br />context info object if there is one that seems to be valid. Return an empty context<br />info when we find an invalid one.</p></em>
+                            <dl>
+                                    <dt>ctx</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd>context</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getPropNameInfo(ctx) {
+        var propName = &quot;&quot;,
+            offset = TokenUtils.offsetInToken(ctx),
+            tokenString = ctx.token.string,
+            excludedCharacters = [&quot;;&quot;, &quot;{&quot;, &quot;}&quot;];
+        
+        if (ctx.token.type === &quot;property&quot; || ctx.token.type === &quot;property error&quot; ||
+                ctx.token.type === &quot;tag&quot;) {
+            propName = tokenString;
+            if (TokenUtils.movePrevToken(ctx) &amp;&amp; &#x2F;\S&#x2F;.test(ctx.token.string) &amp;&amp;
+                    excludedCharacters.indexOf(ctx.token.string) === -1) {
+                propName = ctx.token.string + tokenString;
+                offset += ctx.token.string.length;
+            }
+        } else if (ctx.token.type === &quot;meta&quot; || tokenString === &quot;-&quot;) {
+            propName = tokenString;
+            if (TokenUtils.moveNextToken(ctx) &amp;&amp;
+                    (ctx.token.type === &quot;property&quot; || ctx.token.type === &quot;property error&quot; ||
+                    ctx.token.type === &quot;tag&quot;)) {
+                propName += ctx.token.string;
+            }
+        } else if (&#x2F;\S&#x2F;.test(tokenString) &amp;&amp; excludedCharacters.indexOf(tokenString) === -1) {
+            &#x2F;&#x2F; We&#39;re not inside the property name context.
+            return createInfo();
+        } else {
+            var testPos = {ch: ctx.pos.ch + 1, line: ctx.pos.line},
+                testToken = ctx.editor.getTokenAt(testPos, true);
+
+            if (testToken.type === &quot;property&quot; || testToken.type === &quot;property error&quot; ||
+                    testToken.type === &quot;tag&quot;) {
+                propName = testToken.string;
+                offset = 0;
+            }
+        }
+
+        &#x2F;&#x2F; If we&#39;re in the property name context but not in an existing property name, 
+        &#x2F;&#x2F; then reset offset to zero.
+        if (propName === &quot;&quot;) {
+            offset = 0;
+        }
+
+        return createInfo(PROP_NAME, offset, propName);
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
                             <h4>_getPropNameStartingFromPropValue</h4>
                             <em><p>Scans backwards from the current context and returns the name of the property if there is <br />a valid one. </p></em>
                             <dl>
@@ -932,7 +990,8 @@
                             </dl>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function _getPropNameStartingFromPropValue(ctx) {
-        var ctxClone = $.extend({}, ctx);
+        var ctxClone = $.extend({}, ctx),
+            propName = &quot;&quot;;
         do {
             &#x2F;&#x2F; If we&#39;re no longer in the property value before seeing a colon, then we don&#39;t
             &#x2F;&#x2F; have a valid property name. Just return an empty string.
@@ -943,10 +1002,55 @@
         
         if (ctxClone.token.string === &quot;:&quot; &amp;&amp; TokenUtils.moveSkippingWhitespace(TokenUtils.movePrevToken, ctxClone) &amp;&amp;
                 (ctxClone.token.type === &quot;property&quot; || ctxClone.token.type === &quot;property error&quot;)) {
-            return ctxClone.token.string;
+            propName = ctxClone.token.string;
+            if (TokenUtils.movePrevToken(ctxClone) &amp;&amp; ctxClone.token.type === &quot;meta&quot;) {
+                propName = ctxClone.token.string + propName;
+            }
         }
         
-        return &quot;&quot;;
+        return propName;
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_getRangeForPropValue</h4>
+                            <em><p>Return a range object with a start position and an end position after<br />skipping any whitespaces and all separators used before and after a<br />valid property value.</p></em>
+                            <dl>
+                                    <dt>startCtx</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd>context</dd>
+                                    <dt>endCtx</dt>
+                                    <dd class="label label-info pull-left">editor:{CodeMirror},pos:{ch:{string},line:{number}},token:{object}</dd>
+                                    <dd>context</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _getRangeForPropValue(startCtx, endCtx) {
+        var range = { &quot;start&quot;: {},
+                      &quot;end&quot;: {} };
+        
+        &#x2F;&#x2F; Skip the &quot;:&quot; and any leading whitespace
+        while (TokenUtils.moveNextToken(startCtx)) {
+            if (&#x2F;\S&#x2F;.test(startCtx.token.string)) {
+                break;
+            }
+        }
+        
+        &#x2F;&#x2F; Skip the trailing whitespace and property separators.
+        while (endCtx.token.string === &quot;;&quot; || endCtx.token.string === &quot;}&quot; ||
+                !&#x2F;\S&#x2F;.test(endCtx.token.string)) {
+            TokenUtils.movePrevToken(endCtx);
+        }
+        
+        range.start = _.clone(startCtx.pos);
+        range.start.ch = startCtx.token.start;
+        
+        range.end = _.clone(endCtx.pos);
+        range.end.ch = endCtx.token.end;
+        
+        return range;
     }</code></pre>
                         </div>
                         <div class="member private">
@@ -980,7 +1084,8 @@
             canAddNewOne = false,
             testPos = {ch: ctx.pos.ch + 1, line: ctx.pos.line},
             testToken = editor._codeMirror.getTokenAt(testPos, true),
-            propName;
+            propName,
+            range;
         
         &#x2F;&#x2F; Get property name first. If we don&#39;t have a valid property name, then 
         &#x2F;&#x2F; return a default rule info.
@@ -1032,13 +1137,21 @@
         forwardCtx = TokenUtils.getInitialContext(editor._codeMirror, forwardPos);
         propValues = propValues.concat(_getSucceedingPropValues(forwardCtx, lastValue));
         
+        if (propValues.length) {
+            range = _getRangeForPropValue(backwardCtx, forwardCtx);
+        } else {
+            &#x2F;&#x2F; No property value, so just return the cursor pos as range
+            range = { &quot;start&quot;: _.clone(ctx.pos),
+                      &quot;end&quot;: _.clone(ctx.pos) };
+        }
+        
         &#x2F;&#x2F; If current index is more than the propValues size, then the cursor is 
         &#x2F;&#x2F; at the end of the existing property values and is ready for adding another one.
         if (index === propValues.length) {
             canAddNewOne = true;
         }
         
-        return createInfo(PROP_VALUE, offset, propName, index, propValues, canAddNewOne);
+        return createInfo(PROP_VALUE, offset, propName, index, propValues, canAddNewOne, range);
     }</code></pre>
                         </div>
                         <div class="member private">
@@ -1333,15 +1446,20 @@
                                         <span class="label label-optional pull-left">optional</span>
                                     <dd class="label label-info pull-left">boolean</dd>
                                     <dd>If this is true, then the value in index refers to the index at which a new item is going to be inserted and should not be used for accessing an existing value in values array. </dd>
+                                    <dt>range</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">{start: {line: number, ch: number}, end: {line: number, ch: number}}</dd>
+                                    <dd>A range object with a start position and an end position</dd>
                             </dl>
                             <button class="btn btn-small show-code">Show code</button>
-                            <pre class="code"><code>function createInfo(context, offset, name, index, values, isNewItem) {
+                            <pre class="code"><code>function createInfo(context, offset, name, index, values, isNewItem, range) {
         var ruleInfo = { context: context || &quot;&quot;,
                          offset: offset || 0,
                          name: name || &quot;&quot;,
                          index: -1,
                          values: [],
-                         isNewItem: (isNewItem) ? true : false };
+                         isNewItem: (isNewItem === true),
+                         range: range };
         
         if (context === PROP_VALUE || context === SELECTOR || context === IMPORT_URL) {
             ruleInfo.index = index;
@@ -1847,7 +1965,7 @@
                     }
                     
                     &#x2F;&#x2F; Stop once we&#39;ve reached a &lt;style ...&gt; tag
-                    if (ctx.token.string === &quot;&lt;style&quot;) {
+                    if (ctx.token.string === &quot;style&quot; &amp;&amp; ctx.token.type === &quot;tag&quot;) {
                         &#x2F;&#x2F; Remove everything up to end-of-tag from selector
                         var eotIndex = selector.indexOf(&quot;&gt;&quot;);
                         if (eotIndex !== -1) {
@@ -1875,7 +1993,7 @@
                     selector = _parseSelector(ctx);
                     break;
                 } else {
-                    if (ctx.token.string.trim() !== &quot;&quot;) {
+                    if (&#x2F;\S&#x2F;.test(ctx.token.string)) {
                         foundChars = true;
                     }
                 }
@@ -1894,7 +2012,7 @@
         &#x2F;&#x2F; special case - we aren&#39;t in a selector and haven&#39;t found any chars,
         &#x2F;&#x2F; look at the next immediate token to see if it is non-whitespace
         if (!selector &amp;&amp; !foundChars) {
-            if (TokenUtils.moveNextToken(ctx) &amp;&amp; ctx.token.type !== &quot;comment&quot; &amp;&amp; ctx.token.string.trim() !== &quot;&quot;) {
+            if (TokenUtils.moveNextToken(ctx) &amp;&amp; ctx.token.type !== &quot;comment&quot; &amp;&amp; &#x2F;\S&#x2F;.test(ctx.token.string)) {
                 foundChars = true;
                 ctx = TokenUtils.getInitialContext(cm, $.extend({}, pos));
             }
@@ -1954,25 +2072,7 @@
         }
 
         if (_isInPropName(ctx)) {
-            if (ctx.token.type === &quot;property&quot; || ctx.token.type === &quot;property error&quot; || ctx.token.type === &quot;tag&quot;) {
-                propName = ctx.token.string;
-            } else {
-                var testPos = {ch: ctx.pos.ch + 1, line: ctx.pos.line},
-                    testToken = editor._codeMirror.getTokenAt(testPos, true);
-                
-                if (testToken.type === &quot;property&quot; || testToken.type === &quot;property error&quot; || testToken.type === &quot;tag&quot;) {
-                    propName = testToken.string;
-                    offset = 0;
-                }
-            }
-            
-            &#x2F;&#x2F; If we&#39;re in property name context but not in an existing property name, 
-            &#x2F;&#x2F; then reset offset to zero.
-            if (propName === &quot;&quot;) {
-                offset = 0;
-            }
-            
-            return createInfo(PROP_NAME, offset, propName);
+            return _getPropNameInfo(ctx, editor);
         }
         
         if (_isInPropValue(ctx)) {

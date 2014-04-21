@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;..&#x2F;..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;..&#x2F;..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -601,7 +601,7 @@
                 <div class="span9">
                     <section>
                         <div id="description">
-                            <p>lobal define, brackets, $</p>
+                            <p>global define, brackets, $</p>
                         </div>
                     </section>
         
@@ -951,7 +951,7 @@
                 break;
             }
             prev = this.getToken(cursor);
-        } while (prev.string.trim() === &quot;&quot;);
+        } while (!&#x2F;\S&#x2F;.test(prev.string));
         
         return prev;
     };</code></pre>
@@ -1249,7 +1249,7 @@
                 break;
             }
             next = this.getToken(cursor);
-        } while (skipWhitespace &amp;&amp; next.string.trim() === &quot;&quot;);
+        } while (skipWhitespace &amp;&amp; !&#x2F;\S&#x2F;.test(next.string));
         
         return next;
     };</code></pre>

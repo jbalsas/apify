@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -601,7 +601,7 @@
                 <div class="span9">
                     <section>
                         <div id="description">
-                            <p>lobal define, $, window, Mustache</p>
+                            <p>global define, $, window, Mustache</p>
                         </div>
                     </section>
         
@@ -715,21 +715,21 @@
                 &#x2F;&#x2F;   class=&quot;error-dialog modal hide&quot;
                 &#x2F;&#x2F; and the insertion point is inside &quot;modal&quot;, we want &quot;.modal&quot;
                 var attributeValue = tagInfo.attr.value;
-                var startIndex = attributeValue.substr(0, tagInfo.position.offset).lastIndexOf(&quot; &quot;);
-                var endIndex = attributeValue.indexOf(&quot; &quot;, tagInfo.position.offset);
-                selectorName = &quot;.&quot; +
-                    attributeValue.substring(
-                        startIndex === -1 ? 0 : startIndex + 1,
-                        endIndex === -1 ? attributeValue.length : endIndex
-                    );
-                
-                &#x2F;&#x2F; If the insertion point is surrounded by space, selectorName is &quot;.&quot;
-                &#x2F;&#x2F; Check for that here
-                if (selectorName === &quot;.&quot;) {
-                    selectorName = &quot;&quot;;
-                }
-                
-                if (selectorName === &quot;&quot;) {
+                if (&#x2F;\S&#x2F;.test(attributeValue)) {
+                    var startIndex = attributeValue.substr(0, tagInfo.position.offset).lastIndexOf(&quot; &quot;);
+                    var endIndex = attributeValue.indexOf(&quot; &quot;, tagInfo.position.offset);
+                    selectorName = &quot;.&quot; +
+                        attributeValue.substring(
+                            startIndex === -1 ? 0 : startIndex + 1,
+                            endIndex === -1 ? attributeValue.length : endIndex
+                        );
+
+                    &#x2F;&#x2F; If the insertion point is surrounded by space between two classnames, selectorName is &quot;.&quot;
+                    if (selectorName === &quot;.&quot;) {
+                        selectorName = &quot;&quot;;
+                        reason = Strings.ERROR_CSSQUICKEDIT_BETWEENCLASSES;
+                    }
+                } else {
                     reason = Strings.ERROR_CSSQUICKEDIT_CLASSNOTFOUND;
                 }
             } else if (tagInfo.attr.name === &quot;id&quot;) {

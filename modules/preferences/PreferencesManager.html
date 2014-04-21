@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -834,7 +834,7 @@
         if (!filename || !projectDirectory) {
             return false;
         }
-        return FileUtils.getRelativeFilename(projectDirectory, filename) ? true : false;
+        return FileUtils.getRelativeFilename(projectDirectory, filename) !== undefined;
     }</code></pre>
                         </div>
                         <div class="member private">
@@ -919,7 +919,9 @@
                                     scopeOrderWithoutProject;
         }
         return context;
-    }</code></pre>
+    }
+    
+    PreferencesImpl.manager.contextNormalizer = _normalizeContext;</code></pre>
                         </div>
                         <div class="member private public">
                             <span class="pull-right scope">
@@ -1066,13 +1068,17 @@
                             <pre class="code"><code>function convertPreferences(clientID, rules, isViewState, prefCheckCallback) {
         PreferencesImpl.smUserScopeLoading.done(function () {
             PreferencesImpl.userScopeLoading.done(function () {
+                if (!clientID || (typeof clientID === &quot;object&quot; &amp;&amp; (!clientID.id || !clientID.uri))) {
+                    console.error(&quot;Invalid clientID&quot;);
+                    return;
+                }
                 var prefs = getPreferenceStorage(clientID, null, true);
 
                 if (!prefs) {
                     return;
                 }
 
-                var prefsID = getClientID(clientID);
+                var prefsID = typeof clientID === &quot;object&quot; ? getClientID(clientID) : clientID;
                 if (prefStorage.convertedKeysMap === undefined) {
                     prefStorage.convertedKeysMap = {};
                 }
@@ -1084,7 +1090,7 @@
                         savePreferences();
                     });
             }).fail(function (error) {
-                console.error(&quot;Error while converting &quot;, getClientID(clientID));
+                console.error(&quot;Error while converting &quot;, typeof clientID === &quot;object&quot; ? getClientID(clientID) : clientID);
                 console.error(error);
             });
         });
@@ -1092,28 +1098,6 @@
 
     
     &#x2F;&#x2F; Constants for preference lookup contexts.</code></pre>
-                        </div>
-                        <div class="member public">
-                            <span class="pull-right scope">
-                                
-                                Public API
-                            </span>
-                            <h4>get</h4>
-                            <em><p>Look up a preference in the given context. The default is <br />CURRENT_FILE (preferences as they would be applied to the<br />currently edited file).</p></em>
-                            <dl>
-                                    <dt>id</dt>
-                                    <dd class="label label-info pull-left">string</dd>
-                                    <dd>Preference ID to retrieve the value of</dd>
-                                    <dt>context</dt>
-                                        <span class="label label-optional pull-left">optional</span>
-                                    <dd class="label label-info pull-left">Object, string</dd>
-                                    <dd>CURRENT_FILE, CURRENT_PROJECT or a filename</dd>
-                            </dl>
-                            <button class="btn btn-small show-code">Show code</button>
-                            <pre class="code"><code>function get(id, context) {
-        context = _normalizeContext(context);
-        return PreferencesImpl.manager.get(id, context);
-    }</code></pre>
                         </div>
                         <div class="member public">
                             <span class="pull-right scope">
@@ -1278,45 +1262,6 @@
                                 
                                 Public API
                             </span>
-                            <h4>set</h4>
-                            <em><p>Sets a preference and notifies listeners that there may<br />have been a change. By default, the preference is set in the same location in which<br />it was defined except for the "default" scope. If the current value of the preference<br />comes from the "default" scope, the new value will be set at the level just above<br />default.</p>
-
-<p>The preferences are saved automatically unless doNotSave is true.</p>
-
-<p>As with the <code>get()</code> function, the context can be a filename,<br />CURRENT_FILE, CURRENT_PROJECT or a full context object as supported by<br />PreferencesSystem.</p></em>
-                            <dl>
-                                    <dt>id</dt>
-                                    <dd class="label label-info pull-left">string</dd>
-                                    <dd>Identifier of the preference to set</dd>
-                                    <dt>value</dt>
-                                    <dd class="label label-info pull-left">Object</dd>
-                                    <dd>New value for the preference</dd>
-                                    <dt>options</dt>
-                                        <span class="label label-optional pull-left">optional</span>
-                                    <dd class="label label-info pull-left">{location: ?Object, context: ?Object, string}</dd>
-                                    <dd>Specific location in which to set the value or the context to use when setting the value</dd>
-                                    <dt>doNotSave</dt>
-                                        <span class="label label-optional pull-left">optional</span>
-                                    <dd class="label label-info pull-left">boolean</dd>
-                                    <dd>True if the preference change should not be saved automatically.</dd>
-                            </dl>
-                            <button class="btn btn-small show-code">Show code</button>
-                            <pre class="code"><code>function set(id, value, options, doNotSave) {
-        if (options &amp;&amp; options.context) {
-            options.context = _normalizeContext(options.context);
-        }
-        var wasSet = PreferencesImpl.manager.set(id, value, options);
-        if (!doNotSave) {
-            PreferencesImpl.manager.save();
-        }
-        return wasSet;
-    }</code></pre>
-                        </div>
-                        <div class="member public">
-                            <span class="pull-right scope">
-                                
-                                Public API
-                            </span>
                             <h4>setValueAndSave</h4>
                             <em><p>@deprecated Use set instead.</p>
 
@@ -1336,7 +1281,7 @@
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function setValueAndSave(id, value, options) {
         DeprecationWarning.deprecationWarning(&quot;setValueAndSave called for &quot; + id + &quot;. Use set instead.&quot;);
-        var changed = set(id, value, options).stored;
+        var changed = exports.set(id, value, options).stored;
         PreferencesImpl.manager.save();
         return changed;
     }</code></pre>
@@ -1394,8 +1339,8 @@
     
     exports.ready               = PreferencesImpl.managerReady;
     exports.getUserPrefFile     = getUserPrefFile;
-    exports.get                 = get;
-    exports.set                 = set;
+    exports.get                 = PreferencesImpl.manager.get.bind(PreferencesImpl.manager);
+    exports.set                 = PreferencesImpl.manager.set.bind(PreferencesImpl.manager);
     exports.save                = PreferencesImpl.manager.save.bind(PreferencesImpl.manager);
     exports.on                  = PreferencesImpl.manager.on.bind(PreferencesImpl.manager);
     exports.off                 = PreferencesImpl.manager.off.bind(PreferencesImpl.manager);

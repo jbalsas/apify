@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -1048,6 +1048,7 @@
                                     
                                     <button class="btn btn-small show-code">Show code</button>
                                     <pre class="code"><code>function PromiseQueue() {
+        this._queue = [];
     }</code></pre>
                                 </div>
             
@@ -1086,7 +1087,7 @@
                                         </dl>
                                         <p></p>
                                         <button class="btn btn-small show-code">Show code</button>
-                                        <pre class="code"><code>PromiseQueue.prototype._queue = [];</code></pre>
+                                        <pre class="code"><code>PromiseQueue.prototype._queue = null;</code></pre>
                                     </div>
                                     
                                 </section>
@@ -1115,7 +1116,7 @@
         if (this._queue.length) {
             var op = this._queue.shift();
             this._curPromise = op();
-            this._curPromise.done(function () {
+            this._curPromise.always(function () {
                 self._curPromise = null;
                 self._doNext();
             });

@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -762,11 +762,19 @@
 
 <p>It keeps track of multiple Scope levels and also manages path-based Scopes.</p>
 
-<p>It also provides the ability to register preferences, which gives a fine-grained<br />means for listening for changes and will ultimately allow for automatic UI generation.</p></em>
+<p>It also provides the ability to register preferences, which gives a fine-grained<br />means for listening for changes and will ultimately allow for automatic UI generation.</p>
+
+<p>The contextNormalizer is used to customize get/set contexts based on the needs of individual<br />context systems. It can be passed in at construction time or set later.</p></em>
                             <dl>
+                                    <dt>contextNormalizer</dt>
+                                        <span class="label label-optional pull-left">optional</span>
+                                    <dd class="label label-info pull-left">function</dd>
+                                    <dd>function that is passed the context used for get or set to adjust for specific PreferencesSystem behavior</dd>
                             </dl>
                             <button class="btn btn-small show-code">Show code</button>
-                            <pre class="code"><code>function PreferencesSystem() {
+                            <pre class="code"><code>function PreferencesSystem(contextNormalizer) {
+        this.contextNormalizer = contextNormalizer;
+        
         this._knownPrefs = {};
         this._scopes = {
             &quot;default&quot;: new Scope(new MemoryStorage())

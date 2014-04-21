@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -610,6 +610,7 @@
                         
                         <ul class="nav nav-list">
                             <li><a href="..&#x2F;../modules/.&#x2F;PreferencesBase.html">PreferencesBase</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
                             <li><a href="..&#x2F;../modules/utils&#x2F;Async.html">Async</a></li>
                         </ul>
                         
@@ -678,6 +679,7 @@
                 });
         });
 
+    
     &#x2F;&#x2F; &quot;State&quot; is stored like preferences but it is not generally intended to be user-editable.
     &#x2F;&#x2F; It&#39;s for more internal, implicit things like window size, working set, etc.
     var stateManager = new PreferencesBase.PreferencesSystem();
@@ -686,6 +688,18 @@
     var stateProjectLayer = new PreferencesBase.ProjectLayer();
     smUserScope.addLayer(stateProjectLayer);
     var smUserScopeLoading = stateManager.addScope(&quot;user&quot;, smUserScope);
+    
+    
+    &#x2F;&#x2F; Listen for times where we might be unwatching a root that contains one of the user-level prefs files,
+    &#x2F;&#x2F; and force a re-read of the file in order to ensure we can write to it later (see #7300).
+    $(ProjectManager).on(&quot;projectClose&quot;, function (event, rootDir) {
+        var prefsDir = brackets.app.getApplicationSupportDirectory() + &quot;&#x2F;&quot;;
+        if (prefsDir.indexOf(rootDir.fullPath) === 0) {
+            manager.fileChanged(userPrefFile);
+            stateManager.fileChanged(userStateFile);
+        }
+    });
+    
     
     &#x2F;&#x2F; Semi-Public API. Use this at your own risk. The public API is in PreferencesManager.
     exports.manager             = manager;

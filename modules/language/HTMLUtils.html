@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -601,7 +601,7 @@
                 <div class="span9">
                     <section>
                         <div id="description">
-                            <p>lobal define, $</p>
+                            <p>global define, $</p>
                         </div>
                     </section>
         
@@ -713,7 +713,13 @@
         var mode = ctx.editor.getMode(),
             innerModeData = CodeMirror.innerMode(mode, ctx.token.state);
 
-        return innerModeData.state.tagName;
+        if (ctx.token.type === &quot;tag bracket&quot;) {
+            return innerModeData.state.tagName;
+        }
+        
+        &#x2F;&#x2F; If the ctx is inside the tag name of an end tag, innerModeData.state.tagName is
+        &#x2F;&#x2F; undefined. So return token string as the tag name.
+        return innerModeData.state.tagName || ctx.token.string;
     }</code></pre>
                         </div>
                         <div class="member private">
@@ -981,8 +987,8 @@
             forwardCtx  = $.extend({}, backwardCtx);
         
         if (editor.getModeForSelection() === &quot;html&quot;) {
-            if (backwardCtx.token &amp;&amp; backwardCtx.token.type !== &quot;tag&quot;) {
-                while (TokenUtils.movePrevToken(backwardCtx) &amp;&amp; backwardCtx.token.type !== &quot;tag&quot;) {
+            if (backwardCtx.token &amp;&amp; !tagPrefixedRegExp.test(backwardCtx.token.type)) {
+                while (TokenUtils.movePrevToken(backwardCtx) &amp;&amp; !tagPrefixedRegExp.test(backwardCtx.token.type)) {
                     if (backwardCtx.token.type === &quot;error&quot; &amp;&amp; backwardCtx.token.string.indexOf(&quot;&lt;&quot;) === 0) {
                         break;
                     }
@@ -991,7 +997,7 @@
                     }
                 }
                 
-                while (TokenUtils.moveNextToken(forwardCtx) &amp;&amp; forwardCtx.token.type !== &quot;tag&quot;) {
+                while (TokenUtils.moveNextToken(forwardCtx) &amp;&amp; !tagPrefixedRegExp.test(forwardCtx.token.type)) {
                     if (forwardCtx.token.type === &quot;attribute&quot;) {
                         &#x2F;&#x2F; If the current tag is not closed, codemirror may return the next opening
                         &#x2F;&#x2F; tag as an attribute. Stop the search loop in that case.
@@ -1005,7 +1011,7 @@
                         }
                         &#x2F;&#x2F; If we type the first letter of the next attribute, it comes as an error
                         &#x2F;&#x2F; token. We need to double check for possible invalidated attributes.
-                        if (forwardCtx.token.string.trim() !== &quot;&quot; &amp;&amp;
+                        if (&#x2F;\S&#x2F;.test(forwardCtx.token.string) &amp;&amp;
                                 forwardCtx.token.string.indexOf(&quot;\&quot;&quot;) === -1 &amp;&amp;
                                 forwardCtx.token.string.indexOf(&quot;&#39;&quot;) === -1 &amp;&amp;
                                 forwardCtx.token.string.indexOf(&quot;=&quot;) === -1) {
@@ -1045,13 +1051,13 @@
             tagInfo,
             tokenType;
         
-        &#x2F;&#x2F; check if this is inside a style block.
+        &#x2F;&#x2F; Check if this is inside a style block.
         if (editor.getModeForSelection() !== &quot;html&quot;) {
             return createTagInfo();
         }
         
-        &#x2F;&#x2F;check and see where we are in the tag
-        if (ctx.token.string.length &gt; 0 &amp;&amp; ctx.token.string.trim().length === 0) {
+        &#x2F;&#x2F; Check and see where we are in the tag
+        if (ctx.token.string.length &gt; 0 &amp;&amp; !&#x2F;\S&#x2F;.test(ctx.token.string)) {
 
             &#x2F;&#x2F; token at (i.e. before) pos is whitespace, so test token at next pos
             &#x2F;&#x2F;
@@ -1061,13 +1067,14 @@
             var testPos = {ch: ctx.pos.ch + 1, line: ctx.pos.line},
                 testToken = editor._codeMirror.getTokenAt(testPos, true);
 
-            if (testToken.string.length &gt; 0 &amp;&amp; testToken.string.trim().length &gt; 0 &amp;&amp;
+            if (testToken.string.length &gt; 0 &amp;&amp; &#x2F;\S&#x2F;.test(testToken.string) &amp;&amp;
                     testToken.string.charAt(0) !== &quot;&gt;&quot;) {
                 &#x2F;&#x2F; pos has whitespace before it and non-whitespace after it, so use token after
                 ctx.token = testToken;
 
-                if (ctx.token.type === &quot;tag&quot; ||
-                        (ctx.token.type &amp;&amp; ctx.token.type.indexOf(&quot;error&quot;) !== -1)) {
+                &#x2F;&#x2F; Check whether the token type is one of the types prefixed with &quot;tag&quot;
+                &#x2F;&#x2F; (e.g. &quot;tag&quot;, &quot;tag error&quot;, &quot;tag brackets&quot;)
+                if (tagPrefixedRegExp.test(ctx.token.type)) {
                     &#x2F;&#x2F; Check to see if the cursor is just before a &quot;&lt;&quot; but not in any tag.
                     if (ctx.token.string.charAt(0) === &quot;&lt;&quot;) {
                         return createTagInfo();
@@ -1100,7 +1107,7 @@
 
                 if (ctx.token.type === &quot;comment&quot;) {
                     return createTagInfo();
-                } else if (ctx.token.type !== &quot;tag&quot; &amp;&amp; ctx.token.string !== &quot;=&quot;) {
+                } else if (!tagPrefixedRegExp.test(ctx.token.type) &amp;&amp; ctx.token.string !== &quot;=&quot;) {
                     &#x2F;&#x2F; If it wasn&#39;t the tag name, assume it was an attr value
                     &#x2F;&#x2F; Also we don&#39;t handle the &quot;=&quot; here.
                     tagInfo = _getTagInfoStartingFromAttrValue(ctx);
@@ -1108,9 +1115,9 @@
                     &#x2F;&#x2F; Check to see if this is the closing of a tag (either the start or end)
                     &#x2F;&#x2F; or a comment tag.
                     if (ctx.token.type === &quot;comment&quot; ||
-                            (ctx.token.type === &quot;tag&quot; &amp;&amp;
+                            (tagPrefixedRegExp.test(ctx.token.type) &amp;&amp;
                             (ctx.token.string === &quot;&gt;&quot; || ctx.token.string === &quot;&#x2F;&gt;&quot; ||
-                                (ctx.token.string.charAt(0) === &quot;&lt;&quot; &amp;&amp; ctx.token.string.charAt(1) === &quot;&#x2F;&quot;)))) {
+                                ctx.token.string === &quot;&lt;&#x2F;&quot;))) {
                         return createTagInfo();
                     }
                     
@@ -1133,11 +1140,21 @@
             }
         }
         
-        if (ctx.token.type === &quot;tag&quot; ||
-                (ctx.token.type &amp;&amp; ctx.token.type.indexOf(&quot;error&quot;) !== -1)) {
-            &#x2F;&#x2F; Check if the user just typed a white space after &quot;&lt;&quot; that made an existing tag invalid.
-            if (ctx.token.string.match(&#x2F;^&lt;\s+&#x2F;) &amp;&amp; offset !== 1) {
-                return createTagInfo();
+        if (tagPrefixedRegExp.test(ctx.token.type)) {
+            if (ctx.token.type !== &quot;tag bracket&quot;) {
+                &#x2F;&#x2F; Check if the user just typed a white space after &quot;&lt;&quot; that made an existing tag invalid.
+                if (TokenUtils.movePrevToken(ctx) &amp;&amp; !&#x2F;\S&#x2F;.test(ctx.token.string)) {
+                    return createTagInfo();
+                }
+
+                &#x2F;&#x2F; Check to see if this is a closing tag
+                if (ctx.token.type === &quot;tag bracket&quot; &amp;&amp; ctx.token.string === &quot;&lt;&#x2F;&quot;) {
+                    tokenType = CLOSING_TAG;
+                }
+
+                &#x2F;&#x2F; Restore the original ctx by moving back to next context since we call
+                &#x2F;&#x2F; movePrevToken above to detect &quot;&lt;&quot; or &quot;&lt;&#x2F;&quot;.
+                TokenUtils.moveNextToken(ctx);
             }
             
             &#x2F;&#x2F; Check to see if this is the closing of a start tag or a self closing tag
@@ -1145,16 +1162,25 @@
                 return createTagInfo();
             }
             
-            &#x2F;&#x2F; Check to see if this is a closing tag
-            if (ctx.token.string.charAt(0) === &quot;&lt;&quot; &amp;&amp; ctx.token.string.charAt(1) === &quot;&#x2F;&quot;) {
-                return createTagInfo(CLOSING_TAG, offset - 2, ctx.token.string.slice(2));
-            }
-            
             &#x2F;&#x2F; Make sure the cursor is not after an equal sign or a quote before we report the context as a tag.
             if (ctx.token.string !== &quot;=&quot; &amp;&amp; ctx.token.string.match(&#x2F;^[&quot;&#39;]&#x2F;) === null) {
                 if (!tokenType) {
                     tokenType = TAG_NAME;
-                    offset--; &#x2F;&#x2F;need to take off 1 for the leading &quot;&lt;&quot;
+                    if (ctx.token.type === &quot;tag bracket&quot;) {
+                        &#x2F;&#x2F; Check to see if this is a closing tag
+                        if (ctx.token.string === &quot;&lt;&#x2F;&quot;) {
+                            tokenType = CLOSING_TAG;
+                            offset -= 2;
+                        } else {
+                            offset = 0;
+                        }
+                        &#x2F;&#x2F; If the cursor is right after the &quot;&lt;&quot; or &quot;&lt;&#x2F;&quot;, then 
+                        &#x2F;&#x2F; move context to next one so that _extractTagName
+                        &#x2F;&#x2F; call below can get the tag name if there is one.
+                        if (offset === 0) {
+                            TokenUtils.moveNextToken(ctx);
+                        }
+                    }
                 }
                 
                 &#x2F;&#x2F; We&#39;re actually in the tag, just return that as we have no relevant 

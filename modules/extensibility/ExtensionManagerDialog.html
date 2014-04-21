@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -601,7 +601,7 @@
                 <div class="span9">
                     <section>
                         <div id="description">
-                            <p>lobal brackets, define, $, Mustache, window</p>
+                            <p>global brackets, define, $, Mustache, window</p>
                         </div>
                     </section>
         
@@ -856,7 +856,7 @@
             });
             
             &#x2F;&#x2F; Update search UI before new tab is shown
-            $(&quot;a[data-toggle=&#39;tab&#39;]&quot;).each(function (index, tabElement) {
+            $(&quot;a[data-toggle=&#39;tab&#39;]&quot;, $dlg).each(function (index, tabElement) {
                 $(tabElement).on(&quot;show&quot;, function (event) {
                     _activeTabIndex = index;
                     

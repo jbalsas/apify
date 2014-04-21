@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -610,6 +610,7 @@
                         
                         <ul class="nav nav-list">
                             <li><a href="..&#x2F;../modules/thirdparty&#x2F;lodash.html">lodash</a></li>
+                            <li><a href="..&#x2F;../modules/project&#x2F;ProjectManager.html">ProjectManager</a></li>
                             <li><a href="..&#x2F;../modules/widgets&#x2F;DefaultDialogs.html">DefaultDialogs</a></li>
                             <li><a href="..&#x2F;../modules/widgets&#x2F;Dialogs.html">Dialogs</a></li>
                             <li><a href="..&#x2F;../modules/widgets&#x2F;DropdownButton.html">DropdownButton</a></li>
@@ -719,9 +720,13 @@
                             <h4>createFilterPicker</h4>
                             <em><p>Creates a UI element for selecting a filter, populated with a list of recently used filters and an option to<br />edit the selected filter. The edit option is fully functional, but selecting any other item does nothing. The<br />client should call commitDropdown() when the UI containing the filter picker is confirmed (which updates the MRU<br />order) and then use the returned filter object as needed.</p></em>
                             <dl>
+                                    <dt>context</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">{label:string, promise:$.Promise}</dd>
+                                    <dd>Info on files filter will apply to - see editFilter()</dd>
                             </dl>
                             <button class="btn btn-small show-code">Show code</button>
-                            <pre class="code"><code>function createFilterPicker() {
+                            <pre class="code"><code>function createFilterPicker(context) {
         var $picker = $(&quot;&lt;div class=&#39;filter-picker&#39;&gt;&lt;span class=&#39;filter-label&#39;&gt;&lt;&#x2F;span&gt;&lt;button class=&#39;btn no-focus&#39;&gt;&lt;&#x2F;button&gt;&lt;&#x2F;div&gt;&quot;),
             $button = $picker.find(&quot;button&quot;);
         
@@ -757,7 +762,7 @@
         updatePicker();
         
         $button.click(function () {
-            editFilter(getLastFilter())
+            editFilter(getLastFilter(), context)
                 .done(function (buttonId) {
                     if (buttonId === Dialogs.DIALOG_BTN_OK) {
                         updatePicker();
@@ -766,80 +771,6 @@
         });
         
         return $picker;
-    }</code></pre>
-                        </div>
-                        <div class="member public">
-                            <span class="pull-right scope">
-                                
-                                Public API
-                            </span>
-                            <h4>editFilter</h4>
-                            <em><p>Opens a dialog box to edit the given filter. When editing is finished, the value of getLastFilter() changes to<br />reflect the edits. If the dialog was canceled, the preference is left unchanged.</p></em>
-                            <dl>
-                                    <dt>filter</dt>
-                                        <span class="label label-non-nullable pull-left">non-nullable</span>
-                                    <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
-                                    <dd></dd>
-                            </dl>
-                            <button class="btn btn-small show-code">Show code</button>
-                            <pre class="code"><code>function editFilter(filter) {
-        var lastFocus = window.document.activeElement;
-        
-        var html = StringUtils.format(Strings.FILE_FILTER_INSTRUCTIONS, brackets.config.glob_help_url) +
-            &quot;&lt;textarea class=&#39;exclusions-editor&#39;&gt;&lt;&#x2F;textarea&gt;&quot;;
-        var buttons = [
-            { className : Dialogs.DIALOG_BTN_CLASS_NORMAL, id: Dialogs.DIALOG_BTN_CANCEL, text: Strings.CANCEL },
-            { className : Dialogs.DIALOG_BTN_CLASS_PRIMARY, id: Dialogs.DIALOG_BTN_OK, text: Strings.OK }
-        ];
-        var dialog = Dialogs.showModalDialog(DefaultDialogs.DIALOG_ID_INFO, Strings.FILE_FILTER_DIALOG, html, buttons);
-        
-        dialog.getElement().find(&quot;.exclusions-editor&quot;).val(filter.join(&quot;\n&quot;)).focus();
-        
-        dialog.done(function (buttonId) {
-            if (buttonId === Dialogs.DIALOG_BTN_OK) {
-                var newFilter = dialog.getElement().find(&quot;.exclusions-editor&quot;).val().split(&quot;\n&quot;);
-                
-                &#x2F;&#x2F; Remove blank lines
-                newFilter = newFilter.filter(function (glob) {
-                    return glob.trim().length;
-                });
-                
-                &#x2F;&#x2F; Update saved filter preference
-                setLastFilter(newFilter);
-            }
-            lastFocus.focus();  &#x2F;&#x2F; restore focus to old pos
-        });
-        
-        return dialog.getPromise();
-    }</code></pre>
-                        </div>
-                        <div class="member public">
-                            <span class="pull-right scope">
-                                
-                                Public API
-                            </span>
-                            <h4>filterFileList</h4>
-                            <em><p>Returns a copy of 'files' filtered to just those that don't match any of the exclusion globs in the filter.</p></em>
-                            <dl>
-                                    <dt>compiledFilter</dt>
-                                        <span class="label label-non-nullable pull-left">non-nullable</span>
-                                    <dd class="label label-info pull-left">string</dd>
-                                    <dd>'Compiled' filter object as returned by compile()</dd>
-                                    <dt>files</dt>
-                                        <span class="label label-non-nullable pull-left">non-nullable</span>
-                                    <dd class="label label-info pull-left">Array.&lt;File&gt;</dd>
-                                    <dd></dd>
-                            </dl>
-                            <button class="btn btn-small show-code">Show code</button>
-                            <pre class="code"><code>function filterFileList(compiledFilter, files) {
-        if (!compiledFilter) {
-            return files;
-        }
-        
-        var re = new RegExp(compiledFilter);
-        return files.filter(function (f) {
-            return !f.fullPath.match(re);
-        });
     }
     
     
@@ -857,13 +788,117 @@
                                 
                                 Public API
                             </span>
+                            <h4>editFilter</h4>
+                            <em><p>Opens a dialog box to edit the given filter. When editing is finished, the value of getLastFilter() changes to<br />reflect the edits. If the dialog was canceled, the preference is left unchanged.</p></em>
+                            <dl>
+                                    <dt>filter</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Array.&lt;string&gt;</dd>
+                                    <dd></dd>
+                                    <dt>context</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">{label:string, promise:$.Promise}</dd>
+                                    <dd>Info on which files the filter will be applied to. If specified, editing UI will indicate how many files are excluded by the filter. Label should be of the form "in ..."</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function editFilter(filter, context) {
+        var lastFocus = window.document.activeElement;
+        
+        var html = StringUtils.format(Strings.FILE_FILTER_INSTRUCTIONS, brackets.config.glob_help_url) +
+            &quot;&lt;textarea class=&#39;exclusions-editor&#39;&gt;&lt;&#x2F;textarea&gt;&lt;div class=&#39;exclusions-filecount&#39;&gt;&quot; + Strings.FILTER_COUNTING_FILES + &quot;&lt;&#x2F;div&gt;&quot;;
+        var buttons = [
+            { className : Dialogs.DIALOG_BTN_CLASS_NORMAL, id: Dialogs.DIALOG_BTN_CANCEL, text: Strings.CANCEL },
+            { className : Dialogs.DIALOG_BTN_CLASS_PRIMARY, id: Dialogs.DIALOG_BTN_OK, text: Strings.OK }
+        ];
+        var dialog = Dialogs.showModalDialog(DefaultDialogs.DIALOG_ID_INFO, Strings.FILE_FILTER_DIALOG, html, buttons);
+        
+        var $editField = dialog.getElement().find(&quot;.exclusions-editor&quot;);
+        $editField.val(filter.join(&quot;\n&quot;)).focus();
+        
+        function getValue() {
+            var newFilter = $editField.val().split(&quot;\n&quot;);
+
+            &#x2F;&#x2F; Remove blank lines
+            return newFilter.filter(function (glob) {
+                return glob.trim().length;
+            });
+        }
+        
+        dialog.done(function (buttonId) {
+            if (buttonId === Dialogs.DIALOG_BTN_OK) {
+                &#x2F;&#x2F; Update saved filter preference
+                setLastFilter(getValue());
+            }
+            lastFocus.focus();  &#x2F;&#x2F; restore focus to old pos
+        });
+        
+        
+        &#x2F;&#x2F; Code to update the file count readout at bottom of dialog (if context provided)
+        var $fileCount = dialog.getElement().find(&quot;.exclusions-filecount&quot;);
+        
+        function updateFileCount() {
+            context.promise.done(function (files) {
+                var filter = getValue();
+                if (filter.length) {
+                    var filtered = filterFileList(compile(filter), files);
+                    $fileCount.html(StringUtils.format(Strings.FILTER_FILE_COUNT, filtered.length, files.length, context.label));
+                } else {
+                    $fileCount.html(StringUtils.format(Strings.FILTER_FILE_COUNT_ALL, files.length, context.label));
+                }
+            });
+        }
+        
+        if (context) {
+            $editField.on(&quot;input&quot;, _.debounce(updateFileCount, 400));
+            updateFileCount();
+        } else {
+            $fileCount.hide();
+        }
+        
+        return dialog.getPromise();
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
+                            <h4>filterFileList</h4>
+                            <em><p>Returns a copy of 'files' filtered to just those that don't match any of the exclusion globs in the filter.</p></em>
+                            <dl>
+                                    <dt>compiledFilter</dt>
+                                        <span class="label label-nullable pull-left">nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>'Compiled' filter object as returned by compile(), or null to no-op</dd>
+                                    <dt>files</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">Array.&lt;File&gt;</dd>
+                                    <dd></dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function filterFileList(compiledFilter, files) {
+        if (!compiledFilter) {
+            return files;
+        }
+        
+        var re = new RegExp(compiledFilter);
+        return files.filter(function (f) {
+            return !f.fullPath.match(re);
+        });
+    }</code></pre>
+                        </div>
+                        <div class="member public">
+                            <span class="pull-right scope">
+                                
+                                Public API
+                            </span>
                             <h4>filterPath</h4>
                             <em><p>Returns false if the given path matches any of the exclusion globs in the given filter. Returns true<br />if the path does not match any of the globs. If filtering many paths at once, use filterFileList()<br />for much better performance.</p></em>
                             <dl>
                                     <dt>compiledFilter</dt>
-                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                        <span class="label label-nullable pull-left">nullable</span>
                                     <dd class="label label-info pull-left">string</dd>
-                                    <dd>'Compiled' filter object as returned by compile()</dd>
+                                    <dd>'Compiled' filter object as returned by compile(), or null to no-op</dd>
                                     <dt>fullPath</dt>
                                         <span class="label label-non-nullable pull-left">non-nullable</span>
                                     <dd class="label label-info pull-left">string</dd>

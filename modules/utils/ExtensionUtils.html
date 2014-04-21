@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -608,8 +608,10 @@
                     <section id="dependencies">
                         <h3>Dependencies</h3>
                         
+                        <ul class="nav nav-list">
+                            <li><a href="..&#x2F;../modules/filesystem&#x2F;FileSystem.html">FileSystem</a></li>
+                        </ul>
                         
-                        <span class="alert alert-info">This module has no dependencies</span>
                         
                     </section>
         
@@ -734,6 +736,24 @@
         return url;
     }</code></pre>
                         </div>
+                        <div class="member">
+                            <span class="pull-right scope">
+                                
+                                
+                            </span>
+                            <h4>isAbsolutePathOrUrl</h4>
+                            <em><p>getModuleUrl returns different urls for win platform<br />so that's why we need a different check here</p></em>
+                            <dl>
+                                    <dt>pathOrUrl</dt>
+                                        <span class="label label-non-nullable pull-left">non-nullable</span>
+                                    <dd class="label label-info pull-left">string</dd>
+                                    <dd>that should be checked if it's absolute</dd>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function isAbsolutePathOrUrl(pathOrUrl) {
+        return brackets.platform === &quot;win&quot; ? PathUtils.isAbsoluteUrl(pathOrUrl) : FileSystem.isAbsolutePath(pathOrUrl);
+    }</code></pre>
+                        </div>
                         <div class="member public">
                             <span class="pull-right scope">
                                 
@@ -755,7 +775,7 @@
                             </dl>
                             <button class="btn btn-small show-code">Show code</button>
                             <pre class="code"><code>function loadFile(module, path) {
-        var url     = PathUtils.isAbsoluteUrl(path) ? path : getModuleUrl(module, path),
+        var url     = isAbsolutePathOrUrl(path) ? path : getModuleUrl(module, path),
             promise = $.get(url);
 
         return promise;
@@ -851,7 +871,7 @@
                 rootpath: dir
             };
 
-            if (PathUtils.isAbsoluteUrl(url)) {
+            if (isAbsolutePathOrUrl(url)) {
                 options.currentFileInfo = {
                     currentDirectory: dir,
                     entryPath: dir,

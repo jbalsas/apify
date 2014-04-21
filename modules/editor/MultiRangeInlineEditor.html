@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -1130,6 +1130,12 @@
         
         if (this._ranges.length === 1) {
             this.$relatedContainer.remove();
+            
+            &#x2F;&#x2F; Refresh the height of the inline editor since we remove
+            &#x2F;&#x2F; the entire selector list.
+            if (this.editor) {
+                this.editor.refresh();
+            }
         }
         
         this._updateCommands();

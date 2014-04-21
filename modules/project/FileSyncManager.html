@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -603,7 +603,7 @@
                         <div id="description">
                             <p>FileSyncManager is a set of utilities to help track external modifications to the files and folders<br />in the currently open project.</p>
 
-<p>Currently, we look for external changes purely by checking file timestamps against the last-sync<br />timestamp recorded on Document. Later, we will use actual native directory-watching callbacks<br />instead.</p>
+<p>Currently, we detect external changes purely by checking file timestamps against the last-sync<br />timestamp recorded on Document. Brackets triggers this check whenever an external change was detected<br />by our native file watchers, and on window focus. We recheck all open Documents, but with file caching<br />the timestamp check is a fast no-op for everything other than files where a watcher change was just<br />notified. If watchers/caching are disabled, we'll essentially check only on window focus, and we'll hit<br />the disk to check every open Document's timestamp every time.</p>
 
 <p>FUTURE: Whenever we have a 'project file tree model,' we should manipulate that instead of notifying<br />DocumentManager directly. DocumentManager, the tree UI, etc. then all listen to that model for changes.</p>
                         </div>

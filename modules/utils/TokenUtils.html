@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -775,7 +775,7 @@
         if (!moveFxn(ctx)) {
             return false;
         }
-        while (!ctx.token.type &amp;&amp; ctx.token.string.trim().length === 0) {
+        while (!ctx.token.type &amp;&amp; !&#x2F;\S&#x2F;.test(ctx.token.string)) {
             if (!moveFxn(ctx)) {
                 return false;
             }

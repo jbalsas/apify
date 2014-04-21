@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -601,7 +601,7 @@
                 <div class="span9">
                     <section>
                         <div id="description">
-                            <p>lobal define, $, brackets</p>
+                            <p>global define, $, brackets</p>
                         </div>
                     </section>
         
@@ -675,7 +675,7 @@
             $(current).on(&quot;keypress&quot;, _handleKeypressEvent);
             $(current).on(&quot;keyup&quot;,    _handleKeyupEvent);
         }
-        
+
         if (previous) {
             &#x2F;&#x2F;Removing all old Handlers
             $(previous).off(&quot;editorChange&quot;, _handleChange);
@@ -684,11 +684,11 @@
             $(previous).off(&quot;keyup&quot;,    _handleKeyupEvent);
         }
     }
-    
+
     activeEditorChangeHandler(null, EditorManager.getActiveEditor(), null);
-    
+
     $(EditorManager).on(&quot;activeEditorChange&quot;, activeEditorChangeHandler);
-    
+
     &#x2F;&#x2F; Dismiss code hints before executing any command since the command
     &#x2F;&#x2F; may make the current hinting session irrevalent after execution.
     &#x2F;&#x2F; For example, when the user hits Ctrl+K to open Quick Doc, it is
@@ -699,7 +699,7 @@
 
     exports._getCodeHintList        = _getCodeHintList;
     exports._removeHintProvider     = _removeHintProvider;
-    
+
     &#x2F;&#x2F; Define public API
     exports.isOpen                  = isOpen;
     exports.registerHintProvider    = registerHintProvider;
@@ -723,7 +723,7 @@
                             <pre class="code"><code>function _getProvidersForLanguageId(languageId) {
         return hintProviders[languageId] || hintProviders.all;
     }
-    
+
     var _beginSession;</code></pre>
                         </div>
                         <div class="member private">
@@ -751,7 +751,7 @@
             if (_inSession(editor)) {
                 var charToRetest = lastChar;
                 _updateHintList();
-                
+
                 &#x2F;&#x2F; _updateHintList() may end a hinting session and clear lastChar, but a
                 &#x2F;&#x2F; different provider may want to start a new session with the same character.
                 &#x2F;&#x2F; So check whether current provider terminates the current hinting
@@ -768,7 +768,7 @@
             if (hintList &amp;&amp; changeList[0] &amp;&amp; changeList[0].text.length &amp;&amp; changeList[0].text[0].length) {
                 var expectedLength = editor.getCursorPos().ch - changeList[0].from.ch,
                     newText = changeList[0].text[0];
-                &#x2F;&#x2F; We may get extra text in newText since some features like auto 
+                &#x2F;&#x2F; We may get extra text in newText since some features like auto
                 &#x2F;&#x2F; close braces can append some text automatically.
                 &#x2F;&#x2F; See https:&#x2F;&#x2F;github.com&#x2F;adobe&#x2F;brackets&#x2F;issues&#x2F;6345#issuecomment-32548064
                 &#x2F;&#x2F; as an example of this scenario.
@@ -905,7 +905,7 @@
             index,
             providers,
             targetLanguageIdArr;
-        
+
         if (Array.isArray(targetLanguageId)) {
             targetLanguageIdArr = targetLanguageId;
         } else if (targetLanguageId) {
@@ -913,10 +913,10 @@
         } else {
             targetLanguageIdArr = Object.keys(hintProviders);
         }
-        
+
         targetLanguageIdArr.forEach(function (languageId) {
             providers = hintProviders[languageId];
-            
+
             for (index = 0; index &lt; providers.length; index++) {
                 if (providers[index].provider === provider) {
                     providers.splice(index, 1);
@@ -943,7 +943,7 @@
         if (!editor) {
             editor = EditorManager.getFocusedEditor();
         }
-        
+
         if (editor) {
             lastChar = null;
             if (_inSession(editor)) {
@@ -971,10 +971,10 @@
             deferredHints.reject();
             deferredHints = null;
         }
-        
+
         var response = sessionProvider.getHints(lastChar);
         lastChar = null;
-        
+
         if (!response) {
             &#x2F;&#x2F; the provider wishes to close the session
             _endSession();
@@ -994,6 +994,14 @@
             } else { &#x2F;&#x2F; response is a deferred
                 deferredHints = response;
                 response.done(function (hints) {
+                    &#x2F;&#x2F; Guard against timing issues where the session ends before the
+                    &#x2F;&#x2F; response gets a chance to execute the callback.  If the session
+                    &#x2F;&#x2F; ends first while still waiting on the response, then hintList
+                    &#x2F;&#x2F; will get cleared up.
+                    if (!hintList) {
+                        return;
+                    }
+
                     if (hintList.isOpen()) {
                         &#x2F;&#x2F; the session is open
                         hintList.update(hints);
@@ -1064,7 +1072,7 @@
                             <pre class="code"><code>function registerHintProvider(providerInfo, languageIds, priority) {
         var providerObj = { provider: providerInfo,
                             priority: priority || 0 };
-        
+
         if (languageIds.indexOf(&quot;all&quot;) !== -1) {
             &#x2F;&#x2F; Ignore anything else in languageIds and just register for every language. This includes
             &#x2F;&#x2F; the special &quot;all&quot; language since its key is in the hintProviders map from the beginning.

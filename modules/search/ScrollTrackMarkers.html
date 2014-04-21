@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -731,11 +731,19 @@
         marks = marks.concat(posArray);
         _renderMarks(posArray);
     }
-    
-    
-    exports.clear = clear;
-    exports.setVisible = setVisible;
-    exports.addTickmarks = addTickmarks;
+
+    &#x2F;&#x2F; Private helper for unit tests
+    function _getTickmarks() {
+        return marks;
+    }
+
+
+    &#x2F;&#x2F; For unit tests
+    exports._getTickmarks   = _getTickmarks;
+
+    exports.clear           = clear;
+    exports.setVisible      = setVisible;
+    exports.addTickmarks    = addTickmarks;
 });</code></pre>
                         </div>
                         <div class="member public">

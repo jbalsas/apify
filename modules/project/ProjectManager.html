@@ -25,7 +25,7 @@
             <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="..&#x2F;../index.html">Brackets API</a>
+            <a class="brand" href="..&#x2F;../index.html"> API</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li><a href="#dependencies">Dependencies</a></li>
@@ -603,7 +603,7 @@
                         <div id="description">
                             <p>ProjectManager is the model for the set of currently open project. It is responsible for<br />creating and updating the project tree when projects are opened and when changes occur to<br />the file tree.</p>
 
-<p>This module dispatches these events:<br />   - beforeProjectClose -- before _projectRoot changes<br />   - beforeAppClose     -- before Brackets quits entirely<br />   - projectOpen        -- after _projectRoot changes and the tree is re-rendered<br />   - projectRefresh     -- when project tree is re-rendered for a reason other than<br />                           a project being opened (e.g. from the Refresh command)</p>
+<p>This module dispatches these events:<br />   - beforeProjectClose -- before _projectRoot changes, but working set files still open<br />   - projectClose       -- <em>just</em> before _projectRoot changes; working set already cleared &amp; project root unwatched<br />   - beforeAppClose     -- before Brackets quits entirely<br />   - projectOpen        -- after _projectRoot changes and the tree is re-rendered<br />   - projectRefresh     -- when project tree is re-rendered for a reason other than<br />                           a project being opened (e.g. from the Refresh command)</p>
 
 <p>These are jQuery events, so to listen for them you do something like this:<br />   $(ProjectManager).on("eventname", handler);</p>
                         </div>
@@ -786,6 +786,8 @@
                                 <dl>
                                         <dt>See</dt>
                                             <dd><a href='#'>getProjectRoot()</a></dd>
+                                        <dt>Type</dt>
+                                            <dd>Directory</dd>
                                         <dt>Private</dt>
                                 </dl>
                                 <p></p>
@@ -976,18 +978,6 @@
         &quot;welcomeProjects&quot;: &quot;user&quot;,
         &quot;projectBaseUrl_&quot;: &quot;user&quot;
     }, true, _checkPreferencePrefix);
-    
-    function _reloadProjectPreferencesScope() {
-        var root = getProjectRoot();
-        if (root) {
-            &#x2F;&#x2F; Alias the &quot;project&quot; Scope to the path Scope for the project-level settings file
-            PreferencesManager._setProjectSettingsFile(root.fullPath + SETTINGS_FILENAME);
-        } else {
-            PreferencesManager._setProjectSettingsFile();
-        }
-    }
-    
-    $(exports).on(&quot;projectOpen&quot;, _reloadProjectPreferencesScope);
     
     &#x2F;&#x2F; Initialize the sort prefixes and make sure to change them when the sort pref changes
     _generateSortPrefixes();
@@ -1611,8 +1601,9 @@
             if (_projectRoot &amp;&amp; _projectRoot.fullPath === rootPath) {
                 return (new $.Deferred()).resolve().promise();
             }
+            
+            &#x2F;&#x2F; About to close current project (if any)
             if (_projectRoot) {
-                &#x2F;&#x2F; close current project
                 $(exports).triggerHandler(&quot;beforeProjectClose&quot;, _projectRoot);
             }
             
@@ -1620,6 +1611,11 @@
             DocumentManager.closeAll();
     
             _unwatchProjectRoot().always(function () {
+                &#x2F;&#x2F; Done closing old project (if any)
+                if (_projectRoot) {
+                    $(exports).triggerHandler(&quot;projectClose&quot;, _projectRoot);
+                }
+                
                 startLoad.resolve();
             });
         }
@@ -1710,6 +1706,26 @@
             }, deferred.reject);
 
         return deferred.promise();
+    }</code></pre>
+                        </div>
+                        <div class="member private">
+                            <span class="pull-right scope">
+                                Private
+                                
+                            </span>
+                            <h4>_reloadProjectPreferencesScope</h4>
+                            <em><p>Reloads the project preferences.</p></em>
+                            <dl>
+                            </dl>
+                            <button class="btn btn-small show-code">Show code</button>
+                            <pre class="code"><code>function _reloadProjectPreferencesScope() {
+        var root = getProjectRoot();
+        if (root) {
+            &#x2F;&#x2F; Alias the &quot;project&quot; Scope to the path Scope for the project-level settings file
+            PreferencesManager._setProjectSettingsFile(root.fullPath + SETTINGS_FILENAME);
+        } else {
+            PreferencesManager._setProjectSettingsFile();
+        }
     }</code></pre>
                         </div>
                         <div class="member private">
@@ -1864,15 +1880,15 @@
                 var events        = $._data(_projectTree[0], &quot;events&quot;),
                     eventsForType = events ? events[type] : null,
                     event         = eventsForType ? _.find(eventsForType, function (e) {
-                                        return e.namespace === namespace &amp;&amp; e.selector === selector;
-                                    }) : null,
+                        return e.namespace === namespace &amp;&amp; e.selector === selector;
+                    }) : null,
                     eventHandler  = event ? event.handler : null;
                 if (!eventHandler) {
                     console.error(type + &quot;.&quot; + namespace + &quot; &quot; + selector + &quot; handler not found!&quot;);
                 }
                 return eventHandler;
             };
-            var createCustomHandler = function(originalHandler) {
+            var createCustomHandler = function (originalHandler) {
                 return function (event) {
                     var $node = $(event.target).parent(&quot;li&quot;),
                         methodName;
