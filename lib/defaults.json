@@ -4,10 +4,11 @@
         "/.js$/"
     ],
     "excludes": [
-        "thirdparty",
+        "extensions",
+        "nls",
         "node_modules",
-        "unittest",
-        "nls"
+        "thirdparty",
+        "unittest"
     ],
     "templates": {
         "filelist": "/../templates/filelist.html",
