@@ -1,17 +1,17 @@
-<ul class="nav nav-list">
-    <li class="nav-header">
-        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules ({{fileset.length}})</a>
-    </li>
-</ul>
-{{#fileset.groups}}
-<ul class="nav nav-list package-list">
-    <li class="nav-header">
-        <a href="javascript:;" class="toggle-package" data-package="package_{{ns_class}}"><i class="icon-folder-open"></i>{{ns}}</a>
-    </li>
-</ul>
-<ul id="package_{{ns_class}}" class="nav nav-list">
-    {{#files}}
-    <li><a href="{{{level}}}/modules/{{{docPath}}}{{name}}.html">{{name}}</a></li>
-    {{/files}}
-</ul>                
-{{/fileset.groups}}
+            <ul class="nav nav-list">
+              <li class="nav-header">
+                <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules ({{fileset.length}})</a>
+              </li>
+            </ul>
+            {{#fileset.groups}}
+            <ul class="nav nav-list package-list">
+              <li class="nav-header">
+                <a href="javascript:;" class="toggle-package" data-package="package_{{ns_class}}"><i class="icon-folder-open"></i>{{ns}}</a>
+              </li>
+            </ul>
+            <ul id="package_{{ns_class}}" class="nav nav-list">
+              {{#files}}
+              <li><a href="{{{level}}}/modules/{{{docPath}}}{{name}}.html">{{name}}</a></li>
+              {{/files}}
+            </ul>
+            {{/fileset.groups}}

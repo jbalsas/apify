@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>{{name}}</title>
-        <link rel="stylesheet" href="assets/css/bootstrap.css">
-        <link rel="stylesheet" href="assets/css/typeahead.js-bootstrap.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.css">
-        <link rel="stylesheet" href="assets/css/main.css">
-        <!--[if IE 7]>
-        <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
-        <![endif]-->
-        <script type="text/javascript" src="assets/js/jquery-1.9.1.js"></script>
-        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-        <script type="text/javascript" src="assets/js/typeahead.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
-        <script>
-            window.moduleLevel = ".";
-        </script>
-    </head>
-    <body>
-        {{{fragments.navbar}}}
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span12">
-                    <div class="page-header">
-                        <h1>{{title}} API</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row-fluid">
-                <div class="span12">
-                    <h2>Modules ({{fileset.length}})</h2>
-                    {{{fragments.filelist}}}
-                </div>
-            </div>
-        </div>        
-    </body>
+  <head>
+    <title>{{name}}</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/typeahead.js-bootstrap.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="assets/js/typeahead.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+      window.moduleLevel = ".";
+    </script>
+  </head>
+  <body>
+{{{fragments.navbar}}}
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="page-header">
+            <h1>{{title}} API</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <h2>Modules ({{fileset.length}})</h2>
+{{{fragments.filelist}}}
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
