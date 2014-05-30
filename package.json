@@ -7,7 +7,7 @@
     "dependencies" : {
         "commander" : "1.1.x",
         "deferred"  : "0.6.x",
-        "dox"       : "https://github.com/jbalsas/dox/tarball/master",
+        "dox"       : "https://github.com/jbalsas/dox/tarball/jbalsas/update_0.4.4",
         "find"      : "0.1.4",
         "filequeue" : "0.1.x",
         "fmerge"    : "1.0.x",
