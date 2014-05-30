@@ -37,14 +37,15 @@
 {{{fragments.filelist}}}
           </div>
         </div>
-        <div class="span9">
-          <section>
-            <div id="description">
+        <div class="module span9">
+          <section class="description">
+            <h3>Description</h3>
+            <div>
               {{{module.description}}}
             </div>
           </section>
     
-          <section id="dependencies">
+          <section class="dependencies">
             <h3>Dependencies</h3>
             
             {{#module.dependencies.length}}
@@ -62,7 +63,7 @@
           </section>
     
           {{#module.variables.length}}
-            <section id="variables">
+            <section class="variables">
               <h3>Variables 
                 <label class="checkbox">
                   <input class="toggle-public" type="checkbox"> Show Private Members
@@ -87,7 +88,7 @@
                   {{/.}}
                 {{/tags}}
                 </dl>
-                {{{description.full}}}
+                <div class="description">{{{description.full}}}</div>
                 <button class="btn btn-small show-code">Show code</button>
                 <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
               </div>
@@ -97,7 +98,7 @@
           {{/module.variables.length}}
     
           {{#module.functions.length}}
-          <section id="functions">
+          <section class="functions">
             <h3>Functions 
               <label class="checkbox">
                 <input class="toggle-public" type="checkbox"> Show Private Members
@@ -111,7 +112,7 @@
                 {{#isPublicAPI}}Public API{{/isPublicAPI}}
               </span>
               <h4>{{ctx.name}}</h4>
-              <em>{{{description.full}}}</em>
+              <div class="description">{{{description.full}}}</div>
               <dl>
                 {{#params}}
                   <dt>{{name}}</dt>
@@ -131,7 +132,7 @@
           {{/module.functions.length}}
           
           {{#module.classes.length}}
-          <section id="classes">
+          <section class="classes">
             <h2>Classes</h2>
             
             {{#module.classes}}
@@ -179,7 +180,7 @@
                       {{/.}}
                       {{/tags}}
                     </dl>
-                    {{{description.full}}}
+                    <div class="description">{{{description.full}}}</div>
                     <button class="btn btn-small show-code">Show code</button>
                     <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
                   </div>
@@ -203,7 +204,7 @@
                       {{#isPublicAPI}}Public API{{/isPublicAPI}}
                     </span>
                     <h4>{{ctx.name}}</h4>
-                    <em>{{{description.full}}}</em>
+                    <div class="description">{{{description.full}}}</div>
                     <dl>
                       {{#params}}
                       <dt>{{name}}</dt>

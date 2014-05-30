@@ -504,9 +504,20 @@ body{
 .nav-header{
 }
 
-#description {
+.module > .description {
     font-size: 16px;
     line-height: 22px;
+}
+
+.module > .description > h3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 section > h2,
@@ -524,11 +535,11 @@ h3 .checkbox{
     vertical-align: middle;
     width: auto;
 }
-#dependencies ul{
+.module > .dependencies ul{
     margin: 0;
     padding: 0;
 }
-#dependencies ul li {
+.module > .dependencies ul li {
     display: inline-block;
     padding: 4px 12px;
     margin-bottom: 10px;
@@ -546,11 +557,11 @@ h3 .checkbox{
        -moz-border-radius: 3px;
             border-radius: 3px;
 }
-#dependencies ul li a {
+.module > .dependencies ul li a {
     padding-top:0;
     padding-bottom:0;
 }
-#dependencies ul li a:hover {
+.module > .dependencies ul li a:hover {
     background: transparent;
 }
 .member{
@@ -586,6 +597,9 @@ h3 .checkbox{
 }
 .show-private .member.private{
     display: block;
+}
+.member .description {
+    font-style: italic;
 }
 .member .scope{
     color: #888;
