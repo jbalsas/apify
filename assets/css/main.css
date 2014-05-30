@@ -573,7 +573,7 @@ h3 .checkbox{
     margin-top: -10px;
 
 }
-.member pre.highlight-code{
+.member pre[class*="language-"]{
     background: #f9f9f9;
     border: 1px solid #eee;
     border-top: 1px solid #e7e7e7;

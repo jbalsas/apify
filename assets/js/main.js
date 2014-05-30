@@ -1,6 +1,6 @@
 $(function () {
     $(".show-code").click(function () {
-        var block = $(this).parent().find('pre.highlight-code');
+        var block = $(this).parent().find('pre[class*="language-"]');
         block.toggle();
         if (block.is(":visible")) {
             $(this).html("Hide code");
