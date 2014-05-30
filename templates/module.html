@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{{level}}}/assets/css/bootstrap.css">
     <link rel="stylesheet" href="{{{level}}}/assets/css/typeahead.js-bootstrap.css">
     <link rel="stylesheet" href="{{{level}}}/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="{{{level}}}/assets/css/highlight.css">
+    <link rel="stylesheet" href="{{{level}}}/assets/css/prism.css">
     <link rel="stylesheet" href="{{{level}}}/assets/css/main.css">
     <!--[if IE 7]>
     <link rel="stylesheet" href="../assets/css/font-awesome-ie7.css">
@@ -13,7 +13,6 @@
     <script type="text/javascript" src="{{{level}}}/assets/js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="{{{level}}}/assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="{{{level}}}/assets/js/typeahead.js"></script>
-    <script type="text/javascript" src="{{{level}}}/assets/js/highlight.pack.js"></script>
     <script type="text/javascript" src="{{{level}}}/assets/js/main.js"></script>
     
     <script>
@@ -90,7 +89,7 @@
                 </dl>
                 {{{description.full}}}
                 <button class="btn btn-small show-code">Show code</button>
-                <pre class="code"><code>{{code}}</code></pre>
+                <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
               </div>
               {{/module.variables}}
               
@@ -124,7 +123,7 @@
                 {{/params}}
               </dl>
               <button class="btn btn-small show-code">Show code</button>
-              <pre class="code"><code>{{code}}</code></pre>
+              <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
             </div>
             {{/module.functions}}
             
@@ -152,7 +151,7 @@
                   </dl>
                   
                   <button class="btn btn-small show-code">Show code</button>
-                  <pre class="code"><code>{{constructor.code}}</code></pre>
+                  <pre class="language-javascript"><code class="language-javascript">{{constructor.code}}</code></pre>
                 </div>
       
                 {{#properties.length}}
@@ -182,7 +181,7 @@
                     </dl>
                     {{{description.full}}}
                     <button class="btn btn-small show-code">Show code</button>
-                    <pre class="code"><code>{{code}}</code></pre>
+                    <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
                   </div>
                   {{/properties}}
                   
@@ -220,7 +219,7 @@
                       {{/returns}}
                     </dl>
                     <button class="btn btn-small show-code">Show code</button>
-                    <pre class="code"><code>{{code}}</code></pre>
+                    <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
                   </div>
                   {{/methods}}
                 </section>
@@ -235,7 +234,7 @@
         </div>
       </div>
     </div>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script type="text/javascript" src="{{{level}}}/assets/js/prism.js"></script>
   </body>
 </html>

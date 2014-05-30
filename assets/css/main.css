@@ -573,12 +573,11 @@ h3 .checkbox{
     margin-top: -10px;
 
 }
-.member .code{
+.member pre[class*="language-"]{
     background: #f9f9f9;
     border: 1px solid #eee;
     border-top: 1px solid #e7e7e7;
     display: none;
-    margin-top: 10px;
     margin-bottom: 0;
 }
 .member.private{
@@ -597,6 +596,7 @@ h3 .checkbox{
 
 .show-code {
     float: right;
+    margin: 10px;
 }
 
 /* Typeahead styles (Bootstrap conflicts) */
