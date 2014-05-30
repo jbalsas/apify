@@ -37,14 +37,15 @@
 {{{fragments.filelist}}}
           </div>
         </div>
-        <div class="span9">
-          <section>
-            <div id="description">
+        <div class="module span9">
+          <section class="description">
+            <h3>Description</h3>
+            <div>
               {{{module.description}}}
             </div>
           </section>
     
-          <section id="dependencies">
+          <section class="dependencies">
             <h3>Dependencies</h3>
             
             {{#module.dependencies.length}}
@@ -62,7 +63,7 @@
           </section>
     
           {{#module.variables.length}}
-            <section id="variables">
+            <section class="variables">
               <h3>Variables 
                 <label class="checkbox">
                   <input class="toggle-public" type="checkbox"> Show Private Members
@@ -97,7 +98,7 @@
           {{/module.variables.length}}
     
           {{#module.functions.length}}
-          <section id="functions">
+          <section class="functions">
             <h3>Functions 
               <label class="checkbox">
                 <input class="toggle-public" type="checkbox"> Show Private Members
@@ -131,7 +132,7 @@
           {{/module.functions.length}}
           
           {{#module.classes.length}}
-          <section id="classes">
+          <section class="classes">
             <h2>Classes</h2>
             
             {{#module.classes}}
