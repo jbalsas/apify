@@ -587,6 +587,9 @@ h3 .checkbox{
 .show-private .member.private{
     display: block;
 }
+.member .description {
+    font-style: italic;
+}
 .member .scope{
     color: #888;
     font-style: italic;

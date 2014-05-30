@@ -87,7 +87,7 @@
                   {{/.}}
                 {{/tags}}
                 </dl>
-                {{{description.full}}}
+                <div class="description">{{{description.full}}}</div>
                 <button class="btn btn-small show-code">Show code</button>
                 <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
               </div>
@@ -111,7 +111,7 @@
                 {{#isPublicAPI}}Public API{{/isPublicAPI}}
               </span>
               <h4>{{ctx.name}}</h4>
-              <em>{{{description.full}}}</em>
+              <div class="description">{{{description.full}}}</div>
               <dl>
                 {{#params}}
                   <dt>{{name}}</dt>
@@ -179,7 +179,7 @@
                       {{/.}}
                       {{/tags}}
                     </dl>
-                    {{{description.full}}}
+                    <div class="description">{{{description.full}}}</div>
                     <button class="btn btn-small show-code">Show code</button>
                     <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
                   </div>
@@ -203,7 +203,7 @@
                       {{#isPublicAPI}}Public API{{/isPublicAPI}}
                     </span>
                     <h4>{{ctx.name}}</h4>
-                    <em>{{{description.full}}}</em>
+                    <div class="description">{{{description.full}}}</div>
                     <dl>
                       {{#params}}
                       <dt>{{name}}</dt>
