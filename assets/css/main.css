@@ -573,6 +573,9 @@ h3 .checkbox{
     margin-top: -10px;
 
 }
+.member > p {
+    font-style: italic;
+}
 .member .code{
     background: #f9f9f9;
     border: 1px solid #eee;
