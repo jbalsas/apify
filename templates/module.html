@@ -123,6 +123,13 @@
                   <dd>{{{description}}}</dd>
                 {{/params}}
               </dl>
+              <dl>
+                {{#returns}}
+                <dt>Returns: </dt>
+                <dd class="label label-info pull-left">{{types}}</dd>
+                <dd>{{{description}}}</dd>
+                {{/returns}}
+              </dl>
               <button class="btn btn-small show-code">Show code</button>
               <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
             </div>
