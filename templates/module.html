@@ -71,7 +71,7 @@
               </h3>
               
               {{#module.variables}}
-              <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+              <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}{{#isDeprecated}} deprecated{{/isDeprecated}}">
       
                 <span class="pull-right scope">
                   {{#isPrivate}}Private{{/isPrivate}}
@@ -106,7 +106,7 @@
             </h3>
             
             {{#module.functions}}
-            <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+            <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}{{#isDeprecated}} deprecated{{/isDeprecated}}">
               <span class="pull-right scope">
                 {{#isPrivate}}Private{{/isPrivate}}
                 {{#isPublicAPI}}Public API{{/isPublicAPI}}
@@ -171,7 +171,7 @@
                   </h3>
                   
                   {{#properties}}
-                  <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+                  <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}{{#isDeprecated}} deprecated{{/isDeprecated}}">
                     <span class="pull-right scope">
                       {{#isPrivate}}Private{{/isPrivate}}
                       {{#isPublicAPI}}Public API{{/isPublicAPI}}
@@ -205,7 +205,7 @@
                   </h3>
                   
                   {{#methods}}
-                  <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}">
+                  <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}{{#isDeprecated}} deprecated{{/isDeprecated}}">
                     <span class="pull-right scope">
                       {{#isPrivate}}Private{{/isPrivate}}
                       {{#isPublicAPI}}Public API{{/isPublicAPI}}
