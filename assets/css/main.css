@@ -11,6 +11,11 @@ body {
   background-color: #F8F8F8;
 }
 
+.module, .left-section {
+    overflow-y: auto;
+    height: calc(100vh - 195px);
+}
+
 a {
   color: #0083e8;    
 }
