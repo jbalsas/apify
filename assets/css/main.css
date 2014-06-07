@@ -607,14 +607,12 @@ h3 .checkbox{
 }
 
 .deprecated {
-  background: #EBEBEB;
-  background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
+    background: #EBEBEB;
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
 }
 
-.deprecated h4:before {
-  color: #454545;
-  content: '(Deprecated) ';
-  font-weight: 600;
+.deprecated .label-deprecated {
+    margin-right: 10px;
 }
 
 .deprecated .scope {
