@@ -621,7 +621,8 @@ h3 .checkbox{
     margin-top: -10px;
     margin-bottom: 10px;
 }
-.member .code{
+.member .code,
+.member .code {
     background: #f9f9f9;
     border: 1px solid #eee;
     border-top: 1px solid #e7e7e7;

@@ -14,7 +14,7 @@
     <script type="text/javascript" src="{{{level}}}/assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="{{{level}}}/assets/js/typeahead.js"></script>
     <script type="text/javascript" src="{{{level}}}/assets/js/main.js"></script>
-    <script src="//use.edgefonts.net/source-sans-pro:n3,i3,n4,i4;source-code-pro.js"></script>
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4;source-code-pro.js"></script>
 
     <!-- Control the Flash of Unstyled Text (or FOUT) -->
     <style type="text/css">
@@ -48,7 +48,7 @@
             </div>
           </section>
     
-          <section class="dependencies">
+          <section id="dependencies">
             <h3>Dependencies</h3>
             
             {{#module.dependencies.length}}
@@ -93,7 +93,7 @@
                 </dl>
                 <div class="description">{{{description.full}}}</div>
                 <button class="btn btn-small show-code">Show code</button>
-                <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
+                <pre class="code language-javascript"><code class="language-javascript">{{code}}</code></pre>
               </div>
               {{/module.variables}}
               
