@@ -549,6 +549,7 @@ body{
 #toggle-other-modules i{
     font-size: 28px;
 }
+
 .nav-header{
 }
 
@@ -649,6 +650,19 @@ h3 .checkbox{
     font-style: italic;
     padding-bottom: 10px;
     margin-top: -10px;
+}
+
+.deprecated {
+    background: #EBEBEB;
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
+}
+
+.deprecated .label-deprecated {
+    margin-right: 10px;
+}
+
+.deprecated .scope {
+    text-decoration: line-through;
 }
 
 .show-code {
