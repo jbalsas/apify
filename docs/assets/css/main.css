@@ -3,16 +3,15 @@
 
 body {
   margin: 0;
-  font-family: source-sans-pro, Helvetica, Arial, sans-serif;
+  font-family: source-sans-pro, Helvetica, Arial, sans-serif !imporant;
   font-size: 14px;
   font-weight: 300;
-  line-height: 20px;
-  color: #454545;
+  color: #333;
   background-color: #F8F8F8;
 }
 
 a {
-  color: #0083e8;    
+  color: #288edf;
 }
 
 a:focus {
@@ -66,7 +65,7 @@ h3 {
 }
 
 h1 {
-  font-size: 38.5px;
+  font-size: 30px;
 }
 
 h2 {
@@ -489,8 +488,15 @@ input[type="color"]:focus,
 }
 body{
     padding-bottom: 40px;
-    padding-top: 40px;
+    padding-top: 70px;
 }
+
+.number-of-modules {
+    font-size: 14px;
+    line-height: 1.5em;
+    margin: 16px 0 0;
+}
+
 #other-module{
     display: none;
     overflow: scroll;
@@ -502,7 +508,7 @@ body{
 }
 
 #description {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
 }
 
