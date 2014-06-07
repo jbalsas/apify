@@ -37,6 +37,12 @@ pre {
           border-radius: 3px;
 }
 
+p code,
+p pre {
+    border-radius: 2px;
+    padding: 0;
+}
+
 h1,
 h2,
 h3,
