@@ -611,7 +611,13 @@ h3 .checkbox{
   background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
 }
 
-.deprecated h4, .deprecated .scope {
+.deprecated h4:before {
+  color: #454545;
+  content: '(Deprecated) ';
+  font-weight: 600;
+}
+
+.deprecated .scope {
     text-decoration: line-through;
 }
 
