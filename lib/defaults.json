@@ -1,4 +1,7 @@
 {
+    "content": {
+        "index": "README.md"
+    },
     "language": "js",
     "includes": [
         "/.js$/"
