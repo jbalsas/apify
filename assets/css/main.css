@@ -499,13 +499,6 @@ body{
     padding-bottom: 40px;
     padding-top: 40px;
 }
-#other-module{
-    display: none;
-    overflow: scroll;
-}
-#toggle-other-modules i{
-    font-size: 28px;
-}
 .nav-header{
 }
 
