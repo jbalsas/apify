@@ -15,8 +15,8 @@
         "index": {
             "main": "/../templates/index/main.html",
             "partials": {
-                "filelist": "/../templates/filelist.html",
-                "navbar": "/../templates/navbar.html"
+                "filelist": "/../templates/navigation/filelist.html",
+                "navbar": "/../templates/navigation/navbar.html"
             }
         },
         "module": {
@@ -34,8 +34,8 @@
                 "tags": "/../templates/module/tags.html",
                 "variables": "/../templates/module/variables.html",
                 
-                "filelist": "/../templates/filelist.html",
-                "navbar": "/../templates/navbar.html"
+                "filelist": "/../templates/navigation/filelist.html",
+                "navbar": "/../templates/navigation/navbar.html"
             }
         }
     },
