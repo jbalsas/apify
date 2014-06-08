@@ -7,6 +7,37 @@
 </section>
 
 {{> dependencies}}
-{{> variables}}
-{{> functions}}
+
+{{#module.variables.length}}
+<section id="variables">
+    
+    <h3>Variables 
+        <label class="checkbox">
+            <input class="toggle-public" type="checkbox"> Show Private Members
+        </label>
+    </h3>
+
+    {{#module.variables}}
+        {{> variable}}
+    {{/module.variables}}
+
+</section>
+{{/module.variables.length}}
+
+{{#module.functions.length}}
+<section id="functions">
+
+    <h3>Functions 
+        <label class="checkbox">
+            <input class="toggle-public" type="checkbox"> Show Private Members
+        </label>
+    </h3>
+
+    {{#module.functions}}
+        {{> function}}
+    {{/module.functions}}
+
+</section>
+{{/module.functions.length}}
+
 {{> classes}}

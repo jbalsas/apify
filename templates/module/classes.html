@@ -1,32 +1,63 @@
 {{#module.classes.length}}
 <section id="classes">
-  <h2>Classes</h2>
+    
+    <h2>Classes</h2>
 
-  {{#module.classes}}
+    {{#module.classes}}
     <div class="well">
-      <div class="member public">
-        <span class="pull-right scope">
-          Constructor
-        </span>
-        <h4>{{constructor.ctx.name}}</h4>
-        <em>{{{constructor.description.full}}}</em>
-        <dl>
-          {{#constructor.params}}
-          <dt>{{name}}</dt>
-          <dd class="label label-info pull-left">{{types}}</dd>
-          <dd>{{{description}}}</dd>
-          {{/constructor.params}}
-        </dl>
+        <div class="member public">
+            
+            <span class="pull-right scope">Constructor</span>
+            
+            <h4>{{constructor.ctx.name}}</h4>
+            <em>{{{constructor.description.full}}}</em>
+            
+            <dl>
+                {{#constructor.params}}
+                <dt>{{name}}</dt>
+                <dd class="label label-info pull-left">{{types}}</dd>
+                <dd>{{{description}}}</dd>
+                {{/constructor.params}}
+            </dl>
 
-        <button class="btn btn-small show-code">Show cod e</button>
-        <pre class="code language-javascript"><code class="language-javascript">{{constructor.code}}</code></pre>
-      </div>
+            <button class="btn btn-small show-code">Show code</button>
+            <pre class="code language-javascript"><code class="language-javascript">{{constructor.code}}</code></pre>
+        </div>
+        
+        {{#properties.length}}
+        <section class="properties {{hasProperties}}">
 
-      {{> properties}}
-      {{> methods}}
+            <h3>Properties 
+                <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label>
+            </h3>
+
+            {{#properties}}
+                {{> variable}}
+            {{/properties}}
+
+        </section>
+        {{/properties.length}}
+
+        {{#methods.length}}
+        <section class="methods">
+
+            <h3>Methods 
+                <label class="checkbox">
+                    <input class="toggle-public" type="checkbox"> Show Private Members
+                </label>
+            </h3>
+
+            {{#methods}}
+                {{> function}}
+            {{/methods}}
+
+        </section>
+        {{/methods.length}}
 
     </div>
-  {{/module.classes}}
+    {{/module.classes}}
 
 </section>
 {{/module.classes.length}}

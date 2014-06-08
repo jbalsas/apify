@@ -25,15 +25,13 @@
                 "classes": "/../templates/module/classes.html",
                 "code": "/../templates/module/code.html",
                 "dependencies": "/../templates/module/dependencies.html",
-                "functions": "/../templates/module/functions.html",
-                "methods": "/../templates/module/methods.html",
+                "function": "/../templates/module/function.html",
                 "module": "/../templates/module/module.html",
                 "params": "/../templates/module/params.html",
-                "properties": "/../templates/module/properties.html",
                 "returns": "/../templates/module/returns.html",
                 "scope": "/../templates/module/scope.html",
                 "tags": "/../templates/module/tags.html",
-                "variables": "/../templates/module/variables.html",
+                "variable": "/../templates/module/variable.html",
                 
                 "filelist": "/../templates/navigation/filelist.html",
                 "navbar": "/../templates/navigation/navbar.html"
