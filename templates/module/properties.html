@@ -10,10 +10,7 @@
     {{#properties}}
     <div class="member{{#isPrivate}} private{{/isPrivate}}{{#isPublicAPI}} public{{/isPublicAPI}}{{#isDeprecated}} deprecated{{/isDeprecated}}">
 
-        <span class="pull-right scope">
-            {{#isPrivate}}Private{{/isPrivate}}
-            {{#isPublicAPI}}Public API{{/isPublicAPI}}
-        </span>
+        {{> scope}}
 
         <h4>{{#isDeprecated}}<span class="label label-deprecated label-inverse">deprecated</span>{{/isDeprecated}}{{ctx.name}}</h4>
 

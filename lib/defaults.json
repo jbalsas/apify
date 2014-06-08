@@ -31,6 +31,7 @@
                 "params": "/../templates/module/params.html",
                 "properties": "/../templates/module/properties.html",
                 "returns": "/../templates/module/returns.html",
+                "scope": "/../templates/module/scope.html",
                 "tags": "/../templates/module/tags.html",
                 "variables": "/../templates/module/variables.html",
                 
