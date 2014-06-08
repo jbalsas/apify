@@ -13,7 +13,7 @@ body {
 
 .module, .left-section {
     overflow-y: auto;
-    height: calc(100vh - 195px);
+    height: calc(100vh - 95px);
 }
 
 a {
@@ -43,7 +43,9 @@ pre {
 }
 
 p code,
-p pre {
+p pre,
+li code,
+li pre {
     border-radius: 2px;
     padding: 0;
 }
@@ -532,19 +534,6 @@ input[type="color"]:focus,
 /* non-bootstrap css
 ---------------------------------------------------------*/
 
-/* This offsets the anchor links so they won't go behind the fixed top nav bar */
-
-#dependencies:before,
-#variables:before,
-#functions:before,
-#classes:before {
-  display: block;
-  content: " ";
-  margin-top: -285px;
-  height: 285px;
-  visibility: hidden;
-}
-
 [class^="icon-"]{
     background: none;
 }
@@ -557,7 +546,7 @@ body{
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5em;
-    margin: 0;
+    margin: 20px 0 0;
 }
 
 #other-module{
