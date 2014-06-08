@@ -11,6 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.module, .left-section {
+    overflow-y: auto;
+    height: calc(100vh - 195px);
+}
+
 a {
   color: #137cd4;
 }
@@ -549,7 +554,6 @@ body{
 #toggle-other-modules i{
     font-size: 28px;
 }
-
 .nav-header{
 }
 
