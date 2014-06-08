@@ -31,6 +31,7 @@
                 "returns": "/../templates/module/returns.html",
                 "scope": "/../templates/module/scope.html",
                 "tags": "/../templates/module/tags.html",
+                "toggle_scope": "/../templates/module/toggle_scope.html",
                 "variable": "/../templates/module/variable.html",
                 
                 "filelist": "/../templates/navigation/filelist.html",

@@ -12,9 +12,9 @@
 <section id="variables">
     
     <h3>Variables 
-        <label class="checkbox">
-            <input class="toggle-public" type="checkbox"> Show Private Members
-        </label>
+        {{#module.variables.length}}
+            {{> toggle_scope}}
+        {{/module.variables.length}}
     </h3>
 
     {{#module.variables}}
@@ -28,9 +28,9 @@
 <section id="functions">
 
     <h3>Functions 
-        <label class="checkbox">
-            <input class="toggle-public" type="checkbox"> Show Private Members
-        </label>
+        {{#module.functions.length}}
+            {{> toggle_scope}}
+        {{/module.functions.length}}
     </h3>
 
     {{#module.functions}}

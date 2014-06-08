@@ -28,9 +28,9 @@
         <section class="properties {{hasProperties}}">
 
             <h3>Properties 
-                <label class="checkbox">
-                    <input class="toggle-public" type="checkbox"> Show Private Members
-                </label>
+                {{#properties.length}}
+                    {{> toggle_scope}}
+                {{/properties.length}}
             </h3>
 
             {{#properties}}
@@ -44,9 +44,9 @@
         <section class="methods">
 
             <h3>Methods 
-                <label class="checkbox">
-                    <input class="toggle-public" type="checkbox"> Show Private Members
-                </label>
+                {{#methods.length}}
+                    {{> toggle_scope}}
+                {{/methods.length}}
             </h3>
 
             {{#methods}}
