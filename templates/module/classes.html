@@ -1,0 +1,32 @@
+{{#module.classes.length}}
+<section id="classes">
+  <h2>Classes</h2>
+
+  {{#module.classes}}
+    <div class="well">
+      <div class="member public">
+        <span class="pull-right scope">
+          Constructor
+        </span>
+        <h4>{{constructor.ctx.name}}</h4>
+        <em>{{{constructor.description.full}}}</em>
+        <dl>
+          {{#constructor.params}}
+          <dt>{{name}}</dt>
+          <dd class="label label-info pull-left">{{types}}</dd>
+          <dd>{{{description}}}</dd>
+          {{/constructor.params}}
+        </dl>
+
+        <button class="btn btn-small show-code">Show cod e</button>
+        <pre class="code language-javascript"><code class="language-javascript">{{constructor.code}}</code></pre>
+      </div>
+
+      {{> properties}}
+      {{> methods}}
+
+    </div>
+  {{/module.classes}}
+
+</section>
+{{/module.classes.length}}

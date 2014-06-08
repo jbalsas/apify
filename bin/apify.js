@@ -8,18 +8,24 @@ var defaults    = require("../lib/defaults.json"),
     merge       = require("fmerge"),
     path        = require("path"),
     program     = require("commander"),
+    _           = require("underscore")._,
     config;
 
 function parseExcludes(list) {
     return list.split(",");
 }
 
-// Resolve absolute path for default templates and assets
-var templates = Object.keys(defaults.templates);
-templates.forEach(function (templateName) {
-    defaults.templates[templateName] = __dirname + defaults.templates[templateName];
-});
+function resolvePaths(collection) {
+    var paths = {};
 
+    _.each(collection, function(item, index) {
+        paths[index] = _.isString(item) ? (__dirname + item) : resolvePaths(item);
+    });
+
+    return paths;
+}
+
+defaults.templates = resolvePaths(defaults.templates);
 defaults.assets = __dirname + defaults.assets;
 
 program
