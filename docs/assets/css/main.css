@@ -532,6 +532,19 @@ input[type="color"]:focus,
 /* non-bootstrap css
 ---------------------------------------------------------*/
 
+/* This offsets the anchor links so they won't go behind the fixed top nav bar */
+
+#dependencies:before,
+#variables:before,
+#functions:before,
+#classes:before {
+  display: block;
+  content: " ";
+  margin-top: -285px;
+  height: 285px;
+  visibility: hidden;
+}
+
 [class^="icon-"]{
     background: none;
 }

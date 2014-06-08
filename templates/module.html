@@ -66,7 +66,7 @@
           </section>
     
           {{#module.variables.length}}
-            <section class="variables">
+            <section id="variables">
               <h3>Variables 
                 <label class="checkbox">
                   <input class="toggle-public" type="checkbox"> Show Private Members
@@ -101,7 +101,7 @@
           {{/module.variables.length}}
     
           {{#module.functions.length}}
-          <section class="functions">
+          <section id="functions">
             <h3>Functions 
               <label class="checkbox">
                 <input class="toggle-public" type="checkbox"> Show Private Members
@@ -142,7 +142,7 @@
           {{/module.functions.length}}
           
           {{#module.classes.length}}
-          <section class="classes">
+          <section id="classes">
             <h2>Classes</h2>
             
             {{#module.classes}}
