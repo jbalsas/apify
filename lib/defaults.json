@@ -12,8 +12,13 @@
         "unittest"
     ],
     "templates": {
-        "filelist": "/../templates/filelist.html",
-        "index": "/../templates/index.html",
+        "index": {
+            "main": "/../templates/index/main.html",
+            "partials": {
+                "filelist": "/../templates/filelist.html",
+                "navbar": "/../templates/navbar.html"
+            }
+        },
         "module": {
             "main": "/../templates/module/main.html",
             "partials": {
@@ -32,8 +37,7 @@
                 "filelist": "/../templates/filelist.html",
                 "navbar": "/../templates/navbar.html"
             }
-        },
-        "navbar": "/../templates/navbar.html"
+        }
     },
     "assets": "/../assets"
 }
