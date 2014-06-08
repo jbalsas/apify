@@ -15,6 +15,15 @@
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/typeahead.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/highlight.pack.js"></script>
         <script type="text/javascript" src="..&#x2F;..&#x2F;../assets/js/main.js"></script>
+        <script src="//use.edgefonts.net/source-sans-pro:n3,i3,n4,i4;source-code-pro.js"></script>
+
+        <!-- Control the Flash of Unstyled Text (or FOUT) -->
+        <style type="text/css">
+            .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4,
+            .wf-loading h5, .wf-loading h6, .wf-loading p, .wf-loading a {
+                visibility: hidden;
+            }
+        </style>
         
         <script>
             window.moduleLevel = "../../..";
@@ -41,20 +50,9 @@
         </div>
         <div class="container-fluid">
             <div class="row-fluid">
-                <div class="span12">
-                    <div class="page-header">
-                        <h1>ModuleParser</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row-fluid">
                 <div class="span3">
                     <div class="left-section">
-                        <ul class="nav nav-list">
-    <li class="nav-header">
-        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (8)</a>
-    </li>
-</ul>
+                        <h2 class="number-of-modules">Modules (8)</h2>
 <ul class="nav nav-list package-list">
     <li class="nav-header">
         <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
@@ -88,6 +86,7 @@
                     </div>
                 </div>
                 <div class="span9">
+                    <h1>ModuleParser</h1>
                     <section>
                         <div id="description">
                             <p>Default JS parser for the modules on the documented fileset.<br />Parses the file data using dox, and then runs the output through the different registered processors.</p>

@@ -13,6 +13,16 @@
         <script type="text/javascript" src="assets/js/bootstrap.js"></script>
         <script type="text/javascript" src="assets/js/typeahead.js"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
+        <script src="//use.edgefonts.net/source-sans-pro:n3,i3,n4,i4;source-code-pro.js"></script>
+
+        <!-- Control the Flash of Unstyled Text (or FOUT) -->
+        <style type="text/css">
+            .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4,
+            .wf-loading h5, .wf-loading h6, .wf-loading p, .wf-loading a {
+                visibility: hidden;
+            }
+        </style>
+
         <script>
             window.moduleLevel = ".";
         </script>
@@ -29,48 +39,37 @@
         <div class="container-fluid">
             <div class="row-fluid">
                 <div class="span12">
-                    <div class="page-header">
-                        <h1>apify API</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row-fluid">
-                <div class="span12">
-                    <h2>Modules (8)</h2>
-                    <ul class="nav nav-list">
-    <li class="nav-header">
-        <a href="#" id="toggle-other-modules"><i class="icon-folder-close"></i> Modules (8)</a>
-    </li>
-</ul>
-<ul class="nav nav-list package-list">
-    <li class="nav-header">
-        <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
-    </li>
-</ul>
-<ul id="package_" class="nav nav-list">
-    <li><a href="./modules/Documenter.html">Documenter</a></li>
-</ul>                
-<ul class="nav nav-list package-list">
-    <li class="nav-header">
-        <a href="javascript:;" class="toggle-package" data-package="package_language_js"><i class="icon-folder-open"></i>language.js</a>
-    </li>
-</ul>
-<ul id="package_language_js" class="nav nav-list">
-    <li><a href="./modules/language&#x2F;js&#x2F;GoogleClosureProcessor.html">GoogleClosureProcessor</a></li>
-    <li><a href="./modules/language&#x2F;js&#x2F;IndexGenerator.html">IndexGenerator</a></li>
-    <li><a href="./modules/language&#x2F;js&#x2F;ModuleGenerator.html">ModuleGenerator</a></li>
-    <li><a href="./modules/language&#x2F;js&#x2F;ModuleParser.html">ModuleParser</a></li>
-    <li><a href="./modules/language&#x2F;js&#x2F;RequireProcessor.html">RequireProcessor</a></li>
-    <li><a href="./modules/language&#x2F;js&#x2F;SearchGenerator.html">SearchGenerator</a></li>
-</ul>                
-<ul class="nav nav-list package-list">
-    <li class="nav-header">
-        <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
-    </li>
-</ul>
-<ul id="package_utils" class="nav nav-list">
-    <li><a href="./modules/utils&#x2F;Workspace.html">Workspace</a></li>
-</ul>                
+                    <h2 class="number-of-modules">Modules (8)</h2>
+
+                    <ul class="nav nav-list package-list">
+                        <li class="nav-header">
+                            <a href="javascript:;" class="toggle-package" data-package="package_"><i class="icon-folder-open"></i></a>
+                        </li>
+                    </ul>
+                    <ul id="package_" class="nav nav-list">
+                        <li><a href="./modules/Documenter.html">Documenter</a></li>
+                    </ul>
+                    <ul class="nav nav-list package-list">
+                        <li class="nav-header">
+                            <a href="javascript:;" class="toggle-package" data-package="package_language_js"><i class="icon-folder-open"></i>language.js</a>
+                        </li>
+                    </ul>
+                    <ul id="package_language_js" class="nav nav-list">
+                        <li><a href="./modules/language&#x2F;js&#x2F;GoogleClosureProcessor.html">GoogleClosureProcessor</a></li>
+                        <li><a href="./modules/language&#x2F;js&#x2F;IndexGenerator.html">IndexGenerator</a></li>
+                        <li><a href="./modules/language&#x2F;js&#x2F;ModuleGenerator.html">ModuleGenerator</a></li>
+                        <li><a href="./modules/language&#x2F;js&#x2F;ModuleParser.html">ModuleParser</a></li>
+                        <li><a href="./modules/language&#x2F;js&#x2F;RequireProcessor.html">RequireProcessor</a></li>
+                        <li><a href="./modules/language&#x2F;js&#x2F;SearchGenerator.html">SearchGenerator</a></li>
+                    </ul>
+                    <ul class="nav nav-list package-list">
+                        <li class="nav-header">
+                            <a href="javascript:;" class="toggle-package" data-package="package_utils"><i class="icon-folder-open"></i>utils</a>
+                        </li>
+                    </ul>
+                    <ul id="package_utils" class="nav nav-list">
+                        <li><a href="./modules/utils&#x2F;Workspace.html">Workspace</a></li>
+                    </ul>
 
                 </div>
             </div>

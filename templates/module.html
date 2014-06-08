@@ -14,6 +14,15 @@
     <script type="text/javascript" src="{{{level}}}/assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="{{{level}}}/assets/js/typeahead.js"></script>
     <script type="text/javascript" src="{{{level}}}/assets/js/main.js"></script>
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i3,n4,i4;source-code-pro.js"></script>
+
+    <!-- Control the Flash of Unstyled Text (or FOUT) -->
+    <style type="text/css">
+        .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4,
+        .wf-loading h5, .wf-loading h6, .wf-loading p, .wf-loading a {
+            visibility: hidden;
+        }
+    </style>
     
     <script>
       window.moduleLevel = "{{{level}}}";
@@ -25,19 +34,13 @@
     </div>
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span12">
-          <div class="page-header">
-            <h1>{{module.name}}</h1>
-          </div>
-        </div>
-      </div>
-      <div class="row-fluid">
         <div class="span3">
           <div class="left-section">
 {{{fragments.filelist}}}
           </div>
         </div>
         <div class="module span9">
+          <h1>{{module.name}}</h1>
           <section class="description">
             <h3>Description</h3>
             <div>
@@ -45,7 +48,7 @@
             </div>
           </section>
     
-          <section class="dependencies">
+          <section id="dependencies">
             <h3>Dependencies</h3>
             
             {{#module.dependencies.length}}
@@ -63,7 +66,7 @@
           </section>
     
           {{#module.variables.length}}
-            <section class="variables">
+            <section id="variables">
               <h3>Variables 
                 <label class="checkbox">
                   <input class="toggle-public" type="checkbox"> Show Private Members
@@ -90,7 +93,7 @@
                 </dl>
                 <div class="description">{{{description.full}}}</div>
                 <button class="btn btn-small show-code">Show code</button>
-                <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
+                <pre class="code language-javascript"><code class="language-javascript">{{code}}</code></pre>
               </div>
               {{/module.variables}}
               
@@ -98,7 +101,7 @@
           {{/module.variables.length}}
     
           {{#module.functions.length}}
-          <section class="functions">
+          <section id="functions">
             <h3>Functions 
               <label class="checkbox">
                 <input class="toggle-public" type="checkbox"> Show Private Members
@@ -131,7 +134,7 @@
                 {{/returns}}
               </dl>
               <button class="btn btn-small show-code">Show code</button>
-              <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
+              <pre class="code language-javascript"><code class="language-javascript">{{code}}</code></pre>
             </div>
             {{/module.functions}}
             
@@ -139,7 +142,7 @@
           {{/module.functions.length}}
           
           {{#module.classes.length}}
-          <section class="classes">
+          <section id="classes">
             <h2>Classes</h2>
             
             {{#module.classes}}
@@ -159,7 +162,7 @@
                   </dl>
                   
                   <button class="btn btn-small show-code">Show code</button>
-                  <pre class="language-javascript"><code class="language-javascript">{{constructor.code}}</code></pre>
+                  <pre class="code language-javascript"><code class="language-javascript">{{constructor.code}}</code></pre>
                 </div>
       
                 {{#properties.length}}
@@ -189,7 +192,7 @@
                     </dl>
                     <div class="description">{{{description.full}}}</div>
                     <button class="btn btn-small show-code">Show code</button>
-                    <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
+                    <pre class="code language-javascript"><code class="language-javascript">{{code}}</code></pre>
                   </div>
                   {{/properties}}
                   
@@ -227,7 +230,7 @@
                       {{/returns}}
                     </dl>
                     <button class="btn btn-small show-code">Show code</button>
-                    <pre class="language-javascript"><code class="language-javascript">{{code}}</code></pre>
+                    <pre class="code language-javascript"><code class="language-javascript">{{code}}</code></pre>
                   </div>
                   {{/methods}}
                 </section>
