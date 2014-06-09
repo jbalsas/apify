@@ -25,6 +25,7 @@
                 "classes": "/../templates/module/classes.html",
                 "code": "/../templates/module/code.html",
                 "dependencies": "/../templates/module/dependencies.html",
+                "deprecation_message": "/../templates/module/deprecation_message.html",
                 "function": "/../templates/module/function.html",
                 "module": "/../templates/module/module.html",
                 "params": "/../templates/module/params.html",
