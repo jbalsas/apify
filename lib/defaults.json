@@ -12,10 +12,32 @@
         "unittest"
     ],
     "templates": {
-        "filelist": "/../templates/filelist.html",
-        "index": "/../templates/index.html",
-        "module": "/../templates/module.html",
-        "navbar": "/../templates/navbar.html"
+        "index": {
+            "main": "/../templates/index/main.html",
+            "partials": {
+                "filelist": "/../templates/navigation/filelist.html",
+                "navbar": "/../templates/navigation/navbar.html"
+            }
+        },
+        "module": {
+            "main": "/../templates/module/main.html",
+            "partials": {
+                "classes": "/../templates/module/classes.html",
+                "code": "/../templates/module/code.html",
+                "dependencies": "/../templates/module/dependencies.html",
+                "function": "/../templates/module/function.html",
+                "module": "/../templates/module/module.html",
+                "params": "/../templates/module/params.html",
+                "returns": "/../templates/module/returns.html",
+                "scope": "/../templates/module/scope.html",
+                "tags": "/../templates/module/tags.html",
+                "toggle_scope": "/../templates/module/toggle_scope.html",
+                "variable": "/../templates/module/variable.html",
+                
+                "filelist": "/../templates/navigation/filelist.html",
+                "navbar": "/../templates/navigation/navbar.html"
+            }
+        }
     },
     "assets": "/../assets"
 }

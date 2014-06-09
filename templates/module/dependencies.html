@@ -1,0 +1,15 @@
+<section id="dependencies">
+    <h3>Dependencies</h3>
+
+    {{#module.dependencies.length}}
+    <ul class="nav nav-list">
+        {{#module.dependencies}}
+        <li><a href="{{level}}/modules/{{{url}}}.html">{{name}}</a></li>
+        {{/module.dependencies}}
+    </ul>
+    {{/module.dependencies.length}}
+
+    {{^module.dependencies.length}}
+    <span class="alert alert-info">This module has no dependencies</span>
+    {{/module.dependencies.length}}
+</section>

@@ -1,0 +1,10 @@
+<dl>
+    {{#params}}
+    <dt>{{name}}</dt>
+    {{#modifiers}}
+    <span class="label label-{{.}} pull-left">{{.}}</span>
+    {{/modifiers}}
+    <dd class="label label-info pull-left">{{types}}</dd>
+    <dd>{{{description}}}</dd>
+    {{/params}}
+</dl>

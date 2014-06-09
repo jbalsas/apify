@@ -1,0 +1,43 @@
+<h1>{{module.name}}</h1>
+
+<section class="description">
+    <h3>Description</h3>
+    
+    <div>{{{module.description}}}</div>
+</section>
+
+{{> dependencies}}
+
+{{#module.variables.length}}
+<section id="variables">
+    
+    <h3>Variables 
+        {{#module.variables.length}}
+            {{> toggle_scope}}
+        {{/module.variables.length}}
+    </h3>
+
+    {{#module.variables}}
+        {{> variable}}
+    {{/module.variables}}
+
+</section>
+{{/module.variables.length}}
+
+{{#module.functions.length}}
+<section id="functions">
+
+    <h3>Functions 
+        {{#module.functions.length}}
+            {{> toggle_scope}}
+        {{/module.functions.length}}
+    </h3>
+
+    {{#module.functions}}
+        {{> function}}
+    {{/module.functions}}
+
+</section>
+{{/module.functions.length}}
+
+{{> classes}}
