@@ -1,6 +1,6 @@
 {
     "name": "apify",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "author": "Chema Balsas <jbalsas@gmail.com> (https://github.com/jbalsas)",
     "collaborators": ["Aleksandr Motsjonov <soswow@gmail.com>"],
     "description": "An API documentation generator",
