@@ -760,15 +760,3 @@ input.tt-hint {
 dl .label {
     margin-bottom: 0;
 }
-
-.label-nullable {
-    background-color: #f89406;
-}
-
-.label-non-nullable {
-    background-color: #b94a48;
-}
-
-.label-optional {
-    background-color: #999999;
-}
