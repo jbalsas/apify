@@ -516,12 +516,29 @@ input[type="color"]:focus,
     margin-left: -15px;
 }
 
+.label,
+badge {
+    padding: 4px 7px;
+    font-weight: 400;
+    color: #ffffff;
+    text-shadow: none;
+}
+
 .label-info,
 .badge-info {
     background-color: #eee;
-    color: #000;
-    font-weight: 300;
+    color: #222;
     text-shadow: none;
+}
+
+.label-non-nullable {
+    background-color: #FAE0F0;
+    color: red;
+}
+
+.label-nullable {
+    background-color: #FFE493;
+    color: #8F4C02;
 }
 
 .well {
@@ -529,7 +546,7 @@ input[type="color"]:focus,
 }
 
     
-    
+
     
 /* non-bootstrap css
 ---------------------------------------------------------*/
@@ -546,7 +563,7 @@ body{
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5em;
-    margin: 20px 0 0;
+    margin: 10px 0 0 15px;
 }
 
 #other-module{
