@@ -524,21 +524,13 @@ badge {
     text-shadow: none;
 }
 
+.label-non-nullable,
+.label-nullable,
 .label-info,
 .badge-info {
     background-color: #eee;
     color: #222;
     text-shadow: none;
-}
-
-.label-non-nullable {
-    background-color: #FAE0F0;
-    color: red;
-}
-
-.label-nullable {
-    background-color: #FFE493;
-    color: #8F4C02;
 }
 
 .well {
