@@ -121,6 +121,7 @@ dt {
   color: #000;
   font-weight: 400;
   margin-bottom: 5px;
+  -webkit-font-smoothing: subpixel-antialiased; /* this makes it slightly bolder */    
 }
 
 dd {
