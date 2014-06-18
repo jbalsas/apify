@@ -121,6 +121,7 @@ dt {
   color: #000;
   font-weight: 400;
   margin-bottom: 5px;
+  -webkit-font-smoothing: subpixel-antialiased; /* this makes it slightly bolder */    
 }
 
 dd {
@@ -516,11 +517,20 @@ input[type="color"]:focus,
     margin-left: -15px;
 }
 
+.label,
+badge {
+    padding: 4px 7px;
+    font-weight: 400;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.label-non-nullable,
+.label-nullable,
 .label-info,
 .badge-info {
     background-color: #eee;
-    color: #000;
-    font-weight: 300;
+    color: #222;
     text-shadow: none;
 }
 
@@ -529,7 +539,7 @@ input[type="color"]:focus,
 }
 
     
-    
+
     
 /* non-bootstrap css
 ---------------------------------------------------------*/
@@ -546,7 +556,7 @@ body{
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5em;
-    margin: 20px 0 0;
+    margin: 10px 0 0 15px;
 }
 
 #other-module{
@@ -741,17 +751,5 @@ input.tt-hint {
 }
 
 dl .label {
-    margin-bottom: 0;
-}
-
-.label-nullable {
-    background-color: #f89406;
-}
-
-.label-non-nullable {
-    background-color: #b94a48;
-}
-
-.label-optional {
-    background-color: #999999;
+    margin-bottom: 7px;
 }
