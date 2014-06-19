@@ -11,6 +11,10 @@
     <h3>Description</h3>
     
     <div>{{{module.description}}}</div>
+    
+    {{#examples}}
+        {{> example}}
+    {{/examples}}
 </section>
 
 {{> dependencies}}

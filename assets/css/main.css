@@ -655,6 +655,22 @@ h3 .checkbox{
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.member .example {
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.member .example:before {
+    color: #888;
+    content:  'Example';
+    font-style: italic;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 .member.private{
     display: none;
     background: #fff;

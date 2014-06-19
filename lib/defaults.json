@@ -26,6 +26,7 @@
                 "code": "/../templates/module/code.html",
                 "dependencies": "/../templates/module/dependencies.html",
                 "deprecation_message": "/../templates/module/deprecation_message.html",
+                "example": "/../templates/module/example.html",
                 "function": "/../templates/module/function.html",
                 "modifiers": "/../templates/module/modifiers.html",
                 "module": "/../templates/module/module.html",

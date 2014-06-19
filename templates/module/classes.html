@@ -25,6 +25,10 @@
                 <dd>{{{description}}}</dd>
                 {{/constructor.params}}
             </dl>
+          
+            {{#examples}}
+                {{> example}}
+            {{/examples}}
 
             <button class="btn btn-small show-code">Show code</button>
             <pre class="code language-javascript"><code class="language-javascript">{{constructor.code}}</code></pre>
