@@ -27,6 +27,7 @@
                 "dependencies": "/../templates/module/dependencies.html",
                 "deprecation_message": "/../templates/module/deprecation_message.html",
                 "function": "/../templates/module/function.html",
+                "modifiers": "/../templates/module/modifiers.html",
                 "module": "/../templates/module/module.html",
                 "params": "/../templates/module/params.html",
                 "returns": "/../templates/module/returns.html",

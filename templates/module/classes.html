@@ -9,13 +9,19 @@
             
             <span class="pull-right scope">Constructor</span>
             
-            <h4>{{constructor.ctx.name}}</h4>
+            <h4>
+                {{constructor.ctx.name}}
+                
+                {{#constructor.extends}}
+                <span class="scope">(extends {{.}})</span>
+                {{/constructor.extends}}
+            </h4>
+            
             <em>{{{constructor.description.full}}}</em>
             
             <dl>
                 {{#constructor.params}}
-                <dt>{{name}} <span class="label label-info pull-left">{{types}}</span>
-</dt>
+                <dt>{{name}} <span class="label label-info pull-left">{{types}}</span></dt>
                 <dd>{{{description}}}</dd>
                 {{/constructor.params}}
             </dl>

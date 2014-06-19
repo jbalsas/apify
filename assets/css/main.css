@@ -527,6 +527,7 @@ badge {
 
 .label-non-nullable,
 .label-nullable,
+.label-optional,
 .label-info,
 .badge-info {
     background-color: #eee;
