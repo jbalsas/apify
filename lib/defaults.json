@@ -22,6 +22,7 @@
         "module": {
             "main": "/../templates/module/main.html",
             "partials": {
+                "additional": "/../templates/module/additional.html",
                 "classes": "/../templates/module/classes.html",
                 "code": "/../templates/module/code.html",
                 "dependencies": "/../templates/module/dependencies.html",
