@@ -2,7 +2,7 @@
 
     {{> scope}}
 
-    <h4>{{#isDeprecated}}<span class="label label-deprecated label-inverse">deprecated</span>{{/isDeprecated}}{{ctx.name}}</h4>
+    <h4>{{#isDeprecated}}<span class="label label-deprecated label-inverse">deprecated</span>{{/isDeprecated}}{{ctx.name}} {{> modifiers}}</h4>
 
     {{> deprecation_message}}
     
@@ -10,5 +10,7 @@
     
     {{> params}}
     {{> returns}} 
+    {{> examples}}
+    {{> additional}}
     {{> code}}
 </div>

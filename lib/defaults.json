@@ -22,11 +22,15 @@
         "module": {
             "main": "/../templates/module/main.html",
             "partials": {
+                "additional": "/../templates/module/additional.html",
                 "classes": "/../templates/module/classes.html",
                 "code": "/../templates/module/code.html",
                 "dependencies": "/../templates/module/dependencies.html",
                 "deprecation_message": "/../templates/module/deprecation_message.html",
+                "example": "/../templates/module/example.html",
+                "examples": "/../templates/module/examples.html",
                 "function": "/../templates/module/function.html",
+                "modifiers": "/../templates/module/modifiers.html",
                 "module": "/../templates/module/module.html",
                 "params": "/../templates/module/params.html",
                 "returns": "/../templates/module/returns.html",
