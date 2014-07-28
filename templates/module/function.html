@@ -2,7 +2,13 @@
 
     {{> scope}}
 
-    <h4>{{#isDeprecated}}<span class="label label-deprecated label-inverse">deprecated</span>{{/isDeprecated}}{{ctx.name}} {{> modifiers}}</h4>
+    <h4>
+        {{#isDeprecated}}
+            <span class="label label-deprecated label-inverse">deprecated</span>
+        {{/isDeprecated}}
+        {{ctx.name}} {{> modifiers}}
+        <a class="anchor" href="#{{ctx.scope.owner}}-{{ctx.name}}" name="{{ctx.scope.owner}}-{{ctx.name}}"><i class="icon-link"></i></a>
+    </h4>
 
     {{> deprecation_message}}
     

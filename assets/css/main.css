@@ -685,6 +685,27 @@ h3 .checkbox{
     margin-top: -10px;
 }
 
+.member .anchor {
+    color: inherit;
+    visibility: hidden
+}
+
+.member .anchor:hover {
+    text-decoration: none;
+}
+
+.member .anchor:focus {
+    box-shadow: none;
+}
+
+.member .anchor .icon-link {
+    line-height: 24px;
+}
+
+.member:hover .anchor {
+    visibility: visible;
+}
+
 .deprecated {
     background: #EBEBEB;
     background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
