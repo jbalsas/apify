@@ -13,7 +13,7 @@ body {
 
 .module, .left-section {
     overflow-y: auto;
-    height: calc(100vh - 95px);
+    height: calc(100vh - 110px);
 }
 
 a {
