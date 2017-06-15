@@ -7,7 +7,7 @@ API documentation generator
 
 Installation
 -----------
-`[sudo] npm install -g apify`
+`[sudo] npm install -g jsdocify`
 
 Usage
 -----------
